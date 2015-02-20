@@ -201,5 +201,11 @@ h3 {
     background-color: #4A4A4A;
     color: #ffffff;
     text-align: center;
-    padding: 35px 0 65px;
+    padding: 35px 40px 65px 40px;
+    text-align: left;
+    font-size:12px;
+}
+
+.footer_box a {
+    color:#ffffff;
 }

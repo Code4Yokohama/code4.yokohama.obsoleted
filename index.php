@@ -15,7 +15,7 @@
     <meta property="og:url" content="http://code4.yokohama/" />
     <meta property="og:image" content="http://<?php echo $_SERVER['SERVER_NAME']; ?><?php echo ($_SERVER['SERVER_PORT'] == 80)? "" : ":${_SERVER['SERVER_PORT']}"; ?>/images/icon_top.png" />
 
-    <title>code for YOKOHAMA</title>
+    <title>Code for YOKOHAMA</title>
 
 <?php if ($_SERVER['SERVER_NAME'] === 'code4.yokohama'): ?>
     <script>
@@ -81,6 +81,6 @@
 </div>
 
 <div class="footer_box">
-    <p>Code for YOKOHAMA some rights reserved.</p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />このウェブサイトのコンテンツは <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">クリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。</a><br />Copyright (C) 2015 Code for YOKOHAMA.</p>
 </div>
 </body>

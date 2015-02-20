@@ -12,7 +12,7 @@
     <meta property="og:title" content="code for YOKOHAMA" />
     <meta property="og:type" content="article" />
     <meta property="og:description" content="Code for YOKOHAMAでは仲間とともに技術を磨き、学んだスキルを地域の課題解決に役立てていく活動です。" />
-    <meta property="og:url" content="" />
+    <meta property="og:url" content="http://code4.yokohama/" />
     <meta property="og:image" content="http://<?php echo $_SERVER['SERVER_NAME']; ?><?php echo ($_SERVER['SERVER_PORT'] == 80)? "" : ":${_SERVER['SERVER_PORT']}"; ?>/images/icon_top.png" />
 
     <title>code for YOKOHAMA</title>

@@ -88,6 +88,7 @@ a:hover{
     /*color:#666666;*/
 }
 
+
 .clear {
     clear: both;
 }
@@ -124,6 +125,10 @@ a:hover{
 }
 .blue {
     color: #59A3E8;
+}
+
+.linkblue {
+    color: #33588a;;
 }
 
 .main_logo {
@@ -208,4 +213,16 @@ h3 {
 
 .footer_box a {
     color:#ffffff;
+}
+
+.m_botom {
+    margin-bottom: 20px;
+}
+
+.m_top {
+    margin-top: 20px;
+}
+
+.m_img {
+    margin: 20px ;
 }

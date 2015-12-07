@@ -206,9 +206,15 @@ body {
 .header__keyword {
     position: absolute;
     z-index: 1;
+    width: 100%;
     height: 860px;
     padding-top: 120px;
     text-align: center;
+}
+
+.header__keyword_image {
+    display: block;
+    margin: 0 auto;
 }
 
 .header__keyword_text {

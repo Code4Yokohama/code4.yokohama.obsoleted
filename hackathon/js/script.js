@@ -4,7 +4,7 @@ $(function(){
         winH = window.innerHeight;
 
     //bxslider
-    $('.bxslider, .sp_bxslider').bxSlider({
+    $('.bxslider').bxSlider({
         auto: true,
         mode: 'fade',
         controls: true,
@@ -14,19 +14,19 @@ $(function(){
         easing: 'ease-in-out'
     });
 
-    fixKvSize(winW,winH);
+    //fixKvSize(winW,winH);
 
-    $(window).resize(function(){
+    /*$(window).resize(function(){
         var winW = window.innerWidth;
         fixKvSize(winW,winH);
-    });
+    });*/
 
 });
 
-function fixKvSize(winW,winH){
+/*function fixKvSize(winW,winH){
 
     $('.bx-viewport, .bx-wrapper, .bxslider, .bxslider li').css({
         'height': winH
     });
 
-}
+}*/

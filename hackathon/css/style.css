@@ -206,19 +206,18 @@ body {
 .header__keyword {
     position: absolute;
     z-index: 1;
-    left: 50%;
-    margin-left: -307px;
+    height: 860px;
     padding-top: 120px;
+    text-align: center;
 }
-.header__keytext {
-    position: absolute;
-    left: 50%;
-    bottom: 120px;
-    z-index: 1;
+
+.header__keyword_text {
+    display: inline-block;
     width: 860px;
-    margin-left: -430px;
+    margin-top: 70px;
     padding: 30px;
     font-size:18px;
+    text-align: left;
     background-color: rgba(225,225,225,0.75);
 }
 
@@ -237,6 +236,7 @@ body {
 }
 
 .bx-wrapper li {
+    min-height: 950px;
     background-position: center center;
     background-size: cover;
 }

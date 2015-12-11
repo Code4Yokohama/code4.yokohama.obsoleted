@@ -93,6 +93,37 @@ a:hover{
     clear: both;
 }
 
+
+
+/*--------------------------------------------------------------
+  #header
+-------------------------------------------------------------- */
+
+#header {
+    position: relative;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.header__title_wrapper {
+    position: relative;
+    width: 860px;
+    margin: 0 auto;
+}
+
+.header__title_wrapper h1 {
+    height:60px;
+    line-height:60px;
+}
+
+.header__title_wrapper h1 img {
+    vertical-align: middle;
+}
+.index .header__title_wrapper h1 {
+    text-align: left;
+}
+
+
 /*--------------------------------------------------------------
   main
 -------------------------------------------------------------- */
@@ -102,21 +133,21 @@ a:hover{
 }
 
 .header_box {
-    width: 1000px;
-    height: 40px;
-    margin: 0 auto;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 380px;
+    height: 60px;
+    line-height: 60px;
+}
+.menu_box a {
+    color: #fff;
 }
 .sns_box {
     width: 100%;
+    margin-top: 20px;
     text-align: right;
     line-height: 9px;
-    margin-top: 10px;
-}
-.menu_box {
-    position: absolute;
-    top: 30px;
-    right: 0;
 }
 .sns_box li,
 .menu_box li{

@@ -41,18 +41,25 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="header_box">
-    <div class="sns_box">
-        <div class="fb-like" data-href="http://code4.yokohama/" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://code4.yokohama/" data-count="none">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<header id="header" class="index">
+    <div class="header__title_wrapper">
+        <h1 class="c-section_inner"><a href="/"><img src="images/c4y_logo_small.png" alt="code for YOKOHAMA"></a></h1>
+        <div class="header_box">
+            <ul class="menu_box">
+                <li><a href="hackathon/">ハッカソン</a></li>
+                <!--<li>プロジェクト</li>-->
+                <li><a href="mailto:info@code4.yokohama">問い合わせ</a></li>
+                <!--<li>参加方法</li>-->
+            </ul>
+            <div class="sns_box">
+                <div class="fb-like" data-href="http://code4.yokohama/" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://code4.yokohama/" data-count="none">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+        </div>
     </div>
-    <ul class="menu_box">
-        <!--<li>プロジェクト</li>-->
-        <li><a class="blue" href="mailto:info@code4.yokohama">問い合わせ</a></li>
-        <!--<li>参加方法</li>-->
-    </ul>
-</div>
+</header>
 <div class="top_box inner">
     <h1><img class="main_logo" src="images/c4y_logo.png" alt="code for YOKOHAMAロゴ" /></h1>
     <h2>Technology for Social Innovation</h2>
@@ -88,7 +95,7 @@
                 <li>1.Code for YOKOHAMAの目指すところ</li>
                 <li>2.GOTEO開発コミュニティについて</li>
                 <li>3.今後の活動計画についてのブレインストーミング</li>
-                <li><a href="https://www.facebook.com/events/1395282610784330/" target="_blank".blue >イベントページ(facebook)</a></li>
+                <li><a href="https://www.facebook.com/events/1395282610784330/" target="_blank" >イベントページ(facebook)</a></li>
             </ul>
             <h3 class="m_top">＜登壇者＞（敬称略）</h3>
             <ul>
@@ -134,7 +141,7 @@
                 </li>
             </ul>
             <p>４）LOCAL GOOD OPENSOURCE PROJECTの紹介</p><br/>
-        <a href="https://www.facebook.com/events/1386915761635925/" target="_blank".blue >イベントページ(facebook)</a><br/>
+        <a href="https://www.facebook.com/events/1386915761635925/" target="_blank" >イベントページ(facebook)</a><br/>
         <div class="project_btn m_botom">第四回</div>
             <h3>5月8日</h3>
             <h3>Code for YOKOHAMA ミートアップ</h3>
@@ -179,19 +186,19 @@
             <h3 class="m_top"><紹介事例></h3>
             <ul>
                 <li>▽Code for YOKOHAMAの今年度の活動の計画</li>
-                <li><a class="linkblue" href="http://www.digital.nyc/" target="_blank".blue >▽NYのエンジニアと起業のHUBサイト「Digital.NYC: Official Hub For Tech & NYC Startups」</a></li>
-                <li><a class="linkblue" href="http://www.city.yokohama.lg.jp/keizai/sogyo/it/20150325164328.html" target="_blank".blue >▽横浜市　経済局 平成27年度「オープンデータ活用ビジネス化支援事業」</a></li>
-                <li><a class="linkblue" href="https://www.facebook.com/events/1650753081823971/" target="_blank".blue >▽6/24開催：「オープンデータ自治体サミット」</a></li>
-                <li><a class="linkblue" href="https://www.facebook.com/events/1425878117734136/" target="_blank".blue >▽6/23開催：オープンデータ自治体サミット前夜祭　「オープンガバメントとマイナンバー　地方議会の役割」</a></li>
-                <li><a class="linkblue" href="https://jobhub.jp/camp/yokohama-ups" target="_blank".blue >▽YOKOHAMA Ups!　　横浜発のアイデア・アプリ開発コンテスト</a></li>
-                <li><a class="linkblue" href="http://blog.2015.cross-party.com/" target="_blank".blue >▽2月開催予定「CROSS 2016」（調整中）</a></li>
+                <li><a class="linkblue" href="http://www.digital.nyc/" target="_blank" >▽NYのエンジニアと起業のHUBサイト「Digital.NYC: Official Hub For Tech & NYC Startups」</a></li>
+                <li><a class="linkblue" href="http://www.city.yokohama.lg.jp/keizai/sogyo/it/20150325164328.html" target="_blank" >▽横浜市　経済局 平成27年度「オープンデータ活用ビジネス化支援事業」</a></li>
+                <li><a class="linkblue" href="https://www.facebook.com/events/1650753081823971/" target="_blank" >▽6/24開催：「オープンデータ自治体サミット」</a></li>
+                <li><a class="linkblue" href="https://www.facebook.com/events/1425878117734136/" target="_blank" >▽6/23開催：オープンデータ自治体サミット前夜祭　「オープンガバメントとマイナンバー　地方議会の役割」</a></li>
+                <li><a class="linkblue" href="https://jobhub.jp/camp/yokohama-ups" target="_blank" >▽YOKOHAMA Ups!　　横浜発のアイデア・アプリ開発コンテスト</a></li>
+                <li><a class="linkblue" href="http://blog.2015.cross-party.com/" target="_blank" >▽2月開催予定「CROSS 2016」（調整中）</a></li>
                 <li>▽iPhoneアプリ制作講座＠さくらWORKS＜関内＞</li>
-                <li><a class="linkblue" href="http://www.meti.go.jp/information/publicoffer/saitaku/s150319003.html" target="_blank".blue >▽経産省・JIPDEC「先端課題に対応したベンチャー事業化支援等事業」
+                <li><a class="linkblue" href="http://www.meti.go.jp/information/publicoffer/saitaku/s150319003.html" target="_blank" >▽経産省・JIPDEC「先端課題に対応したベンチャー事業化支援等事業」
                     </br>（電子政府分野におけるITベンチャーの事業化に向けた環境整備事業）
                     </br>地域におけるソーシャルビジネスの創出モデルの確立に向けた実証</a></li>
-                <li><a class="linkblue" href="http://odd15.okfn.jp/" target="_blank".blue >▽インターナショナルオープンデータデイ2016</a></li>
-                <li><a class="linkblue" href="hhttp://localgood.jp/" target="_blank".blue >▽LOCAL GOOD YOKOHAMA、LOCAL GOOD FUKUOKA、LOCAL GOOD KITAQ</a></li>
-                <li><a class="linkblue" href="https://www.facebook.com/events/853367991404631/" target="_blank".blue >▽日本Androidの会 横浜支部 ６月例会</a></li>
+                <li><a class="linkblue" href="http://odd15.okfn.jp/" target="_blank" >▽インターナショナルオープンデータデイ2016</a></li>
+                <li><a class="linkblue" href="hhttp://localgood.jp/" target="_blank" >▽LOCAL GOOD YOKOHAMA、LOCAL GOOD FUKUOKA、LOCAL GOOD KITAQ</a></li>
+                <li><a class="linkblue" href="https://www.facebook.com/events/853367991404631/" target="_blank" >▽日本Androidの会 横浜支部 ６月例会</a></li>
                 <h3><a href="images/c4y_vol6-1.jpg" target="_blank"><img  class="m_img" src="images/c4y_vol6-1.jpg" alt="グラフィックレコーディング1" width="224" height="320"/> 
                 <a href="images/c4y_vol6-2.jpg" target="_blank"><img  class="m_img" src="images/c4y_vol6-2.jpg" alt="グラフィックレコーディング1" width="320" height="224"/> </h3>
         </div>

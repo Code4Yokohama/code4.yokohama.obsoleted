@@ -274,22 +274,28 @@ body {
     height: 38px;
 }
 
-.bx-wrapper .bx-prev {
-    margin-left: -480px;
-    background-position: 0 0;
+
+/*--------------------------------------------------
+    #news
+--------------------------------------------------*/
+.news__box {
+    display: block;
+    width: 750px;
+    height: 120px;
+    margin: 30px auto 40px;
+    padding: 24px 24px 24px 144px;
+    color: #333;
+    text-decoration: none;
+    background: url(../images/news_image01.jpg) no-repeat left center;
+    border: 1px solid #898989;
+    box-sizing: border-box;
 }
 
-.bx-wrapper .bx-prev:hover, .bx-wrapper .bx-prev:focus {
-    background-position: 0 -40px;
+.news__box_date {
+    margin-bottom: 8px;
 }
 
-.bx-wrapper .bx-next {
-    margin-left: 460px;
-    background-position: -28px 0;
-}
-
-.bx-wrapper .bx-next:hover, .bx-wrapper .bx-next:focus {
-    background-position: -28px -40px;
+.news__box_text {
 }
 
 
@@ -322,6 +328,7 @@ body {
 }
 
 .about__overview .c-overview_box {
+    position: relative;
     width: 286px;
     height: 400px;
     padding: 0 20px;
@@ -396,6 +403,42 @@ body {
     font-size: 18px;
     line-height: 24px;
 }
+
+/*-- for end hackathon styles --*/
+.overview_end {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 286px;
+    height: 400px;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.5);
+}
+.overview_end__text {
+    width: 220px;
+    height: 30px;
+    margin: 140px auto 0;
+    color: #898989;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #fff;
+}
+.overview_end .about__overview_apply {
+    font-size: 14px;
+    font-weight: normal;
+}
+.overview_end__link {
+    position: absolute;
+    top: 320px;
+    left: 50%;
+    margin-left: -90px;
+    padding-left: 14px;
+    font-size: 14px;
+    font-weight: normal;
+}
+/*-- for end hackathon styles --*/
+
 
 .about__blue {
     background-color: #357ee0;
@@ -585,6 +628,11 @@ body {
     float: right;
 }
 
+.back_button {
+    margin-bottom: 30px;
+    text-align: right;
+}
+
 
 /*--------------------------------------------------
     #sponsors
@@ -593,6 +641,10 @@ body {
 #sponsors {
     padding: 30px 0;
     background-color: #4ea2ed;
+}
+
+#sponsors a {
+    color: #333 ;
 }
 
 .sponsors__title {
@@ -617,3 +669,161 @@ body {
 .footer__link img {
     vertical-align: middle;
 }
+
+
+
+/*--------------------------------------------------
+    body#report
+--------------------------------------------------*/
+#report .header__keyword {
+    top: 60px;
+    height: 630px;
+    padding-top: 0;
+    background: url(../images/report_kanazawa/mv.jpg) no-repeat bottom center;
+}
+
+#report .header__keyword_image {
+    margin-top: 132px;
+}
+
+#report .header__report_title {
+    width: 800px;
+    margin: 50px auto 0;
+    padding: 18px 0;
+    color: #fff;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+#report .header__report_title_date {
+    font-size: 36px;
+}
+
+#report .header__report_title_title {
+    font-size: 24px;
+}
+
+#report_wrapper {
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 688px;
+}
+
+#report_wrapper .report_box {
+    margin-bottom: 150px;
+}
+
+#report_wrapper .report_box__title {
+    margin-top: 60px;
+    font-size: 50px;
+    text-align: right;
+    border-bottom: 2px solid #000;
+}
+
+#report_wrapper .report_box__date {
+    padding: 28px 0 20px;
+    font-size: 35px;
+    line-height: 35px;
+}
+
+#report_wrapper .report_box__text {
+    margin-bottom: 60px;
+}
+
+#report_wrapper .photo_box__caption {
+    margin: 8px 0 38px;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: right;
+}
+
+#report_wrapper .team_wrapper {
+    margin-bottom: 100px;
+}
+
+#report_wrapper .team {
+    margin-bottom: 60px;
+}
+
+#report_wrapper .team__title {
+    margin-bottom: 24px;
+    padding: 5px 0 5px 8px;
+    border-left: 10px solid #357ee0;
+}
+
+#report_wrapper .team__title span {
+    display: block;
+    font-size: 23px;
+    line-height:31px;
+}
+
+#report_wrapper .team__text {
+    margin-bottom: 24px;
+}
+
+#report_wrapper .award_wrapper {
+    margin-bottom: 120px;
+}
+
+#report_wrapper  .judge_result {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+#report_wrapper .award__title {
+    height: 120px;
+    margin-bottom: 10px;
+    padding-left: 110px;
+    background: url(../images/report_kanazawa/icon_award.png) no-repeat left center;
+}
+
+#report_wrapper .award__title.highest {
+    padding-left: 120px;
+    background: url(../images/report_kanazawa/icon_h_award.png) no-repeat left center;
+}
+
+#report_wrapper .award__title span {
+    display: block;
+}
+
+#report_wrapper .award__title .award__title_award {
+    margin-bottom: 12px;
+    padding-top: 18px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+#report_wrapper .award__title .award__title_team {
+    font-size: 32px;
+}
+
+#report_wrapper .related_links {
+    margin-bottom: 130px;
+}
+
+#report_wrapper .related_links h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+    line-height: 35px;
+}
+
+#report_wrapper .related_links a {
+    font-size: 18px;
+}
+
+/*-- report common styles for parts --*/
+#report .c-text {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+#report_wrapper .c-blue_square:before {
+    display: inline-block;
+    content: ' ';
+    width: 35px;
+    height: 35px;
+    margin-right: 12px;
+    vertical-align: top;
+    background-color: #357ee0;
+}
+
+

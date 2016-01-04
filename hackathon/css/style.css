@@ -537,6 +537,9 @@ body {
     list-style-type: disc;
 }
 
+.about__schedule__caution {
+    margin: 16px 32px 0;
+}
 
 /*-- access --*/
 

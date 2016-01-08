@@ -19,7 +19,9 @@
 
     <link type="image/png" rel="icon" href="../c4y_favicon.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/html5shiv.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="html5shiv.js"></script>
+    <![endif]-->
     <script src="js/jquery.bxslider.min.js"></script>
     <script src="js/script.js"></script>
     <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css">
@@ -59,290 +61,359 @@
         </ul>
     </header>
 
-    <div id="news" class="c-section_inner">
-        <a class="news__box" href="report/kanazawaku/">
-            <dl>
-                <dt class="news__box_date">■2015.12.10</dt>
-                <dd class="news__box_text">12/5 - 12/6 金沢区ハッカソン＠八景島客船ターミナル<br>レポートを公開しました</dd>
-            </dl>
-        </a>
-    </div>
+    <div id="tournament_detail">
+        <div class="tournament_detail__overview clearfix c-section_inner">
+            <div class="tournament_detail__overview_three_box">
+                <section class="tournament_detail__overview_yokohama c-overview_box">
+                    <h3 class="tournament_detail__overview_title"><img src="images/about01.png" alt="横浜"></h3>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th>日程</th>
+                            <td class="tournament_detail__overview_date">12/5 - 12/6</td>
+                        </tr>
+                        <tr>
+                            <th>大会会場</th>
+                            <td class="tournament_detail__overview_place">八景島客船ターミナル2F</td>
+                        </tr>
+                        <!--
+                        <tr>
+                            <td colspan="2"><a class="c-button_base c-button01 c-button_small01 tournament_detail__overview_apply"  href="http://ptix.co/1kY0ZiR" target="_blank">お申し込み</a></td>
+                        </tr>
+                        -->
+                        </tbody>
+                    </table>
+                </section>
+                <a class="overview_end" href="report/kanazawaku/">
+                    <p class="overview_end__text">ハック完了</p>
+                    <p class="c-button_base c-button01 c-button_small01 tournament_detail__overview_apply overview_end__link">レポートはこちら</p>
+                </a>
 
-    <div id="about">
-        <div class="about__overview clearfix">
-            <div class="clearfix c-section_inner">
-                <div class="about__overview_three_box">
-                    <section class="about__overview_yokohama c-overview_box">
-                        <h3 class="about__overview_title"><img src="images/about01.png" alt="横浜"></h3>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <th>日程</th>
-                                <td class="about__overview_date">12/5 - 12/6</td>
-                            </tr>
-                            <tr>
-                                <th>大会会場</th>
-                                <td class="about__overview_place">八景島客船ターミナル2F</td>
-                            </tr>
-                            <!--
-                            <tr>
-                                <td colspan="2"><a class="c-button_base c-button01 c-button_small01 about__overview_apply"  href="http://ptix.co/1kY0ZiR" target="_blank">お申し込み</a></td>
-                            </tr>
-                            -->
-                            </tbody>
-                        </table>
-                    </section>
-                    <a class="overview_end" href="report/kanazawaku/">
-                        <p class="overview_end__text">ハック完了</p>
-                        <p class="c-button_base c-button01 c-button_small01 about__overview_apply overview_end__link">レポートはこちら</p>
-                    </a>
-
-                </div>
-                <div class="about__overview_three_box">
-                    <section class="about__overview_yokosuka c-overview_box">
-                        <h3 class="about__overview_title"><img src="images/about02.png" alt="横須賀"></h3>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <th>日程</th>
-                                    <td class="about__overview_date">1/23 - 1/24</td>
-                                </tr>
-                                <tr>
-                                    <th>大会会場</th>
-                                    <td class="about__overview_place">
-                                        <a href="http://www.werk-yokosuka.jp/access/" target="_blank">ヴェルクよこすか</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2"><a class="c-button_base c-button01 c-button_small01 about__overview_apply"  href="http://salon-yrp.net/form/mail.cgi?id=yokosukavalleyh" target="_blank">お申し込み</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </section>
-                </div>
-                <div class="about__overview_three_box">
-                    <section class="about__overview_kamakura c-overview_box">
-                        <h3 class="about__overview_title"><img src="images/about03.png" alt="鎌倉"></h3>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <th>日程</th>
-                                <td class="about__overview_date">1月中旬開催予定</td>
-                            </tr>
-                            <tr>
-                                <th>大会会場</th>
-                                <td class="about__overview_place">大会会場 後日発表</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2"><span class="c-button_base c-button04 c-button_small01 about__overview_soon">後日公開</span></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </section>
-                </div>
             </div>
-            <div class="about__overview_champion_wrap">
-                <section class="about__overview_champion">
-                    <h3 class="about__overview_champion_title"><span>GRAND </span><span>CHAMPION</span></h3>
-                    <p>
-                        各都市の優秀作品の中から最優秀作品を決定します<br>
-                        総合イベントにて表彰！
-                    </p>
+            <div class="tournament_detail__overview_three_box">
+                <section class="tournament_detail__overview_yokosuka c-overview_box">
+                    <h3 class="tournament_detail__overview_title"><img src="images/about02.png" alt="横須賀"></h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>日程</th>
+                                <td class="tournament_detail__overview_date">1/23 - 1/24</td>
+                            </tr>
+                            <tr>
+                                <th>大会会場</th>
+                                <td class="tournament_detail__overview_place">
+                                    <a href="http://www.werk-yokosuka.jp/access/" target="_blank">ヴェルクよこすか</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><a class="c-button_base c-button01 c-button_small01 tournament_detail__overview_apply"  href="#huck_detail">詳細はこちら</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+            <div class="tournament_detail__overview_three_box">
+                <section class="tournament_detail__overview_kamakura c-overview_box">
+                    <h3 class="tournament_detail__overview_title"><img src="images/about03.png" alt="鎌倉"></h3>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th>日程</th>
+                            <td class="tournament_detail__overview_date">2月上旬開催予定</td>
+                        </tr>
+                        <tr>
+                            <th>大会会場</th>
+                            <td class="tournament_detail__overview_place">大会会場 後日発表</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><span class="c-button_base c-button04 c-button_small01 tournament_detail__overview_soon">後日公開</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </section>
             </div>
         </div>
-        <section>
-            <div class="about__blue">
-                <div class="c-section_inner">
-                    <h2><img src="images/yokosuka_title.png" alt="YOKOSUKA × YOKOHAMA"></h2>
-                    <section class="about__schedule">
-                        <div class="c-circle_wrapper">
-                        <h3 class="c-circle_wrpper_title">Schedule</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td class="about__schedule_time">timeline</td>
-                                    <td class="about__schedule_day1 c-table_title">1.23<span>SAT</span></td>
-                                    <td class="about__schedule_day2 c-table_title">1.24<span>SUN</span></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="c-time_cell">9:45</td>
-                                    <td class="c-normal_cell"><p>開場</p></td>
-                                    <td class="c-normal_cell"><p>開場</p></td>
-                                </tr>
-                                <tr>
-                                    <td class="c-time_cell">10:00</td>
-                                    <td class="c-normal_cell">
-                                        <p>よこすか海軍カレーインプットプチセミナー</p>
-                                    </td>
-                                    <td class="c-normal_cell">
-                                        <p>アプリ開発ミニセミナー「アプリのユーザーインターフェースとモックの簡単な作り方」</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="c-time_cell">10:30</td>
-                                    <td class="c-normal_cell">
-                                        <p>横須賀フィールドワーク（よこすかポートマーケット〜三笠公園〜記念艦三笠を予定）</p>
-                                    </td>
-                                    <td class="c-normal_cell">
-                                        <p>ハッカソン開始</p>
-                                        <p>希望される方と横須賀フィールドワーク（横須賀の谷戸〜ドブ板〜ヴェルニー公園を予定）</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="c-time_cell">11:30</td>
-                                    <td class="c-normal_cell c-bk_light_blue">
-                                        <p>よこすか海軍カレーランチタイム<br>（よこすか海軍カレーガイドマップをプレゼントいたします）<p>
-                                    </td>
-                                    <td class="c-normal_cell c-bk_light_blue">
-                                        <p>よこすか海軍カレーランチタイム<br>（よこすか海軍カレーガイドマップをプレゼントいたします）<p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="c-time_cell c-td_height01">13:00</td>
-                                    <td class="c-normal_cell">
-                                        <p>アイデアソン（※1）</p>
-                                    </td>
-                                    <td class="c-normal_cell" rowspan="3">
-                                        <p>ハッカソン（※2）</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="c-time_cell">15:30</td>
-                                    <td class="c-normal_cell">
-                                        <p>アプリ開発ミニセミナー「スマートフォンアプリのビジネスモデル」</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="c-time_cell">16:00</td>
-                                    <td class="c-normal_cell">
-                                        <p>発表会</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="c-time_cell">17:00</td>
-                                    <td class="c-normal_cell">
-                                        <p>1日目終了</p>
-                                    </td>
-                                    <td class="c-normal_cell">
-                                        <p>発表会</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="c-time_cell c-td_height02">18:00</td>
-                                    <td class="c-normal_cell"></td>
-                                    <td class="c-normal_cell c-bk_dark_blue">
-                                        <p>懇親会<br>（有志の方。会費制）</p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        </div>
-                        <div class="about__schedule__caution">
-                            <p>
-                                ※1<br>
-                                アイデアソンとは：同じテーマについて皆で集中的にアイデアを出し合うことにより、これまで得られなかった新たな発想を創出しようとする取り組み。
-                            </p>
-                            <p>
-                                ※2<br>
-                                ハッカソンとは：“ハック”（hack）とマラソン（marathon）を組み合わせた米IT業界発祥の造語。プログラマーやデザイナーから成る複数の参加チームが、マラソンのように、数時間から数日間の与えられた時間の中で企画・デザイン・プログラミングに没頭し、アイデアや成果を競い合う開発イベント。
-                            </p>
-                        </div>
-                    </section>
-                    <section class="about__access c-circle_wrapper">
-                        <h3 class="c-circle_wrpper_title">Access</h3>
-                        <p>ヴェルクよこすか<span>京浜急行「横須賀中央駅」から徒歩５分</span></p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.0249758568743!2d139.67203511558068!3d35.280505280289695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60183ff59180eac1%3A0x2c78757b69e65689!2z44CSMjM4LTAwMDYg56We5aWI5bed55yM5qiq6aCI6LOA5biC5pel44Gu5Ye655S677yR5LiB55uu77yVIOODtOOCp-ODq-OCr-OCiOOBk-OBmeOBiw!5e0!3m2!1sja!2sjp!4v1451892814834" width="852" height="252" allowfullscreen></iframe>
-                        <a class="c-button_base c-button02 c-button_small02 about__access_gmap_link" href="https://www.google.co.jp/maps/place/%E3%80%92238-0006+%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E9%A0%88%E8%B3%80%E5%B8%82%E6%97%A5%E3%81%AE%E5%87%BA%E7%94%BA%EF%BC%91%E4%B8%81%E7%9B%AE%EF%BC%95+%E3%83%B4%E3%82%A7%E3%83%AB%E3%82%AF%E3%82%88%E3%81%93%E3%81%99%E3%81%8B/@35.2805053,139.6720351,17z/data=!3m1!4b1!4m2!3m1!1s0x60183ff59180eac1:0x2c78757b69e65689" target="_blank">Google Mapで見る</a>
-                    </section>
-                    <div class="about__apply_wrap">
-                        <a class="c-button_base c-button03 c-button_big about__apply" href="http://salon-yrp.net/form/mail.cgi?id=yokosukavalleyh" target="_blank">お申込みは専用ウェブページから</a>
+
+        <div class="clearfix c-section_inner">
+            <div id="report" class="c-two_left">
+                <a class="tournament_detail_news tournament_detail_news_report clearfix" href="report/kanazawaku/">
+                    <div class="tournament_detail_news_img c-two_left"><img src="images/news_image01.jpg" alt="金沢区ハッカソン"></div>
+                    <dl class="c-two_right">
+                        <dt class="tournament_detail_news_date">■2015.12.10</dt>
+                        <dd class="tournament_detail_news_text">12/5 - 12/6 金沢区ハッカソン＠八景島客船ターミナル<br>レポートを公開しました</dd>
+                    </dl>
+                </a>
+            </div>
+            <div class="c-two_right">
+                <a class="tournament_detail_news tournament_detail_news_champion clearfix" href="#total_tournament">
+                    <div class="tournament_detail_news_img c-two_left"><img src="images/hackathon_icon.png" alt="総合大会"></div>
+                    <dl class="c-two_right">
+                        <dt class="tournament_detail_news_date">■2016.01.08</dt>
+                        <dd class="tournament_detail_news_text">
+                            総合大会開催決定！<br>
+                            鎌倉・横須賀・横浜3市連携ハッカソン<br>
+                            成果発表会＆フューチャーセッション<!--<span>はこちら</span>--></dd>
+                    </dl>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="tournament_detail__blue">
+            <section id="huck_detail" class="c-section_inner">
+                <h2><img src="images/yokosuka_title.png" alt="YOKOSUKA × YOKOHAMA"></h2>
+                <section class="tournament_detail__schedule">
+                    <div class="c-circle_wrapper">
+                    <h3 class="c-circle_wrpper_title">Schedule</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="tournament_detail__schedule_time">timeline</td>
+                                <td class="tournament_detail__schedule_day1 c-table_title">1.23<span>SAT</span></td>
+                                <td class="tournament_detail__schedule_day2 c-table_title">1.24<span>SUN</span></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="c-time_cell">9:45</td>
+                                <td class="c-normal_cell"><p>開場</p></td>
+                                <td class="c-normal_cell"><p>開場</p></td>
+                            </tr>
+                            <tr>
+                                <td class="c-time_cell">10:00</td>
+                                <td class="c-normal_cell c-bk_light_blue">
+                                    <p>よこすか海軍カレーインプットプチセミナー</p>
+                                </td>
+                                <td class="c-normal_cell c-bk_light_blue">
+                                    <p>アプリ開発ミニセミナー「アプリのユーザーインターフェースとモックの簡単な作り方」</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="c-time_cell">10:30</td>
+                                <td class="c-normal_cell c-bk_light_blue">
+                                    <p>横須賀フィールドワーク（よこすかポートマーケット〜三笠公園〜記念艦三笠を予定）</p>
+                                </td>
+                                <td class="c-normal_cell c-bk_light_blue">
+                                    <p>ハッカソン開始</p>
+                                    <p>希望される方と横須賀フィールドワーク（横須賀の谷戸〜ドブ板〜ヴェルニー公園を予定）</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="c-time_cell">11:30</td>
+                                <td class="c-normal_cell">
+                                    <p>よこすか海軍カレーランチタイム<br>（よこすか海軍カレーガイドマップをプレゼントいたします）<p>
+                                </td>
+                                <td class="c-normal_cell">
+                                    <p>よこすか海軍カレーランチタイム<br>（よこすか海軍カレーガイドマップをプレゼントいたします）<p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="c-time_cell c-td_height01">13:00</td>
+                                <td class="c-normal_cell c-bk_light_blue">
+                                    <p>アイデアソン（※1）</p>
+                                </td>
+                                <td class="c-normal_cell c-bk_light_blue" rowspan="3">
+                                    <p>ハッカソン（※2）</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="c-time_cell">15:30</td>
+                                <td class="c-normal_cell c-bk_light_blue">
+                                    <p>アプリ開発ミニセミナー「スマートフォンアプリのビジネスモデル」</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="c-time_cell">16:00</td>
+                                <td class="c-normal_cell c-bk_light_blue">
+                                    <p>発表会</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="c-time_cell">17:00</td>
+                                <td class="c-normal_cell">
+                                    <p>1日目終了</p>
+                                </td>
+                                <td class="c-normal_cell c-bk_light_blue">
+                                    <p>発表会</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="c-time_cell c-td_height02">18:00</td>
+                                <td class="c-normal_cell"></td>
+                                <td class="c-normal_cell c-bk_dark_blue">
+                                    <p>懇親会<br>（有志の方。会費制）</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                     </div>
+                    <div class="tournament_detail__schedule__caution">
+                        <p>
+                            ※1<br>
+                            アイデアソンとは：同じテーマについて皆で集中的にアイデアを出し合うことにより、これまで得られなかった新たな発想を創出しようとする取り組み。
+                        </p>
+                        <p>
+                            ※2<br>
+                            ハッカソンとは：“ハック”（hack）とマラソン（marathon）を組み合わせた米IT業界発祥の造語。プログラマーやデザイナーから成る複数の参加チームが、マラソンのように、数時間から数日間の与えられた時間の中で企画・デザイン・プログラミングに没頭し、アイデアや成果を競い合う開発イベント。
+                        </p>
+                    </div>
+                </section>
+                <section class="tournament_detail__access c-circle_wrapper">
+                    <h3 class="c-circle_wrpper_title">Access</h3>
+                    <p>ヴェルクよこすか<span>京浜急行「横須賀中央駅」から徒歩５分</span></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.0249758568743!2d139.67203511558068!3d35.280505280289695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60183ff59180eac1%3A0x2c78757b69e65689!2z44CSMjM4LTAwMDYg56We5aWI5bed55yM5qiq6aCI6LOA5biC5pel44Gu5Ye655S677yR5LiB55uu77yVIOODtOOCp-ODq-OCr-OCiOOBk-OBmeOBiw!5e0!3m2!1sja!2sjp!4v1451892814834" width="852" height="252" allowfullscreen></iframe>
+                    <a class="c-button_base c-button02 c-button_small02 tournament_detail__access_gmap_link" href="https://www.google.co.jp/maps/place/%E3%80%92238-0006+%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E9%A0%88%E8%B3%80%E5%B8%82%E6%97%A5%E3%81%AE%E5%87%BA%E7%94%BA%EF%BC%91%E4%B8%81%E7%9B%AE%EF%BC%95+%E3%83%B4%E3%82%A7%E3%83%AB%E3%82%AF%E3%82%88%E3%81%93%E3%81%99%E3%81%8B/@35.2805053,139.6720351,17z/data=!3m1!4b1!4m2!3m1!1s0x60183ff59180eac1:0x2c78757b69e65689" target="_blank">Google Mapで見る</a>
+                </section>
+                <div class="tournament_detail__apply_wrap">
+                    <a class="c-button_base c-button03 c-button_big tournament_detail__apply" href="http://salon-yrp.net/form/mail.cgi?id=yokosukavalleyh" target="_blank">お申込みは専用ウェブページから</a>
+                </div>
+            </section>
+            <div class="tournament_detail__description c-section_inner">
+                <div class="clearfix">
+                    <section class="tournament_detail__description_theme c-two_left">
+                        <h3 class="c-circle_title c-display_block_span"><span>カレー×ハッカソンで</span><span>横須賀の歴史・文化を</span><span>知ろう！ひろめよう！</span></h3>
+                        <p>
+                            横須賀名物「よこすか海軍カレー」にちなんで、カレーという国民食をテーマにしたハッカソンを開催いたします。ご当地カレーナンバー１の「よこすか海軍カレー」を通じて、横須賀の歴史・文化に触れて、横須賀の魅力を見つけてみよう！
+                        </p>
+                    </section>
+                    <section class="tournament_detail__description_entry c-two_right">
+                        <h3 class="c-circle_title"><span>アーバンデータチャレンジ</span><span>との連携</span></h3>
+                        <p>
+                            参加作品は全国規模で開催中の地域オープンデータをテーマにしたコンテスト<a class="tournament_detail__description_entry__link_urban" href="http://urbandata-challenge.jp/" target="_blank">「アーバンデータチャレンジ」</a>へエントリーすることができます。アーバンデータチャレンジについて、詳しくはウェブサイトをご覧ください。
+                        </p>
+                    </section>
                 </div>
             </div>
-            <div class="about__description c-section_inner">
-<!--
-                <div class="clearfix">
-                    <section class="about__description_seminor c-two_left">
-                        <h3 class="c-circle_title"><span>LODチャレンジと連携</span><span>SPARQLミニ講座を開催！</span></h3>
-                        <p>
-                            老舗のオープンデータコンテストLODチャレンジと連携して、話題の技術「SPARQL」のミニ講座を開催します。<br>
-                            SPARQLとは、オープンデータの公開形式の一つRDFのためのクエリ言語です。<br>
-                            今回のハッカソンのために実際の金沢区のオープンデータが入ったSPARQLエンドポイントを用意しました。
-                        </p>
-                    </section>
-                    <section class="about__description_demo c-two_right">
-                        <h3 class="c-circle_title"><span>ビーコンマネージメントサービスを展開</span><span>Tangerine,Inc も参戦！</span></h3>
-                        <p>当日はビーコンを無償貸出、サービスのデモンストレーションを通して、金沢区のオープンデータを活用するイメージを広げます。</p>
-                    </section>
-                </div>
--->
-                <div class="clearfix">
-                    <section class=" c-two_left">
-                        <h3 class="c-title">アーバンデータチャレンジとの連携</h3>
-                        <p>
-                            参加作品は全国規模で開催中の地域オープンデータをテーマにしたコンテスト<a href="http://urbandata-challenge.jp/" target="_blank">「アーバンデータチャレンジ」</a>へも同時にエントリーされます。
-                        </p>
-                    </section>
-                    <section class=" c-two_right">
-                        <h3 class="c-title">Code for YOKOHAMAについて</h3>
-                        <p>
-                            参加する人々それぞれが持つ技術やスキルを地域課題の解決、快適な暮らしの実現に活かすことを目的に集まったボランティア団体です。<br>
-                            学生、教育機関、企業、NPOなどさまざまな人々が参加して多様な活動を展開しています。<br>
-                            どなたでも参加することができます。詳しくは<a href="http://code4.yokohama">Code for YOKOHAMA</a>をご覧ください。
-                        </p>
-                    </section>
-                </div>
+            <div id="sponsors" class="c-section_inner">
+                <a class="sponsors__yokosuka_balley_logo" href="http://www.yokosuka-valley.com/" target="_blank"><img src="images/yokosuka_valley_logo.png" alt="ヨコスカバレー構想実現委員会"></a>
+                <ul>
+                    <li>
+                        <dl>
+                            <dt class="sponsors__category">主催：</dt>
+                            <dd class="sponsors__name"><a href="http://www.yokosuka-valley.com/" target="_blank">ヨコスカバレー構想実現委員会</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="sponsors__category">協力：</dt>
+                            <dd class="sponsors__name"><a href="http://kaigun-curry.net/" target="_blank">カレーの街よこすか事業者部会</a></dd>
+                        </dl>
+                    </li>
+                </ul>
             </div>
+        </div>
+    </div>
+    <div id="total_tournament">
+        <section class="c-section_inner">
+            <h2 class="total_tournament__title c-display_block_span"><span>鎌倉・横須賀・横浜3市連携ハッカソン</span><span>成果発表会＆フューチャーセッション</span></h2>
+            <p class="total_tournament__description">
+                カマコンバレー（鎌倉）・Code for YOKOHAMA（横浜）・ヨコスカバレー（横須賀）のテック系3団体では連携してハッカソンを展開してきました。結果、多数の市民が参加、素晴らしい作品が数多く生み出されました。本イベントでは3市それぞれの大会から選出された受賞者を一同に集め最優秀作品を決定します。また、今回の一連の取り組みをきっかけに、今後3市のシビックテックが協働で取り組むべきアイディアを話会うフューチャーセッションを実施します。シビックテックの交流を促し、地域の境界を越えなければならない課題解決にチャレンジします。
+            </p>
+            <section class="total_tournament__period total_tournament__detail">
+                <h3>詳細</h3>
+                <table>
+                    <tbody>
+                    <tr>
+                        <th>日時</th>
+                        <td>2月20日（土）13時開始、17時終了予定（12時30分開場）</td>
+                    </tr>
+                    <tr>
+                        <th>参加資格</th>
+                        <td>どなたでも参加していただけます。※小学生は保護者同伴のうえご参加ください</td>
+                    <tr>
+                        <th>募集人数</th>
+                        <td>100名
+                        </td>
+                    <tr>
+                        <th>参加費</th>
+                        <td>無料</td>
+                    <tr>
+                        <th>会場</th>
+                        <td>横浜市立大学金沢八景キャンパス　理学系研究棟2F</td>
+                    <tr>
+                        <th>参加申し込み方法</th>
+                        <td><a href="http://peatix.com/event/140655" target="_blank">http://peatix.com/event/140655</a></td>
+                    <tr>
+                        <th>ウェブサイト</th>
+                        <td><a href="http://code4.yokohama/hackathon" target="_blank">http://code4.yokohama/hackathon</a></td>
+                    <tr>
+                        <th>主催</th>
+                        <td>Code for YOKOHAMA、カマコンバレー、ヨコスカバレー構想実現委員会</td>
+                    <tr>
+                        <th>共催</th>
+                        <td>横浜市政策局、横浜市金沢区</td>
+                    <tr>
+                        <th>後援（調整中）</th>
+                        <td>アーバンデータチャレンジ実行員会、LODチャレンジ実行委員会、<br>一般社団法人リンクデータ、横須賀市、鎌倉市</td>
+                    <tr>
+                        <th>メディアパートナー</th>
+                        <td>湘南経済新聞、横須賀経済新聞、ヨコハマ経済新聞</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="total_tournament__period total_tournament__program">
+                <h3>プログラム</h3>
+                <div class="total_tournament__program_text">
+                    <ul class="c-list_style">
+                        <li>開会の挨拶</li>
+                        <li>主旨・経緯説明</li>
+                        <li>プレゼンテーション（各都市選出による優秀作品をプレゼンします）</li>
+                        <li>ワークショップ（3市のシビックテックが連携するアイディアを参加者全員で考えます）</li>
+                        <li>審査・表彰</li>
+                        <li>講評</li>
+                    </ul>
+                    <p>※当日は終了後に懇親会を予定しております。ぜひご参加ください</p>
+                    <p>※プログラムは予告なく変更になることもあります、予めご了承ください</p>
+                    <img src="images/trophy.png" alt="トロフィー">
+                </div>
+            </section>
+            <section class="total_tournament__period total_tournament__election">
+                <h3>3市選出作品紹介</h3>
+                <div class="total_tournament__election__city">
+                    <h4 class="total_tournament__election__title">横浜市金沢区大会選出</h4>
+                    <section class="clearfix">
+                        <div class="total_tournament__election__team c-two_left">
+                            <h5 class="total_tournament__election__team_name c-display_block_span"><span>チーム名：そうかも</span><span>アプリ名：「助けられるかも」</span></h5>
+                            <p class="total_tournament__election__team_description">オープンデータとbeaconを活用し地域における災害時の避難ルート、安否情報を必要とする人や、介護などを必要とする、疾病のある高齢者や妊婦など「困っている人」の生命リスク時に助けを受けるのに必要な情報を届けるシステム。（例：倒れた高齢者の位置情報がサーバーに行く→サーバーから近くの人の携帯電話に通知が行く→本人が自分も名前も言えない状況でもあらかじめ登録している緊急連絡先に助けを求められる）</p>
+
+                        </div>
+                        <img class="c-two_right" src="images/kanazawa_team01.jpg" alt="チーム：そうかも">
+                    </section>
+                    <section class="clearfix">
+                        <div class="total_tournament__election__team c-two_left">
+                            <h5 class="total_tournament__election__team_name c-display_block_span"><span>チーム名：イセキホリダー（岸本さん）</span><span>アプリ名：「イセキホリダー」</span></h5>
+                            <p class="total_tournament__election__team_description">「オープンデータ」×「カセキホリダー」×「Ingress」×「遺跡から学ぶ」から、横浜の史跡がマップ上で一目で認識できる。ひいては、地域活性を目指すアプリ。Google Mapと連携し経路検索やスタンプラリー（行った遺跡のスタンプが入手できる）などの機能がある。地元の人がターゲット。</p>
+                        </div>
+                        <img class="c-two_right" src="images/kanazawa_team02.jpg" alt="チーム：イセキホリダー">
+                    </section>
+                </div>
+                <div class="total_tournament__election__city">
+                    <h4 class="total_tournament__election__title">横須賀大会選出：1/23 - 1/24</h4>
+                </div>
+                <div class="total_tournament__election__city">
+                    <h4 class="total_tournament__election__title">鎌倉大会選出：2月上旬決定予定</h4>
+                </div>
+            </section>
+            <!--
+            <section class="total_tournament__period total_tournament__judges">
+                <h3>審査員紹介<span>（調整中）</span></h3>
+                <ul class="c-list_style">
+                    <li>國原 章弘（横浜市金沢区長）</li>
+                    <li>長谷 川孝（横浜市政策局調整担当理事）</li>
+                    <li>鎌倉市より</li>
+                    <li>横須賀市より</li>
+                </ul>
+            </section>
+            -->
+            <footer class="total_tournament__period total_tournament__contact">
+                <!--<h3>お問い合わせ</h3>-->
+                <a class="total_tournament__contact_link" href="/"><img src="images/logo_footer.png" alt="code for YOKOHAMA"></a>
+                <p>mail：<a href="mailto:event@code4.yokohama">event@code4.yokohama</a></p>
+                <p>website：<a href="http://code4.yokohama/hackathon" target="_blank">http://code4.yokohama/hackathon</a></p>
+            </footer>
         </section>
     </div>
-
-    <div id="sponsors">
-        <ul class="c-section_inner">
-            <li>
-                <dl class="clearfix">
-                    <dt class="sponsors__title">■主催：</dt>
-                    <dd><a href="http://code4.yokohama/" target="_blank">Code for YOKOHAMA</a></dd>
-                </dl>
-            </li>
-            <li>
-                <dl class="clearfix">
-                    <dt class="sponsors__title">■共催：</dt>
-                    <dd><a href="http://www.city.yokohama.lg.jp/seisaku/" target="_blank">横浜市政策局</a>、<a href="http://www.city.yokohama.lg.jp/kanazawa/" target="_blank">横浜市金沢区</a>、<a href="http://aigid.jp/?page_id=1175" target="_blank">アーバンデータチャレンジ2015実行委員会</a>、<a href="http://www.yokohama-cu.ac.jp/" target="_blank">横浜市立大学</a>、<a href="http://univ.kanto-gakuin.ac.jp/" target="_blank">関東学院大学</a></dd>
-                </dl>
-            </li>
-            <li>
-                <dl class="clearfix">
-                    <dt class="sponsors__title">■協賛：</dt>
-                    <dd><a href="http://www.seaparadise.co.jp/info/company.php" target="_blank">（株）横浜八景島</a>、<a href="http://burton-store.jp/outlet/" target="_blank">BURTON OUTLET STORE YOKOHAMA</a></dd>
-                </dl>
-            </li>
-            <li>
-                <dl class="clearfix">
-                    <dt class="sponsors__title">■協力：</dt>
-                    <dd><a href="http://info-lounge.jp/" target="_blank">インフォ・ラウンジ合同会社</a>、<a href="http://tangerine.io/" target="_blank">Tangerine,Inc</a> 、<a href="http://lodc.jp/2015/concrete5/" target="_blank">LODチャレンジJapan2015実行委員会</a></dd>
-                </dl>
-            </li>
-            <li>
-                <dl class="clearfix">
-                    <dt class="sponsors__title">■後援：</dt>
-                    <dd><a href="http://linkdata.org/" target="_blank">一般社団法人リンクデータ</a></dd>
-                </dl>
-            </li>
-            <li>
-                <dl class="clearfix">
-                    <dt class="sponsors__title">■メディアパートナー：</dt>
-                    <dd><a href="http://shonan.keizai.biz/" target="_blank">湘南経済新聞</a>、<a href="http://yokosuka.keizai.biz/" target="_blank">横須賀経済新聞</a>、<a href="http://www.hamakei.com/" target="_blank">ヨコハマ経済新聞</a></dd>
-                </dl>
-            </li>
-        </ul>
-    </div>
-
-    <footer id="footer">
-        <a class="footer__link" href="/"><img src="images/logo_footer.png" alt="code for YOKOHAMA"></a>
-    </footer>
 
 </body>
 </html>

@@ -167,7 +167,7 @@ body {
 
 .c-circle_wrapper {
     background-color: #fff;
-    border: 4px solid #000;
+    border: 4px solid #E5E3D1;
     border-radius: 20px;
 }
 
@@ -176,8 +176,27 @@ body {
     font-size: 34px;
     text-align: center;
     line-height: 64px;
-    border-bottom: 4px solid #000;
+    border-bottom: 4px solid #E5E3D1;
 }
+
+.c-two_left {
+    float: left;
+}
+
+.c-two_right {
+    float: right;
+}
+
+.c-display_block_span span {
+    display: block;
+}
+
+.c-list_style li {
+    line-height: 1.8em;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
 
 
 /*--------------------------------------------------
@@ -225,6 +244,7 @@ body {
     font-size:18px;
     text-align: left;
     background-color: rgba(225,225,225,0.75);
+    border-radius: 8px;
 }
 
 .header__keyvisual_credit {
@@ -276,58 +296,34 @@ body {
 
 
 /*--------------------------------------------------
-    #news
---------------------------------------------------*/
-.news__box {
-    display: block;
-    width: 750px;
-    height: 120px;
-    margin: 30px auto 40px;
-    padding: 24px 24px 24px 144px;
-    color: #333;
-    text-decoration: none;
-    background: url(../images/news_image01.jpg) no-repeat left center;
-    border: 1px solid #898989;
-    box-sizing: border-box;
-}
-
-.news__box_date {
-    margin-bottom: 8px;
-}
-
-.news__box_text {
-}
-
-
-/*--------------------------------------------------
-    #about
+    #tournament_detail
 --------------------------------------------------*/
 
 /*-- overview --*/
 
-.about__overview_three_box {
+.tournament_detail__overview_three_box {
     position: relative;
     float: left;
 }
 
-.about__overview_three_box:last-child {
+.tournament_detail__overview_three_box:last-child {
     margin-right: 0;
 }
 
-.about__overview_title {
+.tournament_detail__overview_title {
     height: 240px;
     padding-top: 56px;
     text-align: center;
 }
 
-.about__overview_title img {
+.tournament_detail__overview_title img {
 }
 
-.about__overview th {
+.tournament_detail__overview th {
     display: none;
 }
 
-.about__overview .c-overview_box {
+.tournament_detail__overview .c-overview_box {
     position: relative;
     width: 286px;
     height: 400px;
@@ -336,73 +332,113 @@ body {
     text-align: center;
 }
 
-.about__overview .about__overview_yokohama {
+.tournament_detail__overview .tournament_detail__overview_yokohama {
     background-color: #357ee0;
 }
 
-.about__overview .about__overview_yokosuka {
+.tournament_detail__overview .tournament_detail__overview_yokosuka {
     background-color: #000d50;
 }
 
-.about__overview .about__overview_kamakura {
+.tournament_detail__overview .tournament_detail__overview_kamakura {
     background-color: #6a8465;
 }
 
-.about__overview_date {
+.tournament_detail__overview_date {
     font-size: 30px;
     line-height: 30px;
 }
 
-.about__overview_place {
+.tournament_detail__overview_place {
     height: 50px;
     padding-top: 8px;
     font-size: 18px;
     line-height: 20px;
 }
 
-.about__overview_apply {
+.tournament_detail__overview_apply {
     width: 180px;
     padding-left: 30px;
-    font-size: 18px;
+    font-size: 14px;
     background-position: 130px center;
 }
 
-.about__overview_soon {
+.tournament_detail__overview_soon {
     width: 180px;
     font-size: 18px;
     text-align: center;
     background-position: 130px center;
 }
 
-.about__overview_champion_wrap {
-    background: url(../images/about__champ_bk.jpg) repeat-x;
+
+/*-- .tournament_detail_report --*/
+
+.tournament_detail_news {
+    display: block;
+    width: 420px;
+    height: 120px;
+    margin: 40px auto;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #898989;
+    box-sizing: border-box;
 }
 
-.about__overview_champion {
-    width: 550px;
-    height: 400px;
-    margin: 0 auto;
-    padding-left: 250px;
-    padding-right: 24px;
-    background: url(../images/about04.png) no-repeat left center;
+.tournament_detail_news_img {
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    border-right: 1px solid #898989;
 }
 
-.about__overview_champion h3 {
+.tournament_detail_news_champion img {
+    width: 100px;
+    padding-top: 10px;
+}
+
+.tournament_detail_news dl {
+    width: 290px;
+    padding: 14px 8px;
+}
+
+/*.tournament_detail_news_report {
+    background: url(../images/news_image01.jpg) no-repeat left center;
+}
+
+.tournament_detail_news_champion {
+    background: url(../images/hackathon_icon.png) no-repeat left center;
+}*/
+
+.tournament_detail_news_date {
+    margin-bottom: 8px;
+}
+
+/*.tournament_detail__champion h3 {
     margin-bottom: 24px;
-    padding-top: 110px;
+    padding-top: 10px;
     font-size: 36px;
     font-weight: bolder;
-    background: url(../images/about_04_trophy.png) no-repeat 200px bottom;
+    background: url(../images/trophy_s.png) no-repeat 200px 8px;
 }
 
-.about__overview_champion h3 span {
-    display: block;
-}
-
-.about__overview_champion p {
+.tournament_detail__champion_text {
     font-size: 18px;
-    line-height: 24px;
 }
+
+.tournament_detail__champion_detail {
+    width: 100%;
+    margin-top: 24px;
+    padding-left: 30px;
+    font-size: 18px;
+    background-position: 230px center;
+    background-color: #4EA2ED;
+}
+
+.tournament_detail__champion_detail a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}*/
 
 /*-- for end hackathon styles --*/
 .overview_end {
@@ -424,10 +460,6 @@ body {
     text-align: center;
     background-color: #fff;
 }
-.overview_end .about__overview_apply {
-    font-size: 14px;
-    font-weight: normal;
-}
 .overview_end__link {
     position: absolute;
     top: 320px;
@@ -435,52 +467,51 @@ body {
     margin-left: -90px;
     padding-left: 14px;
     font-size: 14px;
-    font-weight: normal;
 }
 /*-- for end hackathon styles --*/
 
 
-.about__blue {
-    background-color: #357ee0;
+.tournament_detail__blue {
+    background-color: #000d50;
 }
 
-.about__blue h2 {
-    padding: 60px 0 40px;
+.tournament_detail__blue h2 {
+    padding: 80px 0 40px;
     text-align: center;
 }
 
 
 /*-- schedule --*/
 
-.about__schedule {
+.tournament_detail__schedule {
     margin-bottom: 64px;
 }
 
-.about__schedule_day1 {
+.tournament_detail__schedule_day1 {
     width: 45%;
 }
 
-.about__schedule_day2 {
+.tournament_detail__schedule_day2 {
     width: 45%;
 }
 
-.about__schedule_time {
+.tournament_detail__schedule_time {
     width: 10%;
     padding-bottom: 8px;
     color: #fff;
     text-align: center;
     vertical-align: bottom;
     background-color: #01428c;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #E5E3D1;
 }
 
-.about__schedule tbody td {
+.tournament_detail__schedule tbody td {
 }
-.about__schedule tbody tr:last-child td {
+.tournament_detail__schedule tbody tr:last-child td {
     border-bottom: none;
 }
 
-.about__schedule .c-table_title {
+.tournament_detail__schedule .c-table_title {
     padding: 12px 0 8px;
     font-size: 50px;
     line-height: 50px;
@@ -489,77 +520,78 @@ body {
     border-bottom: 2px solid #01428c;
 }
 
-.about__schedule .c-table_title span {
+.tournament_detail__schedule .c-table_title span {
     margin-left: 12px;
     font-size: 30px;
     line-height: 30px;
 }
 
-.about__schedule .c-time_cell {
+.tournament_detail__schedule .c-time_cell {
     color: #fff;
     text-align: center;
     background-color: #01428c;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #E5E3D1;
 }
 
-.about__schedule .c-normal_cell {
+.tournament_detail__schedule .c-normal_cell {
     padding: 4px 16px;
-    border-bottom: 2px dashed #01428c;
+    border-bottom: 1px dashed #01428c;
 }
 
-.about__schedule .c-td_height01 {
+.tournament_detail__schedule .c-td_height01 {
     height: 196px;
 }
 
-.about__schedule .c-td_height02 {
+.tournament_detail__schedule .c-td_height02 {
     height: 56px;
     border-radius: 0 0 0 15px;
 }
 
-.about__schedule .c-bk_light_blue {
+.tournament_detail__schedule .c-bk_light_blue {
     background-color: #aee2f2;
 }
 
-.about__schedule .c-bk_dark_blue {
+.tournament_detail__schedule .c-bk_dark_blue {
     background-color: #4ea2ed;
     border-radius: 0 0 15px 0;
 }
 
-.about__schedule tbody tr td:nth-child(2n) {
+.tournament_detail__schedule tbody tr td:nth-child(2n) {
     border-right: 2px solid #01428c;
 ;
 }
 
-.about__schedule tbody td ul {
+.tournament_detail__schedule tbody td ul {
     padding-left: 32px;
 }
-.about__schedule tbody td li {
+.tournament_detail__schedule tbody td li {
     list-style-type: disc;
 }
 
-.about__schedule__caution {
+.tournament_detail__schedule__caution {
     margin: 16px 32px 0;
+    color: #fff;
 }
 
 /*-- access --*/
 
-.about__access {
+.tournament_detail__access {
     position: relative;
     height:508px;
 }
 
-.about__access > p {
+.tournament_detail__access > p {
     padding: 24px 0;
     font-size: 25px;
     text-align: center;
 }
 
-.about__access > p > span {
+.tournament_detail__access > p > span {
     padding-left: 24px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
-.about__access_gmap_link {
+.tournament_detail__access_gmap_link {
     position: absolute;
     right: 16px;
     bottom: 24px;
@@ -569,66 +601,63 @@ body {
     background-position: 160px center;
 }
 
+/*-- apply button --*/
 
-.about__apply_wrap {
-    padding: 36px 0 72px;
+.tournament_detail__apply_wrap {
+    padding: 36px 0 132px;
     text-align: center;
 }
 
-.about__apply {
+.tournament_detail__apply {
     width: 460px;
     padding-left: 40px;
     font-size: 21px;
     background-position: 380px center;
 }
 
-
 /*-- description --*/
 
-.about__description {
-    padding-top: 60px;
+.tournament_detail__description {
+    margin-bottom: 60px;
 }
 
-.about__description .c-title {
-    color: #01428c;
-    font-size: 30px;
-    line-height: 40px;
-}
-
-.about__description .c-circle_title {
+.tournament_detail__description .c-circle_title {
     height: 124px;
-    padding-left: 136px;
-    color: #01428c;
-    font-size: 27px;
+    padding-left: 128px;
+    color: #AEE2F2;
+    font-size: 24px;
     letter-spacing: -0.05em;
     background-repeat: no-repeat;
     background-position: center left;
-    background-size: 118px;
 }
 
-.about__description p {
+.tournament_detail__description .c-circle_title span {
+    line-height: 40px;
+}
+
+.tournament_detail__description p {
     margin-top: 24px;
-    margin-bottom: 60px;
-    font-size: 14px;
+    color: #fff;
+    font-size: 16px;
     line-height: 24px;
 }
 
-.about__description_seminor h3 {
-    background-image: url(../images/seminor_logo.png);
+.tournament_detail__description_theme h3 {
+    background-image: url(../images/theme_logo.png);
 }
 
-.about__description_demo h3 {
-    background-image: url(../images/demo_logo.png);
+.tournament_detail__description_entry h3 {
+    padding-top: 20px;
+    background-image: url(../images/entry_logo.png);
+}
+.tournament_detail__description_entry__link_urban {
+    color: #fff;
+    text-decoration: underline;
 }
 
-.about__description .c-two_left {
+.tournament_detail__description .c-two_left,
+.tournament_detail__description .c-two_right {
     width: 48%;
-    float: left;
-}
-
-.about__description .c-two_right {
-    width: 48%;
-    float: right;
 }
 
 .back_button {
@@ -636,43 +665,165 @@ body {
     text-align: right;
 }
 
-
-/*--------------------------------------------------
-    #sponsors
---------------------------------------------------*/
-
 #sponsors {
-    padding: 30px 0;
-    background-color: #4ea2ed;
-}
-
-#sponsors a {
-    color: #333 ;
-}
-
-.sponsors__title {
-    float: left;
-}
-
-
-/*--------------------------------------------------
-    #footer
---------------------------------------------------*/
-
-#footer {
+    padding-bottom: 60px;
     text-align: center;
 }
 
-.footer__link {
+.sponsors__yokosuka_balley_logo {
+    display: block;
+    margin-bottom: 24px;
+}
+
+.sponsors__category,
+.sponsors__name {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+}
+
+.sponsors__name a {
+    color: #fff;
+}
+
+
+/*--------------------------------------------------
+    #total_tournament
+--------------------------------------------------*/
+#total_tournament {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    font-size: 15px;
+    background: url(../images/about__champ_bk.jpg) repeat;
+}
+
+.total_tournament__title {
+    width: 750px;
+    margin: 0 auto 40px;
+    padding: 8px 0 8px 130px;
+    font-size: 35px;
+    background: url(../images/hackathon_icon_s.png) no-repeat left center ;
+}
+
+.total_tournament__description {
+    margin-bottom: 80px;
+    line-height: 1.8em;
+}
+
+.total_tournament__period {
+    margin-bottom: 80px;
+}
+
+.total_tournament__period:last-child {
+    margin-bottom: 40px;
+}
+
+.total_tournament__period h3 {
+    margin-bottom: 32px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.total_tournament__detail table tr:nth-child(odd) {
+    background-color: #AEE2F2;
+}
+.total_tournament__detail table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.total_tournament__detail table th,
+.total_tournament__detail table td {
+    padding: 10px 16px;
+}
+
+.total_tournament__detail table th {
+    width: 25%;
+}
+
+.total_tournament__program_text {
+    width: 630px;
+    margin: 0 auto 40px;
+    padding-right: 12px;
+}
+
+.total_tournament__program_text ul {
+    margin-bottom: 12px;
+}
+
+.total_tournament__program_text p {
+    font-size: 13px;
+}
+
+.total_tournament__program_text img {
+    display: block;
+    margin: 30px auto 0;
+}
+
+.total_tournament__election h3 {
+    margin-bottom: 40px;
+}
+
+.total_tournament__election__title {
+    margin-bottom: 36px;
+    padding-left: 8px;
+    font-size: 20px;
+    line-height:30px;
+    background-color: #AEE2F2;
+}
+
+.total_tournament__election__city {
+    margin-bottom: 40px;
+}
+
+.total_tournament__election__team {
+    width: 540px;
+    margin-bottom: 36px;
+}
+
+.total_tournament__election__team_name {
+    height: 73px;
+    margin-bottom: 16px;
+    padding-top: 6px;
+    padding-left: 16px;
+    font-size: 20px;
+    border-left: 16px solid #4EA2ED;
+}
+
+.total_tournament__election__team_description {
+    line-height:1.6em;
+}
+
+.total_tournament__judges h3 span {
+    font-size: 18px;
+}
+
+.total_tournament__judges ul {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.total_tournament__contact {
+    text-align: center;
+}
+
+.total_tournament__contact_link {
     display: block;
     height: 100px;
     line-height: 100px;
 }
 
-.footer__link img {
+.total_tournament__contact_link img {
     vertical-align: middle;
 }
 
+.total_tournament__contact dl {
+    width: 400px;
+}
+
+.total_tournament__contact dt,
+.total_tournament__contact dd {
+    display: inline-block;
+}
 
 
 /*--------------------------------------------------

@@ -155,7 +155,7 @@ body {
 
 .c-button03 {
     color: #fff;
-    background-image: url(../images/apply_btn03.png);
+    background-image: url(../images/apply_btn04.png);
     border-color: #fff;
 }
 
@@ -165,9 +165,16 @@ body {
     border-width: 3px;
 }
 
+.c-button05 {
+    color: #fff;
+    background-image: url(../images/apply_btn04.png);
+    border-color: #fff;
+    border-width: 3px;
+}
+
 .c-circle_wrapper {
     background-color: #fff;
-    border: 4px solid #E5E3D1;
+    border: 4px solid #000;
     border-radius: 20px;
 }
 
@@ -176,7 +183,7 @@ body {
     font-size: 34px;
     text-align: center;
     line-height: 64px;
-    border-bottom: 4px solid #E5E3D1;
+    border-bottom: 4px solid #000;
 }
 
 .c-two_left {
@@ -385,8 +392,8 @@ body {
 }
 
 .tournament_detail_news_img {
-    width: 120px;
-    height: 120px;
+    width: 119px;
+    height: 119px;
     text-align: center;
     border-right: 1px solid #898989;
 }
@@ -472,7 +479,7 @@ body {
 
 
 .tournament_detail__blue {
-    background-color: #000d50;
+    background-color: #6A8465;
 }
 
 .tournament_detail__blue h2 {
@@ -544,6 +551,11 @@ body {
 
 .tournament_detail__schedule .c-td_height02 {
     height: 56px;
+    /*border-radius: 0 0 0 15px;*/
+}
+
+.tournament_detail__schedule .c-td_height03 {
+    height: 30px;
     border-radius: 0 0 0 15px;
 }
 
@@ -557,7 +569,7 @@ body {
 }
 
 .tournament_detail__schedule tbody tr td:nth-child(2n) {
-    border-right: 2px solid #01428c;
+    /*border-right: 2px solid #01428c;*/
 ;
 }
 
@@ -604,7 +616,7 @@ body {
 /*-- apply button --*/
 
 .tournament_detail__apply_wrap {
-    padding: 36px 0 132px;
+    padding: 36px 0 90px;
     text-align: center;
 }
 
@@ -624,7 +636,8 @@ body {
 .tournament_detail__description .c-circle_title {
     height: 124px;
     padding-left: 128px;
-    color: #AEE2F2;
+    /*color: #AEE2F2;*/
+    color: #fff;
     font-size: 24px;
     letter-spacing: -0.05em;
     background-repeat: no-repeat;
@@ -633,10 +646,11 @@ body {
 
 .tournament_detail__description .c-circle_title span {
     line-height: 40px;
+    padding-top: 18px;
 }
 
 .tournament_detail__description p {
-    margin-top: 24px;
+    margin: 24px 0 30px;
     color: #fff;
     font-size: 16px;
     line-height: 24px;
@@ -647,7 +661,7 @@ body {
 }
 
 .tournament_detail__description_entry h3 {
-    padding-top: 20px;
+    padding-top: 40px;
     background-image: url(../images/entry_logo.png);
 }
 .tournament_detail__description_entry__link_urban {
@@ -657,7 +671,7 @@ body {
 
 .tournament_detail__description .c-two_left,
 .tournament_detail__description .c-two_right {
-    width: 48%;
+    /*width: 48%;*/
 }
 
 .back_button {
@@ -833,7 +847,15 @@ body {
     top: 60px;
     height: 630px;
     padding-top: 0;
+    /*background: url(../images/report_kanazawa/mv.jpg) no-repeat bottom center;*/
+}
+
+#report .header__keyword.report_kanazawa {
     background: url(../images/report_kanazawa/mv.jpg) no-repeat bottom center;
+}
+
+#report .header__keyword.report_yokosuka {
+    background: url(../images/report_yokosuka/mv.jpg) no-repeat bottom center;
 }
 
 #report .header__keyword_image {
@@ -964,6 +986,16 @@ body {
     font-size: 18px;
 }
 
+#report #sponsors ul.c-section_inner dl dt.sponsors__title,
+#report #sponsors ul.c-section_inner dl dd{
+    display: inline;
+}
+
+#report #footer{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 /*-- report common styles for parts --*/
 #report .c-text {
     font-size: 18px;
@@ -979,5 +1011,4 @@ body {
     vertical-align: top;
     background-color: #357ee0;
 }
-
 

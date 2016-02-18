@@ -858,6 +858,10 @@ body {
     background: url(../images/report_yokosuka/mv.jpg) no-repeat bottom center;
 }
 
+#report .header__keyword.report_kamakura {
+    background: url(../images/report_kamakura/mv.jpg) no-repeat bottom center;
+}
+
 #report .header__keyword_image {
     margin-top: 132px;
 }

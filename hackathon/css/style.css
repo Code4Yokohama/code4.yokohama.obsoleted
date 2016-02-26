@@ -862,8 +862,15 @@ body {
     background: url(../images/report_kamakura/mv.jpg) no-repeat bottom center;
 }
 
+#report .header__keyword.report_future {
+    background: url(../images/report_future/mv.jpg) no-repeat bottom center;
+}
+
 #report .header__keyword_image {
     margin-top: 132px;
+}
+#report .header__keyword_image02 {
+    margin-top: 60px;
 }
 
 #report .header__report_title {
@@ -908,8 +915,12 @@ body {
 #report_wrapper .report_box__text {
     margin-bottom: 60px;
 }
+#report_wrapper .report_box__text02 {
+    margin: 50px 0 60px;
+}
 
-#report_wrapper .photo_box__caption {
+#report_wrapper .photo_box__caption,
+.photo_box__caption {
     margin: 8px 0 38px;
     font-size: 13px;
     line-height: 13px;
@@ -940,7 +951,8 @@ body {
     margin-bottom: 24px;
 }
 
-#report_wrapper .award_wrapper {
+#report_wrapper .award_wrapper,
+#total_tournament .award_wrapper{
     margin-bottom: 120px;
 }
 
@@ -949,30 +961,41 @@ body {
     font-size: 30px;
     font-weight: bolder;
 }
-#report_wrapper .award__title {
+#report_wrapper .award__title,
+#total_tournament .award__title {
     height: 120px;
     margin-bottom: 10px;
     padding-left: 110px;
     background: url(../images/report_kanazawa/icon_award.png) no-repeat left center;
 }
 
-#report_wrapper .award__title.highest {
+#report_wrapper .award__title.highest,
+#total_tournament .award__title.highest {
     padding-left: 120px;
     background: url(../images/report_kanazawa/icon_h_award.png) no-repeat left center;
 }
 
-#report_wrapper .award__title span {
+#total_tournament .award__title.special {
+    padding-left: 120px;
+    margin-bottom: 40px;
+    background: url(../images/report_future/icon_award_special.png) no-repeat left center;
+}
+
+#report_wrapper .award__title span,
+#total_tournament .award__title span {
     display: block;
 }
 
-#report_wrapper .award__title .award__title_award {
+#report_wrapper .award__title .award__title_award,
+#total_tournament .award__title .award__title_award {
     margin-bottom: 12px;
     padding-top: 18px;
     font-size: 20px;
     line-height: 20px;
 }
 
-#report_wrapper .award__title .award__title_team {
+#report_wrapper .award__title .award__title_team,
+#total_tournament .award__title .award__title_team {
     font-size: 32px;
 }
 
@@ -1016,3 +1039,26 @@ body {
     background-color: #357ee0;
 }
 
+ul.evaluate_point{
+    list-style-type: disc;
+    margin: 0 0 50px 40px;
+}
+
+#total_tournament p.btn_future{
+    margin:10px auto;
+    background-color: #357ee0;
+    border: 1px solid #357ee0;
+    border-radius: 40px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    width: 220px;
+    padding: 10px 0 10px 25px;
+    font-size: 14px;
+    color: #FFF;
+    background-image: url(../images/apply_btn04.png);
+    background-repeat: no-repeat;
+    background-position: 177px center;    
+}
+#total_tournament a.btn_future_link{
+    text-decoration: none;
+}

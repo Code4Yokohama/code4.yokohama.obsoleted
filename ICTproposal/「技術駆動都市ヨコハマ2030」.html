@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">「技術駆動都市ヨコハマ2030」</h1>
+
+<p><strong>- The tech driven city YOKOHAMA 2030 -</strong></p>
+
+<ul>
+<li>version: α1.0</li>
+<li>published: 2017-07-07</li>
+</ul>
+
+<h2 id="toc_1">はじめに</h2>
+
+<p><strong>「果なく栄えて行くらんみ代を　飾る宝も入りくる港」</strong></p>
+
+<p>（「宝」ともいうべき様々な人や物事が入ってくる、この「港」横浜は、これからも限りなく発展していくでしょう。）</p>
+
+<p>これは、明治の文豪森鴎外の作詞による<a href="http://www.city.yokohama.lg.jp/kyoiku/gakusyu/sika/">『横浜市歌』</a>の最後のフレーズです。横浜市は開港後150年余り、まさにこの通りの発展をとげており、直近（2017年6月）の人口が約372万人と、全国の市区町村の中でNo1の座を占めています。</p>
+
+<p>しかし、2000年代に入り、日本は大きな、かつ急激な変化のうねりにのみこまれ続けています。明治の近代化以降ほぼ一貫して拡大してきた日本の人口もついに減少に転じた中、グローバル化によって国内外での都市間競争はますます激しさを増しています。残念ながら、横浜市も2010年代以降は<a href="https://resas.go.jp/population-sum/#/graph/14/14100/2015/2/10.005624549193879/35.4175/139.3372222">いまの働き手である生産年齢人口や、未来をつくっていく年少人口が毎年減少し続けています</a> 。</p>
+
+<p>そんな中、横浜に暮らす人々が末永くこのまちを愛し続けてくれるように、新しく住み働く日々の暮らしの舞台を探し求める人々が横浜を選択してくれるように、デジタル技術（ICT（情報通信技術。ITともいう）、<a href="https://ja.wikipedia.org/wiki/%E3%83%A2%E3%83%8E%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88">IoT（モノのインターネット）</a>、AI（人工知能）、ロボットといった社会を大きく変化させる技術）を活用することで、地域課題の解決を図り、これまで以上にくらしやすいまち横浜をつくりあげることで、冒頭の鴎外の歌詞がこれからの100年も歌い継がれていくようにしていきます。</p>
+
+<h2 id="toc_2">1.デジタル技術を活用して市民生活の質を向上させます</h2>
+
+<p>デジタル技術は上手に活用することで、少ない投資で大きな効果を見込めます。  </p>
+
+<p>すべての市民がより快適に、健康に暮らすことができるように、人々が持てる才能を発揮し活躍できるように、活力に満ち溢れたまちなみや美しい景観をつくるため、新たな文化を創造するため、世界の都市の中で横浜が輝くために必要とされるすべてを実現するためにデジタル技術を積極的に活用していきます。</p>
+
+<h3 id="toc_3">1.1.すべてのあらゆる人が安心して健康に暮らせるまちを目指します</h3>
+
+<p>現代社会の人々の生活様式はとても多様です。横浜市においても例外ではなく、子育て中の親から高齢者、病気を抱えながら生活している人、障がい者、外国籍の人も大勢暮らしています。また、その働き方も様々です。  </p>
+
+<p>こうした人々が快適に安心して健康にくらせるまちづくりをデジタル技術を活用しながら進めていきます。</p>
+
+<h4 id="toc_4">1.1.1.デジタル技術を活用した情報のバリアフリー・ユニバーサルデザインを進めます</h4>
+
+<p>情報サービスの多言語化などバリアフリー・ユニバーサルデザインを進め、赤ちゃんからシニア、障がいを持つ方、外国籍の方、すべての市民が必要とする情報をデジタルならではの手法を用いて充実させていきます。  </p>
+
+<p>さらに、行政情報のオープンデータ化を進めるとともに、民間との共創型による情報発信により、効果的な情報発信に努めます。</p>
+
+<h4 id="toc_5">1.1.2.地域医療にもデジタル技術でイノベーションをもたらします</h4>
+
+<p>医療機関が保持する患者に関する各種情報を個人に帰属させ、機関を横断した情報連携を実現、効率的に医療サービスをうけられるようにします。研究機関等とも連携し、医療データの収集と分析を進め、市民の健康増進に対して有益な制度やサービスの実現に努めます。</p>
+
+<h4 id="toc_6">1.1.3.一人暮らし高齢者の穏やかでいきいきした暮らしを実現します</h4>
+
+<p>一人暮らしの高齢者が安心して暮らせるように、他者とのふれあい、連絡、みまもり、買い物、医療、移動、これらの課題に対してデジタル技術を活用した解決を図ります。</p>
+
+<p>企業やNPO等非営利組織とも連携しながら、効果的なデジタル技術の活用方法を検討します。</p>
+
+<h3 id="toc_7">1.2.持続的に発展していく地域経済を定着させます</h3>
+
+<p>デジタル技術を背景とするマッチングやシェアリングの手法を導入し、ヒトやモノといった既存の地域資源を上手に活用、従来よりもコストを抑えながら暮らしの充足を図っていきます。データや科学にもとづいたアプローチで、環境の改善、地域内での購買行動や移動の質を向上させ、また、地域を支えるコミュニティの活動をデジタル技術でエンパワーメントして循環型の地域経済を発展させていきます。</p>
+
+<h4 id="toc_8">1.2.1.地域コミュニティにデジタル技術で活力をもたらします</h4>
+
+<p>テクノロジーが進歩した現代においても、また、これからも、地域を支える自治会等の地域コミュニティの役割はとても重要です。そうしたコミュニティ活動において、デジタル技術を活用した情報発信や情報共有、申請手続きの簡便化などを進めます。</p>
+
+<h4 id="toc_9">1.2.2.データや科学に基づいた都市マネジメントをおこないます</h4>
+
+<p>人々の生活がより快適になるように、既存の統計データに加え、センシング技術やシミュレーション技術を活用し、データや科学的根拠に基づいた環境改善を進めていきます。</p>
+
+<p>観光客に対するインターネット接続環境を充実させるとともに、地域情報の提供を行い、横浜の魅力を発信し、地域内での回遊を促すような取組を進めます。</p>
+
+<h3 id="toc_10">1.3.市民が誇れる横浜ブランドを形成し発信していきます</h3>
+
+<p>グローバル化の波が押し寄せ、日本国内のみならず諸外国にまで目を向けたときに横浜のアイデンティティはなんなのか、あらためて考える必要に迫られています。 都心臨海部の特徴的な都市景観、関内・外を中心に進められてきた文化施策、市民に愛されているプロスポーツチーム、こうした要素に先端技術を掛け合わせることで、横浜全体をショーケース化、「技術駆動都市ヨコハマ2030」として国内外に発信していきます。</p>
+
+<h4 id="toc_11">1.3.1.先端企業との共創により先端技術をいち早く導入します</h4>
+
+<p>先端的な取組を進める企業との共創により、市民がテクノロジーの有用性や可能性を感じられる機会を多く作ります。そうした取組の中から効果が見込める技術についてはいち早く社会実装して実用化していきます。</p>
+
+<h4 id="toc_12">1.3.2.テクノロジーの価値をデザインの力で最大化します</h4>
+
+<p>テクノロジーを実社会で活用しようと考えたときに、テクノロジー単体で人々に受け入れられることはありえません。テクノロジーの利活用の場面を見いだし、それが十分に機能するように、まちの環境に溶け込むように、そして、人々に使いやすいように、テクノロジーがその真価を発揮するためには適切なデザインが必要です。 </p>
+
+<p>「テクノロジー × デザイン」をキーワードに、企業や教育機関などとも連携し、デザインの力を上手に使いながらテクノロジーの社会実装を進めます。</p>
+
+<h3 id="toc_13">■アクション</h3>
+
+<ul>
+<li>(1)情報のバリアフリー・ユニバーサルデザイン</li>
+<li>(2)地域医療のイノベーション促進</li>
+<li>(3)一人暮らし高齢者の支援</li>
+<li>(4)地域コミュニティをエンパワーメント(元気付け・勇気づけ)</li>
+<li>(5)データや科学に基づいた都市マネジメント</li>
+<li>(6)先端技術企業との共創推進</li>
+<li>(7)デザインの力でテクノロジーを社会実装</li>
+<li>(8)マッチングやシェアリングの手法を用いて持続的に発展可能な都市を形成</li>
+<li>(9)市民が誇れる「技術駆動都市ヨコハマ2030」ブランドの形成</li>
+</ul>
+
+<h2 id="toc_14">2.デジタル技術で企業活動を支援します</h2>
+
+<p>市民の生活の質のうち、経済面に注目してみましょう。経済的な豊かさ・質を表す指標としては「人口一人当たりの経済規模（市内総生産と市民総所得）」がよく使われますが、横浜市は政令指定都市の中ではいずれもランキングが下位の「Bクラス」にとどまっている現状があります。大阪市や名古屋市といった強豪がひしめく「Aクラス」の仲間入りをするためには色々な課題がありますが、そのうちの一つが「市内の地域産業の高付加価値化」といったものです。</p>
+
+<p>また、インターネットの登場以降、地域の産業が世界のマーケットに直結、国境を越えてビジネスを展開するための敷居が格段に下がりました。さらに、この10年ではスマートフォンを舞台とするマーケットが爆発的に拡大中です。そして、クラウドのコモディティ化やAI技術の発展によってデータを中心としたマーケットも拡大しています。</p>
+
+<p>そこで、このような急激なマーケットの変化の中で横浜という都市の存在感を示しつつ、経済面で「Aクラス」入りするために、市内に先端デジタル技術企業を牽引役とする高付加価値な産業を育成していきます。</p>
+
+<p>具体的には、アイコン的企業の誘致、または、スタートアップ支援、既存の業態に対するデジタル技術を応用したイノベーションの促進、そして、それらを支えるデータ基盤の整備を行います。</p>
+
+<h3 id="toc_15">2.1.起業しやすいまち横浜を実現します</h3>
+
+<p>市内テクノロジー企業の情報を集約したデータベースを構築し国内外にアピール。優れた技術や製品、ソリューションを持つ企業のビジネスチャンスや求職者に対するマッチングの機会を拡大します。また、講演会、セミナー、交流会等の情報も集約、先端技術分野の企業間交流の機会増加によりコミュニティの形成と代謝を促すとともに、金融機関やベンチャーキャピタルとのマッチングなど資金調達のチャンスも拡大します。</p>
+
+<h3 id="toc_16">2.2.高付加価値な先端技術人材を呼び込みます</h3>
+
+<p>地域の中小企業にとって優秀な先端技術人材の確保は大きな課題となっています。やりがい、自由な働き方、職場環境、通勤環境、コミュニティ等、横浜で働くことの価値をあらゆる側面から見つめ直しアピールしていくとともに、多様な働き方を支援する制度を充実させます。 </p>
+
+<p>大学等研究機関、教育機関と連携し、優れた人材が地元で求職活動することを応援します。また、才能のある人材が起業する舞台として横浜を選んでもらえるように、スタートアップのためのインキュベーション制度を充実させます。 </p>
+
+<h3 id="toc_17">2.3.地域のインフラとしてのデータ利活用環境を整備します</h3>
+
+<p>蛇口をひねれば水が出る、プラグを差し込めば電気が流れる、それらと同じように地域に関するデータがいつでも簡単に入手できる「データインフラ」をつくります。 </p>
+
+<p>これまでインフラといえば、上下水道や電気はライフラインとして人々の暮らしを守り、道路や鉄道などの公共交通網は人や物のダイナミックな移動を可能として経済活動を支えてきました。</p>
+
+<p>21世紀に入るとブロードバンド、さらに、モバイルブロードバンドの本格的な普及が進み高度な情報通信社会が形成されました。現在ではスマートフォンや各種センサーデバイスから日々大量のデータがインターネットに送信されるようになり、こうしたデータからは地球の気候変動から、人、物、金の動きといった社会の様子まで捉えることが可能です。</p>
+
+<p>企業が上手にデータを活用すれば、製品やサービスに新たな付加価値を与えることができ、製品やサービスの質が向上すれば利用者である市民の生活の質は向上するでしょう。また、公共分野においてはデータを活用することで、今よりも効率的な行政運営が可能となり、市民一人一人に寄り添った行政サービスを提供できるようになります。</p>
+
+<h4 id="toc_18">2.3.1.データインフラの姿</h4>
+
+<p>今後、インターネットを飛び交うデータの種類や量は爆発的に増加することが予想されます。また、それらを効率的に処理するための技術も次々に新しいものが登場することでしょう。そうした激しい環境の変化に対応するためには、コードやID体系など基礎となるデータの整備を着実に進め、新しいデータや技術を柔軟に取り込み組み合わせることのできるように備えておくことが肝要です。</p>
+
+<p>統計データや地理空間情報等の静的なデータからセンサー由来のダイナミックなデータまで、データの質や量を充実させ、由来の異なるデータであっても、APIなど簡便かつ統一的な方法でアクセス可能とし、機械が扱い易い形式で提供します。個人情報の扱いやセキュリティにも十分に配慮しながら行政サービスのパーソナライズや企業のデータ活用ニーズにも応えていきます。</p>
+
+<h3 id="toc_19">■アクション</h3>
+
+<ul>
+<li>(10)市内テクノロジー企業のためのデータベース構築、情報共有やマッチング</li>
+<li>(11)大学や研究機関と連携、起業支援など優れた人材の誘致</li>
+<li>(12)データ利活用のためのインフラの整備</li>
+</ul>
+
+<h2 id="toc_20">3.市民に寄り添う行政に転換していきます</h2>
+
+<p>より効果的に政策を立案するため、また、事業を企画したり、事業の効果を検証したりするためにデータ分析手法やデジタル技術を活用します。共創型による行政運営、市民に寄り添った行政運営を推進していきます。</p>
+
+<h3 id="toc_21">3.1.共創型＝オープンイノベーションによる社会課題解決を図ります</h3>
+
+<p>横浜市が掲げる「共創」の概念とその取り組みをさらに発展させ、課題の発見、解決策の立案、実施、改善の様々なプロセスにおいて、産官学民の共創による行政運営を推進します。官民データ活用推進条例に基づき「市民の皆様との共有財」としてオープンライセンスのもと行政データを公開し、それらのデータに加え、市民、企業、大学などの教育機関が持つ知見や技術を駆使してこれまで行政だけはむずかしかった課題の解決にもチャレンジしていきます。また、各区で行われている地域との対話の場などを活用し、データに基づく仮説と市民の感じる課題をマッチングする機会を積極的に設けるとともに、課題解決に向けた様々な取り組みを正しく評価できる仕組みを構築します。</p>
+
+<p>行政サービスの効率化・利便性向上を積極的に推進し、生まれたばかりの赤ちゃんから高齢者に至るすべての市民生活の質の向上を目指します。</p>
+
+<h3 id="toc_22">3.2.行政サービスをスマートフォンから使えるようにします</h3>
+
+<p>これまでデジタルでの行政サービスの代表格と言えば、ホームページによる情報発信があります。横浜市は全国の自治体の中でもいち早くホームページを開設し活用してきましたが、2017年現在では、必要とする情報を探しにくい、操作性やユーザビリティ(使い勝手)が悪い、スマートフォンで閲覧しづらいなど、多くの課題があると言われています。このホームページを使いやすくリニューアルすることは当然取り組むべき大切なことですが、それに加えて、行政サービスのデジタル化をさらに先の段階に進めます。</p>
+
+<p>21世紀を生きる市民は、住む場所、働き方、家族構成、ライフステージなど、一人一人がおかれている状況は異なり、また、必要とする情報やサービスも異なります。そうした多様なニーズに対して柔軟に対応する必要がありますが、スマートフォンとデジタル技術を積極的に活用することでこの課題の解決を図ります。</p>
+
+<p>日本では2017年現在、約6割の人々がスマートフォンを利用していますが、この割合は今後数年間でさらに増えるものと予想されます。スマートフォンを利用したプッシュ型による情報提供、行政サービスのアプリ化など、「申請を待つ行政」から「市民の手元へサービスを届ける行政」へのシフトを行っていきます。</p>
+
+<p>こうした新機能やサービスの開発は行政だけで行うのではなく、民間事業者の知見を取り入れ、質の高いサービス開発を共創型で推進していきます。</p>
+
+<h3 id="toc_23">3.3.情報システム調達を改革します</h3>
+
+<p>近年、技術の進歩や多様化にともない、行政の情報システムも複雑さを増しています。プロジェクトの開始から終了まですべてを事前に策定した計画通りに進めることは難しく、様々な外的・内的要因をうけ、状況は刻一刻と変化します。そうした変化に対して仕様を調整したり、時にはゴール設定すらも変更することも必要となるかもしれません。このような柔軟な体制と姿勢を持ってプロジェクトを遂行する必要があります。</p>
+
+<p>さらに、これまでの行政の情報システムでは単に仕様書に記載されている機能要件を満たしていれば十分という考え方が一般的でした。しかし、そうした考え方にとどまらず、生産性の向上や効率化に確実に効果があるか、使い勝手は良いかなど、利用者にとって真に価値のあるシステムを構築することが求められるようになっています。</p>
+
+<p>以上のような課題に取り組むためには、民間の情報システム開発プロジェクトで採用されている手法を行政の情報システムの開発プロジェクトにも取り入れて行く必要があります。</p>
+
+<h4 id="toc_24">3.3.1.情報システム関連事業の評価フレームワークを構築します</h4>
+
+<p>事業の計画段階において、現状の課題、導入後に期待される効果、それに対してどのようなシステムが求められているのかなど、できるだけ具体的な指標を用い、改善見込みをKPIとして設定し事業を評価できるフレームワークを作成します。</p>
+
+<h4 id="toc_25">3.3.2.アジャイル手法を採用します</h4>
+
+<p>現在の行政システムの開発プロジェクトでは、はじめに仕様書ありきで、そこから段階的に設計を行い、工程管理に従って開発を進めるウォーターフォール型とよばれる手法が採用されることが一般的です。それに対して、アジャイル型手法では開発工程において細かくテストと改善を繰り返しながら開発を進めて行きます。状況の変化や不測の事態に対して柔軟に対応したり、細かい改善を繰り返して質を高めて行くことに適した手法です。</p>
+
+<p>行政システムの開発プロジェクトにおいても、アジャイル手法を積極的に採用し、事業の質を高めていきます。</p>
+
+<h4 id="toc_26">3.3.3.オープンソースを積極的に採用していきます</h4>
+
+<p>情報システム開発プロジェクトの計画段階において、既存のオープンソースを採用することによって効率的に開発が行えるかを検討します。さらに、プロジェクトを通じて生まれたプログラムは積極的にオープンソースとして公開するとともに、周辺自治体や民間企業、ボランティア組織等と連携してオープンソースプロジェクトを立ち上げ、持続的に機能改善や機能追加がなされていく状況を確立します。</p>
+
+<h3 id="toc_27">3.4.行政職員のデジタル技術活用リテラシーの向上を図ります</h3>
+
+<p>従来、ICTスキルといえばWindows等OSや、Microsoft Office（ワード、エクセル、パワーポイント）といったOAツールを操作できる、といった程度のことを指していましたが、現在、行政の現場で求められるICTスキルはソーシャルメディアの活用から、データ分析、データマネージメント、セキュリティ対応、クラウド活用まで広範になってきています。日々高度化する状況に対応し、より積極的にテクノロジーを活用できる行政職員が必要とされています。</p>
+
+<h4 id="toc_28">3.4.1.デジタル技術専門部署を設置します</h4>
+
+<p>CIOの配下に専門職員を配し、市役所が関与するICTをはじめとするデジタル技術関連のプロジェクトを統括、支援する体制(Digital Technology Management Office:DTMO等)を整備、システムアーキテクチャやデータの設計、オープンソースの活用のされ方、知財管理の管理のされ方までをガバナンスします。</p>
+
+<p>各プロジェクトを通じてデータが生成される場合、データインフラに統合し、他のプロジェクトやオープンデータについては民間での利用も含め、マルチユースを前提とします。</p>
+
+<h4 id="toc_29">3.4.2.研修プログラムを充実させます</h4>
+
+<p>市役所内でより良い行政サービスをデザインできる人材育成を行うための専門組織を設置します。行政サービスのデザインにあたっては、デジタル技術に関する知識だけでなく、法務や市民活動など様々な知識が必要とされることから、それらを「行政サービスデザインスキル標準」としてまとめ、大学や民間とも連携しながら実践力のある専門人材育成を行います。</p>
+
+<p>職員向けの研修プログラムを実施、高い専門的技術を学べる機会をつくります。また、外部のセミナーへの参加も推奨します。</p>
+
+<h4 id="toc_30">3.4.3.民間との人事交流を活発にしていきます</h4>
+
+<p>デジタル技術分野に高い専門性を持つ民間企業との人事交流の機会を増やすことで、職員のレベルアップを図ります。</p>
+
+<h4 id="toc_31">■アクション</h4>
+
+<ul>
+<li>(13)データや科学に基づいた政策立案や事業企画</li>
+<li>(14)市のホームページの使いやすさを改善</li>
+<li>(15)行政サービスのスマートフォン対応を推進</li>
+<li>(16)必要とする情報や機能をすぐに利用できるパーソナライズ機能の実現</li>
+<li>(17)共創型で質の高いサービス開発</li>
+<li>(18)行政情報システムでサービスデザインの実施</li>
+<li>(19)行政情報システム関連事業の評価フレームワークを構築</li>
+<li>(20)アジャイル開発手法を導入</li>
+<li>(21)オープンソースを積極的に採用</li>
+<li>(22)オープンソースプロジェクトを立ち上げ</li>
+<li>(23)デジタル技術の進歩をリードできる職員を育成</li>
+<li>(24)デジタル技術専門部門(DTMO)を設置</li>
+<li>(25)民間との人事交流の活性化</li>
+</ul>
+
+<h2 id="toc_32">2030年に向けて出航します</h2>
+
+<p>これら25のアクションについて、市内で可能なものから一つずつ実施されるように、Code for Yokohamaは市の議員や職員、市内の企業、NPO、研究者、学生、個人といった様々な組織や人々に働きかけていきます。ゴールは2030年。技術駆動都市を目指し、横浜は今、新たな出航のときを迎えます。</p>
+
+
+
+
+</body>
+
+</html>

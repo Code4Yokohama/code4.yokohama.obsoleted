@@ -24,7 +24,7 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
+
       ga('create', 'UA-59974413-1', 'auto');
       ga('send', 'pageview');
     </script>
@@ -66,6 +66,14 @@
     <p>Code for YOKOHAMAは仲間とともに技術を磨き、学んだスキルを地域の課題解決に役立てていく活動です。<br />
         横浜から価値あるソリューションを世界へ。あなたもこの活動に参加しませんか？</p>
     <a class="participate_btn" href="https://docs.google.com/a/info-lounge.jp/forms/d/1jpl0R1mK1JXRzOPdQpVBU6pN3Ei2Ol4Qz9R44tHEdQI/viewform" target="_blank">参加する</a>
+    <div id="focused">
+      <h3><a href="./ICTproposal/" title="技術駆動都市ヨコハマ2030">横浜市のICT政策に提言<br />「技術駆動都市ヨコハマ2030」</a></h3>
+      <p>この7月には横浜市長選挙があります。行政運営におけるテクノロジー活用の新たなパラダイムを横浜から発信すべく、新たな横浜市長に向けて横浜市のICT政策についてCode for YOKOHAMAのメンバーを中心に有志でまとめた提言を公開します。<br />なお、このドキュメントはα版として公開し、引き続きみなさんからの提案もGithubで受付中です。</p>
+      <ul>
+      <li><a href="https://github.com/Code4Yokohama/ICTProposal" title="Githubのリポジトリ">Githubのリポジトリ</a></li>
+      <li><a href="./ICTproposal/" title="「技術駆動都市ヨコハマ2030」の全文を読む">「技術駆動都市ヨコハマ2030」の全文を読む</a></li>
+      </ul>
+    </div>
 </div>
 <div class="project_wrapper">
     <div class="project_box inner">
@@ -121,16 +129,16 @@
                 <li>杉浦裕樹（横浜コミュニティデザイン・ラボ）</li>
                 <li>ほか</li>
             </ul>
-            <h3><a href="images/c4y_vol1-1.jpg" target="_blank"><img class="m_img" src="images/c4y_vol1-1.jpg" alt="グラフィックレコーディング1" width="224" height="320"/> 
+            <h3><a href="images/c4y_vol1-1.jpg" target="_blank"><img class="m_img" src="images/c4y_vol1-1.jpg" alt="グラフィックレコーディング1" width="224" height="320"/>
                 <a href="images/c4y_vol1-2.jpg" target="_blank"><img class="m_img" src="images/c4y_vol1-2.jpg" alt="グラフィックレコーディング2" width="224" height="320"/></h3>
         <div class="project_btn m_botom">第三回</div>
             <h3>4月28日</h3>
             <h3>Code for YOKOHAMA - Civic Hack Night vol.03</h3>
             <h3><内容></h3>
             <ul>
-                <li>１．「Cesiumを使って見よう」（渡邊英徳さん、早川聖奈さん）</li>  
-                <li>２．「E2D3でCesiumを使う方法」（清水正行さん）</li>  
-                <li>３．「参加者の活動紹介ピッチ</li>  
+                <li>１．「Cesiumを使って見よう」（渡邊英徳さん、早川聖奈さん）</li>
+                <li>２．「E2D3でCesiumを使う方法」（清水正行さん）</li>
+                <li>３．「参加者の活動紹介ピッチ</li>
                 <li>
                     <ul>
                         <li>&nbsp;&nbsp;▽「ウィキペディア街道」プロジェクトと5月23日に開催するイベントについて（小池 隆さん）</li>
@@ -161,7 +169,7 @@
             <ul>
                 <li>１．「Local Goodの紹介」（Local Good YOKOHAMA事務局）</li>
                 <li>２．「Local Goodオープンソースプロジェクト」（肥田野正輝さん）
-                <li>３．参加者の活動紹介ピッチ（懇親タイム）</li>                
+                <li>３．参加者の活動紹介ピッチ（懇親タイム）</li>
             </ul>
         <div class="project_btn m_botom">第五回</div>
             <h3>5月19日</h3>
@@ -199,7 +207,7 @@
                 <li><a class="linkblue" href="http://odd15.okfn.jp/" target="_blank" >▽インターナショナルオープンデータデイ2016</a></li>
                 <li><a class="linkblue" href="hhttp://localgood.jp/" target="_blank" >▽LOCAL GOOD YOKOHAMA、LOCAL GOOD FUKUOKA、LOCAL GOOD KITAQ</a></li>
                 <li><a class="linkblue" href="https://www.facebook.com/events/853367991404631/" target="_blank" >▽日本Androidの会 横浜支部 ６月例会</a></li>
-                <h3><a href="images/c4y_vol6-1.jpg" target="_blank"><img  class="m_img" src="images/c4y_vol6-1.jpg" alt="グラフィックレコーディング1" width="224" height="320"/> 
+                <h3><a href="images/c4y_vol6-1.jpg" target="_blank"><img  class="m_img" src="images/c4y_vol6-1.jpg" alt="グラフィックレコーディング1" width="224" height="320"/>
                 <a href="images/c4y_vol6-2.jpg" target="_blank"><img  class="m_img" src="images/c4y_vol6-2.jpg" alt="グラフィックレコーディング1" width="320" height="224"/> </h3>
         </div>
     </div>

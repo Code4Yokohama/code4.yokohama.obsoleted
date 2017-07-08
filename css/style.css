@@ -177,7 +177,7 @@ a:hover{
     width: 400px;
     border: 2px solid #DB2023;
     border-radius: 8px;
-    margin: 0 auto 105px;
+    margin: 0 auto 3em;
     padding: 15px 0;
     text-align: center;
 }
@@ -256,4 +256,111 @@ h3 {
 
 .m_img {
     margin: 20px ;
+}
+
+/*提言用*/
+#focused {
+  border: 1px solid #CCCCCC ;
+  padding: 3em 4em ;
+  margin-bottom: 4em;
+}
+
+#focused h3 {
+  font-size: 2em ;
+}
+
+#focused p {
+  font-size: 1.2em ;
+  line-height: 1.6em;
+  margin-bottom: 2em;
+}
+
+#focused li {
+  list-style: disc;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+#focused li a {
+  color: #CC3333;
+}
+
+#focused li a:hover {
+  color: #FF3333;
+}
+
+#focused li a:visited {
+  color: #660000;
+}
+
+#proposal p {
+  font-size: 1.2em;
+}
+
+#proposal p.subtitle {
+  font-weight: bold;
+  text-align: center;
+}
+
+#proposal ul#status {
+  margin-top: 2em;
+}
+
+#proposal ul#status li {
+  text-align: right;
+  list-style: none;
+}
+
+#proposal h1,
+#proposal h2,
+#proposal h3,
+#proposal h4 {
+  color: #663333;
+  font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', 'メイリオ', Helvetica, Arial, sans-serif;
+  font-weight: bold;;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+#proposal h1 {
+  font-size: 3em;
+  text-align: left;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+
+#proposal h2 {
+  font-size: 2em;
+  text-align: left;
+  padding-bottom: 0.5em;
+  border-bottom: 1px #CCC solid;
+}
+
+#proposal h3 {
+  font-size: 1.5em;
+  text-align: left;
+}
+
+#proposal h4 {
+  font-size: 1.2em;
+  text-align: left;
+}
+
+#proposal ul {
+  margin-top: 1em;
+}
+
+#proposal ul li {
+  list-style: disc;
+  margin-left: 2em;
+  font-size: 1.2em;
+}
+
+#credit {
+  margin-bottom: 4em;
+}
+
+#credit p{
+  margin-top: 2em;
+  text-align: right;
 }

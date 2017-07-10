@@ -32,59 +32,38 @@
     </script>
 <?php endif; ?>
 
-<style type="text/css">
-* {
-	-webkit-print-color-adjust: exact;
-}
-@media screen and (min-width: 914px) {
-    #proposal {
-        width: 854px;
-        margin:0 auto;
-    }
-}
-@media print {
-	table, pre {
-		page-break-inside: avoid;
-	}
-	pre {
-		word-wrap: break-word;
-	}
-}
-</style>
-
-
 </head>
 
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
 
+<header id="header" class="index">
+    <div class="header__title_wrapper">
+        <h1 class="c-section_inner"><a href="/"><img src="../images/c4y_logo_small.png" alt="code for YOKOHAMA"></a></h1>
+        <div class="header_box">
+            <ul class="menu_box">
+                <li><a href="hackathon/">ハッカソン</a></li>
+                <!--<li>プロジェクト</li>-->
+                <li><a href="mailto:info@code4.yokohama">問い合わせ</a></li>
+                <!--<li>参加方法</li>-->
+            </ul>
+            <div class="sns_box">
+                <div class="fb-like" data-href="http://code4.yokohama/" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://code4.yokohama/" data-count="none">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+        </div>
+    </div>
+</header>
 
-  <header id="header" class="index">
-      <div class="header__title_wrapper">
-          <h1 class="c-section_inner"><a href="/"><img src="../images/c4y_logo_small.png" alt="code for YOKOHAMA"></a></h1>
-          <div class="header_box">
-              <ul class="menu_box">
-                  <li><a href="hackathon/">ハッカソン</a></li>
-                  <!--<li>プロジェクト</li>-->
-                  <li><a href="mailto:info@code4.yokohama">問い合わせ</a></li>
-                  <!--<li>参加方法</li>-->
-              </ul>
-              <div class="sns_box">
-                  <div class="fb-like" data-href="http://code4.yokohama/" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
-                  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://code4.yokohama/" data-count="none">Tweet</a>
-                  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-              </div>
-          </div>
-      </div>
-  </header>
 <div id="proposal">
 <h1>「技術駆動都市ヨコハマ2030」</h1>
 

@@ -293,6 +293,10 @@ h3 {
   color: #660000;
 }
 
+#proposal {
+  padding: 0 2em;
+}
+
 #proposal p {
   font-size: 1.2em;
 }
@@ -323,7 +327,7 @@ h3 {
 }
 
 #proposal h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   text-align: left;
   margin-bottom: 0.2em;
   text-align: center;

@@ -269,6 +269,12 @@ h3 {
   font-size: 2em ;
 }
 
+#focused h4 {
+  font-size: 1.5em ;
+  font-weight: bold;
+  margin-top: 2em;
+}
+
 #focused p {
   font-size: 1.2em ;
   line-height: 1.6em;

@@ -73,6 +73,11 @@
       <li><a href="https://github.com/Code4Yokohama/ICTProposal" title="Githubのリポジトリ">Githubのリポジトリ</a></li>
       <li><a href="./ICTproposal/" title="「技術駆動都市ヨコハマ2030」の全文を読む">「技術駆動都市ヨコハマ2030」の全文を読む</a></li>
       </ul>
+      <h4>横浜市長選候補者に提言を渡します</h4>
+      <p>ここまで検討してきた提言「技術駆動都市ヨコハマ2030」を3人の候補者に提出します。（2017年7月21日）</p>
+      <ul>
+        <li><a href="./ICTproposal/ICT_Proposal_cover20170721.pdf" title="提言状">提言状</a></li>
+      </ul>
     </div>
 </div>
 <div class="project_wrapper">

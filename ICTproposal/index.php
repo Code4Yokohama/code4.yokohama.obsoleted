@@ -32,6 +32,8 @@
     </script>
 <?php endif; ?>
 
+<title>「技術駆動都市ヨコハマ2030」- The tech driven city YOKOHAMA 2030 -</title>
+
 </head>
 
 <body>

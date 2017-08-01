@@ -78,6 +78,10 @@
       <ul>
         <li><a href="./ICTproposal/ICT_Proposal_cover20170721.pdf" title="提言状">提言状</a></li>
       </ul>
+      <h4>横浜市長選候補者に提言を渡しました</h4>
+      <ul>
+      <li><a href="./ICTproposal/report.php">写真や経緯など詳細をご覧ください。</a>（2017年8月1日）</li>
+      </ul>
     </div>
 </div>
 <div class="project_wrapper">

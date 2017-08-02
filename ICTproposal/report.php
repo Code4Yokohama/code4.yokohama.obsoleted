@@ -88,6 +88,7 @@
   <p style="margin-bottom:2em;">最後は、横浜市が公開している『<a href="/Users/iwao/Dropbox/code4YOKOHAMA/website/code4.yokohama/ICTproposal/report.php">平成29年7月30日執行　横浜市長選挙候補者一覧表</a>』に掲載されている住所宛に配達記録郵便で送付しました。</p>
   <img src="toNagashima02.jpg" style="max-width:750px;">
   <img src="toNagashima01.jpg" style="max-width:750px;">
+  <img src="toNagashima03.png" style="max-width:750px;">
 
   <p style="margin:2em 0;"><a href="/">トップページへ戻る</a></p>
 </div>

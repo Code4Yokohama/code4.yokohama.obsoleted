@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:description" content="ICT提言「技術駆動都市ヨコハマ2030」を横浜市長選3候補に渡しました" />
 <meta property="og:url" content="http://code4.yokohama/" />
-<meta property="og:image" content="http://<?php echo $_SERVER['SERVER_NAME']; ?><?php echo ($_SERVER['SERVER_PORT'] == 80)? "" : ":${_SERVER['SERVER_PORT']}"; ?>/images/icon_top.png" />
+<meta property="og:image" content="http://<?php echo $_SERVER['SERVER_NAME']; ?><?php echo ($_SERVER['SERVER_PORT'] == 80)? "" : ":${_SERVER['SERVER_PORT']}"; ?>/ICTproposal/IMG_5472.JPG" />
 <meta property="fb:app_id" content="485812038210485" />
 
 <?php if ($_SERVER['SERVER_NAME'] === 'code4.yokohama'): ?>
@@ -85,7 +85,7 @@
   <p>小林巌生代表から本人にFacebookメッセージを送りましたが返事をいただけなかったため、<a href="https://www.nagashimakazuyoshi.com/">ホームページ</a>の問い合わせフォームにも手渡ししたい旨を送信しましたが、回答をいただけず。</p>
   <p>そこで、公開されている事務所の電話番号（2つ）にも連絡したところ、両方とも現在は使用されていないとのことでした。</p>
   <p>さらに、横浜市選挙管理事務局に電話で問い合わせて、長島氏の事務所の電話番号をうかがったところ、長島氏が横浜市内に選挙事務所を開設していない旨、横浜市からの連絡用の電話番号は非公開であるといった回答をいただきました。</p>
-  <p style="margin-bottom:2em;">最後は、横浜市が公開している『<a href="/Users/iwao/Dropbox/code4YOKOHAMA/website/code4.yokohama/ICTproposal/report.php">平成29年7月30日執行　横浜市長選挙候補者一覧表</a>』に掲載されている住所宛に配達記録郵便で送付しました。</p>
+  <p style="margin-bottom:2em;">最後は、横浜市が公開している『<a href="http://www.city.yokohama.lg.jp/senkyo/170730/rikkouhotodoke.pdf">平成29年7月30日執行　横浜市長選挙候補者一覧表</a>』に掲載されている住所宛に配達記録郵便で送付しました。</p>
   <img src="toNagashima02.jpg" style="max-width:750px;">
   <img src="toNagashima01.jpg" style="max-width:750px;">
   <img src="toNagashima03.png" style="max-width:750px;">

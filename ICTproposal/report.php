@@ -16,7 +16,7 @@
 <meta property="og:title" content="ICT提言「技術駆動都市ヨコハマ2030」を横浜市長選3候補に渡しました" />
 <meta property="og:type" content="article" />
 <meta property="og:description" content="ICT提言「技術駆動都市ヨコハマ2030」を横浜市長選3候補に渡しました" />
-<meta property="og:url" content="http://code4.yokohama/" />
+<meta property="og:url" content="code4.yokohama/ICTproposal/report.php" />
 <meta property="og:image" content="http://<?php echo $_SERVER['SERVER_NAME']; ?><?php echo ($_SERVER['SERVER_PORT'] == 80)? "" : ":${_SERVER['SERVER_PORT']}"; ?>/ICTproposal/IMG_5472.JPG" />
 <meta property="fb:app_id" content="485812038210485" />
 

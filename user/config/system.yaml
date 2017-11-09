@@ -4,12 +4,13 @@ home:
   alias: '/home'
 
 pages:
-  theme: antimatter
+  theme: code4.yokohama
   markdown:
     extra: false
   process:
     markdown: true
     twig: false
+
 
 cache:
   enabled: true

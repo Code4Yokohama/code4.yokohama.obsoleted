@@ -1,0 +1,11 @@
+email: soutaito@info-lounge.jp
+fullname: code4
+title: yokohama
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$3G.EceUqDKSHPR3WIIsQwu2GRXrnN/f8vD40ZXga.sEb85P.j27CW

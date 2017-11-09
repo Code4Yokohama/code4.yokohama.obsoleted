@@ -1,8 +1,13 @@
 {% embed 'partials/base.html.twig' %}
 
 	{% set collection = page.collection() %}
+	{% block stylesheets %}
+			{% do assets.addCss('theme://css/index.css', 100) %}
+			{% do assets.addCss('theme://css/normalize.css', 100) %}
+	{% endblock %}
 
 	{% block content %}
+
 		<main>
 			<div id="about" class="about">
 				<div class="container">
@@ -43,7 +48,7 @@
 							</section>
 						</div>
 						<div class="about_innovation_image">
-							<img src="resources/img/inovation.png" />
+							<img src="{{ url('theme://images/inovation.png')}}" />
 						</div>
 					</article>
 				</div>
@@ -93,12 +98,12 @@
 						<section>
 							<div class="activites_items">
 								<div class="activites_item_box">
-									<img class="activites_image" src="resources/img/activites_image.png" alt="activites" />
+									<img class="activites_image" src="{{ url('theme://images/activites_image.png')}}" alt="activites" />
 									<p class="activites_title">横浜のIT系ネットワークの情報基盤、プロジェクト情報共有を考えよう！<br /> - Code for YOKOHAMA - Civic Hack Night vol.05</p>
 									<p class="activites_detail">今年度横浜において予定されているIT関連のイベントや施策などの動きについて共有します。</p>
 								</div>
 								<div class="activites_item_box">
-									<img class="activites_image" src="resources/img/activites_image.png" alt="activites" />
+									<img class="activites_image" src="{{ url('theme://images/activites_image.png')}}" alt="activites" />
 									<p class="activites_title">自治会運営に役立つツールを開発しよう！<br />- Code for Yokohama Civic Hack Night vol.04</p>
 									<p class="activites_detail">１．自治会ってどんな仕組み？</p>
 								</div>
@@ -114,22 +119,22 @@
 					<h1 class="common_heading red">Member</h1>
 					<ul class="member_list">
 						<li class="member_item_box">
-							<img class="member_image" src="resources/img/member_hidano.png" alt="肥田野 正輝" />
+							<img class="member_image" src="{{ url('theme://images/member_hidano.png')}}" alt="肥田野 正輝" />
 							<p class="member_company">インフォ・ラウンジ合同会社</p>
 							<p class="member_name">肥田野 正輝</p>
 						</li>
 						<li class="member_item_box">
-							<img class="member_image" src="resources/img/member_kobayashi.png" alt="小林 巌生" />
+							<img class="member_image" src="{{ url('theme://images/member_kobayashi.png')}}" alt="小林 巌生" />
 							<p class="member_company">インフォ・ラウンジ合同会社</p>
 							<p class="member_name">小林 巌生</p>
 						</li>
 						<li class="member_item_box">
-							<img class="member_image" src="resources/img/member_ito.png" alt="伊藤 宗太" />
+							<img class="member_image" src="{{ url('theme://images/member_ito.png')}}" alt="伊藤 宗太" />
 							<p class="member_company">インフォ・ラウンジ合同会社</p>
 							<p class="member_name">伊藤 宗太</p>
 						</li>
 						<li class="member_item_box">
-							<img class="member_image" src="resources/img/member_hidano.png" alt="肥田野 正輝" />
+							<img class="member_image" src="{{ url('theme://images/member_hidano.png')}}" alt="肥田野 正輝" />
 							<p class="member_company">インフォ・ラウンジ合同会社</p>
 							<p class="member_name">肥田野 正輝</p>
 						</li>

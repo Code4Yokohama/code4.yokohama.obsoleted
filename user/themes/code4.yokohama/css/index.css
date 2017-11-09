@@ -8,7 +8,7 @@ img { vertical-align: bottom; }
 .container.nav { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
 /*-------------------------------------------------- MainVisual --------------------------------------------------*/
-.main_visual { position: relative; height: 570px; background-image: url("../img/main_visual_image.png"); background-size: cover; }
+.main_visual { position: relative; height: 570px; background-image: url('../images/main_visual_image.png'); background-size: cover; }
 
 .main_visual_image { width: 100%; }
 
@@ -38,11 +38,11 @@ header { position: absolute; }
 .common_heading.red::before { background-color: #db2023; }
 
 /*-------------------------------------------------- About --------------------------------------------------*/
-.about { background-image: url("../img/bg_about.png"); background-size: auto; height: auto; margin: 0; padding: 80px 0; color: #ffffff; position: relative; overflow-x: hidden; }
+.about { background-image: url('../images/bg_about.png'); background-size: auto; height: auto; margin: 0; padding: 80px 0; color: #ffffff; position: relative; overflow-x: hidden; }
 
-.about:before { content: ''; position: absolute; display: block; left: -20px; bottom: -165px; width: 100%; height: 150px; background-color: #af1a1c; transform: rotateZ(6deg); overflow: hidden; }
+/*.about:before { content: ''; position: absolute; display: block; left: -20px; bottom -165px; width: 100%; height: 150px; background-color: #af1a1c; transform: rotateZ(6deg); overflow: hidden; }
 
-.about:after { content: ''; position: absolute; display: block; right: -20px; bottom: -140px; width: 100%; height: 160px; background-color: #e86062; transform: rotateZ(-6deg); }
+.about:after { content: ''; position: absolute; display: block; right: -20px; bottom: -140px; width: 100%; height: 160px; background-color: #e86062; transform: rotateZ(-6deg); }*/
 
 .about_box { text-align: center; width: 100%; padding: 80px 0; }
 
@@ -65,11 +65,11 @@ header { position: absolute; }
 .about_innovation_image { margin-left: auto; padding-left: 15px; width: 50%; }
 
 /*-------------------------------------------------- What's New? --------------------------------------------------*/
-.whats_new { background-image: url("../img/bg_whats_new.png"); background-size: auto; height: auto; margin: 0; padding: 80px 0; color: #ffffff; position: relative; overflow: hidden; z-index: 100; }
+.whats_new { background-image: url('../images/bg_whats_new.png'); background-size: auto; height: auto; margin: 0; padding: 80px 0; color: #ffffff; position: relative; overflow: hidden; z-index: 100; }
 
-.whats_new:before { content: ''; position: absolute; display: block; left: -20px; top: -165px; width: 100%; height: 150px; background-color: #af1a1c; transform: rotateZ(-6deg); }
+/*.whats_new:before { content: ''; position: absolute; display: block; left: -20px; top: -165px; width: 100%; height: 150px; background-color: #af1a1c; transform: rotateZ(-6deg); }
 
-.whats_new:after { content: ''; position: absolute; display: block; right: -20px; top: -140px; width: 100%; height: 160px; background-color: #e86062; transform: rotateZ(6deg); }
+.whats_new:after { content: ''; position: absolute; display: block; right: -20px; top: -140px; width: 100%; height: 160px; background-color: #e86062; transform: rotateZ(6deg); }*/
 
 .whats_new_contents { padding-left: 0; text-align: left; font-size: 16px; list-style: none; border-bottom: 1px solid #fff; }
 
@@ -80,7 +80,7 @@ header { position: absolute; }
 .read_more_button:hover { background-color: #db2023; }
 
 /*-------------------------------------------------- Activites --------------------------------------------------*/
-.activites { background-image: url("../img/bg_activites.png"); background-size: cover; position: relative; height: auto; margin: -50px 0 0 0; padding: 80px 0; color: #ffffff; transform: rotateZ(-4deg); }
+.activites { background-image: url('../images/bg_activites.png'); background-size: cover; position: relative; height: auto; margin: -50px 0 0 0; padding: 80px 0; color: #ffffff; }
 
 .activites_items { display: -ms-flexbox; display: flex; }
 
@@ -91,7 +91,7 @@ header { position: absolute; }
 .activites_detail { font-size: 14px; margin: 15px 20px 20px 30px; }
 
 /*-------------------------------------------------- Member --------------------------------------------------*/
-.member { background-image: url("../img/bg_member.png"); background-size: auto; position: relative; height: auto; margin: 0; padding: 80px 0; color: #ffffff; }
+.member { background-image: url('../images/bg_member.png'); background-size: auto; position: relative; height: auto; margin: 0; padding: 80px 0; color: #ffffff; }
 
 .member_list { display: -ms-flexbox; display: flex; list-style: none; margin: 0 -20px 0 0; padding: 0; }
 
@@ -100,7 +100,7 @@ header { position: absolute; }
 .member_image { width: 240px; height: 240px; }
 
 /*-------------------------------------------------- footer --------------------------------------------------*/
-.footer_box { background-image: url("../img/bg_creative_commons.png"); background-size: auto; position: relative; height: auto; margin: 0; padding: 40px 0; color: #fff; }
+.footer_box { background-image: url('../images/bg_creative_commons.png'); background-size: auto; position: relative; height: auto; margin: 0; padding: 40px 0; color: #fff; }
 
 .container_footer_box { display: -ms-flexbox; display: flex; }
 
@@ -117,7 +117,7 @@ header { position: absolute; }
 .sns_item { margin-right: 30px; }
 
 /*-------------------------------------------------- common_footer --------------------------------------------------*/
-.common_footer_box { background-image: url("../img/bg_common_footer.png"); background-size: auto; position: relative; height: 80px; margin: 0; color: #fff; }
+.common_footer_box { background-image: url('../images/bg_common_footer.png'); background-size: auto; position: relative; height: 80px; margin: 0; color: #fff; }
 
 .link_box { margin: 0 0 -45px; padding-top: 30px; text-align: center; }
 

@@ -7,6 +7,8 @@ img { vertical-align: bottom; }
 
 .container.nav { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
+.container.activites_container { transform: skewY(3deg); }
+
 /*-------------------------------------------------- MainVisual --------------------------------------------------*/
 .main_visual { position: relative; height: 570px; background-image: url('../images/main_visual_image.png'); background-size: cover; }
 
@@ -40,9 +42,9 @@ header { position: absolute; }
 /*-------------------------------------------------- About --------------------------------------------------*/
 .about { background-image: url('../images/bg_about.png'); background-size: auto; height: auto; margin: 0; padding: 80px 0; color: #ffffff; position: relative; overflow-x: hidden; }
 
-/*.about:before { content: ''; position: absolute; display: block; left: -20px; bottom -165px; width: 100%; height: 150px; background-color: #af1a1c; transform: rotateZ(6deg); overflow: hidden; }
+.about:before { content: ''; position: absolute; display: block; left: -20px; bottom: -165px; width: 100%; height: 150px; background-color: #af1a1c; transform: rotateZ(6deg); overflow: hidden; }
 
-.about:after { content: ''; position: absolute; display: block; right: -20px; bottom: -140px; width: 100%; height: 160px; background-color: #e86062; transform: rotateZ(-6deg); }*/
+.about:after { content: ''; position: absolute; display: block; right: -20px; bottom: -140px; width: 100%; height: 160px; background-color: #e86062; transform: rotateZ(-6deg); }
 
 .about_box { text-align: center; width: 100%; padding: 80px 0; }
 
@@ -67,9 +69,9 @@ header { position: absolute; }
 /*-------------------------------------------------- What's New? --------------------------------------------------*/
 .whats_new { background-image: url('../images/bg_whats_new.png'); background-size: auto; height: auto; margin: 0; padding: 80px 0; color: #ffffff; position: relative; overflow: hidden; z-index: 100; }
 
-/*.whats_new:before { content: ''; position: absolute; display: block; left: -20px; top: -165px; width: 100%; height: 150px; background-color: #af1a1c; transform: rotateZ(-6deg); }
+.whats_new:before { content: ''; position: absolute; display: block; left: -20px; top: -165px; width: 100%; height: 150px; background-color: #af1a1c; transform: rotateZ(-6deg); }
 
-.whats_new:after { content: ''; position: absolute; display: block; right: -20px; top: -140px; width: 100%; height: 160px; background-color: #e86062; transform: rotateZ(6deg); }*/
+.whats_new:after { content: ''; position: absolute; display: block; right: -20px; top: -140px; width: 100%; height: 160px; background-color: #e86062; transform: rotateZ(6deg); }
 
 .whats_new_contents { padding-left: 0; text-align: left; font-size: 16px; list-style: none; border-bottom: 1px solid #fff; }
 
@@ -80,7 +82,7 @@ header { position: absolute; }
 .read_more_button:hover { background-color: #db2023; }
 
 /*-------------------------------------------------- Activites --------------------------------------------------*/
-.activites { background-image: url('../images/bg_activites.png'); background-size: cover; position: relative; height: auto; margin: -50px 0 0 0; padding: 80px 0; color: #ffffff; }
+.activites { background-image: url('../images/bg_activites.png'); background-size: cover; position: relative; height: auto; margin: -50px 0 0 0; padding: 80px 0; color: #ffffff; transform: skewY(-3deg); z-index: 50; }
 
 .activites_items { display: -ms-flexbox; display: flex; }
 

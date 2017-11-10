@@ -7,10 +7,10 @@ img { vertical-align: bottom; }
 
 .container.nav { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-.container.activites_container { transform: skewY(3deg); }
+.container.activites_container { transform: skewY(4deg); }
 
 /*-------------------------------------------------- MainVisual --------------------------------------------------*/
-.main_visual { position: relative; height: 570px; background-image: url('../images/main_visual_image.png'); background-size: cover; }
+.main_visual { position: relative; height: 570px; background-image: url('../images/main_visual_image.png'); background-size: cover; background-position: center center;}
 
 .main_visual_image { width: 100%; }
 
@@ -40,7 +40,7 @@ header { position: absolute; }
 .common_heading.red::before { background-color: #db2023; }
 
 /*-------------------------------------------------- About --------------------------------------------------*/
-.about { background-image: url('../images/bg_about.png'); background-size: auto; height: auto; margin: 0; padding: 80px 0; color: #ffffff; position: relative; overflow-x: hidden; }
+.about { background-image: url('../images/bg_about.png'); background-size: auto; height: auto; margin: 0; padding: 80px 0; color: #ffffff; position: relative; overflow: hidden; }
 
 .about:before { content: ''; position: absolute; display: block; left: -20px; bottom: -165px; width: 100%; height: 150px; background-color: #af1a1c; transform: rotateZ(6deg); overflow: hidden; }
 
@@ -82,7 +82,7 @@ header { position: absolute; }
 .read_more_button:hover { background-color: #db2023; }
 
 /*-------------------------------------------------- Activites --------------------------------------------------*/
-.activites { background-image: url('../images/bg_activites.png'); background-size: cover; position: relative; height: auto; margin: -50px 0 0 0; padding: 80px 0; color: #ffffff; transform: skewY(-3deg); z-index: 50; }
+.activites { background-image: url('../images/bg_activites.png'); background-size: cover; position: relative; height: auto; margin: -100px 0 0 0; padding: 150px 0; color: #ffffff; transform: skewY(-4deg); z-index: 50; }
 
 .activites_items { display: -ms-flexbox; display: flex; }
 

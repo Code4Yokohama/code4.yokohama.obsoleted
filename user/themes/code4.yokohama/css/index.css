@@ -1,3 +1,5 @@
+/*-------------------------------------------------- Main --------------------------------------------------*/
+.main_home { background-color: #e86062; }
 /*-------------------------------------------------- About --------------------------------------------------*/
 .about { background-image: url('../images/bg_about.png'); background-size: auto; height: auto; margin: 0; padding: 80px 0; color: #ffffff; position: relative; overflow: hidden; }
 

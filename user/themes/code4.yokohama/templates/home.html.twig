@@ -2,6 +2,7 @@
 
 	{% set collection = page.collection() %}
 	{% block stylesheets %}
+			{% do assets.addCss('theme://css/common.css', 100) %}
 			{% do assets.addCss('theme://css/index.css', 100) %}
 			{% do assets.addCss('theme://css/normalize.css', 100) %}
 	{% endblock %}

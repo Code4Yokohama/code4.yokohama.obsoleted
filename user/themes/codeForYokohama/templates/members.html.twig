@@ -16,37 +16,21 @@
 
         <ul class="members_list">
           <li class="members_item_box">
-            <img class="members_image" src="{{ url('theme://images/member_hidano.png')}}" alt="肥田野 正輝"/>
-            <p class="members_company">インフォ・ラウンジ合同会社</p>
-            <p class="members_name">肥田野 正輝</p>
-          </li>
-          <li class="members_item_box">
-            <img class="members_image" src="{{ url('theme://images/member_kobayashi.png')}}" alt="小林 巌生"/>
-            <p class="members_company">インフォ・ラウンジ合同会社</p>
-            <p class="members_name">小林 巌生</p>
-          </li>
-          <li class="members_item_box">
-            <img class="members_image" src="{{ url('theme://images/member_ito.png')}}" alt="伊藤 宗太"/>
-            <p class="members_company">インフォ・ラウンジ合同会社</p>
-            <p class="members_name">伊藤 宗太</p>
-          </li>
-          <li class="members_item_box">
-            <img class="members_image" src="{{ url('theme://images/member_hidano.png')}}" alt="肥田野 正輝"/>
-            <p class="members_company">インフォ・ラウンジ合同会社</p>
-            <p class="members_name">肥田野 正輝</p>
+            {% for child in collection %}
+              {% include 'partials/members_item.html.twig' with {'members':page, 'page':child, 'truncate':true} %}
+          {% endfor %}
           </li>
         </ul>
 
         <div class="pages_link">
-          {% for child in collection %}
-            {% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
-        {% endfor %}
+
           {% if config.plugins.pagination.enabled and collection.params.pagination %}
             {% include 'partials/pagination.html.twig' with {
               'base_url' : page.url,
               'pagination' : collection.params.pagination
             } %}
           {% endif %}
+
           <ul class="pages_link_number_list">
             <li class="pages_link_number_box">
               <a class="pages_link_number" href="">1</a>

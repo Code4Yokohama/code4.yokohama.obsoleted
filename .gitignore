@@ -1,1 +1,10 @@
 .DS_Store
+
+# cacheフォルダ
+cache/
+
+#logsフォルダ
+logs/
+
+#htaccess
+.htaccess

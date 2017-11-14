@@ -4,7 +4,7 @@ home:
   alias: '/home'
 
 pages:
-  theme: code4.yokohama
+  theme: CodeForYokohama
   markdown:
     extra: false
   process:

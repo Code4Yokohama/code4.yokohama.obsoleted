@@ -5,7 +5,7 @@
 
 <!-- <div class="list-item h-entry"> -->
   {% set header_image_file = page.header.header_image_file %}
-  <div class="members_item_box_content">
+  <li class="members_item_box_content">
     {% if header_image_file %}
       {% set header_image_media = page.media.images[header_image_file] %}
     {% else %}
@@ -15,6 +15,6 @@
     <img class="members_image" src="{{ header_image_media.url }}" alt="hoge"/>
     <p class="members_company">{{page.header.company}}</p>
     <p class="members_name">{{page.header.person}}</p>
-  </div>
+  </li>
 
 <!-- </div> -->

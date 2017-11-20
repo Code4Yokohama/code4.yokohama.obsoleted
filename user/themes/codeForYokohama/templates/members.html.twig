@@ -15,15 +15,15 @@
       <div class="container">
 
         <ul class="members_list">
-          <li class="members_item_box">
+          <!-- <li class="members_item_box"> -->
             {% for child in collection %}
               {% include 'partials/members_item.html.twig' with {'members':page, 'page':child, 'truncate':true} %}
           {% endfor %}
-          </li>
+          <!-- </li> -->
         </ul>
 
         <div class="members_list_border">
-          
+
         </div>
 
         <div class="pages_link">

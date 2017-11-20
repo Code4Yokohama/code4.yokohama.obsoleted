@@ -11,9 +11,11 @@
 .members_list {
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0 -20px 0 0;
   padding: 0;
+  justify-content: space-between;
 }
 
 .members_item_box {
@@ -28,6 +30,8 @@
 .members_item_box_content {
   max-width: 100%;
   margin-right: 20px;
+  color: #000;
+  text-align: center;
 }
 
 .members_image {

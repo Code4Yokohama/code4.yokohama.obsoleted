@@ -1,7 +1,11 @@
-<div class="list-item h-entry">
+{% block stylesheets %}
+  {% do
+    assets.addCss('theme://css/members.css', 100) %}
+{% endblock %}
+
+<!-- <div class="list-item h-entry"> -->
   {% set header_image_file = page.header.header_image_file %}
-  <!-- TODO 管理画面側から入力した人物名を出す仕組み -->
-  <div class="members_item_box">
+  <div class="members_item_box_content">
     {% if header_image_file %}
       {% set header_image_media = page.media.images[header_image_file] %}
     {% else %}
@@ -13,4 +17,4 @@
     <p class="members_name">{{page.header.person}}</p>
   </div>
 
-</div>
+<!-- </div> -->

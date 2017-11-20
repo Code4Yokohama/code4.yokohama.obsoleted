@@ -34,6 +34,11 @@
   text-align: center;
 }
 
+.members_item_box_content_dummy {
+  width: 240px;
+  margin-right: 20px;
+}
+
 .members_image {
   width: 240px;
   height: 240px;
@@ -49,35 +54,4 @@
   margin-top: 35px;
   top: 50%;
   left: 50%;
-}
-
-.pages_link_number_list {
-  list-style: none;
-  margin: 0 -10px 0 0;
-  padding: 0;
-  text-align: center;
-  font-size: 0;
-}
-
-.pages_link_number_box {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.pages_link_number {
-  display: block;
-  border: 1px solid #db2023;
-  width: 46px;
-  height: 46px;
-  line-height: 46px;
-  font-size: 18px;
-  box-sizing: border-box;
-  color: #db2023;
-  text-align: center;
-  text-decoration: none;
-}
-
-.pages_link_number:hover {
-  background-color: #db2023;
-  color: #fff;
 }

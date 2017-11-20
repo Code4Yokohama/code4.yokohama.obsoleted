@@ -1,0 +1,30 @@
+.pagination {
+	list-style: none;
+  margin: 0 -10px 0 0;
+  padding: 0;
+  text-align: center;
+  font-size: 0;
+}
+
+.pagination li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.pagination a, .pagination span {
+	display: block;
+	border: 1px solid #db2023;
+	width: 46px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 18px;
+	box-sizing: border-box;
+	color: #db2023;
+	text-align: center;
+	text-decoration: none;
+}
+
+.pagination a:hover, .pagination span:hover {
+	background-color: #db2023;
+	color: #fff;
+}

@@ -53,7 +53,9 @@
                             </li>
                         </ul>
                     </nav>
-                    <img class="main_visual_typo" src="{{ url('theme://images/main_typo.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION" />
+                    {% set mainTypoImage = url('theme://images/main_typo.png') %}
+                    {% if condition %}{% endif %}
+                    <img class="main_visual_typo" src="{{ mainTypoImage }}" alt="TECHNOLOGY FOR SOCIAL INNOVATION" />
                 </div>
 
             </div>

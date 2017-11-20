@@ -15,7 +15,7 @@
       <div class="container">
 
         <ul class="members_list">
-          {% if collection|length % 4 == 0 %}
+          {% if collection | length % 4 == 0 %}
             {% for child in collection %}
               {% include 'partials/members_item.html.twig' with {
                 'members' : page,
@@ -24,7 +24,7 @@
               } %}
             {% endfor %}
 
-            {% elseif collection|length % 4 > 0 %}
+          {% elseif collection|length % 4 > 0 %}
             {% for child in collection %}
               {% include 'partials/members_item.html.twig' with {
                 'members' : page,
@@ -33,9 +33,8 @@
               } %}
             {% endfor %}
 
-            {% for child in 1..collection|length % 4 %}
-                <div class="members_item_box_content_dummy">
-                </div>
+            {% for child in 1..collection | length % 4 %}
+              <div class="members_item_box_content_dummy"></div>
             {% endfor %}
 
           {% endif %}
@@ -51,21 +50,6 @@
               'pagination' : collection.params.pagination
             } %}
           {% endif %}
-
-          <ul class="pages_link_number_list">
-            <li class="pages_link_number_box">
-              <a class="pages_link_number" href="">1</a>
-            </li>
-            <li class="pages_link_number_box">
-              <a class="pages_link_number" href="">2</a>
-            </li>
-            <li class="pages_link_number_box">
-              <a class="pages_link_number" href="">3</a>
-            </li>
-            <li class="pages_link_number_box">
-              <a class="pages_link_number" href="">></a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>

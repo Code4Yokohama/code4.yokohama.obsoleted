@@ -15,16 +15,33 @@
       <div class="container">
 
         <ul class="members_list">
-          <!-- <li class="members_item_box"> -->
+          {% if collection|length % 4 == 0 %}
             {% for child in collection %}
-              {% include 'partials/members_item.html.twig' with {'members':page, 'page':child, 'truncate':true} %}
-          {% endfor %}
-          <!-- </li> -->
+              {% include 'partials/members_item.html.twig' with {
+                'members' : page,
+                'page' : child,
+                'truncate' : true
+              } %}
+            {% endfor %}
+
+            {% elseif collection|length % 4 > 0 %}
+            {% for child in collection %}
+              {% include 'partials/members_item.html.twig' with {
+                'members' : page,
+                'page' : child,
+                'truncate' : true
+              } %}
+            {% endfor %}
+
+            {% for child in 1..collection|length % 4 %}
+                <div class="members_item_box_content_dummy">
+                </div>
+            {% endfor %}
+
+          {% endif %}
         </ul>
 
-        <div class="members_list_border">
-
-        </div>
+        <div class="members_list_border"></div>
 
         <div class="pages_link">
 

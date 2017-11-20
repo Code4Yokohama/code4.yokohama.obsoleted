@@ -3,18 +3,15 @@
     assets.addCss('theme://css/members.css', 100) %}
 {% endblock %}
 
-<!-- <div class="list-item h-entry"> -->
-  {% set header_image_file = page.header.header_image_file %}
-  <li class="members_item_box_content">
-    {% if header_image_file %}
-      {% set header_image_media = page.media.images[header_image_file] %}
-    {% else %}
-      {% set header_image_media = page.media.images | first %}
-    {% endif %}
+{% set header_image_file = page.header.header_image_file %}
+<li class="members_item_box_content">
+  {% if header_image_file %}
+    {% set header_image_media = page.media.images[header_image_file] %}
+  {% else %}
+    {% set header_image_media = page.media.images | first %}
+  {% endif %}
 
-    <img class="members_image" src="{{ header_image_media.url }}" alt="hoge"/>
-    <p class="members_company">{{page.header.company}}</p>
-    <p class="members_name">{{page.header.person}}</p>
-  </li>
-
-<!-- </div> -->
+  <img class="members_image" src="{{ header_image_media.url }}" alt="hoge"/>
+  <p class="members_company">{{page.header.company}}</p>
+  <p class="members_name">{{page.header.person}}</p>
+</li>

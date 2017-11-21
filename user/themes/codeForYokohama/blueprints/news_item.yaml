@@ -8,7 +8,7 @@ form:
     tabs:
 
       fields:
-        blog:
+        news:
           type: tab
           title: News Item
 

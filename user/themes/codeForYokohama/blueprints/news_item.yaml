@@ -1,4 +1,4 @@
-title: Item
+title: NewsItem
 '@extends':
     type: default
     context: blueprints://pages
@@ -10,7 +10,7 @@ form:
       fields:
         blog:
           type: tab
-          title: Blog Item
+          title: News Item
 
           fields:
 

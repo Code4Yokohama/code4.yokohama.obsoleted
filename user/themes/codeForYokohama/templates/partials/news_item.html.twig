@@ -1,89 +1,83 @@
-<div class="list-item h-entry">
+{% set collection = page.collection() %}
+{% block stylesheets %}
+  {% do
+    assets.addCss('theme://css/common.css', 100) %}
+  {% do
+    assets.addCss('theme://css/news.css', 100) %}
+  {% do
+    assets.addCss('theme://css/normalize.css', 100) %}
+{% endblock %}
 
-    {% set header_image = page.header.header_image|defined(true) %}
-    {% set header_image_width  = page.header.header_image_width|defined(900) %}
-    {% set header_image_height = page.header.header_image_height|defined(300) %}
-    {% set header_image_file = page.header.header_image_file %}
+<div class="news_item_container">
+  <div class="news_item_image_box">
 
-    <div class="list-news-header">
-        <span class="list-news-date">
-            <time class="dt-published" datetime="{{ page.date|date("c") }}">
-                <span>{{ page.date|date("d") }}</span>
-                <em>{{ page.date|date("M") }}</em>
-            </time>
-        </span>
-        {% if page.header.link %}
-            <h4 class="p-name">
-                {% if page.header.continue_link is not sameas(false) %}
-                <a href="{{ page.url }}"><i class="fa fa-angle-double-right u-url"></i></a>
-                {% endif %}
-                <a href="{{ page.header.link }}" class="u-url">{{ page.title }}</a>
-            </h4>
-        {% else %}
-            <h4 class="p-name"><a href="{{ page.url }}" class="u-url">{{ page.title }}</a></h4>
-        {% endif %}
-
-        {% if page.taxonomy.tag %}
-        <span class="tags">
-            {% for tag in page.taxonomy.tag %}
-            <a href="{{ news.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}" class="p-category">{{ tag }}</a>
-            {% endfor %}
-        </span>
-        {% endif %}
-        {% if header_image %}
-            {% if header_image_file %}
-                {% set header_image_media = page.media.images[header_image_file] %}
-            {% else %}
-                {% set header_image_media = page.media.images|first %}
-            {% endif %}
-            {{ header_image_media.cropZoom(header_image_width, header_image_height).html }}
-        {% endif %}
-
-    </div>
-
-    <div class="list-news-padding">
-
-    {% if page.header.continue_link is sameas(false) %}
-        <div class="e-content">
-            {{ page.content }}
-        </div>
-        {% if not truncate %}
-        {% set show_prev_next = true %}
-        {% endif %}
-    {% elseif truncate and page.summary != page.content %}
-        <div class="p-summary e-content">
-            {{ page.summary }}
-            <p><a href="{{ page.url }}">{{ 'Read more'|t }}</a></p>
-        </div>
-    {% elseif truncate %}
-        <div class="p-summary e-content">
-            {{ page.content }}
-            <p><a href="{{ page.url }}">{{ 'Read more'|t }}</a></p>
-        </div>
+    {% if header_image_file %}
+      {% set header_image_media = page.media.images[header_image_file] %}
     {% else %}
-        <div class="e-content">
-            {{ page.content }}
-        </div>
+      {% set header_image_media = page.media.images | first %}
+    {% endif %}
 
-        {% if config.plugins.comments.enabled %}
-            {% include 'partials/comments.html.twig' %}
+    <img class="news_item_image" src="{{ header_image_media.url }}" alt="hoge"/>
+
+  </div>
+  <div class="news_item_content">
+    <div class="news_item_info">
+      <div class="news_item_date">
+        <time class="dt-published" datetime="{{ page.date|date(" c") }}"="c" )=")" }}""="}}" "">
+          <p>{{ page.date|date("Y") }}.{{ page.date|date("m") }}.{{ page.date|date("d") }}</p>
+        </time>
+      </div>
+
+      <!-- TODO categoryのとり方 -->
+      <!-- <div class="news_item_category"> {#{% if page.taxonomy.category %} <span class="tags"> {% for tag in page.taxonomy.category %} <a href="{{ blog.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}" class="p-category">{{ category
+      }}</a> {% endfor %} </span> {% endif %}#} </div> -->
+
+      <div class="news_item_tag">
+        {% if page.taxonomy.tag %}
+          <span class="tags">
+            {% for tag in page.taxonomy.tag %}
+              <a class="news_item_tag" href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}" class="p-category">{{ tag }}</a>
+            {% endfor %}
+          </span>
         {% endif %}
-
-        {% set show_prev_next = true %}
-    {% endif %}
-
-    {% if show_prev_next %}
-
-        <p class="prev-next">
-            {% if not page.isFirst %}
-                <a class="button" href="{{ page.nextSibling.url }}"><i class="fa fa-chevron-left"></i> {{ 'BLOG.ITEM.NEXT_POST'|t }}</a>
-            {% endif %}
-
-            {% if not page.isLast %}
-                <a class="button" href="{{ page.prevSibling.url }}">{{ 'BLOG.ITEM.PREV_POST'|t }} <i class="fa fa-chevron-right"></i></a>
-            {% endif %}
-        </p>
-    {% endif %}
-
+      </div>
     </div>
+    <p class="news_item_title"></p>
+    <p class="news_item_hilite"></p>
+  </div>
+
+  <div class="read_more">
+    {% if page.header.continue_link is sameas(false) %}
+      <div class="read_more_button">
+        {{ page.content }}
+      </div>
+      {% if not truncate %}
+        {% set show_prev_next = true %}
+      {% endif %}
+    {% elseif truncate and page.summary != page.content %}
+      <div class="p-summary read_more_button">
+        {{ page.summary }}
+        <p>
+          <a class="read_more_button" href="{{ page.url }}">{{ 'Read more'|t }}</a>
+        </p>
+      </div>
+    {% elseif truncate %}
+      <div class="p-summary read_more_button">
+        {{ page.content }}
+        <p>
+          <a class="read_more_button" href="{{ page.url }}">{{ 'Read more'|t }}</a>
+        </p>
+      </div>
+    {% else %}
+      <div class="read_more_button">
+        {{ page.content }}
+      </div>
+
+      {% if config.plugins.comments.enabled %}
+        {% include 'partials/comments.html.twig' %}
+      {% endif %}
+
+      {% set show_prev_next = true %}
+    {% endif %}
+  </div>
 </div>

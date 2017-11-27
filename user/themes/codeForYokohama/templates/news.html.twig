@@ -22,22 +22,27 @@
           } %}
         {% endfor %}
 
-        {% if config.plugins.pagination.enabled and collection.params.pagination %}
-          {% include 'partials/pagination.html.twig' with {
-            'base_url' : page.url,
-            'pagination' : collection.params.pagination
-          } %}
-        {% endif %}
+        <div class="pages_link">
 
-        <!-- TODO サイドバーを作る -->
-        <div id="sidebar" class="sidebar_news">
-          {% include 'partials/sidebar.html.twig' with {
-            'news' : page
-          } %}
+          {% if config.plugins.pagination.enabled and collection.params.pagination %}
+            {% include 'partials/pagination.html.twig' with {
+              'base_url' : page.url,
+              'pagination' : collection.params.pagination
+            } %}
+          {% endif %}
         </div>
-
       </div>
     </div>
-  {% endblock %}
+
+    <!-- TODO サイドバーを作る -->
+    <div id="sidebar" class="sidebar_news">
+      {% include 'partials/sidebar.html.twig' with {
+        'news' : page
+      } %}
+    </div>
+
+  </div>
+</div>
+{% endblock %}
 
 {% endembed %}

@@ -9,69 +9,67 @@
 {% endblock %}
 
 <div class="news_item_container">
-  <div class="news_item_image_box">
 
-    {% if header_image_file %}
-      {% set header_image_media = page.media.images[header_image_file] %}
-    {% else %}
-      {% set header_image_media = page.media.images | first %}
-    {% endif %}
+<!-- TODO header_image_fileが多分うまく取れてない、すべてelseの処理を通っている -->
 
-    <img class="news_item_image" src="{{ header_image_media.url }}" alt="hoge"/>
-
-  </div>
-  <div class="news_item_content">
-    <div class="news_item_info">
-      <div class="news_item_date">
-        <time class="dt-published" datetime="{{ page.date|date(" c") }}"="c" )=")" }}""="}}" "">
-          <p>{{ page.date|date("Y") }}.{{ page.date|date("m") }}.{{ page.date|date("d") }}</p>
-        </time>
-      </div>
-
-      <!-- TODO categoryのとり方 -->
-      <!-- <div class="news_item_category"> {#{% if page.taxonomy.category %} <span class="tags"> {% for tag in page.taxonomy.category %} <a href="{{ blog.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}" class="p-category">{{ category
-      }}</a> {% endfor %} </span> {% endif %}#} </div> -->
-
-      <div class="news_item_tag">
-        {% if page.taxonomy.tag %}
-          <span class="tags">
-            {% for tag in page.taxonomy.tag %}
-              <a class="news_item_tag" href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}" class="p-category">{{ tag }}</a>
-            {% endfor %}
-          </span>
-        {% endif %}
-      </div>
+  {% if header_image_file %}
+    {% set header_image_media = page.media.images[header_image_file] %}
+    <!-- <div class="news_item_image_box">
+      <img class="news_item_image" src="{{ header_image_media.url }}" alt="hoge"/>
+    </div> -->
+  {% else %}
+    {% set header_image_media = page.media.images | first %}
+    <div class="news_item_image_box">
+      <img class="news_item_image" src="{{ header_image_media.url }}" alt="hoge"/>
     </div>
-    <p class="news_item_title"></p>
-    <p class="news_item_hilite"></p>
+  {% endif %}
+
+  <div class="news_item_info">
+    <div class="news_item_date">
+      <time class="dt-published" datetime="{{ page.date|date(" c") }}"="c" )=")" }}""="}}" "">
+        <p>{{ page.date|date("Y") }}.{{ page.date|date("m") }}.{{ page.date|date("d") }}</p>
+      </time>
+    </div>
+
+    <!-- TODO categoryのとり方 -->
+    <!-- <div class="news_item_category"> {#{% if page.taxonomy.category %} <span class="tags"> {% for tag in page.taxonomy.category %} <a href="{{ news.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}" class="p-category">{{ category
+    }}</a> {% endfor %} </span> {% endif %}#} </div> -->
+
+    <div class="news_item_tag">
+      {% if page.taxonomy.tag %}
+        <span class="tags">
+          {% for tag in page.taxonomy.tag %}
+            <a class="p-category" href="{{ news.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+          {% endfor %}
+        </span>
+      {% endif %}
+    </div>
   </div>
 
-  <div class="read_more">
+  <div class="news_item_content">
+
+    <a class="news_item_title" href="{{ page.url }}">{{ page.title }}</a>
+
     {% if page.header.continue_link is sameas(false) %}
-      <div class="read_more_button">
-        {{ page.content }}
-      </div>
+      {{ page.content }}
       {% if not truncate %}
         {% set show_prev_next = true %}
       {% endif %}
+
     {% elseif truncate and page.summary != page.content %}
-      <div class="p-summary read_more_button">
-        {{ page.summary }}
-        <p>
-          <a class="read_more_button" href="{{ page.url }}">{{ 'Read more'|t }}</a>
-        </p>
-      </div>
+      {{ page.summary }}
+      <p class="read_more_button">
+        <a class="read_more_button" href="{{ page.url }}">{{ 'Read more'|t }}</a>
+      </p>
+
     {% elseif truncate %}
-      <div class="p-summary read_more_button">
-        {{ page.content }}
-        <p>
-          <a class="read_more_button" href="{{ page.url }}">{{ 'Read more'|t }}</a>
-        </p>
-      </div>
+      {{ page.content }}
+      <p class="read_more_button">
+        <a class="read_more_button" href="{{ page.url }}">{{ 'Read more'|t }}</a>
+      </p>
+
     {% else %}
-      <div class="read_more_button">
-        {{ page.content }}
-      </div>
+      {{ page.content }}
 
       {% if config.plugins.comments.enabled %}
         {% include 'partials/comments.html.twig' %}

@@ -59,6 +59,19 @@ header {
   width: 50%;
 }
 
+.main_title {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  color: #db2023;
+  font-size: 56px;
+}
+
 .grobal_nav {
   display: -ms-flexbox;
   display: flex;

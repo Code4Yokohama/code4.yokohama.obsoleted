@@ -1,6 +1,6 @@
 ---
 name:
-title: members
+title: Members
 blog_url: blog
 body_classes: header-image fullwidth
 sitemap:

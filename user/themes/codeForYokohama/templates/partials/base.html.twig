@@ -1,114 +1,129 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{{ dump(page.title) }}
+{{ dump(page.parent) }}
+{{ dump(page.parent.header.title) }}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getLanguage ?: 'en' }}">
-<head>
-{% block head %}
-    <meta charset="utf-8" />
-    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
-    {% include 'partials/metadata.html.twig' %}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
-    <link rel="canonical" href="{{ page.url(true, true) }}" />
+  <head>
+    {% block head %}
+      <meta charset="utf-8"/>
+      <title>
+        {% if header.title %}{{ header.title|e('html') }}
+          |
+        {% endif %}{{ site.title|e('html') }}</title>
+      {% include 'partials/metadata.html.twig' %}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}"/>
+      <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
-    {% block stylesheets %}
-        {% do assets.addCss('theme://css/common.css', 100) %}
-        {% do assets.addCss('theme://css/normalize.css', 100) %}
-    {% endblock %}
-    {{ assets.css() }}
+      {% block stylesheets %}
+        {% do
+          assets.addCss('theme://css/common.css', 100) %}
+        {% do
+          assets.addCss('theme://css/normalize.css', 100) %}
+      {% endblock %}
+      {{ assets.css() }}
 
-    {% block javascripts %}
-        {% do assets.addJs('jquery', 101) %}
-    {% endblock %}
+      {% block javascripts %}
+        {% do
+          assets.addJs('jquery', 101) %}
+      {% endblock %}
 
-    {{ assets.js() }}
+      {{ assets.js() }}
 
-{% endblock head %}
-</head>
-<body id="top" class="{{ page.header.body_classes }}">
+    {% endblock head %}
+  </head>
+  <body id="top" class="{{ page.header.body_classes }}">
     <div id="sb-site">
-        {% block header %}
-            <div id="mainVisual" class="main_visual">
-                <header>
-                    <h1 class="header_heading"><img class="header_icon" src="{{ url('theme://images/header_icon.png') }}" alt="code for yokohama"/></h1>
+      {% block header %}
+        <div id="mainVisual" class="main_visual">
+          <header>
+            <h1 class="header_heading"><img class="header_icon" src="{{ url('theme://images/header_icon.png') }}" alt="code for yokohama"/></h1>
 
-                </header>
+          </header>
 
-                <div class="container nav">
-                    <nav id="grobalNav" class="grobal_nav">
-                        <ul class="nav_box">
-                            <li class="nav_item">
-                                <a href="">Activites</a>
-                            </li>
-                            <li class="nav_item">
-                                <a href="">Meeting</a>
-                            </li>
-                            <li class="nav_item">
-                                <a href="members.html">Member</a>
-                            </li>
-                            <li class="nav_item">
-                                <a href="">About</a>
-                            </li>
-                            <li class="nav_item">
-                                <a href="">Get Involved</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    {% set mainTypoImage = url('theme://images/main_typo.png') %}
-                    {% if condition %}{% endif %}
-                    <img class="main_visual_typo" src="{{ mainTypoImage }}" alt="TECHNOLOGY FOR SOCIAL INNOVATION" />
-                    <h1 class="main_title">{{page.title}}</h1>
-                </div>
+          <div class="container nav">
+            <nav id="grobalNav" class="grobal_nav">
+              <ul class="nav_box">
+                <li class="nav_item">
+                  <a href="">Activites</a>
+                </li>
+                <li class="nav_item">
+                  <a href="">Meeting</a>
+                </li>
+                <li class="nav_item">
+                  <a href="members.html">Member</a>
+                </li>
+                <li class="nav_item">
+                  <a href="">About</a>
+                </li>
+                <li class="nav_item">
+                  <a href="">Get Involved</a>
+                </li>
+              </ul>
+            </nav>
+            {% set mainTypoImage = url('theme://images/main_typo.png') %}
+            {% if condition %}{% endif %}
+            <img class="main_visual_typo" src="{{ mainTypoImage }}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
+            {% if page.parent.header.title == null %}
+              {% set pageTitle = page.title %}
+            {% else %}
+              {% set pageTitle = page.parent.header.title %}
+            {% endif %}
+            <h1 class="main_title">{{pageTitle}}</h1>
+          </div>
 
-            </div>
-        {% endblock %}
+        </div>
+      {% endblock %}
 
-        {% block body %}
+      {% block body %}
         <section id="body" class="{{ class }}">
-            {% block content %}{% endblock %}
+          {% block content %}{% endblock %}
         </section>
-        {% endblock %}
+      {% endblock %}
 
-        {% block footer %}
-            <footer>
-                <div class="footer_box">
-                    <div class="container">
-                        <div class="container_footer_box">
-                            <div class="license_box">
-                                <div class="license_image">
-                                    <a class="creative_commons_image" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-                                        <img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="クリエイティブ・コモンズ・ライセンス"/>
-                                    </a>
-                                </div>
-                                <div class="license_message">
-                                    このウェブサイトのコンテンツは <a class="license_message_link" rel="license" href="http://creativecommons.org/licenses/by/4.0/">クリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。</a>
-                                    <div class="copyright">
-                                        <p>© Code for YOKOHAMA.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sns_box">
-                                <ul class="sns_list">
-                                    <li class="sns_item">
-                                        <a class="sns_icon" href=""><img src="{{ url('theme://images/sns_icon_fb.png')}}" /></a>
-                                    </li >
-                                    <li class="sns_item">
-                                        <a class="sns_icon" href=""><img src="{{ url('theme://images/sns_icon_github.png')}}" /></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+      {% block footer %}
+        <footer>
+          <div class="footer_box">
+            <div class="container">
+              <div class="container_footer_box">
+                <div class="license_box">
+                  <div class="license_image">
+                    <a class="creative_commons_image" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                      <img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="クリエイティブ・コモンズ・ライセンス"/>
+                    </a>
+                  </div>
+                  <div class="license_message">
+                    このウェブサイトのコンテンツは
+                    <a class="license_message_link" rel="license" href="http://creativecommons.org/licenses/by/4.0/">クリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。</a>
+                    <div class="copyright">
+                      <p>© Code for YOKOHAMA.</p>
                     </div>
+                  </div>
                 </div>
-                <div class="common_footer_box">
-                    <div class="container">
-                        <div class="link_box">
-                            <a class="link_item" href="">Hackathons</a>
-                            <a class="link_item" href="">CONTACT</a>
-                        </div>
-                    </div>
+                <div class="sns_box">
+                  <ul class="sns_list">
+                    <li class="sns_item">
+                      <a class="sns_icon" href=""><img src="{{ url('theme://images/sns_icon_fb.png')}}"/></a>
+                    </li >
+                    <li class="sns_item">
+                      <a class="sns_icon" href=""><img src="{{ url('theme://images/sns_icon_github.png')}}"/></a>
+                    </li>
+                  </ul>
                 </div>
-            </footer>
-        {% endblock %}
+              </div>
+            </div>
+          </div>
+          <div class="common_footer_box">
+            <div class="container">
+              <div class="link_box">
+                <a class="link_item" href="">Hackathons</a>
+                <a class="link_item" href="">CONTACT</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      {% endblock %}
     </div>
-</body>
+  </body>
 </html>

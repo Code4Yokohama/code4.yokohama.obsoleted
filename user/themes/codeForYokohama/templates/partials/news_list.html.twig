@@ -1,0 +1,74 @@
+{% set collection = page.collection() %}
+{% block stylesheets %}
+  {% do
+    assets.addCss('theme://css/common.css', 100) %}
+  {% do
+    assets.addCss('theme://css/news.css', 100) %}
+  {% do
+    assets.addCss('theme://css/normalize.css', 100) %}
+{% endblock %}
+
+<div class="news_list_container">
+
+  {{dump (page.media.images[header_image_file])}}
+
+  {% if page.media.images != null %}
+    {% set header_image_media = page.media.images | first %}
+    {{ dump (header_image_media)}}
+    <div class="news_list_image_box">
+      <img class="news_list_image" src="{{ header_image_media.url }}" alt="hoge"/>
+    </div>
+  {% endif %}
+
+  <div class="news_list_info">
+    <div class="news_list_date">
+      <time class="dt-published" datetime="{{ page.date|date(" c") }}"="c" )=")" }}""="}}" "">
+        <p>{{ page.date|date("Y") }}.{{ page.date|date("m") }}.{{ page.date|date("d") }}</p>
+      </time>
+    </div>
+
+    <div class="news_list_category">
+      {% set count = 0 %}
+      {% for category in page.taxonomy.category %}
+        <a class="news_list_category_item" href="{{news.url|rtrim('/')}}/category{{ config.system.param_sep}}{{category}}">{{category}}</a>
+        {% set count = count + 1 %}
+        {% if count != count(page.taxonomy.category)%}
+          ,
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="news_list_content">
+
+    <a class="news_list_title" href="{{ page.url }}">{{ page.title }}</a>
+
+    {% if page.header.continue_link is sameas(false) %}
+      {{ page.content }}
+      いっこめ
+      {% if not truncate %}
+        {% set show_prev_next = true %}
+      {% endif %}
+
+    {% elseif truncate and page.summary != page.content %}
+      {{ page.summary }}
+      <p class="read_more_button">
+        <a class="read_more_button" href="{{ page.url }}">{{ 'Read more'|t }}</a>
+      </p>
+
+    {% elseif truncate %}
+      {{ page.content }}
+      <p class="read_more_button">
+        <a class="read_more_button" href="{{ page.url }}">{{ 'Read more'|t }}</a>
+      </p>
+
+    {% else %}
+      {{ page.content }}
+      {% if config.plugins.comments.enabled %}
+        {% include 'partials/comments.html.twig' %}
+      {% endif %}
+
+      {% set show_prev_next = true %}
+    {% endif %}
+  </div>
+</div>

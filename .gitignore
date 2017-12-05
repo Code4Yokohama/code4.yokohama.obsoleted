@@ -8,3 +8,6 @@ logs/
 
 #htaccess
 .htaccess
+
+#gravで生成されるimageファイル
+images/

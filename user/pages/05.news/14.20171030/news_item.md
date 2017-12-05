@@ -4,8 +4,11 @@ media_order: 1_OpenDateDay.jpg
 taxonomy:
     category:
         - testcategory
+        - 'What''s New'
     tag:
-        - testtag
+        - 'Civic Hack Night'
+        - 'LOCAL GOOD YOKOHAMA'
+        - アプリ
 ---
 
 今年度横浜において予定されているIT関連のイベントや施策などの動きについて共有します。 

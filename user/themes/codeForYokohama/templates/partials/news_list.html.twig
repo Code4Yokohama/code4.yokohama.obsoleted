@@ -10,15 +10,11 @@
 
 <div class="news_list_container">
 
-<!-- TODO header_image_fileが多分うまく取れてない、すべてelseの処理を通っている -->
+  {{dump (page.media.images[header_image_file])}}
 
-  {% if header_image_file %}
-    {% set header_image_media = page.media.images[header_image_file] %}
-    <!-- <div class="news_item_image_box">
-      <img class="news_item_image" src="{{ header_image_media.url }}" alt="hoge"/>
-    </div> -->
-  {% else %}
+  {% if page.media.images != null %}
     {% set header_image_media = page.media.images | first %}
+    {{ dump (header_image_media)}}
     <div class="news_list_image_box">
       <img class="news_list_image" src="{{ header_image_media.url }}" alt="hoge"/>
     </div>
@@ -37,7 +33,7 @@
         <a class="news_list_category_item" href="{{news.url|rtrim('/')}}/category{{ config.system.param_sep}}{{category}}">{{category}}</a>
         {% set count = count + 1 %}
         {% if count != count(page.taxonomy.category)%}
-        ,
+          ,
         {% endif %}
       {% endfor %}
     </div>

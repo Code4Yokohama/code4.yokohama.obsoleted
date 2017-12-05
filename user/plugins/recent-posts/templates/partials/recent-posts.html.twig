@@ -1,0 +1,10 @@
+<ul>
+    {% for post in recent_posts %}
+        <li class="sidebar-post">
+            <a title="post.title" href="{{ post.url }}">
+                <span>{{ post.date|date("F Y") }}</span><br>
+                {{ post.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

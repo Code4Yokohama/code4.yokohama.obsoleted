@@ -15,7 +15,7 @@
       <div class="container">
 
         {% for child in collection %}
-          {% include 'partials/news_item.html.twig' with {
+          {% include 'partials/news_list.html.twig' with {
             'news' : page,
             'page' : child,
             'truncate' : true

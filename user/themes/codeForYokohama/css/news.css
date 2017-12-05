@@ -11,10 +11,17 @@
 /*-------------------------------------------------- News --------------------------------------------------*/
 
 .news {
+  display: flex;
   position: relative;
   height: auto;
   margin: 0;
   color: #ffffff;
+}
+
+.news_container {
+  color: #000;
+  display: block;
+  width: 670px;
 }
 
 /*-------------------------------------------------- NewsList --------------------------------------------------*/
@@ -173,14 +180,46 @@
 /*-------------------------------------------------- Sidebar --------------------------------------------------*/
 
 .sidebar_news {
-  width: 300px
+  margin: 70px 0 0 50px;
+  width: 300px;
+  color: #000;
+}
+
+.sidebar_content_title {}
+
+.sidebar_content_title::after {
+  background-color: #db2023;
+  content: '';
+  height: 1px;
+  width: 40px;
+  position: absolute;
+  margin-top: 30px;
+}
+
+.popular_posts {
+  margin-bottom: 75px;
+}
+
+.categories {
+  margin-bottom: 75px;
+}
+
+.archive {
+  margin-bottom: 75px;
+}
+
+.tags {
+  margin-bottom: 75px;
 }
 
 /*-------------------------------------------------- pagination --------------------------------------------------*/
 
 .pages_link {
-  margin-top: 35px;
-  margin-right: 350px;
+  margin: 80px 0 80px 0;
   top: 50%;
   left: 50%;
+}
+
+.next_after_pagination {
+  margin-bottom: 80px;
 }

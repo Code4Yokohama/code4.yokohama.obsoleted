@@ -11,38 +11,37 @@
 
   {% block content %}
 
-    <div id="news" class="news">
-      <div class="container">
+    <div class="container">
+      <div id="news" class="news">
+        <div class="news_container">
 
-        {% for child in collection %}
-          {% include 'partials/news_list.html.twig' with {
-            'news' : page,
-            'page' : child,
-            'truncate' : true
-          } %}
-        {% endfor %}
-
-        <div class="pages_link">
-
-          {% if config.plugins.pagination.enabled and collection.params.pagination %}
-            {% include 'partials/pagination.html.twig' with {
-              'base_url' : page.url,
-              'pagination' : collection.params.pagination
+          {% for child in collection %}
+            {% include 'partials/news_list.html.twig' with {
+              'news' : page,
+              'page' : child,
+              'truncate' : true
             } %}
-          {% endif %}
+          {% endfor %}
+
+          <div class="pages_link">
+
+            {% if config.plugins.pagination.enabled and collection.params.pagination %}
+              {% include 'partials/pagination.html.twig' with {
+                'base_url' : page.url,
+                'pagination' : collection.params.pagination
+              } %}
+            {% endif %}
+          </div>
+        </div>
+        <div id="sidebar" class="sidebar_news">
+          {% include 'partials/sidebar.html.twig' with {
+            'news' : page
+          } %}
         </div>
       </div>
+
     </div>
 
-    <!-- TODO サイドバーを作る -->
-    <div id="sidebar" class="sidebar_news">
-      {% include 'partials/sidebar.html.twig' with {
-        'news' : page
-      } %}
-    </div>
-
-  </div>
-</div>
-{% endblock %}
+  {% endblock %}
 
 {% endembed %}

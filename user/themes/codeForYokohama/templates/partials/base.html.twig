@@ -1,7 +1,4 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
-{{ dump(page.title) }}
-{{ dump(page.parent) }}
-{{ dump(page.parent.header.title) }}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getLanguage ?: 'en' }}">
   <head>

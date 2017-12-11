@@ -3,7 +3,7 @@
     {% do
       assets.addCss('theme://css/common.css', 100) %}
     {% do
-      assets.addCss('theme://css/news.css', 100) %}
+      assets.addCss('theme://css/activities.css', 100) %}
     {% do
       assets.addCss('theme://css/normalize.css', 100) %}
   {% endblock %}
@@ -14,20 +14,20 @@
     {% endif %}
 
     <div class="container">
-      <div id="news" class="news">
-        <div class="news_container">
+      <div id="activities" class="activities">
+        <div class="activities_container">
           <div id="item" class="block pure-u-2-3 h-entry">
-            {% include 'partials/news_item.html.twig' with {
-              'news' : page.parent,
+            {% include 'partials/activities_item.html.twig' with {
+              'activities' : page.parent,
               'truncate' : false
             } %}
           </div>
           <div class="next_after_pagination">
-            
+
           </div>
         </div>
-        <div id="sidebar" class="sidebar_news">
-          {% include 'partials/sidebar.html.twig' with {'news':page.parent}%}
+        <div id="sidebar" class="sidebar_activities">
+          {% include 'partials/sidebar.html.twig' with {'activities':page.parent}%}
         </div>
       </div>
     </div>

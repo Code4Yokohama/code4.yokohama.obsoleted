@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="activities_item_container">
+    <h1 class="activities_item_title">{{ page.title }}</h1>
+
+    <div class="activities_item_info">
+
+      <div class="activities_item_date">
+        <time class="dt-published" datetime="{{ page.date|date(" c") }}"="c" )=")" }}""="}}" "">
+          <p>{{ page.date|date("Y") }}.{{ page.date|date("m") }}.{{ page.date|date("d") }}</p>
+        </time>
+      </div>
+
+      <div class="activities_item_category">
+        {% set count = 0 %}
+
+        {% for category in page.taxonomy.category %}
+          <a class="activities_item_category_item" href="{{activities.url|rtrim('/')}}/category{{ config.system.param_sep}}{{category}}">{{category}}</a>
+          {% set count = count + 1 %}
+          {% if count != count(page.taxonomy.category)%}
+          <span>,</span>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+    </div>
+
+    <!-- TODO header_image_fileが多分うまく取れてない、すべてelseの処理を通っている -->
+    <div class="activities_item_image_box">
+      {% if header_image_file %}
+        {% set header_image_media = page.media.images[header_image_file] %}
+      {% else %}
+        {% set header_image_media = page.media.images | first %}
+        <div class="activities_item_image_box">
+          <img class="activities_item_image" src="{{ header_image_media.url }}" alt="hoge"/>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="activities_item_content">
+
+      {{ page.content }}
+      {% if config.plugins.comments.enabled %}
+        {% include 'partials/comments.html.twig' %}
+      {% endif %}
+
+      {% set show_prev_next = true %}
+
+    </div>
+
+    <div class="activities_item_tags">
+      <p class="activities_item_tags_title">TAGS</p>
+
+      {% set count = 0 %}
+      {% for tag in page.taxonomy.tag %}
+        <a class="activities_item_tags_item" href="{{ activities.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+        {% set count = count + 1 %}
+        {% if count != count(page.taxonomy.tag) %}
+          ,
+        {% endif %}
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+</div>

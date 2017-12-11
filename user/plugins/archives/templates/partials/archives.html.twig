@@ -1,6 +1,12 @@
 <ul class="archives">
-
+{{dump (archives_data)}}
+iii
 {% for month,items in archives_data %}
+aaa
+{{dump (month)}}
+{{dump (items)}}
+{{dump (config.plugins.archives.taxonomy_names.month)}}
+{{dump (config.system.param_sep)}}
     <li>
     	<a href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date('M_Y')|lower|e('url') }}">
         {% if archives_show_count %}

@@ -224,17 +224,31 @@
 
 .archives_list {
   padding: 0;
+  font-size: 12px;
+  color: #282828;
+}
+
+.archives_year {
+  margin-bottom: 20px;
 }
 
 .archives_month_list_box {
   display: inline-block;
+    margin: 0 15px 20px 0;
 }
 
 .archives_month_list {
   list-style: none;
 }
 
-.archives_month_item {}
+.archives_month_item {
+
+}
+
+.archives_month_item a {
+  color: #282828;
+  text-decoration: none;
+}
 
 .tags {
   margin-bottom: 75px;

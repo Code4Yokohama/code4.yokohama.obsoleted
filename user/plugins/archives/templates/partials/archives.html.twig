@@ -1,5 +1,8 @@
 <ul class="archives_list">
   {% for month, items in archives_data %}
+
+    {{dump (month)}}
+    {{dump (config.plugins.archives.taxonomy_names.month)}}
     {% set only_year = preg_replace('/[^0-9]/', '', month) %}
     {% if only_year != only_year_after %}
       {% set only_year = preg_replace('/[^0-9]/', '', month) %}
@@ -7,14 +10,14 @@
     {% endif %}
     <div class="archives_month_list_box">
       <li class="archives_month_list">
-
-        <!-- TODO 記事のない月はそもそも取得されないっぽい -->
         {% if items | length > 0 %}
           <div class="archives_month_item">
             <a href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date('M_Y')|lower|e('url') }}">
             {% endif %}
             {% set only_month = preg_replace('/[0-9]/', '', month) %}
-            <span class="archive_date">{{ only_month }}</span>
+            {% set short_month = strtoupper(substr(only_month, 0, 3)) %}
+
+            <span class="archive_date">{{ short_month }}</span>
           </a>
         </div>
       </li>

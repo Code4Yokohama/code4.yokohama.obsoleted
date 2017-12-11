@@ -1,7 +1,7 @@
 ---
 title: '自治会運営に役立つツールを開発しよう！  - Code for Yokohama Civic Hack Night vol.04'
 media_order: 1_OpenDateDay.jpg
-date: '17:34 09/19/2017'
+date: '17:34 10/02/2017'
 taxonomy:
     category:
         - Activities

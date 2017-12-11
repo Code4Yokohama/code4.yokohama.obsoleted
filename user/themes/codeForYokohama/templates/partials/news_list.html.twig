@@ -10,11 +10,8 @@
 
 <div class="news_list_container">
 
-  {{dump (page.media.images[header_image_file])}}
-
   {% if page.media.images != null %}
     {% set header_image_media = page.media.images | first %}
-    {{ dump (header_image_media)}}
     <div class="news_list_image_box">
       <img class="news_list_image" src="{{ header_image_media.url }}" alt="hoge"/>
     </div>

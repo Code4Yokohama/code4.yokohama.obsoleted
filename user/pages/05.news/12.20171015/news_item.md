@@ -1,5 +1,6 @@
 ---
 title: 横浜市長選挙候補者に提言を渡しました
+date: 17:34 10/15/2017
 taxonomy:
     category:
         - 'Whats New'

@@ -1,5 +1,6 @@
 ---
 title: 横浜市長選挙候補者に提言を渡しました
+date: 17:34 11/20/2017
 media_order: 1_OpenDateDay.jpg
 taxonomy:
     category:

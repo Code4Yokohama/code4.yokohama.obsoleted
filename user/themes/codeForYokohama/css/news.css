@@ -185,7 +185,11 @@
   color: #000;
 }
 
-.sidebar_content_title {}
+.sidebar_content_title {
+  position: relative;
+  margin-bottom: 48px;
+  color: #282828;
+}
 
 .sidebar_content_title::after {
   background-color: #db2023;
@@ -193,7 +197,9 @@
   height: 1px;
   width: 40px;
   position: absolute;
-  margin-top: 30px;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -20px;
 }
 
 .popular_posts {
@@ -204,12 +210,30 @@
   margin-bottom: 75px;
 }
 
+.category_item {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #6f6f6f;
+}
+
 .archive {
   margin-bottom: 75px;
 }
 
 .tags {
   margin-bottom: 75px;
+}
+
+.tag_item {
+  font-size: 12px;
+  border: solid 1px #afafaf;
+  padding: 8px;
+  display: inline-block;
+  margin:0 10px 10px 0;
+  text-decoration: none;
+  color: #3f3f3f;
 }
 
 /*-------------------------------------------------- pagination --------------------------------------------------*/

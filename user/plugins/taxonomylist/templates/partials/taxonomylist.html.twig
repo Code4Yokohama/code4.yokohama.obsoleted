@@ -1,10 +1,26 @@
-{% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
+{% set taxlist = children_only is defined? taxonomylist.getChildPagesTags(): taxonomylist.get() %}
 
 {% if taxlist %}
-<span class="tags">
-    {% for tax,value in taxlist[taxonomy] %}
-        {% set active = uri.param(taxonomy) == tax? 'active' : '' %}
-        <a class="{{ active }}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
-    {% endfor %}
-</span>
+  {% if taxonomy == 'category' %}
+    <span class="categories">
+      {% for tax, value in taxlist[taxonomy] %}
+        {% set active = uri.param(taxonomy) == tax
+          ? 'active'
+          : '' %}
+
+          <a class="category_item" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }} / {{taxlist[taxonomy][tax]}}</a>
+
+      {% endfor %}
+    </span>
+
+  {% elseif taxonomy == 'tag' %}
+    <span class="tags">
+      {% for tax, value in taxlist[taxonomy] %}
+        {% set active = uri.param(taxonomy) == tax
+          ? 'active'
+          : '' %}
+        <a class="tag_item" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
+      {% endfor %}
+    </span>
+  {% endif %}
 {% endif %}

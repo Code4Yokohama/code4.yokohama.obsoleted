@@ -222,6 +222,20 @@
   margin-bottom: 75px;
 }
 
+.archives_list {
+  padding: 0;
+}
+
+.archives_month_list_box {
+  display: inline-block;
+}
+
+.archives_month_list {
+  list-style: none;
+}
+
+.archives_month_item {}
+
 .tags {
   margin-bottom: 75px;
 }
@@ -231,7 +245,7 @@
   border: solid 1px #afafaf;
   padding: 8px;
   display: inline-block;
-  margin:0 10px 10px 0;
+  margin: 0 10px 10px 0;
   text-decoration: none;
   color: #3f3f3f;
 }

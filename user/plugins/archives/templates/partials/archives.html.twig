@@ -1,8 +1,5 @@
 <ul class="archives_list">
   {% for month, items in archives_data %}
-
-    {{dump (month)}}
-    {{dump (config.plugins.archives.taxonomy_names.month)}}
     {% set only_year = preg_replace('/[^0-9]/', '', month) %}
     {% if only_year != only_year_after %}
       {% set only_year = preg_replace('/[^0-9]/', '', month) %}

@@ -1,148 +1,134 @@
 {% embed 'partials/base.html.twig' %}
 
-	{% set collection = page.collection() %}
-	{% block stylesheets %}
-			{% do assets.addCss('theme://css/common.css', 100) %}
-			{% do assets.addCss('theme://css/index.css', 100) %}
-			{% do assets.addCss('theme://css/normalize.css', 100) %}
-	{% endblock %}
+  {% set collection = page.collection() %}
+  {% block stylesheets %}
+    {% do
+      assets.addCss('theme://css/common.css', 100) %}
+    {% do
+      assets.addCss('theme://css/index.css', 100) %}
+    {% do
+      assets.addCss('theme://css/normalize.css', 100) %}
+  {% endblock %}
 
-	{% block content %}
+  {% block content %}
 
-		<main class="main_home">
-			<div id="about" class="about">
-				<div class="container">
-					<h1 class="common_heading white">About</h1>
-					<article class="about_box first">
-						<h2 class="about_title">Technology for Social Innovation</h2>
-						<section>
-							<p class="about_detail">
-								Code for YOKOHAMAは仲間とともに技術を磨き、学んだスキルを地域の課題解決に役立てていく活動です。<br />横浜から価値あるソリューションを世界へ。あなたもこの活動に参加しませんか？
-							</p>
-						</section>
-					</article>
-					<article class="about_box project">
-						<h2 class="about_title">Project</h2>
-						<section>
-							<p class="about_detail">
-								Code for YOKOHAMAはオープンソースやオープンデータに関するプロジェクト、<br /> 参加者のスキルアップを目指すプロジェクトを中心に参加メンバーが主体的に立ち上げていきます。 </p>
-							<div class="project_archives">
-								<div class="project_archives_item">
-									オープンソースオープンソースオープン ソースオープンソースオープンソース オープンソースオープンソースオープン ソースオープンソースオープンソース
-								</div>
-								<div class="project_archives_item">
-									オープンソースオープンソースオープン ソースオープンソースオープンソース オープンソースオープンソースオープン ソースオープンソースオープンソース
-								</div>
-								<div class="project_archives_item">
-									オープンソースオープンソースオープン ソースオープンソースオープンソース オープンソースオープンソースオープン ソースオープンソースオープンソース
-								</div>
-							</div>
-						</section>
-					</article>
-					<article class="about_box innovation">
-						<div class="about_innovation_text">
-							<h2 class="about_title">Technology for Social Innovation</h2>
-							<section>
-								<p class="about_detail">
-									Code for YOKOHAMAは仲間とともに技術を磨き、<br />学んだスキルを地域の課題解決に役立てていく活動です。<br /> 横浜から価値あるソリューションを世界へ。<br /> あなたもこの活動に参加しませんか？
-								</p>
-							</section>
-						</div>
-						<div class="about_innovation_image">
-							<img src="{{ url('theme://images/inovation.png')}}" />
-						</div>
-					</article>
-				</div>
-			</div>
+    <main class="main_home">
+      <div id="about" class="about">
+        <div class="container">
+          <h1 class="common_heading white">About</h1>
+          <article class="about_box first">
+            <h2 class="about_title">Technology for Social Innovation</h2>
+            <section>
+              <p class="about_detail">
+                Code for YOKOHAMAは仲間とともに技術を磨き、学んだスキルを地域の課題解決に役立てていく活動です。<br/>横浜から価値あるソリューションを世界へ。あなたもこの活動に参加しませんか？
+              </p>
+            </section>
+          </article>
+          <article class="about_box project">
+            <h2 class="about_title">Project</h2>
+            <section>
+              <p class="about_detail">
+                Code for YOKOHAMAはオープンソースやオープンデータに関するプロジェクト、<br/>
+                参加者のスキルアップを目指すプロジェクトを中心に参加メンバーが主体的に立ち上げていきます。
+              </p>
+              <div class="project_archives">
+                <div class="project_archives_item">
+                  オープンソースオープンソースオープン ソースオープンソースオープンソース オープンソースオープンソースオープン ソースオープンソースオープンソース
+                </div>
+                <div class="project_archives_item">
+                  オープンソースオープンソースオープン ソースオープンソースオープンソース オープンソースオープンソースオープン ソースオープンソースオープンソース
+                </div>
+                <div class="project_archives_item">
+                  オープンソースオープンソースオープン ソースオープンソースオープンソース オープンソースオープンソースオープン ソースオープンソースオープンソース
+                </div>
+              </div>
+            </section>
+          </article>
+          <article class="about_box innovation">
+            <div class="about_innovation_text">
+              <h2 class="about_title">Technology for Social Innovation</h2>
+              <section>
+                <p class="about_detail">
+                  Code for YOKOHAMAは仲間とともに技術を磨き、<br/>学んだスキルを地域の課題解決に役立てていく活動です。<br/>
+                  横浜から価値あるソリューションを世界へ。<br/>
+                  あなたもこの活動に参加しませんか？
+                </p>
+              </section>
+            </div>
+            <div class="about_innovation_image">
+              <img src="{{ url('theme://images/inovation.png')}}"/>
+            </div>
+          </article>
+        </div>
+      </div>
 
-			<div id="whatsNew" class="whats_new">
-				<div class="container">
-					<h1 class="common_heading red">What's New?</h1>
-					<div>
-						<!-- アイテム1つ1つはどこからデータ持ってくる？ -->
-						<ul class="whats_new_contents">
-							<li class="whats_new_item">
-								<p>
-									2017.10.10　　　実践！共通語彙基盤ワークショップ・ハッカソンを開催します。
-								</p>
-							</li>
-							<li class="whats_new_item">
-								<p>
-									2017.08.01　　　横浜市長選候補者に提言を渡しました。
-								</p>
-							</li>
-							<li class="whats_new_item">
-								<p>
-									2017.07.21　　　横浜市長選候補者に提言を渡します。
-								</p>
-							</li>
-							<li class="whats_new_item">
-								<p>
-									2017.10.10　　　実践！共通語彙基盤ワークショップ・ハッカソンを開催します。
-								</p>
-							</li>
-							<li class="whats_new_item">
-								<p>
-									2017.08.01　　　横浜市長選候補者に提言を渡しました。
-								</p>
-							</li>
-						</ul>
-					</div>
-					<a class="read_more_button" href="activities/category:What's%20New" onclick="">Read more</a>
-				</div>
-			</div>
+      <div id="whatsNew" class="whats_new">
+        <div class="container">
+          <h1 class="common_heading red">What's New?</h1>
+          <div class="whats_new_contents">
+            {% include 'partials/whats_new_home.html.twig' %}
+            <!-- TODO whats_new_home みたいなレイアウト作ってinclude -->
+            <!-- アイテム1つ1つはどこからデータ持ってくる？ -->
 
-			<div id="activites" class="activites">
-				<div class="container activites_container">
-					<h1 class="common_heading white">Activites</h1>
-					<article>
-						<section>
-							<div class="activites_items">
-								<div class="activites_item_box">
-									<img class="activites_image" src="{{ url('theme://images/activites_image.png')}}" alt="activites" />
-									<p class="activites_title">横浜のIT系ネットワークの情報基盤、プロジェクト情報共有を考えよう！<br /> - Code for YOKOHAMA - Civic Hack Night vol.05</p>
-									<p class="activites_detail">今年度横浜において予定されているIT関連のイベントや施策などの動きについて共有します。</p>
-								</div>
-								<div class="activites_item_box">
-									<img class="activites_image" src="{{ url('theme://images/activites_image.png')}}" alt="activites" />
-									<p class="activites_title">自治会運営に役立つツールを開発しよう！<br />- Code for Yokohama Civic Hack Night vol.04</p>
-									<p class="activites_detail">１．自治会ってどんな仕組み？</p>
-								</div>
-							</div>
-						</section>
-					</article>
-					<a class="read_more_button" href="activities/category:Activities" onclick="">Read more</a>
-				</div>
-			</div>
+          </div>
+          <a class="read_more_button" href="activities/category:What's%20New" onclick="">Read more</a>
+        </div>
+      </div>
 
-			<div id="member" class="member">
-				<div class="container">
-					<h1 class="common_heading red">Member</h1>
-					<ul class="member_list">
-						<li class="member_item_box">
-							<img class="member_image" src="{{ url('theme://images/member_hidano.png')}}" alt="肥田野 正輝" />
-							<p class="member_company">インフォ・ラウンジ合同会社</p>
-							<p class="member_name">肥田野 正輝</p>
-						</li>
-						<li class="member_item_box">
-							<img class="member_image" src="{{ url('theme://images/member_kobayashi.png')}}" alt="小林 巌生" />
-							<p class="member_company">インフォ・ラウンジ合同会社</p>
-							<p class="member_name">小林 巌生</p>
-						</li>
-						<li class="member_item_box">
-							<img class="member_image" src="{{ url('theme://images/member_ito.png')}}" alt="伊藤 宗太" />
-							<p class="member_company">インフォ・ラウンジ合同会社</p>
-							<p class="member_name">伊藤 宗太</p>
-						</li>
-						<li class="member_item_box">
-							<img class="member_image" src="{{ url('theme://images/member_hidano.png')}}" alt="肥田野 正輝" />
-							<p class="member_company">インフォ・ラウンジ合同会社</p>
-							<p class="member_name">肥田野 正輝</p>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</main>
-	{% endblock %}
+      <!-- TODO activities_home みたいなレイアウトをincludeする -->
+      <div id="activites" class="activites">
+        <div class="container activites_container">
+          <h1 class="common_heading white">Activites</h1>
+          <article>
+            <section>
+              <div class="activites_items">
+                <div class="activites_item_box">
+                  <img class="activites_image" src="{{ url('theme://images/activites_image.png')}}" alt="activites"/>
+                  <p class="activites_title">横浜のIT系ネットワークの情報基盤、プロジェクト情報共有を考えよう！<br/>
+                    - Code for YOKOHAMA - Civic Hack Night vol.05</p>
+                  <p class="activites_detail">今年度横浜において予定されているIT関連のイベントや施策などの動きについて共有します。</p>
+                </div>
+                <div class="activites_item_box">
+                  <img class="activites_image" src="{{ url('theme://images/activites_image.png')}}" alt="activites"/>
+                  <p class="activites_title">自治会運営に役立つツールを開発しよう！<br/>- Code for Yokohama Civic Hack Night vol.04</p>
+                  <p class="activites_detail">１．自治会ってどんな仕組み？</p>
+                </div>
+              </div>
+            </section>
+          </article>
+          <a class="read_more_button" href="activities/category:Activities" onclick="">Read more</a>
+        </div>
+      </div>
+
+      <!-- TODO members_home みたいなレイアウトをインクルードする -->
+      <div id="member" class="member">
+        <div class="container">
+          <h1 class="common_heading red">Member</h1>
+          <ul class="member_list">
+            <li class="member_item_box">
+              <img class="member_image" src="{{ url('theme://images/member_hidano.png')}}" alt="肥田野 正輝"/>
+              <p class="member_company">インフォ・ラウンジ合同会社</p>
+              <p class="member_name">肥田野 正輝</p>
+            </li>
+            <li class="member_item_box">
+              <img class="member_image" src="{{ url('theme://images/member_kobayashi.png')}}" alt="小林 巌生"/>
+              <p class="member_company">インフォ・ラウンジ合同会社</p>
+              <p class="member_name">小林 巌生</p>
+            </li>
+            <li class="member_item_box">
+              <img class="member_image" src="{{ url('theme://images/member_ito.png')}}" alt="伊藤 宗太"/>
+              <p class="member_company">インフォ・ラウンジ合同会社</p>
+              <p class="member_name">伊藤 宗太</p>
+            </li>
+            <li class="member_item_box">
+              <img class="member_image" src="{{ url('theme://images/member_hidano.png')}}" alt="肥田野 正輝"/>
+              <p class="member_company">インフォ・ラウンジ合同会社</p>
+              <p class="member_name">肥田野 正輝</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  {% endblock %}
 
 {% endembed %}

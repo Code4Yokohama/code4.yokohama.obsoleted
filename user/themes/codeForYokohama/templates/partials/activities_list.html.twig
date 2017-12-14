@@ -27,6 +27,7 @@
     <div class="activities_list_category">
       {% set count = 0 %}
       {% for category in page.taxonomy.category %}
+      <!-- activites.url で、~~~~/activities というURLが取れる（activities_itemからactivitiesにpage.patentが入って渡ってきているから）-->
         <a class="activities_list_category_item" href="{{activities.url|rtrim('/')}}/category{{ config.system.param_sep}}{{category}}">{{category}}</a>
         {% set count = count + 1 %}
         {% if count != count(page.taxonomy.category)%}

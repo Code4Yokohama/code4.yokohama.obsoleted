@@ -1,0 +1,21 @@
+{% set collection = page.collection("What's New") %}
+{% set whatsNewOption = { items:  {'@taxonomy.category': "What's New"}, 'limit': 5, 'order': {'by': 'date', 'dir': 'desc'} } %}
+{% set whatsNewCollection = page.collection(whatsNewOption) %}
+
+{% block stylesheets %}
+  {% do
+    assets.addCss('theme://css/index.css', 100) %}
+{% endblock %}
+<div>
+  <ul class="whats_new_list">
+    {% for child in whatsNewCollection %}
+    {{dump (child.title)}}
+    <li class="whats_new_item">
+      <span class="whats_new_item_date"><time class="dt-published" datetime="{{ child.date|date(" c") }}"="c" )=")" }}""="}}" "">
+        <p>{{ child.date|date("Y") }}.{{ child.date|date("m") }}.{{ child.date|date("d") }}</p>
+      </time></span>
+      <span class="whats_new_item_title">{{child.title}}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

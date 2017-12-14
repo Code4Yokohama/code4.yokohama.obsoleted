@@ -34,7 +34,7 @@
 
 .whats_new:after { content: ''; position: absolute; display: block; right: -20px; top: -140px; width: 100%; height: 160px; background-color: #e86062; transform: rotateZ(6deg); }
 
-.whats_new_contents { padding-left: 0; text-align: left; font-size: 16px; list-style: none; border-bottom: 1px solid #fff; }
+.whats_new_list { padding-left: 0; text-align: left; font-size: 16px; list-style: none; border-bottom: 1px solid #fff; }
 
 .whats_new_item p { margin-bottom: 30px; }
 

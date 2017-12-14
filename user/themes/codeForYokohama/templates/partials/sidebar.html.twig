@@ -1,9 +1,10 @@
-{% set feed_url = blog.url == '/' or blog.url == base_url_relative
-  ? (base_url_relative ~ '/' ~ blog.slug)
+{% set feed_url = activities.url == '/' or activities.url == base_url_relative
+  ? (base_url_relative ~ '/' ~ activities.slug)
   : blog.url %}
-{% set new_base_url = blog.url == '/'
+{% set new_base_url = activities.url == '/'
   ? ''
-  : blog.url %}
+  : activities.url %}
+  {{dump (activities.url)}}
 
 <div class="sidebar_container">
 

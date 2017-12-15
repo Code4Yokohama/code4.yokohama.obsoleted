@@ -11,3 +11,6 @@ logs/
 
 #gravで生成されるimageファイル
 images/
+
+#node modules
+user/themes/codeForYokohama/node_modules/

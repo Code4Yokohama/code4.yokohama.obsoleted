@@ -21,7 +21,9 @@
   {{dump (header_image_media)}}
   <div class="activites_item_box">
     <img class="activities_image" src="{{ header_image_media.url }}" alt="activites"/>
-    <p class="activities_title">{{child.title}}</p>
+    <div class="activities_title">
+      <a href="{{ child.url }}">{{ child.title }}</a>
+    </div>
     <div class="activities_summary">{{child.summary}}</div>
   </div>
 {% endfor %}

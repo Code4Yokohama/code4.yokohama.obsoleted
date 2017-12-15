@@ -1,277 +1,97 @@
 /*-------------------------------------------------- header --------------------------------------------------*/
+.main_visual_typo { display: none; }
 
-.main_visual_typo {
-  display: none;
-}
-
-.main_title {
-  display: block;
-}
+.main_title { display: block; }
 
 /*-------------------------------------------------- Activities --------------------------------------------------*/
+.activities { display: -ms-flexbox; display: flex; position: relative; height: auto; margin: 0; color: #ffffff; }
 
-.activities {
-  display: flex;
-  position: relative;
-  height: auto;
-  margin: 0;
-  color: #ffffff;
-}
-
-.activities_container {
-  color: #000;
-  display: block;
-  width: 670px;
-}
+.activities_container { color: #000; display: block; width: 670px; }
 
 /*-------------------------------------------------- ActivitiesList --------------------------------------------------*/
+.activities_list_container { width: 670px; margin-top: 70px; border-bottom: 1px solid #afafaf; }
 
-.activities_list_container {
-  width: 670px;
-  margin-top: 70px;
-  border-bottom: 1px solid #afafaf;
-}
+.activities_list_image_box { width: 670px; }
 
-.activities_list_image_box {
-  width: 670px;
-}
+.activities_list_image { width: 100%; }
 
-.activities_list_image {
-  width: 100%;
-}
+.activities_list_info { margin-top: 20px; display: -ms-flexbox; display: flex; }
 
-.activities_list_info {
-  margin-top: 20px;
-  display: flex;
-}
+.activities_list_date { height: 15px; padding-right: 15px; color: #6f6f6f; font-size: 12px; border-right: 1px solid #6f6f6f; box-sizing: border-box; }
 
-.activities_list_date {
-  height: 15px;
-  padding-right: 15px;
-  color: #6f6f6f;
-  font-size: 12px;
-  border-right: 1px solid #6f6f6f;
-  box-sizing: border-box;
-}
+.activities_list_date p { padding: 0; margin: 0; }
 
-.activities_list_date p {
-  padding: 0;
-  margin: 0;
-}
+.activities_list_category { height: 15px; padding-left: 15px; color: #6f6f6f; font-size: 12px; line-height: 35px; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; }
 
-.activities_list_category {
-  height: 15px;
-  padding-left: 15px;
-  color: #6f6f6f;
-  font-size: 12px;
-  line-height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.activities_list_category_item { text-decoration: none; }
 
-.activities_list_category_item {
-  text-decoration: none;
-}
+.activities_list_title { font-size: 16px; font-weight: bold; text-align: left; text-decoration: none; }
 
-.activities_list_title {
-  font-size: 16px;
-  font-weight: bold;
-  text-align: left;
-  text-decoration: none;
-}
+.activities_list_content { color: black; text-align: left; margin-top: 15px; }
 
-.activities_list_content {
-  color: black;
-  text-align: left;
-  margin-top: 15px;
-}
-
-.read_more_button {
-  text-align: center;
-  text-decoration: none;
-  color: #3f3f3f;
-}
+.read_more_button { text-align: center; text-decoration: none; color: #3f3f3f; }
 
 /*-------------------------------------------------- ActivitiesItem --------------------------------------------------*/
+.v_item_container { width: 670px; margin-top: 70px; border-bottom: 1px solid #afafaf; }
 
-.v_item_container {
-  width: 670px;
-  margin-top: 70px;
-  border-bottom: 1px solid #afafaf;
-}
+.activities_item_image_box { margin: 60px 0 60px 0; width: 670px; }
 
-.activities_item_image_box {
-  margin: 60px 0 60px 0;
-  width: 670px;
-}
+.activities_item_image { width: 100%; }
 
-.activities_item_image {
-  width: 100%;
-}
+.activities_item_info { margin-top: 20px; display: -ms-flexbox; display: flex; }
 
-.activities_item_info {
-  margin-top: 20px;
-  display: flex;
-}
+.activities_item_date { height: 15px; padding-right: 15px; color: #6f6f6f; font-size: 12px; border-right: 1px solid #6f6f6f; box-sizing: border-box; }
 
-.activities_item_date {
-  height: 15px;
-  padding-right: 15px;
-  color: #6f6f6f;
-  font-size: 12px;
-  border-right: 1px solid #6f6f6f;
-  box-sizing: border-box;
-}
+.activities_item_date p { padding: 0; margin: 0; }
 
-.activities_item_date p {
-  padding: 0;
-  margin: 0;
-}
+.activities_item_title { font-size: 18px; font-weight: bold; text-align: left; text-decoration: none; }
 
-.activities_item_title {
-  font-size: 18px;
-  font-weight: bold;
-  text-align: left;
-  text-decoration: none;
-}
+.activities_item_category { height: 15px; padding-left: 15px; color: #6f6f6f; font-size: 12px; line-height: 35px; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; }
 
-.activities_item_category {
-  height: 15px;
-  padding-left: 15px;
-  color: #6f6f6f;
-  font-size: 12px;
-  line-height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.activities_item_category_item { text-decoration: none; }
 
-.activities_item_category_item {
-  text-decoration: none;
-}
+.activities_item_content { color: black; text-align: left; font-size: 14px; }
 
-.activities_item_content {
-  color: black;
-  text-align: left;
-  font-size: 14px;
-}
+.read_more_button { text-align: center; text-decoration: none; color: #3f3f3f; }
 
-.read_more_button {
-  text-align: center;
-  text-decoration: none;
-  color: #3f3f3f;
-}
+.activities_item_tags { margin: 60px 0 30px 0; color: #000; font-size: 12px; }
 
-.activities_item_tags {
-  margin: 60px 0 30px 0;
-  color: #000;
-  font-size: 12px;
-}
+.activities_item_tags_title { font-weight: bold; }
 
-.activities_item_tags_title {
-  font-weight: bold;
-}
-
-.activities_item_tags_item {
-  text-decoration: none;
-}
+.activities_item_tags_item { text-decoration: none; }
 
 /*-------------------------------------------------- Sidebar --------------------------------------------------*/
+.sidebar_activities { margin: 70px 0 0 50px; width: 300px; color: #000; }
 
-.sidebar_activities {
-  margin: 70px 0 0 50px;
-  width: 300px;
-  color: #000;
-}
+.sidebar_content_title { position: relative; margin-bottom: 48px; color: #282828; }
 
-.sidebar_content_title {
-  position: relative;
-  margin-bottom: 48px;
-  color: #282828;
-}
+.sidebar_content_title::after { background-color: #db2023; content: ''; height: 1px; width: 40px; position: absolute; left: 0; bottom: 0; margin-bottom: -20px; }
 
-.sidebar_content_title::after {
-  background-color: #db2023;
-  content: '';
-  height: 1px;
-  width: 40px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin-bottom: -20px;
-}
+.popular_posts { margin-bottom: 75px; }
 
-.popular_posts {
-  margin-bottom: 75px;
-}
+.categories { margin-bottom: 75px; }
 
-.categories {
-  margin-bottom: 75px;
-}
+.category_item { font-size: 12px; display: block; margin-bottom: 15px; text-decoration: none; color: #6f6f6f; }
 
-.category_item {
-  font-size: 12px;
-  display: block;
-  margin-bottom: 15px;
-  text-decoration: none;
-  color: #6f6f6f;
-}
+.archive { margin-bottom: 75px; }
 
-.archive {
-  margin-bottom: 75px;
-}
+.archives_list { padding: 0; font-size: 12px; color: #282828; }
 
-.archives_list {
-  padding: 0;
-  font-size: 12px;
-  color: #282828;
-}
+.archives_year { margin-bottom: 20px; }
 
-.archives_year {
-  margin-bottom: 20px;
-}
+.archives_month_list_box { display: inline-block; margin: 0 15px 20px 0; }
 
-.archives_month_list_box {
-  display: inline-block;
-    margin: 0 15px 20px 0;
-}
+.archives_month_list { list-style: none; }
 
-.archives_month_list {
-  list-style: none;
-}
+.archives_month_item a { color: #282828; text-decoration: none; }
 
-.archives_month_item {
+.tags { margin-bottom: 75px; }
 
-}
-
-.archives_month_item a {
-  color: #282828;
-  text-decoration: none;
-}
-
-.tags {
-  margin-bottom: 75px;
-}
-
-.tag_item {
-  font-size: 12px;
-  border: solid 1px #afafaf;
-  padding: 8px;
-  display: inline-block;
-  margin: 0 10px 10px 0;
-  text-decoration: none;
-  color: #3f3f3f;
-}
+.tag_item { font-size: 12px; border: solid 1px #afafaf; padding: 8px; display: inline-block; margin: 0 10px 10px 0; text-decoration: none; color: #3f3f3f; }
 
 /*-------------------------------------------------- pagination --------------------------------------------------*/
+.pages_link { margin: 80px 0 80px 0; top: 50%; left: 50%; }
 
-.pages_link {
-  margin: 80px 0 80px 0;
-  top: 50%;
-  left: 50%;
-}
+.next_after_pagination { margin-bottom: 80px; }
 
-.next_after_pagination {
-  margin-bottom: 80px;
-}
+/*# sourceMappingURL=activities.css.map */

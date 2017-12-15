@@ -1,0 +1,28 @@
+{% set collection = page.collection("What's New") %}
+{% set membersOption = {
+  items: {
+    '@page': '/members'
+  },
+  'limit': 4,
+  'order': {
+    'by': 'date',
+    'dir': 'desc'
+  }
+} %}
+{% set membersCollection = page.collection(membersOption) %}
+
+{% block stylesheets %}
+  {% do 
+    assets.addCss('theme://css/index.css', 100) %}
+{% endblock %}
+<div>
+  <ul class="member_list">
+    {% for child in membersCollection %}
+      <li class="member_item_box">
+        <img class="member_image" src="{{ url('theme://images/member_hidano.png')}}" alt="肥田野 正輝"/>
+        <p class="member_company">{{child.header.company}}</p>
+        <p class="member_name">{{child.header.person}}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

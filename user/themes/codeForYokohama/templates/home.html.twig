@@ -86,32 +86,10 @@
         </div>
       </div>
 
-      <!-- TODO members_home みたいなレイアウトをインクルードする -->
       <div id="member" class="member">
         <div class="container">
           <h1 class="common_heading red">Member</h1>
-          <ul class="member_list">
-            <li class="member_item_box">
-              <img class="member_image" src="{{ url('theme://images/member_hidano.png')}}" alt="肥田野 正輝"/>
-              <p class="member_company">インフォ・ラウンジ合同会社</p>
-              <p class="member_name">肥田野 正輝</p>
-            </li>
-            <li class="member_item_box">
-              <img class="member_image" src="{{ url('theme://images/member_kobayashi.png')}}" alt="小林 巌生"/>
-              <p class="member_company">インフォ・ラウンジ合同会社</p>
-              <p class="member_name">小林 巌生</p>
-            </li>
-            <li class="member_item_box">
-              <img class="member_image" src="{{ url('theme://images/member_ito.png')}}" alt="伊藤 宗太"/>
-              <p class="member_company">インフォ・ラウンジ合同会社</p>
-              <p class="member_name">伊藤 宗太</p>
-            </li>
-            <li class="member_item_box">
-              <img class="member_image" src="{{ url('theme://images/member_hidano.png')}}" alt="肥田野 正輝"/>
-              <p class="member_company">インフォ・ラウンジ合同会社</p>
-              <p class="member_name">肥田野 正輝</p>
-            </li>
-          </ul>
+          {% include 'partials/members_home.html.twig' %}
         </div>
       </div>
     </main>

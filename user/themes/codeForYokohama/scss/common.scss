@@ -1,3 +1,4 @@
+@import "colors";
 /*-------------------------------------------------- common --------------------------------------------------*/
 
 body {
@@ -68,7 +69,7 @@ header {
   transform: translate(-50%, -50%);
   margin: 0;
   padding: 0;
-  color: #db2023;
+  color: $primary-red;
   font-size: 56px;
 }
 
@@ -124,11 +125,11 @@ header {
 }
 
 .common_heading.white::before {
-  background-color: #fff;
+  background-color: $white;
 }
 
 .common_heading.red::before {
-  background-color: #db2023;
+  background-color: $primary-red;
 }
 
 /*-------------------------------------------------- footer --------------------------------------------------*/
@@ -140,7 +141,7 @@ header {
   height: auto;
   margin: 0;
   padding: 40px 0;
-  color: #fff;
+  color: $white;
 }
 
 .container_footer_box {
@@ -158,7 +159,7 @@ header {
 }
 
 .license_message_link {
-  color: #fff;
+  color: $white;
   text-decoration: none;
 }
 
@@ -194,7 +195,7 @@ header {
   position: relative;
   height: 80px;
   margin: 0;
-  color: #fff;
+  color: $white;
 }
 
 .link_box {
@@ -204,7 +205,7 @@ header {
 }
 
 .link_item {
-  color: #fff;
+  color: $white;
   font-size: 14pt;
   text-decoration: none;
   margin-right: 45px;

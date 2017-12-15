@@ -1,3 +1,4 @@
+@import "colors";
 /*-------------------------------------------------- header --------------------------------------------------*/
 
 .main_visual_typo {
@@ -15,11 +16,11 @@
   position: relative;
   height: auto;
   margin: 0;
-  color: #ffffff;
+  color: $white;
 }
 
 .activities_container {
-  color: #000;
+  color: $black;
   display: block;
   width: 670px;
 }
@@ -29,7 +30,7 @@
 .activities_list_container {
   width: 670px;
   margin-top: 70px;
-  border-bottom: 1px solid #afafaf;
+  border-bottom: 1px solid $border-gray;
 }
 
 .activities_list_image_box {
@@ -48,9 +49,9 @@
 .activities_list_date {
   height: 15px;
   padding-right: 15px;
-  color: #6f6f6f;
+  color: $activity-text-light;
   font-size: 12px;
-  border-right: 1px solid #6f6f6f;
+  border-right: 1px solid $activity-text-light;
   box-sizing: border-box;
 }
 
@@ -62,7 +63,7 @@
 .activities_list_category {
   height: 15px;
   padding-left: 15px;
-  color: #6f6f6f;
+  color: $activity-text-light;
   font-size: 12px;
   line-height: 35px;
   display: flex;
@@ -90,7 +91,7 @@
 .read_more_button {
   text-align: center;
   text-decoration: none;
-  color: #3f3f3f;
+  color: $activity-text-gray;
 }
 
 /*-------------------------------------------------- ActivitiesItem --------------------------------------------------*/
@@ -98,7 +99,7 @@
 .v_item_container {
   width: 670px;
   margin-top: 70px;
-  border-bottom: 1px solid #afafaf;
+  border-bottom: 1px solid $border-gray;
 }
 
 .activities_item_image_box {
@@ -118,9 +119,9 @@
 .activities_item_date {
   height: 15px;
   padding-right: 15px;
-  color: #6f6f6f;
+  color: $activity-text-light;
   font-size: 12px;
-  border-right: 1px solid #6f6f6f;
+  border-right: 1px solid $activity-text-light;
   box-sizing: border-box;
 }
 
@@ -139,7 +140,7 @@
 .activities_item_category {
   height: 15px;
   padding-left: 15px;
-  color: #6f6f6f;
+  color: $activity-text-light;
   font-size: 12px;
   line-height: 35px;
   display: flex;
@@ -152,7 +153,7 @@
 }
 
 .activities_item_content {
-  color: black;
+  color: $black;
   text-align: left;
   font-size: 14px;
 }
@@ -160,12 +161,12 @@
 .read_more_button {
   text-align: center;
   text-decoration: none;
-  color: #3f3f3f;
+  color: $activity-text-gray;
 }
 
 .activities_item_tags {
   margin: 60px 0 30px 0;
-  color: #000;
+  color: $black;
   font-size: 12px;
 }
 
@@ -182,17 +183,17 @@
 .sidebar_activities {
   margin: 70px 0 0 50px;
   width: 300px;
-  color: #000;
+  color: $black;
 }
 
 .sidebar_content_title {
   position: relative;
   margin-bottom: 48px;
-  color: #282828;
+  color: $activity-text-dark;
 }
 
 .sidebar_content_title::after {
-  background-color: #db2023;
+  background-color: $primary-red;
   content: '';
   height: 1px;
   width: 40px;
@@ -215,7 +216,7 @@
   display: block;
   margin-bottom: 15px;
   text-decoration: none;
-  color: #6f6f6f;
+  color: $activity-text-light;
 }
 
 .archive {
@@ -225,7 +226,7 @@
 .archives_list {
   padding: 0;
   font-size: 12px;
-  color: #282828;
+  color: $activity-text-dark;
 }
 
 .archives_year {
@@ -246,7 +247,7 @@
 }
 
 .archives_month_item a {
-  color: #282828;
+  color: $activity-text-dark;
   text-decoration: none;
 }
 
@@ -256,12 +257,12 @@
 
 .tag_item {
   font-size: 12px;
-  border: solid 1px #afafaf;
+  border: solid 1px $border-gray;
   padding: 8px;
   display: inline-block;
   margin: 0 10px 10px 0;
   text-decoration: none;
-  color: #3f3f3f;
+  color: $activity-text-gray;
 }
 
 /*-------------------------------------------------- pagination --------------------------------------------------*/

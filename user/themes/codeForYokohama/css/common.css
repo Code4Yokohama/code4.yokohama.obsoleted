@@ -37,12 +37,12 @@ header { position: absolute; }
 
 .common_heading::before { content: ''; height: 2px; width: 40px; position: absolute; left: 0; top: 0; }
 
-.common_heading.white::before { background-color: #fff; }
+.common_heading.white::before { background-color: #ffffff; }
 
 .common_heading.red::before { background-color: #db2023; }
 
 /*-------------------------------------------------- footer --------------------------------------------------*/
-.footer_box { background-image: url("../images/bg_creative_commons.png"); background-size: auto; position: relative; height: auto; margin: 0; padding: 40px 0; color: #fff; }
+.footer_box { background-image: url("../images/bg_creative_commons.png"); background-size: auto; position: relative; height: auto; margin: 0; padding: 40px 0; color: #ffffff; }
 
 .container_footer_box { display: -ms-flexbox; display: flex; }
 
@@ -50,7 +50,7 @@ header { position: absolute; }
 
 .license_message { margin-top: 5px; }
 
-.license_message_link { color: #fff; text-decoration: none; }
+.license_message_link { color: #ffffff; text-decoration: none; }
 
 .creative_commons_image { text-decoration: none; }
 
@@ -62,11 +62,11 @@ header { position: absolute; }
 .pages_link { margin-top: 35px; top: 50%; left: 50%; }
 
 /*-------------------------------------------------- common_footer --------------------------------------------------*/
-.common_footer_box { background-image: url("../images/bg_common_footer.png"); background-size: auto; position: relative; height: 80px; margin: 0; color: #fff; }
+.common_footer_box { background-image: url("../images/bg_common_footer.png"); background-size: auto; position: relative; height: 80px; margin: 0; color: #ffffff; }
 
 .link_box { margin: 0 0 -45px; padding-top: 30px; text-align: center; }
 
-.link_item { color: #fff; font-size: 14pt; text-decoration: none; margin-right: 45px; }
+.link_item { color: #ffffff; font-size: 14pt; text-decoration: none; margin-right: 45px; }
 
 /*# sourceMappingURL=index.css.map */
 

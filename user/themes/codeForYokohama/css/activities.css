@@ -6,7 +6,7 @@
 /*-------------------------------------------------- Activities --------------------------------------------------*/
 .activities { display: -ms-flexbox; display: flex; position: relative; height: auto; margin: 0; color: #ffffff; }
 
-.activities_container { color: #000; display: block; width: 670px; }
+.activities_container { color: #000000; display: block; width: 670px; }
 
 /*-------------------------------------------------- ActivitiesList --------------------------------------------------*/
 .activities_list_container { width: 670px; margin-top: 70px; border-bottom: 1px solid #afafaf; }
@@ -50,18 +50,18 @@
 
 .activities_item_category_item { text-decoration: none; }
 
-.activities_item_content { color: black; text-align: left; font-size: 14px; }
+.activities_item_content { color: #000000; text-align: left; font-size: 14px; }
 
 .read_more_button { text-align: center; text-decoration: none; color: #3f3f3f; }
 
-.activities_item_tags { margin: 60px 0 30px 0; color: #000; font-size: 12px; }
+.activities_item_tags { margin: 60px 0 30px 0; color: #000000; font-size: 12px; }
 
 .activities_item_tags_title { font-weight: bold; }
 
 .activities_item_tags_item { text-decoration: none; }
 
 /*-------------------------------------------------- Sidebar --------------------------------------------------*/
-.sidebar_activities { margin: 70px 0 0 50px; width: 300px; color: #000; }
+.sidebar_activities { margin: 70px 0 0 50px; width: 300px; color: #000000; }
 
 .sidebar_content_title { position: relative; margin-bottom: 48px; color: #282828; }
 

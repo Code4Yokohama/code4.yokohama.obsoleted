@@ -8,9 +8,9 @@
 
 .members_list { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; list-style: none; margin: 0 -20px 0 0; padding: 0; -ms-flex-pack: justify; justify-content: space-between; }
 
-.members_item_box { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; font-size: 16px; text-align: center; color: #000; margin-right: 20px; }
+.members_item_box { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; font-size: 16px; text-align: center; color: #000000; margin-right: 20px; }
 
-.members_item_box_content { max-width: 100%; margin-right: 20px; color: #000; text-align: center; }
+.members_item_box_content { max-width: 100%; margin-right: 20px; color: #000000; text-align: center; }
 
 .members_item_box_content_dummy { width: 240px; margin-right: 20px; }
 

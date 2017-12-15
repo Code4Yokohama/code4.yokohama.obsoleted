@@ -1,6 +1,6 @@
 @import "colors";
+@import "mixins";
 /*-------------------------------------------------- common --------------------------------------------------*/
-
 body {
   margin: 0;
 }
@@ -24,15 +24,16 @@ img {
 .container.activites_container {
   transform: skewY(4deg);
 }
-
 /*-------------------------------------------------- MainVisual --------------------------------------------------*/
-
 .main_visual {
   position: relative;
   height: 570px;
-  background-image: url('../images/main_visual_image.png');
+  background-image: url("../images/main_visual_image.png");
   background-size: cover;
   background-position: center center;
+  @include media-query('sp') {
+    background-position: center;
+  };
 }
 
 .main_visual_image {
@@ -49,15 +50,54 @@ header {
 }
 
 .main_visual_typo {
-  position: absolute;
-  display: block;
-  top: 50%;
-  left: 50%;
-  ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  width: 50%;
+  &_pc {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    width: 50%;
+  }
+
+  &_sp {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    width: 50%;
+  }
+  @include media-query('sp') {
+    &_pc {
+      position: absolute;
+      display: none;
+      top: 50%;
+      left: 50%;
+      ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      margin: 0;
+      padding: 0;
+      width: 50%;
+    }
+
+    &_sp {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      margin: 0;
+      padding: 0;
+      width: 50%;
+    }
+  };
 }
 
 .main_title {
@@ -104,9 +144,7 @@ header {
 .nav_item a:hover {
   background-color: #111;
 }
-
 /*-------------------------------------------------- common heading --------------------------------------------------*/
-
 .common_heading {
   margin: 0;
   padding: 40px 0;
@@ -131,11 +169,9 @@ header {
 .common_heading.red::before {
   background-color: $primary-red;
 }
-
 /*-------------------------------------------------- footer --------------------------------------------------*/
-
 .footer_box {
-  background-image: url('../images/bg_creative_commons.png');
+  background-image: url("../images/bg_creative_commons.png");
   background-size: auto;
   position: relative;
   height: auto;
@@ -178,19 +214,15 @@ header {
 .sns_item {
   margin-right: 30px;
 }
-
 /*-------------------------------------------------- agination --------------------------------------------------*/
-
 .pages_link {
   margin-top: 35px;
   top: 50%;
   left: 50%;
 }
-
 /*-------------------------------------------------- common_footer --------------------------------------------------*/
-
 .common_footer_box {
-  background-image: url('../images/bg_common_footer.png');
+  background-image: url("../images/bg_common_footer.png");
   background-size: auto;
   position: relative;
   height: 80px;
@@ -210,5 +242,4 @@ header {
   text-decoration: none;
   margin-right: 45px;
 }
-
 /*# sourceMappingURL=index.css.map */

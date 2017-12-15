@@ -61,9 +61,9 @@
                 </li>
               </ul>
             </nav>
-            {% set mainTypoImage = url('theme://images/main_typo.png') %}
             {% if condition %}{% endif %}
-            <img class="main_visual_typo" src="{{ mainTypoImage }}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
+            <img class="main_visual_typo_pc" src="{{ url ('theme://images/main_typo.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
+            <img class="main_visual_typo_sp" src="{{ url ('theme://images/main_typo_sp.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
             {% if page.parent.header.title == null %}
               {% set pageTitle = page.title %}
             {% else %}

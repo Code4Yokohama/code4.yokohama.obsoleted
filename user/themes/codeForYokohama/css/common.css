@@ -12,13 +12,20 @@ img { vertical-align: bottom; }
 /*-------------------------------------------------- MainVisual --------------------------------------------------*/
 .main_visual { position: relative; height: 570px; background-image: url("../images/main_visual_image.png"); background-size: cover; background-position: center center; }
 
+@media screen and (max-width: 750px) { .main_visual { background-position: center; } }
+
 .main_visual_image { width: 100%; }
 
 header { position: absolute; }
 
 .header_heading { margin: 0 auto 0 0; padding: 40px 0 40px 90px; }
 
-.main_visual_typo { position: absolute; display: block; top: 50%; left: 50%; ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); margin: 0; padding: 0; width: 50%; }
+.main_visual_typo_pc { position: absolute; display: block; top: 50%; left: 50%; ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); margin: 0; padding: 0; width: 50%; }
+
+.main_visual_typo_sp { position: absolute; display: none; top: 50%; left: 50%; ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); margin: 0; padding: 0; width: 50%; }
+
+@media screen and (max-width: 750px) { .main_visual_typo_pc { position: absolute; display: none; top: 50%; left: 50%; ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); margin: 0; padding: 0; width: 50%; }
+  .main_visual_typo_sp { position: absolute; display: block; top: 50%; left: 50%; ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); margin: 0; padding: 0; width: 50%; } }
 
 .main_title { display: none; position: absolute; top: 50%; left: 50%; ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); margin: 0; padding: 0; color: #db2023; font-size: 56px; }
 

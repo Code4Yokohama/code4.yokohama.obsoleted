@@ -18,7 +18,6 @@
 
 {% for child in activitiesCollection %}
   {% set header_image_media = child.media.images | first %}
-  {{dump (header_image_media)}}
   <div class="activites_item_box">
     <img class="activities_image" src="{{ header_image_media.url }}" alt="activites"/>
     <div class="activities_title">

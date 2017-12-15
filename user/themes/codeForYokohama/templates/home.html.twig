@@ -79,17 +79,7 @@
           <article>
             <section>
               <div class="activites_items">
-                <div class="activites_item_box">
-                  <img class="activites_image" src="{{ url('theme://images/activites_image.png')}}" alt="activites"/>
-                  <p class="activites_title">横浜のIT系ネットワークの情報基盤、プロジェクト情報共有を考えよう！<br/>
-                    - Code for YOKOHAMA - Civic Hack Night vol.05</p>
-                  <p class="activites_detail">今年度横浜において予定されているIT関連のイベントや施策などの動きについて共有します。</p>
-                </div>
-                <div class="activites_item_box">
-                  <img class="activites_image" src="{{ url('theme://images/activites_image.png')}}" alt="activites"/>
-                  <p class="activites_title">自治会運営に役立つツールを開発しよう！<br/>- Code for Yokohama Civic Hack Night vol.04</p>
-                  <p class="activites_detail">１．自治会ってどんな仕組み？</p>
-                </div>
+                {% include 'partials/activities_home.html.twig' %}
               </div>
             </section>
           </article>

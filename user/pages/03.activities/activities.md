@@ -1,10 +1,5 @@
 ---
 title: Activities
-taxonomy:
-    category:
-        - Activities
-    tag:
-        - 'Civic Hack Night'
 body_classes: 'header-image fullwidth'
 content:
     items: '@self.children'

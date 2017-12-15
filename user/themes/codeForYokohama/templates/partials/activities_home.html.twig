@@ -1,0 +1,27 @@
+{% set collection = page.collection('Activities') %}
+{% set activitiesOption = {
+  items: {
+    '@taxonomy.category': 'Activities'
+  },
+  'limit': 2,
+  'order': {
+    'by': 'date',
+    'dir': 'desc'
+  }
+} %}
+{% set activitiesCollection = page.collection(activitiesOption) %}
+
+{% block stylesheets %}
+  {% do
+    assets.addCss('theme://css/index.css', 100) %}
+{% endblock %}
+
+{% for child in activitiesCollection %}
+  {% set header_image_media = child.media.images | first %}
+  {{dump (header_image_media)}}
+  <div class="activites_item_box">
+    <img class="activities_image" src="{{ header_image_media.url }}" alt="activites"/>
+    <p class="activities_title">{{child.title}}</p>
+    <div class="activities_summary">{{child.summary}}</div>
+  </div>
+{% endfor %}

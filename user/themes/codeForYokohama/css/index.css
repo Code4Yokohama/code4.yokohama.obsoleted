@@ -111,6 +111,11 @@
   z-index: 100;
 }
 
+.whats_new_contents {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 35px;
+}
+
 .whats_new:before {
   content: '';
   position: absolute;
@@ -140,7 +145,6 @@
   text-align: left;
   font-size: 16px;
   list-style: none;
-  border-bottom: 1px solid #fff;
 }
 
 .whats_new_item {
@@ -218,12 +222,16 @@
   text-align: center;
 }
 
-.activites_title {
+.activities_image {
+  width: 100%;
+}
+
+.activities_title {
   font-size: 16px;
   margin: 30px 20px 20px 15px;
 }
 
-.activites_detail {
+.activities_summary {
   font-size: 14px;
   margin: 15px 20px 20px 30px;
 }

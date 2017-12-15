@@ -222,12 +222,16 @@
   text-align: center;
 }
 
-.activites_title {
+.activities_image {
+  width: 100%;
+}
+
+.activities_title {
   font-size: 16px;
   margin: 30px 20px 20px 15px;
 }
 
-.activites_detail {
+.activities_summary {
   font-size: 14px;
   margin: 15px 20px 20px 30px;
 }

@@ -187,11 +187,24 @@ header {
 .container_footer_box {
   display: -ms-flexbox;
   display: flex;
+  @include media-query('sp') {
+    flex-direction: column;
+  };
 }
 
 .sns_box {
   margin-top: 10px;
   margin-left: auto;
+  @include media-query('sp') {
+    order: 1;
+    margin: 10px auto;
+  };
+}
+
+.license_box {
+  @include media-query('sp') {
+    order: 2;
+  };
 }
 
 .license_message {
@@ -205,6 +218,12 @@ header {
 
 .creative_commons_image {
   text-decoration: none;
+}
+
+.copyright_text {
+  @include media-query('sp') {
+    text-align: center;
+  };
 }
 
 .sns_list {

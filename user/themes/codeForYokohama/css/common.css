@@ -55,13 +55,21 @@ header { position: absolute; }
 
 .container_footer_box { display: -ms-flexbox; display: flex; }
 
+@media screen and (max-width: 750px) { .container_footer_box { -ms-flex-direction: column; flex-direction: column; } }
+
 .sns_box { margin-top: 10px; margin-left: auto; }
+
+@media screen and (max-width: 750px) { .sns_box { -ms-flex-order: 1; order: 1; margin: 10px auto; } }
+
+@media screen and (max-width: 750px) { .license_box { -ms-flex-order: 2; order: 2; } }
 
 .license_message { margin-top: 5px; }
 
 .license_message_link { color: #ffffff; text-decoration: none; }
 
 .creative_commons_image { text-decoration: none; }
+
+@media screen and (max-width: 750px) { .copyright_text { text-align: center; } }
 
 .sns_list { display: -ms-flexbox; display: flex; list-style: none; margin: 0 -30px 0 0; padding: 0; }
 

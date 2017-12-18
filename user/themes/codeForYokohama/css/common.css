@@ -5,6 +5,8 @@ img { vertical-align: bottom; }
 
 .container { width: 1020px; margin: auto; }
 
+@media screen and (max-width: 750px) { .container { width: auto; padding: 0 30px 0 30px; } }
+
 .container.nav { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
 .container.activites_container { transform: skewY(4deg); }

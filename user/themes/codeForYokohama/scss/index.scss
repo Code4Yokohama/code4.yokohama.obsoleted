@@ -1,16 +1,12 @@
 @import "colors";
 @import "mixins";
-
 /*-------------------------------------------------- Main --------------------------------------------------*/
-
 .main_home {
   background-color: $bg-red;
 }
-
 /*-------------------------------------------------- About --------------------------------------------------*/
-
 .about {
-  background-image: url('../images/bg_about.png');
+  background-image: url("../images/bg_about.png");
   background-size: auto;
   height: auto;
   margin: 0;
@@ -31,6 +27,7 @@
   background-color: $bg-red-accent;
   transform: rotateZ(6deg);
   overflow: hidden;
+  @include media-query('sp') {};
 }
 
 .about:after {
@@ -43,12 +40,16 @@
   height: 160px;
   background-color: $bg-red;
   transform: rotateZ(-6deg);
+  @include media-query('sp') {};
 }
 
 .about_box {
   text-align: center;
   width: 100%;
   padding: 80px 0;
+  @include media-query('sp') {
+    padding: 50px 0;
+  };
 }
 
 .about_box.first {
@@ -66,6 +67,9 @@
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  @include media-query('sp') {
+    display: block;
+  };
 }
 
 .about_box.innovation .about_title {
@@ -92,18 +96,36 @@
   display: inline-block;
   margin-top: 0;
   text-align: left;
+  @include media-query('sp') {
+    text-align: center;
+  };
 }
 
 .about_innovation_image {
   margin-left: auto;
   padding-left: 15px;
   width: 50%;
+  @include media-query('sp') {
+    margin: 30px 0 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  };
 }
 
+.about_innovation_image img {
+  @include media-query('sp') {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    box-sizing: border-box;
+  };
+}
 /*-------------------------------------------------- What's New? --------------------------------------------------*/
-
 .whats_new {
-  background-image: url('../images/bg_whats_new.png');
+  background-image: url("../images/bg_whats_new.png");
   background-size: auto;
   height: auto;
   margin: 0;
@@ -154,21 +176,30 @@
   margin-bottom: 35px;
   font-size: 16px;
   display: flex;
+  @include media-query('sp') {
+    display: block;
+  };
 }
 
 .dt-published {
   display: flex;
   align-items: center;
+  @include media-query('sp') {
+    display: block;
+  };
 }
 
 .whats_new_item_date {
-  margin-right: 35px
+  margin-right: 35px;
 }
 
 .whats_new_item_title_box {
   display: inline;
   width: 100%;
   overflow: hidden;
+  @include media-query('sp') {
+    display: block;
+  };
 }
 
 .whats_new_item_title_box a {
@@ -201,15 +232,13 @@
 .read_more_button:hover {
   background-color: $primary-red;
 }
-
 /*-------------------------------------------------- Activites --------------------------------------------------*/
-
 .activites {
-  background-image: url('../images/bg_activites.png');
+  background-image: url("../images/bg_activites.png");
   background-size: cover;
   position: relative;
   height: auto;
-  margin: -100px 0 0 0;
+  margin: -100px 0 0;
   padding: 150px 0;
   color: $white;
   transform: skewY(-4deg);
@@ -219,6 +248,9 @@
 .activites_items {
   display: -ms-flexbox;
   display: flex;
+  @include media-query('sp') {
+    display: block;
+  };
 }
 
 .activites_item_box {
@@ -229,6 +261,10 @@
   background-color: $white;
   color: $black;
   text-align: center;
+  @include media-query('sp') {
+    width: 100%;
+    height: auto;
+  };
 }
 
 .activities_image {
@@ -248,12 +284,14 @@
 .activities_summary {
   font-size: 14px;
   margin: 15px 20px 20px 30px;
+  @include media-query('sp') {
+    padding-bottom: 5vw;
+  };
 }
-
 /*-------------------------------------------------- Member --------------------------------------------------*/
-
+// TODO スマホ表示のときは2人分ずつ表示させるようにtwigから変更
 .member {
-  background-image: url('../images/bg_member.png');
+  background-image: url("../images/bg_member.png");
   background-size: auto;
   position: relative;
   height: auto;

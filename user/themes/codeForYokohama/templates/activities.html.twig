@@ -22,7 +22,7 @@
             } %}
           {% endfor %}
 
-          <div class="pages_link">
+          <div class="pages_link_pc">
 
             {% if config.plugins.pagination.enabled and collection.params.pagination %}
               {% include 'partials/pagination.html.twig' with {
@@ -36,6 +36,15 @@
           {% include 'partials/sidebar.html.twig' with {
             'activities' : page
           } %}
+        </div>
+        <div class="pages_link_sp">
+
+          {% if config.plugins.pagination.enabled and collection.params.pagination %}
+            {% include 'partials/pagination.html.twig' with {
+              'base_url' : page.url,
+              'pagination' : collection.params.pagination
+            } %}
+          {% endif %}
         </div>
       </div>
 

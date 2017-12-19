@@ -2,7 +2,7 @@
 .main_home { background-color: #e86062; }
 
 /*-------------------------------------------------- About --------------------------------------------------*/
-.about { background-image: url("../images/bg_about.png"); background-size: auto; height: auto; margin: 0; padding: 80px 0; color: #ffffff; position: relative; overflow: hidden; }
+.about { background-color: #de2d30; height: auto; margin: 0; padding: 80px 0; color: #ffffff; position: relative; overflow: hidden; }
 
 .about:before { content: ''; position: absolute; display: block; left: -20px; bottom: -165px; width: 100%; height: 150px; background-color: #af1a1c; transform: rotateZ(6deg); overflow: hidden; }
 

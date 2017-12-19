@@ -42,7 +42,7 @@
 .read_more_button { text-align: center; text-decoration: none; color: #3f3f3f; }
 
 /*-------------------------------------------------- ActivitiesItem --------------------------------------------------*/
-.v_item_container { width: 670px; margin-top: 70px; border-bottom: 1px solid #afafaf; }
+.activities_item_container { width: 670px; margin-top: 70px; border-bottom: 1px solid #afafaf; }
 
 .activities_item_image_box { margin: 60px 0 60px 0; width: 670px; }
 

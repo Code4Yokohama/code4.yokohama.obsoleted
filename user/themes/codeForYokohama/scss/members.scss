@@ -1,13 +1,18 @@
 @import "colors";
+@import "mixins";
 /*-------------------------------------------------- header --------------------------------------------------*/
 .main_visual_typo {
-  display: none;
+  &_pc {
+    display: none;
+  }
+  &_sp {
+    display: none;
+  }
 }
 
 .main_title {
   display: block;
 }
-
 
 /*-------------------------------------------------- Member --------------------------------------------------*/
 
@@ -27,6 +32,9 @@
   margin: 0 -20px 0 0;
   padding: 0;
   justify-content: space-between;
+  @include media-query('sp') {
+    width: 100%;
+  };
 }
 
 .members_item_box {
@@ -40,9 +48,13 @@
 
 .members_item_box_content {
   max-width: 100%;
-  margin-right: 20px;
+  padding-right: 20px;
   color: $black;
   text-align: center;
+  @include media-query('sp') {
+    box-sizing: border-box;
+    width: 50%;
+  };
 }
 
 .members_item_box_content_dummy {
@@ -53,6 +65,10 @@
 .members_image {
   width: 240px;
   height: 240px;
+  @include media-query('sp') {
+    width: 100%;
+    height: auto;
+  };
 }
 
 .members_list_border{

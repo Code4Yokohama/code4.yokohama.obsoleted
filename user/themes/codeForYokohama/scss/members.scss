@@ -1,6 +1,13 @@
 @import "colors";
 @import "mixins";
+@import "styles";
 /*-------------------------------------------------- header --------------------------------------------------*/
+.main_visual {
+  @include media-query('sp') {
+    height: $sp-main-visual-height;
+  };
+}
+
 .main_visual_typo {
   &_pc {
     display: none;
@@ -12,6 +19,9 @@
 
 .main_title {
   display: block;
+  @include media-query('sp') {
+    margin-top: $sp-page-title-font-margin;
+  };
 }
 
 /*-------------------------------------------------- Member --------------------------------------------------*/

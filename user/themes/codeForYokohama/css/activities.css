@@ -1,9 +1,13 @@
 /*-------------------------------------------------- header --------------------------------------------------*/
+@media screen and (max-width: 750px) { .main_visual { height: 300px; } }
+
 .main_visual_typo_pc { display: none; }
 
 .main_visual_typo_sp { display: none; }
 
 .main_title { display: block; }
+
+@media screen and (max-width: 750px) { .main_title { margin-top: 25px; } }
 
 /*-------------------------------------------------- Activities --------------------------------------------------*/
 .activities { display: -ms-flexbox; display: flex; position: relative; height: auto; margin: 0; color: #ffffff; }

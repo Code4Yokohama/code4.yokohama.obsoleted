@@ -87,7 +87,19 @@
 
 .sidebar_content_title::after { background-color: #db2023; content: ''; height: 1px; width: 40px; position: absolute; left: 0; bottom: 0; margin-bottom: -20px; }
 
-.recent_posts { margin-bottom: 75px; }
+.recent_posts { margin-bottom: 75px; width: 100%; }
+
+.recent_posts_list { padding: 0; list-style: none; }
+
+.recent_post_box { width: 100%; display: -ms-flexbox; display: flex; margin-bottom: 20px; }
+
+.recent_post_image_box { float: left; width: 26%; margin-right: 10px; height: auto; }
+
+.recent_post_image { width: 100%; height: auto; }
+
+.recent_post_title_box { width: 100%; float: left; }
+
+.recent_post_title { font-size: 12px; text-decoration: none; }
 
 .categories { margin-bottom: 75px; }
 

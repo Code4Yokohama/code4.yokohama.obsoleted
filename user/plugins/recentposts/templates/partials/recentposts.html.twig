@@ -1,10 +1,17 @@
-<ul>
-    {% for post in recent_posts %}
-        <li class="sidebar-post">
-            <a title="post.title" href="{{ post.url }}">
-                <span>{{ post.date|date("F Y") }}</span><br>
-                {{ post.title }}
-            </a>
-        </li>
-    {% endfor %}
+<ul class="recent_posts_list">
+  {% for post in recent_posts %}
+    <li>
+      <div class="recent_post_box">
+        {% set header_image_media = post.media.images | first %}
+        {% if header_image_media %}
+          <div class="recent_post_image_box">
+            <img class="recent_post_image" src="{{ header_image_media.url }}" alt="hoge"/>
+          </div>
+        {% endif %}
+        <div class="recent_post_title_box">
+          <a class="recent_post_title" title="post.title" href="{{ post.url }}">{{ post.title }}</a>
+        </div>
+      </div>
+    </li>
+  {% endfor %}
 </ul>

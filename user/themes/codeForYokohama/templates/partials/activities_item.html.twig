@@ -17,7 +17,7 @@
           <a class="activities_item_category_item" href="{{activities.url|rtrim('/')}}/category{{ config.system.param_sep}}{{category}}">{{category}}</a>
           {% set count = count + 1 %}
           {% if count != count(page.taxonomy.category)%}
-          <span>,</span>
+            <span>,</span>
           {% endif %}
         {% endfor %}
       </div>
@@ -26,12 +26,10 @@
 
     <!-- TODO header_image_fileが多分うまく取れてない、すべてelseの処理を通っている -->
     <div class="activities_item_image_box">
-      {% if header_image_file %}
-        {% set header_image_media = page.media.images[header_image_file] %}
-      {% else %}
-        {% set header_image_media = page.media.images | first %}
+      {% set header_image_media = page.media.images | first %}
+      {% if header_image_media %}
         <div class="activities_item_image_box">
-          <img class="activities_item_image" src="{{ header_image_media.url }}" alt="hoge"/>
+          <img class="activities_item_image" src="{{ header_image_media.url }}">
         </div>
       {% endif %}
     </div>

@@ -251,8 +251,13 @@ header {
   }
 
   &_sp {
-    margin: 0;
-    padding: 0;
+    display: none;
+    @include media-query('sp') {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
   }
 }
 

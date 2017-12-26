@@ -67,7 +67,9 @@ header { width: 100%; position: absolute; }
 
 .nav_box_pc { list-style-type: none; margin: 0; padding: 0; overflow: hidden; }
 
-.nav_box_sp { margin: 0; padding: 0; }
+.nav_box_sp { display: none; }
+
+@media screen and (max-width: 750px) { .nav_box_sp { display: block; margin: 0; padding: 0; } }
 
 .nav_item { float: right; }
 

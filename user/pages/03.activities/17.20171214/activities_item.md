@@ -1,5 +1,5 @@
 ---
-title: testlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitletestlongtitle
+title: 長いタイトルでも単語が区切られていればよしなに改行してくれてる！長いタイトルでも単語が区切られていればよしなに改行してくれてる！長いタイトルでも単語が区切られていればよしなに改行してくれてる！長いタイトルでも単語が区切られていればよしなに改行してくれてる！
 taxonomy:
     category:
         - 'What''s New'

@@ -2,7 +2,7 @@
 .main_home { background-color: #e86062; }
 
 /*-------------------------------------------------- About --------------------------------------------------*/
-.about { background-image: url("../images/bg_about.png"); background-size: auto; height: auto; margin: 0; padding: 80px 0; color: #ffffff; position: relative; overflow: hidden; }
+.about { background-color: #de2d30; height: auto; margin: 0; padding: 80px 0; color: #ffffff; position: relative; overflow: hidden; }
 
 .about:before { content: ''; position: absolute; display: block; left: -20px; bottom: -165px; width: 100%; height: 150px; background-color: #af1a1c; transform: rotateZ(6deg); overflow: hidden; }
 
@@ -10,11 +10,15 @@
 
 .about_box { text-align: center; width: 100%; padding: 80px 0; }
 
+@media screen and (max-width: 750px) { .about_box { padding: 50px 0; } }
+
 .about_box.first { padding-top: 0; }
 
 .about_box.project { border: 1px solid #ffffff; border-left: none; border-right: none; }
 
 .about_box.innovation { display: -ms-flexbox; display: flex; margin-left: auto; margin-right: auto; }
+
+@media screen and (max-width: 750px) { .about_box.innovation { display: block; } }
 
 .about_box.innovation .about_title { margin-top: 0; }
 
@@ -26,7 +30,13 @@
 
 .about_innovation_text { display: inline-block; margin-top: 0; text-align: left; }
 
+@media screen and (max-width: 750px) { .about_innovation_text { text-align: center; } }
+
 .about_innovation_image { margin-left: auto; padding-left: 15px; width: 50%; }
+
+@media screen and (max-width: 750px) { .about_innovation_image { margin: 30px 0 0; padding: 0; width: 100%; text-align: center; } }
+
+@media screen and (max-width: 750px) { .about_innovation_image img { margin: 0; padding: 0; width: 100%; height: auto; text-align: center; box-sizing: border-box; } }
 
 /*-------------------------------------------------- What's New? --------------------------------------------------*/
 .whats_new { background-image: url("../images/bg_whats_new.png"); background-size: auto; height: auto; margin: 0; padding: 80px 0; color: #ffffff; position: relative; overflow: hidden; z-index: 100; }
@@ -41,11 +51,17 @@
 
 .whats_new_item { margin-bottom: 35px; font-size: 16px; display: -ms-flexbox; display: flex; }
 
+@media screen and (max-width: 750px) { .whats_new_item { display: block; } }
+
 .dt-published { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; }
+
+@media screen and (max-width: 750px) { .dt-published { display: block; } }
 
 .whats_new_item_date { margin-right: 35px; }
 
 .whats_new_item_title_box { display: inline; width: 100%; overflow: hidden; }
+
+@media screen and (max-width: 750px) { .whats_new_item_title_box { display: block; } }
 
 .whats_new_item_title_box a { text-decoration: none; }
 
@@ -56,11 +72,15 @@
 .read_more_button:hover { background-color: #db2023; }
 
 /*-------------------------------------------------- Activites --------------------------------------------------*/
-.activites { background-image: url("../images/bg_activites.png"); background-size: cover; position: relative; height: auto; margin: -100px 0 0 0; padding: 150px 0; color: #ffffff; transform: skewY(-4deg); z-index: 50; }
+.activites { background-image: url("../images/bg_activites.png"); background-size: cover; position: relative; height: auto; margin: -100px 0 0; padding: 150px 0; color: #ffffff; transform: skewY(-4deg); z-index: 50; }
 
 .activites_items { display: -ms-flexbox; display: flex; }
 
+@media screen and (max-width: 750px) { .activites_items { display: block; } }
+
 .activites_item_box { margin-right: 30px; margin-bottom: 50px; width: 495px; height: 519px; background-color: #ffffff; color: #000000; text-align: center; }
+
+@media screen and (max-width: 750px) { .activites_item_box { width: 100%; height: auto; } }
 
 .activities_image { width: 100%; }
 
@@ -69,6 +89,8 @@
 .activities_title a { text-decoration: none; font-weight: bold; }
 
 .activities_summary { font-size: 14px; margin: 15px 20px 20px 30px; }
+
+@media screen and (max-width: 750px) { .activities_summary { padding-bottom: 5vw; } }
 
 /*-------------------------------------------------- Member --------------------------------------------------*/
 .member { background-image: url("../images/bg_member.png"); background-size: auto; position: relative; height: auto; margin: 0; padding: 80px 0; color: #ffffff; }

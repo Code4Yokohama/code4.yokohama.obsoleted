@@ -4,21 +4,15 @@
 {% set new_base_url = activities.url == '/'
   ? ''
   : activities.url %}
-  {{dump (activities.url)}}
 
 <div class="sidebar_container">
 
-  <!--TODO popular posts じゃなくて recent posts のpluginしか見つかっていない。 -->
-  {#{% if config.plugins.recentposts.enabled %}
-    <div class="popular_posts">
-      <h4 class="sidebar_content_title">POPULAR POSTS</h4>
-      {% include 'partials/recent-posts.html.twig' %}
+  {% if config.plugins.recentposts.enabled %}
+    <div class="recent_posts">
+      <h4 class="sidebar_content_title">RECENT POSTS</h4>
+      {% include 'partials/recentposts.html.twig' %}
     </div>
-  {% endif %}#}
-
-  <div class="popular_posts">
-    <h4 class="sidebar_content_title">POPULAR POSTS</h4>
-  </div>
+  {% endif %}
 
   {% if config.plugins.taxonomylist.enabled %}
     <div class="categories">

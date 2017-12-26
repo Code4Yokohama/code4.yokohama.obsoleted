@@ -1,4 +1,5 @@
 {% set collection = page.collection("What's New") %}
+<!-- TODO スマホ表示のときは取得する要素を2つにする-->
 {% set membersOption = {
   items: {
     '@page': '/members'
@@ -12,7 +13,7 @@
 {% set membersCollection = page.collection(membersOption) %}
 
 {% block stylesheets %}
-  {% do 
+  {% do
     assets.addCss('theme://css/index.css', 100) %}
 {% endblock %}
 <div>

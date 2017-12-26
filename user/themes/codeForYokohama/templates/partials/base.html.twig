@@ -23,47 +23,90 @@
 
       {% block javascripts %}
         {% do
-          assets.addJs('jquery', 101) %}
+          assets.add('jquery',101) %}
+        {% do
+          assets.add('theme://js/script.js',101) %}
       {% endblock %}
-
       {{ assets.js() }}
 
     {% endblock head %}
   </head>
+
   <body id="top" class="{{ page.header.body_classes }}">
+
     <div id="sb-site">
       {% block header %}
         <div id="mainVisual" class="main_visual">
           <header>
-            <a href="../home.html">
-              <h1 class="header_heading"><img class="header_icon" src="{{ url('theme://images/header_icon.png') }}" alt="code for yokohama"/></h1>
-            </a>
+            <div class="header_box">
+              <div class="header_box_pc">
+                <div class="header_image_pc">
+                  <a class="header_icon_link" href="../home.html">
+                    <h1 class="header_heading"><img class="header_icon" src="{{ url('theme://images/header_logo_pc.png') }}" alt="code for yokohama"/></h1>
+                  </a>
+                </div>
+                <div class="header nav">
+                  <nav id="grobalNav" class="grobal_nav">
+                    <ul class="nav_box_pc">
+                      <li class="nav_item">
+                        <a href="">Get Involved</a>
+                      </li>
+                      <li class="nav_item">
+                        <a href="">About</a>
+                      </li>
+                      <li class="nav_item">
+                        <a href="members.html">Members</a>
+                      </li>
+                      <li class="nav_item">
+                        <a href="">Meeting</a>
+                      </li>
+                      <li class="nav_item">
+                        <a href="../activities.html">Activities</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
 
-          </header>
+              <div class="header_box_sp">
+                <a class="header_icon_link" href="../home.html">
+                  <h1 class="header_heading"><img class="header_icon" src="{{ url('theme://images/header_logo_sp.png') }}" alt="code for yokohama"/></h1>
+                </a>
 
-          <div class="container nav">
-            <nav id="grobalNav" class="grobal_nav">
-              <ul class="nav_box">
-                <li class="nav_item">
-                  <a href="">Get Involved</a>
-                </li>
-                <li class="nav_item">
-                  <a href="">About</a>
-                </li>
-                <li class="nav_item">
-                  <a href="members.html">Members</a>
-                </li>
-                <li class="nav_item">
-                  <a href="">Meeting</a>
-                </li>
-                <li class="nav_item">
-                  <a href="../activities.html">Activities</a>
-                </li>
-              </ul>
-            </nav>
-            {% set mainTypoImage = url('theme://images/main_typo.png') %}
-            {% if condition %}{% endif %}
-            <img class="main_visual_typo" src="{{ mainTypoImage }}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
+                <div class="menu_icon">
+                  <span class="top"></span>
+                  <span class="middle"></span>
+                <span class="bottom" </span>
+                </div>
+
+              </div>
+            </header>
+            <div class="menu_item_box">
+              <div class="header nav">
+                <nav id="grobalNav" class="grobal_nav">
+                  <ul class="nav_box_sp">
+                    <li class="nav_item">
+                      <a href="">Get Involved</a>
+                    </li>
+                    <li class="nav_item">
+                      <a href="">About</a>
+                    </li>
+                    <li class="nav_item">
+                      <a href="members.html">Members</a>
+                    </li>
+                    <li class="nav_item">
+                      <a href="">Meeting</a>
+                    </li>
+                    <li class="nav_item">
+                      <a href="../activities.html">Activities</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            <img class="main_visual_typo_pc" src="{{ url ('theme://images/main_typo_pc.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
+            <img class="main_visual_typo_sp" src="{{ url ('theme://images/main_typo_sp.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
             {% if page.parent.header.title == null %}
               {% set pageTitle = page.title %}
             {% else %}
@@ -96,7 +139,7 @@
                     このウェブサイトのコンテンツは
                     <a class="license_message_link" rel="license" href="http://creativecommons.org/licenses/by/4.0/">クリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。</a>
                     <div class="copyright">
-                      <p>© Code for YOKOHAMA.</p>
+                      <p class="copyright_text">© Code for YOKOHAMA.</p>
                     </div>
                   </div>
                 </div>

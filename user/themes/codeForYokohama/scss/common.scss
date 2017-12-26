@@ -98,6 +98,8 @@ header {
 
 .header_icon {
   @include media-query('sp') {
+    height: 45px;
+    width: auto;
     position: absolute;
     top: 50%;
     left: 50%;

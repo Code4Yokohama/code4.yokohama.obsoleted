@@ -87,7 +87,7 @@
 
 .sidebar_content_title::after { background-color: #db2023; content: ''; height: 1px; width: 40px; position: absolute; left: 0; bottom: 0; margin-bottom: -20px; }
 
-.popular_posts { margin-bottom: 75px; }
+.recent_posts { margin-bottom: 75px; }
 
 .categories { margin-bottom: 75px; }
 

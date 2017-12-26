@@ -23,9 +23,10 @@
 
       {% block javascripts %}
         {% do
-          assets.addJs('jquery', 101) %}
+          assets.add('jquery',101) %}
+        {% do
+          assets.add('theme://js/script.js',101) %}
       {% endblock %}
-
       {{ assets.js() }}
 
     {% endblock head %}
@@ -46,7 +47,7 @@
                 </div>
                 <div class="header nav">
                   <nav id="grobalNav" class="grobal_nav">
-                    <ul class="nav_box">
+                    <ul class="nav_box_pc">
                       <li class="nav_item">
                         <a href="">Get Involved</a>
                       </li>
@@ -71,33 +72,38 @@
                 <a class="header_icon_link" href="../home.html">
                   <h1 class="header_heading"><img class="header_icon" src="{{ url('theme://images/header_logo_sp.png') }}" alt="code for yokohama"/></h1>
                 </a>
-                <div class="header nav">
-                  <nav id="grobalNav" class="grobal_nav">
-                    <ul class="nav_box">
-                      <li class="nav_item">
-                        <a href="">Get Involved</a>
-                      </li>
-                      <li class="nav_item">
-                        <a href="">About</a>
-                      </li>
-                      <li class="nav_item">
-                        <a href="members.html">Members</a>
-                      </li>
-                      <li class="nav_item">
-                        <a href="">Meeting</a>
-                      </li>
-                      <li class="nav_item">
-                        <a href="../activities.html">Activities</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
+
                 <div class="menu_icon">
                   <span class="top"></span>
                   <span class="middle"></span>
-                <span class="bottom" </div> <div class="header_menu_background"></div>
+                <span class="bottom" </span>
+                </div>
+
               </div>
             </header>
+            <div class="menu_item_box">
+              <div class="header nav">
+                <nav id="grobalNav" class="grobal_nav">
+                  <ul class="nav_box_sp">
+                    <li class="nav_item">
+                      <a href="">Get Involved</a>
+                    </li>
+                    <li class="nav_item">
+                      <a href="">About</a>
+                    </li>
+                    <li class="nav_item">
+                      <a href="members.html">Members</a>
+                    </li>
+                    <li class="nav_item">
+                      <a href="">Meeting</a>
+                    </li>
+                    <li class="nav_item">
+                      <a href="../activities.html">Activities</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
 
             <img class="main_visual_typo_pc" src="{{ url ('theme://images/main_typo_pc.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
             <img class="main_visual_typo_sp" src="{{ url ('theme://images/main_typo_sp.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>

@@ -62,6 +62,8 @@ header {
       align-items: center;
       text-align: center;
       padding: 5px 0;
+      position: relative;
+      z-index: 20;
     };
   }
 }
@@ -111,12 +113,9 @@ header {
 
 .menu_icon {
   @include media-query('sp') {
-    display: block;
-    width: 40px;
-    height: 100%;
-    margin-right: 20px;
-    float: left;
-    position: relative;
+    position: absolute;
+    right: 30px;
+    top: 50%;
 
     span {
       width: 40px;
@@ -125,11 +124,9 @@ header {
       display: block;
       background: $black;
       position: absolute;
-      left: 50%;
+      left: 90%;
       top: 50%;
       margin-left: -25px;
-      transition: all 0.3s;
-      transform: rotate(0deg);
     }
 
     .top {
@@ -139,7 +136,33 @@ header {
     .bottom {
       transform: translateY(13px);
     }
+
+    &.active {
+      .middle {
+        background: rgba(255, 255, 255, 0);
+      }
+
+      .top {
+        transform: rotate(-45deg) translateY(0px);
+      }
+
+      .bottom {
+        transform: rotate(45deg) translateY(0px);
+      }
+    }
   }
+}
+
+.menu_item_box {
+  display: none;
+  @include media-query('sp') {
+    background-color: $black;
+    width: 100%;
+    float: right;
+    margin-top: 55px;
+    position: relative;
+    z-index: 10;
+  };
 }
 
 .main_visual_typo {
@@ -213,17 +236,31 @@ header {
   -ms-flex-align: center;
   align-items: center;
   float: right;
+  @include media-query('sp') {
+    height: 100%;
+    float: left;
+  }
 }
 
 .nav_box {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  &_pc {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  &_sp {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .nav_item {
   float: right;
+  @include media-query('sp') {
+    float: none;
+  }
 }
 
 .nav_item a {
@@ -232,6 +269,9 @@ header {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  @include media-query('sp') {
+    text-align: left;
+  }
 }
 
 .nav_item a:hover {

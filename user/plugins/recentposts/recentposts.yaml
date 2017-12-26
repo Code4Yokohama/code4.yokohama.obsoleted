@@ -1,7 +1,7 @@
 enabled: true
 built_in_css: true
 date_display_format: 'F Y'
-limit: 12
+limit: 3
 order:
     by: date
     dir: desc

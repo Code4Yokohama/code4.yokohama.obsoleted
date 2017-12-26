@@ -68,7 +68,7 @@ class RecentPostsPlugin extends Plugin {
         $page = $this->grav['page'];
         // If a page exists merge the configs
         if ($page) {
-            $this->config->set('plugins.recent-posts', $this->mergeConfig($page));
+            $this->config->set('plugins.recentposts', $this->mergeConfig($page));
         }
 
         /** @var Taxonomy $taxonomy_map */
@@ -82,8 +82,8 @@ class RecentPostsPlugin extends Plugin {
         $recent_posts = array();
 
         // get the plugin filters setting
-        $filters = (array)$this->config->get('plugins.recent-posts.filters');
-        $operator = $this->config->get('plugins.recent-posts.filter_combinator');
+        $filters = (array)$this->config->get('plugins.recentposts.filters');
+        $operator = $this->config->get('plugins.recentposts.filter_combinator');
         $new_approach = false;
         $collection = null;
 
@@ -133,8 +133,8 @@ class RecentPostsPlugin extends Plugin {
         }
 
         // reorder the collection based on settings
-        $collection = $collection->order($this->config->get('plugins.recent-posts.order.by'), $this->config->get('plugins.recent-posts.order.dir'));
-        $date_format = $this->config->get('plugins.recent-posts.date_display_format');
+        $collection = $collection->order($this->config->get('plugins.recentposts.order.by'), $this->config->get('plugins.recentposts.order.dir'));
+        $date_format = $this->config->get('plugins.recentposts.date_display_format');
 
         // loop over new collection of pages that match filters
         foreach ($collection as $page) {
@@ -145,7 +145,7 @@ class RecentPostsPlugin extends Plugin {
         }
 
         // slice the array to the limit you want
-        $recent_posts = array_slice($recent_posts, 0, intval($this->config->get('plugins.recent-posts.limit')), is_string(reset($recent_posts)) ? false : true);
+        $recent_posts = array_slice($recent_posts, 0, intval($this->config->get('plugins.recentposts.limit')), is_string(reset($recent_posts)) ? false : true);
 
         // add the archives_start date to the twig variables
         $this->grav['twig']->twig_vars['recent_posts'] = $recent_posts;

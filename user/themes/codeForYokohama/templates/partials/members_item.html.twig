@@ -11,7 +11,14 @@
     {% set header_image_media = page.media.images | first %}
   {% endif %}
 
-  <img class="members_image" src="{{ header_image_media.url }}" alt="hoge"/>
-  <p class="members_company">{{page.header.company}}</p>
-  <p class="members_name">{{page.header.person}}</p>
+  <div class="members_info" id="{{page.id}}">
+    <img class="members_image" src="{{ header_image_media.url }}" alt="hoge"/>
+    <p class="members_company">{{page.header.company}}</p>
+    <p class="members_name">{{page.header.person}}</p>
+  </div>
+  <div class="members_detail_content" id="members_detail-{{page.id}}">
+    {% include 'partials/members_detail.html.twig' with {
+      'page' : page
+    } %}
+  </div>
 </li>

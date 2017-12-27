@@ -14,7 +14,8 @@
     <div id="members" class="members">
       <div class="container">
 
-        <ul class="members_list">
+        {% set boxCount = 0 %}
+        <ul class="members_list" data-target-box-id="box_{{boxCount}}">
           {% if collection | length % 4 == 0 %}
             {% for child in collection %}
               {% include 'partials/members_item.html.twig' with {
@@ -22,6 +23,16 @@
                 'page' : child,
                 'truncate' : true
               } %}
+              {% if loop.index % 4 == 0 %}
+                {% if loop.index != collection | length %}
+                </ul>
+                <div class="members_detail_box" data-box-id="box_{{boxCount}}" id="members_detail-{{page.id}}">
+                  <div class="box_square" id="members_detail"></div>
+                </div>
+                {% set boxCount = boxCount + 1 %}
+                <ul class="members_list" data-target-box-id="box_{{boxCount}}">
+                {% endif %}
+              {% endif %}
             {% endfor %}
 
           {% elseif collection|length % 4 > 0 %}

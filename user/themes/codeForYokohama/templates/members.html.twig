@@ -16,39 +16,33 @@
 
         {% set boxCount = 0 %}
         <ul class="members_list" data-target-box-id="box_{{boxCount}}">
-          {% if collection | length % 4 == 0 %}
-            {% for child in collection %}
-              {% include 'partials/members_item.html.twig' with {
-                'members' : page,
-                'page' : child,
-                'truncate' : true
-              } %}
-              {% if loop.index % 4 == 0 %}
-                {% if loop.index != collection | length %}
-                </ul>
-                <div class="members_detail_box" data-box-id="box_{{boxCount}}" id="members_detail-{{page.id}}">
-                  <div class="box_square" id="members_detail"></div>
+          {% for child in collection %}
+            {% set childId = child.id %}
+            {% include 'partials/members_item.html.twig' with {
+              'members' : page,
+              'page' : child,
+              'truncate' : true
+            } %}
+            {% if loop.index % 4 == 0 %}
+            </ul>
+            {% if loop.index <= collection | length %}
+              {{dump (childId)}}
+              <div class="members_detail_box" data-box-id="box_{{boxCount}}" id="members_detail-{{childId}}">
+                <div class="box_square" id="members_detail">
+                  {% include 'partials/members_detail.html.twig' with {
+                    'members' : page,
+                    'page' : child,
+                    'truncate' : true
+                  } %}
                 </div>
-                {% set boxCount = boxCount + 1 %}
+              </div>
+              {% set boxCount = boxCount + 1 %}
+              {% if boxCount < 4 %}
                 <ul class="members_list" data-target-box-id="box_{{boxCount}}">
                 {% endif %}
               {% endif %}
-            {% endfor %}
-
-          {% elseif collection|length % 4 > 0 %}
-            {% for child in collection %}
-              {% include 'partials/members_item.html.twig' with {
-                'members' : page,
-                'page' : child,
-                'truncate' : true
-              } %}
-            {% endfor %}
-
-            {% for child in 1..collection | length % 4 %}
-              <div class="members_item_box_content_dummy"></div>
-            {% endfor %}
-
-          {% endif %}
+            {% endif %}
+          {% endfor %}
         </ul>
 
         <div class="members_list_border"></div>

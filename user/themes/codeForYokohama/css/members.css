@@ -10,15 +10,17 @@
 @media screen and (max-width: 750px) { .main_title { margin-top: 25px; } }
 
 /*-------------------------------------------------- Member --------------------------------------------------*/
+.container { width: auto; }
+
 .members { position: relative; height: auto; margin: 0; padding: 80px 0; color: #ffffff; }
 
-.members_list { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; list-style: none; margin: 0 -20px 0 0; padding: 0; -ms-flex-pack: justify; justify-content: space-between; }
+.members_list { width: 1020px; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; list-style: none; margin: 0 auto; padding: 0; -ms-flex-pack: justify; justify-content: space-between; }
 
 @media screen and (max-width: 750px) { .members_list { width: 100%; } }
 
-.members_item_box { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; font-size: 16px; text-align: center; color: #000000; margin-right: 20px; }
-
 .members_item_box_content { max-width: 100%; padding-right: 20px; color: #000000; text-align: center; }
+
+.members_item_box_content:last-child { padding-right: 0; }
 
 @media screen and (max-width: 750px) { .members_item_box_content { box-sizing: border-box; width: 50%; } }
 
@@ -32,7 +34,9 @@
 
 .members_detail_content { display: none; }
 
-.members_detail_box { display: none; position: absolute; left: 0; width: 100%; height: 590px; background-color: #000; color: #ffffff; }
+.members_detail_box { display: none; left: 0; width: 100%; height: 590px; background-color: #000; color: #ffffff; }
+
+.members_detail_box .members_detail_content { display: block; width: 1020px; margin: auto; }
 
 .box_square { height: 590px; }
 

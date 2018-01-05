@@ -12,6 +12,7 @@
   &_pc {
     display: none;
   }
+
   &_sp {
     display: none;
   }
@@ -23,8 +24,10 @@
     margin-top: $sp-page-title-font-margin;
   };
 }
-
 /*-------------------------------------------------- Member --------------------------------------------------*/
+.container {
+  width: auto;
+}
 
 .members {
   position: relative;
@@ -35,11 +38,12 @@
 }
 
 .members_list {
+  width: 1020px;
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0 -20px 0 0;
+  margin: 0 auto;
   padding: 0;
   justify-content: space-between;
   @include media-query('sp') {
@@ -47,20 +51,15 @@
   };
 }
 
-.members_item_box {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 16px;
-  text-align: center;
-  color: $black;
-  margin-right: 20px;
-}
-
 .members_item_box_content {
   max-width: 100%;
   padding-right: 20px;
   color: $black;
   text-align: center;
+
+  &:last-child {
+    padding-right: 0;
+  }
   @include media-query('sp') {
     box-sizing: border-box;
     width: 50%;
@@ -72,6 +71,13 @@
   margin-right: 20px;
 }
 
+.members_info {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
 .members_image {
   width: 240px;
   height: 240px;
@@ -81,8 +87,86 @@
   };
 }
 
-.members_list_border{
+.members_detail_content {
+  display: none;
+}
+
+.members_detail_box {
+  display: none;
+  left: 0;
+  width: 100%;
+  height: 590px;
+  background-color: #000;
+  color: $white;
+
+  .members_detail_content {
+    display: block;
+    width: 1020px;
+    margin: auto;
+    padding: 60px 0;
+  }
+}
+
+.box_square {
+  height: 590px;
+}
+
+.members_list_border {
   width: 100%;
   height: 1px;
   background-color: $border-gray;
+}
+/*-------------------------------------------------- Members Detail --------------------------------------------------*/
+.members_detail {
+  display: flex;
+
+  &_image_box {
+    margin-right: 55px;
+
+    img {
+      height: 240px;
+      width: 240px;
+    }
+  }
+
+  &_content_box {
+    a {
+      display: block;
+      font-size: 14px;
+    }
+  }
+
+  &_company {}
+
+  &_person {
+    margin-top: 10px;
+  }
+
+  &_info {
+    margin: 30px 0;
+  }
+
+  &_sns_box {
+    display: flex;
+    margin-left: 295px;
+  }
+
+  &_sns {
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-decoration: none;
+    position: relative;
+    margin-right: 20px;
+
+    img {
+      text-align: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
 }

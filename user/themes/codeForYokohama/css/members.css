@@ -10,24 +10,55 @@
 @media screen and (max-width: 750px) { .main_title { margin-top: 25px; } }
 
 /*-------------------------------------------------- Member --------------------------------------------------*/
+.container { width: auto; }
+
 .members { position: relative; height: auto; margin: 0; padding: 80px 0; color: #ffffff; }
 
-.members_list { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; list-style: none; margin: 0 -20px 0 0; padding: 0; -ms-flex-pack: justify; justify-content: space-between; }
+.members_list { width: 1020px; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; list-style: none; margin: 0 auto; padding: 0; -ms-flex-pack: justify; justify-content: space-between; }
 
 @media screen and (max-width: 750px) { .members_list { width: 100%; } }
 
-.members_item_box { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; font-size: 16px; text-align: center; color: #000000; margin-right: 20px; }
-
 .members_item_box_content { max-width: 100%; padding-right: 20px; color: #000000; text-align: center; }
+
+.members_item_box_content:last-child { padding-right: 0; }
 
 @media screen and (max-width: 750px) { .members_item_box_content { box-sizing: border-box; width: 50%; } }
 
 .members_item_box_content_dummy { width: 240px; margin-right: 20px; }
 
+.members_info { width: 100%; height: 100%; position: relative; cursor: pointer; }
+
 .members_image { width: 240px; height: 240px; }
 
 @media screen and (max-width: 750px) { .members_image { width: 100%; height: auto; } }
 
+.members_detail_content { display: none; }
+
+.members_detail_box { display: none; left: 0; width: 100%; height: 590px; background-color: #000; color: #ffffff; }
+
+.members_detail_box .members_detail_content { display: block; width: 1020px; margin: auto; padding: 60px 0; }
+
+.box_square { height: 590px; }
+
 .members_list_border { width: 100%; height: 1px; background-color: #afafaf; }
+
+/*-------------------------------------------------- Members Detail --------------------------------------------------*/
+.members_detail { display: -ms-flexbox; display: flex; }
+
+.members_detail_image_box { margin-right: 55px; }
+
+.members_detail_image_box img { height: 240px; width: 240px; }
+
+.members_detail_content_box a { display: block; font-size: 14px; }
+
+.members_detail_person { margin-top: 10px; }
+
+.members_detail_info { margin: 30px 0; }
+
+.members_detail_sns_box { display: -ms-flexbox; display: flex; margin-left: 295px; }
+
+.members_detail_sns { display: block; width: 20px; height: 20px; text-decoration: none; position: relative; margin-right: 20px; }
+
+.members_detail_sns img { text-align: center; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
 
 /*# sourceMappingURL=members.css.map */

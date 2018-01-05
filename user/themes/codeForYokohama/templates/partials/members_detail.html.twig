@@ -1,0 +1,30 @@
+{% block stylesheets %}
+  {% do
+    assets.addCss('theme://css/members.css', 100) %}
+{% endblock %}
+{{dump (page)}}
+{% if header_image_file %}
+  {% set header_image_media = page.media.images[header_image_file] %}
+{% else %}
+  {% set header_image_media = page.media.images | first %}
+{% endif %}
+<div class="members_detail">
+  <div class="members_detail_image_box">
+    <img src="{{ header_image_media.url }}" alt="{{page.header.company}} {{page.header.person}}"/>
+  </div>
+  <div class="members_detail_content_box">
+    <a class="members_detail_company">{{page.header.company}}</a>
+    <a class="members_detail_person">{{page.header.person}}</a>
+    <a class="members_detail_info">{{page.content}}</a>
+  </div>
+</div>
+{% if page.header.sns != null %}
+  <div class="members_detail_sns_box">
+    {% if page.header.sns.twitter_url != null %}
+      <a class="members_detail_sns" href="{{page.header.sns.twitter_url}}"><img src="{{ url('theme://images/sns_icon_member_twitter.png')}}" /></a>
+    {% endif %}
+    {% if page.header.sns.facebook_url != null %}
+      <a class="members_detail_sns" href="{{page.header.sns.facebook_url}}"><img src="{{ url('theme://images/sns_icon_member_fb.png')}}" /></a>
+    {% endif %}
+  </div>
+{% endif %}

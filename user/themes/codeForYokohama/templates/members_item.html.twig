@@ -3,7 +3,7 @@
     {% do
       assets.addCss('theme://css/common.css', 100) %}
     {% do
-      assets.addCss('theme://css/activities.css', 100) %}
+      assets.addCss('theme://css/members.css', 100) %}
     {% do
       assets.addCss('theme://css/normalize.css', 100) %}
   {% endblock %}
@@ -17,13 +17,10 @@
       <div id="members" class="members">
         <div class="members_container">
           <div id="item" class="block pure-u-2-3 h-entry">
-            {% include 'partials/members_item.html.twig' with {
+            {% include 'partials/members_detail.html.twig' with {
               'members' : page.parent,
               'truncate' : false
             } %}
-
-          </div>
-          <div class="next_after_pagination">
 
           </div>
         </div>

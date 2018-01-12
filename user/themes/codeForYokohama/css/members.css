@@ -34,7 +34,7 @@
 
 .members_detail_content { display: none; }
 
-.members_detail_box { display: none; left: 0; width: 100%; height: 590px; background-color: #000; color: #ffffff; }
+.members_detail_box { display: none; left: 0; width: 100%; height: 590px; background-color: #000; color: #ffffff; margin-bottom: 40px; }
 
 .members_detail_box .members_detail_content { display: block; width: 1020px; margin: auto; padding: 60px 0; }
 

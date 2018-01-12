@@ -14,6 +14,8 @@
 
 .members { position: relative; height: auto; margin: 0; padding: 80px 0; color: #ffffff; }
 
+@media screen and (max-width: 750px) { .members { padding: 25px 0; } }
+
 .members_list { width: 1020px; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; list-style: none; margin: 0 auto; padding: 0; -ms-flex-pack: justify; justify-content: space-between; }
 
 @media screen and (max-width: 750px) { .members_list { width: 100%; } }
@@ -45,22 +47,48 @@
 .members_list_border { width: 100%; height: 1px; background-color: #afafaf; }
 
 /*-------------------------------------------------- Members Detail --------------------------------------------------*/
-.members_detail { display: -ms-flexbox; display: flex; }
+.members_detail_pc { display: -ms-flexbox; display: flex; }
 
-.members_detail_image_box { margin-right: 55px; }
+.members_detail_pc_image_box { margin-right: 55px; }
 
-.members_detail_image_box img { height: 240px; width: 240px; }
+.members_detail_pc_image_box img { height: 240px; width: 240px; }
 
-.members_detail_content_box a { display: block; font-size: 14px; }
+.members_detail_pc_content_box a { display: block; font-size: 14px; }
 
-.members_detail_person { margin-top: 10px; }
+.members_detail_pc_person { margin-top: 10px; }
 
-.members_detail_info { margin: 30px 0; }
+.members_detail_pc_info { margin: 30px 0; }
 
-.members_detail_sns_box { display: -ms-flexbox; display: flex; margin-left: 295px; }
+.members_detail_pc_sns_box { display: -ms-flexbox; display: flex; margin-left: 295px; }
 
-.members_detail_sns { display: block; width: 20px; height: 20px; text-decoration: none; position: relative; margin-right: 20px; }
+.members_detail_pc_sns { display: block; width: 20px; height: 20px; text-decoration: none; position: relative; margin-right: 20px; }
 
-.members_detail_sns img { text-align: center; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
+.members_detail_pc_sns img { text-align: center; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
+
+@media screen and (max-width: 750px) { .members_detail_pc { display: none; } }
+
+.members_detail_sp { display: none; color: #000000; }
+
+@media screen and (max-width: 750px) { .members_detail_sp { display: block; } }
+
+.members_detail_sp_image_box { width: 100%; height: auto; }
+
+.members_detail_sp_image_box img { width: 100%; height: auto; }
+
+.members_detail_sp_content_box { margin-top: 25px; }
+
+.members_detail_sp_content_box a { display: block; text-align: left; }
+
+.members_detail_sp_company { font-size: 11px; }
+
+.members_detail_sp_person { font-size: 13px; margin-top: 10px; }
+
+.members_detail_sp_info { font-size: 13px; margin: 30px 0; }
+
+.members_detail_sp_sns_box { display: -ms-flexbox; display: flex; }
+
+.members_detail_sp_sns { display: block; width: 25px; height: 25px; text-decoration: none; margin-right: 20px; }
+
+.members_detail_sp_sns img { object-fit: contain; width: 100%; height: 100%; text-align: center; }
 
 /*# sourceMappingURL=members.css.map */

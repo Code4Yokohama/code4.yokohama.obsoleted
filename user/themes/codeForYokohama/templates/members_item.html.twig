@@ -3,7 +3,7 @@
     {% do
       assets.addCss('theme://css/common.css', 100) %}
     {% do
-      assets.addCss('theme://css/activities.css', 100) %}
+      assets.addCss('theme://css/members.css', 100) %}
     {% do
       assets.addCss('theme://css/normalize.css', 100) %}
   {% endblock %}
@@ -14,21 +14,15 @@
     {% endif %}
 
     <div class="container">
-      <div id="activities" class="activities">
-        <div class="activities_container">
+      <div id="members" class="members">
+        <div class="members_container">
           <div id="item" class="block pure-u-2-3 h-entry">
-            {% include 'partials/activities_item.html.twig' with {
-              'activities' : page.parent,
+            {% include 'partials/members_detail.html.twig' with {
+              'members' : page.parent,
               'truncate' : false
             } %}
 
           </div>
-          <div class="next_after_pagination">
-
-          </div>
-        </div>
-        <div id="sidebar" class="sidebar_activities">
-          {% include 'partials/sidebar.html.twig' with {'activities':page.parent}%}
         </div>
       </div>
     </div>

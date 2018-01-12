@@ -10,9 +10,8 @@
   {% else %}
     {% set header_image_media = page.media.images | first %}
   {% endif %}
-  {{dump (page.id)}}
   <div class="members_info" id="{{page.id}}">
-    <img class="members_image" src="{{ header_image_media.url }}" alt="hoge"/>
+    <a href="{{page.url}}"><img class="members_image" src="{{ header_image_media.url }}" alt="hoge"/></a>
     <p class="members_company">{{page.header.company}}</p>
     <p class="members_name">{{page.header.person}}{{page.title}}</p>
   </div>

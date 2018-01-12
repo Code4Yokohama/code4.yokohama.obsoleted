@@ -1,0 +1,34 @@
+{% embed 'partials/base.html.twig' %}
+  {% block stylesheets %}
+    {% do
+      assets.addCss('theme://css/common.css', 100) %}
+    {% do
+      assets.addCss('theme://css/activities.css', 100) %}
+    {% do
+      assets.addCss('theme://css/normalize.css', 100) %}
+  {% endblock %}
+
+  {% block content %}
+    {% if config.plugins.breadcrumbs.enabled %}
+      {% include 'partials/breadcrumbs.html.twig' %}
+    {% endif %}
+
+    <div class="container">
+      <div id="members" class="members">
+        <div class="members_container">
+          <div id="item" class="block pure-u-2-3 h-entry">
+            {% include 'partials/members_item.html.twig' with {
+              'members' : page.parent,
+              'truncate' : false
+            } %}
+
+          </div>
+          <div class="next_after_pagination">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+
+{% endembed %}

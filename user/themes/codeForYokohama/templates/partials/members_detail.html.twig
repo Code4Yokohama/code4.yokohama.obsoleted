@@ -2,7 +2,6 @@
   {% do
     assets.addCss('theme://css/members.css', 100) %}
 {% endblock %}
-{{dump (page)}}
 {% if header_image_file %}
   {% set header_image_media = page.media.images[header_image_file] %}
 {% else %}

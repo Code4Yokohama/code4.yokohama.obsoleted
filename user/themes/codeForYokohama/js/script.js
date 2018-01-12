@@ -8,17 +8,22 @@ jQuery(function($) {
   $('.members_info').on('click', function() {
     var targetId = $(this).attr('id');
     var targetBox = $(this).parents('.members_list').data('target-box-id');
+    var currentOpen = $('.members_detail_box.isOpen > .members_detail_content').attr('id');
 
-    if ($('*[data-box-id="' + targetBox + '"]').hasClass('isOpen')) {
-      $('*[data-box-id="' + targetBox + '"]').slideUp(300).removeClass('isOpen');
+    if (currentOpen === undefined) {
+      $('*[data-box-id="' + targetBox + '"]')
+        .html($('#members_detail-' + targetId).clone())
+        .slideDown(300).addClass('isOpen');
     } else {
-      $('.isOpen').slideUp(300).removeClass('isOpen');
-      window.setTimeout(function() {
-        console.log($('#members_detail-' + targetId));
-        $('*[data-box-id="' + targetBox + '"]')
-          .html($('#members_detail-' + targetId))
-          .slideDown(300).addClass('isOpen');
-      }, 500);
+      $('.members_detail_box.isOpen').slideUp(300).removeClass('isOpen');
+      if (targetId !== currentOpen.replace(/^members_detail-/g, '')) {
+        $('.members_detail_box.isOpen').slideUp(300).removeClass('isOpen');
+        window.setTimeout(function() {
+          $('*[data-box-id="' + targetBox + '"]')
+            .html($('#members_detail-' + targetId).clone())
+            .slideDown(300).addClass('isOpen');
+        }, 500);
+      }
     }
   })
 });

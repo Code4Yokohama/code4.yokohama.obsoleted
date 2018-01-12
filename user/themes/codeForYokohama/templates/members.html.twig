@@ -26,7 +26,6 @@
             {% if loop.index % 4 == 0 %}
             </ul>
             {% if loop.index <= collection | length %}
-              {{dump (childId)}}
               <div class="members_detail_box" data-box-id="box_{{boxCount}}"></div>
               {% set boxCount = boxCount + 1 %}
               {% if boxCount < 4 %}

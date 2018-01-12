@@ -7,7 +7,7 @@
 
 .main_title { display: block; }
 
-@media screen and (max-width: 750px) { .main_title { margin-top: 25px; } }
+@media screen and (max-width: 750px) { .main_title { margin-top: 25px; font-size: 32px; } }
 
 /*-------------------------------------------------- Member --------------------------------------------------*/
 .container { width: auto; }

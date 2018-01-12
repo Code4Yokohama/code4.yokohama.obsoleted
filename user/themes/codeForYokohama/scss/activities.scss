@@ -22,6 +22,7 @@
   display: block;
   @include media-query('sp') {
     margin-top: $sp-page-title-font-margin;
+    font-size: $sp-page-title-font-size;
     };
 }
 

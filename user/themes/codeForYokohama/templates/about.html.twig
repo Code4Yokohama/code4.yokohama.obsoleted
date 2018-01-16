@@ -1,0 +1,54 @@
+{% embed 'partials/base.html.twig' %}
+  {% set collection = page.collection() %}
+  {% block stylesheets %}
+    {% do
+      assets.addCss('theme://css/common.css', 100) %}
+    {% do
+      assets.addCss('theme://css/members.css', 100) %}
+    {% do
+      assets.addCss('theme://css/normalize.css', 100) %}
+  {% endblock %}
+
+  {% block content %}
+
+    <div id="members" class="members">
+      <div class="container">
+
+        {% set boxCount = 0 %}
+        <ul class="members_list" data-target-box-id="box_{{boxCount}}">
+          {% for child in collection %}
+            {% set childId = child.id %}
+            {% include 'partials/members_item.html.twig' with {
+              'members' : page,
+              'page' : child,
+              'truncate' : true
+            } %}
+            {% if loop.index % 4 == 0 %}
+            </ul>
+            {% if loop.index <= collection | length %}
+              <div class="members_detail_box" data-box-id="box_{{boxCount}}"></div>
+              {% set boxCount = boxCount + 1 %}
+              {% if boxCount < 4 %}
+                <ul class="members_list" data-target-box-id="box_{{boxCount}}">
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+
+        <div class="members_list_border"></div>
+
+        <div class="pages_link">
+
+          {% if config.plugins.pagination.enabled and collection.params.pagination %}
+            {% include 'partials/pagination.html.twig' with {
+              'base_url' : page.url,
+              'pagination' : collection.params.pagination
+            } %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+  {% endblock %}
+{% endembed %}

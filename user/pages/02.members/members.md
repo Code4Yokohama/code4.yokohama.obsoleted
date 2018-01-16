@@ -1,18 +1,18 @@
 ---
-name: null
 title: Members
-blog_url: blog
 body_classes: 'header-image fullwidth'
-sitemap:
-    changefreq: monthly
-    priority: 1.03
 content:
     items: '@self.children'
+    limit: 16
     order:
         by: date
         dir: desc
-    limit: 16
     pagination: true
+    url_taxonomy_filters: true
+blog_url: blog
+sitemap:
+    changefreq: monthly
+    priority: 1.03
 feed:
     description: 'Sample Blog Description'
     limit: 10

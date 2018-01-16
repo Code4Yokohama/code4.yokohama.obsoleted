@@ -38,10 +38,38 @@
       {% block header %}
         <div id="mainVisual" class="main_visual">
           <header>
+            {% set menuItemHomeUrl = null %}
+            {% set menuItemHomeTitle = null %}
+            {% set menuItemActivitiesUrl = null %}
+            {% set menuItemActivitiesTitle = null %}
+            {% set menuItemMembersUrl = null %}
+            {% set menuItemMembersTitle = null %}
+            {% set menuItemAboutUrl = null %}
+            {% set menuItemAboutTitle = null %}
+
+            {% for page in pages.children.visible %}
+              {% if page.menu == 'Home' %}
+                {% set menuItemHomeTitle = page.menu %}
+                {% set menuItemHomeUrl = page.url %}
+              {% endif %}
+              {% if page.menu == 'Activities' %}
+                {% set menuItemActivitiesTitle = page.menu %}
+                {% set menuItemActivitiesUrl = page.url %}
+              {% endif %}
+              {% if page.menu == 'Members' %}
+                {% set menuItemMembersTitle = page.menu %}
+                {% set menuItemMembersUrl = page.url %}
+              {% endif %}
+              {% if page.menu == 'About' %}
+                {% set menuItemAboutTitle = page.menu %}
+                {% set menuItemAboutUrl = page.url %}
+              {% endif %}
+            {% endfor %}
+
             <div class="header_box">
               <div class="header_box_pc">
                 <div class="header_image_pc">
-                  <a class="header_icon_link" href="../home.html">
+                  <a class="header_icon_link" href="{{menuItemHomeUrl}}">
                     <h1 class="header_heading"><img class="header_icon" src="{{ url('theme://images/header_logo_pc.png') }}" alt="code for yokohama"/></h1>
                   </a>
                 </div>
@@ -49,25 +77,48 @@
                   <nav id="grobalNav" class="grobal_nav">
                     <ul class="nav_box_pc">
                       <li class="nav_item">
-                        <a href="">Get Involved</a>
+                        <!-- Get Involved -->
+                        <a href="{{'' ~ menuItemActivitiesUrl ~ '/category:Get%20Involved'}}">Get Involved</a>
                       </li>
                       <li class="nav_item">
-                        <a href="">About</a>
+                        <!-- About -->
+                        <a href="{{menuItemAboutUrl}}">
+                        {% if menuItemMembersTitle != null %}
+                          {{menuItemMembersTitle}}
+                        {% else %}
+                          About
+                        {% endif %}</a>
                       </li>
                       <li class="nav_item">
-                        <a href="members.html">Members</a>
+                        <!-- Members -->
+                        <a href="{{menuItemMembersUrl}}">
+                          {% if menuItemMembersTitle != null %}
+                            {{menuItemMembersTitle}}
+                          {% else %}
+                            Members
+                          {% endif %}
+                        </a>
                       </li>
                       <li class="nav_item">
-                        <a href="">Meeting</a>
+                        <!-- Meeting -->
+                        <a href="{{'' ~ menuItemActivitiesUrl ~ '/category:Meeting'}}">Meeting</a>
                       </li>
                       <li class="nav_item">
-                        <a href="../activities.html">Activities</a>
+                        <!-- Activities -->
+                        <a href="{{menuItemActivitiesUrl}}">
+                          {% if menuItemActivitiesTitle != null %}
+                            {{menuItemActivitiesTitle}}
+                          {% else %}
+                            Activities
+                          {% endif %}
+                        </a>
                       </li>
                     </ul>
                   </nav>
                 </div>
               </div>
 
+              {{dump (page.children.visible)}}
               <div class="header_box_sp">
                 <a class="header_icon_link" href="../home.html">
                   <h1 class="header_heading"><img class="header_icon" src="{{ url('theme://images/header_logo_sp.png') }}" alt="code for yokohama"/></h1>
@@ -76,10 +127,7 @@
                 <div class="menu_icon">
                   <span class="top"></span>
                   <span class="middle"></span>
-                <span class="bottom" </span> </div> </header> <div class="menu_item_box"> <div class="header nav"> <nav id="grobalNav" class="grobal_nav"> <ul class="nav_box_sp"> <li class="nav_item"> <a href=""> involved</a>="Involved</a>" </li>get about</a>
-              </li>
-              <li class="nav_item">
-                <a href="members.html">Members</a>
+                <span class="bottom" </span> </div> </header> <div class="menu_item_box"> <div class="header nav"> <nav id="grobalNav" class="grobal_nav"> <ul class="nav_box_sp"> <li class="nav_item"> <a href=""> involved</a>="involved</a>" </li> about</a>="about</a>" <a href="members.html">="involved</a>" get members</a>
               </li>
               <li class="nav_item">
                 <a href="">Meeting</a>

@@ -34,48 +34,108 @@
 
   <body id="top" class="{{ page.header.body_classes }}">
 
-    <div id="sb-site">
-      {% block header %}
-        <div id="mainVisual" class="main_visual">
-          <header>
-            {% set menuItemHomeUrl = null %}
-            {% set menuItemHomeTitle = null %}
-            {% set menuItemActivitiesUrl = null %}
-            {% set menuItemActivitiesTitle = null %}
-            {% set menuItemMembersUrl = null %}
-            {% set menuItemMembersTitle = null %}
-            {% set menuItemAboutUrl = null %}
-            {% set menuItemAboutTitle = null %}
+    {% block header %}
+      <div id="mainVisual" class="main_visual">
+        <img class="main_visual_typo_pc" src="{{ url ('theme://images/main_typo_pc.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
+        <img class="main_visual_typo_sp" src="{{ url ('theme://images/main_typo_sp.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
+        <header>
+          {% set menuItemHomeUrl = null %}
+          {% set menuItemHomeTitle = null %}
+          {% set menuItemActivitiesUrl = null %}
+          {% set menuItemActivitiesTitle = null %}
+          {% set menuItemMembersUrl = null %}
+          {% set menuItemMembersTitle = null %}
+          {% set menuItemAboutUrl = null %}
+          {% set menuItemAboutTitle = null %}
 
-            {% for page in pages.children.visible %}
-              {% if page.menu == 'Home' %}
-                {% set menuItemHomeTitle = page.menu %}
-                {% set menuItemHomeUrl = page.url %}
-              {% endif %}
-              {% if page.menu == 'Activities' %}
-                {% set menuItemActivitiesTitle = page.menu %}
-                {% set menuItemActivitiesUrl = page.url %}
-              {% endif %}
-              {% if page.menu == 'Members' %}
-                {% set menuItemMembersTitle = page.menu %}
-                {% set menuItemMembersUrl = page.url %}
-              {% endif %}
-              {% if page.menu == 'About' %}
-                {% set menuItemAboutTitle = page.menu %}
-                {% set menuItemAboutUrl = page.url %}
-              {% endif %}
-            {% endfor %}
+          {% for page in pages.children.visible %}
+            {% if page.menu == 'Home' %}
+              {% set menuItemHomeTitle = page.menu %}
+              {% set menuItemHomeUrl = page.url %}
+            {% endif %}
+            {% if page.menu == 'Activities' %}
+              {% set menuItemActivitiesTitle = page.menu %}
+              {% set menuItemActivitiesUrl = page.url %}
+            {% endif %}
+            {% if page.menu == 'Members' %}
+              {% set menuItemMembersTitle = page.menu %}
+              {% set menuItemMembersUrl = page.url %}
+            {% endif %}
+            {% if page.menu == 'About' %}
+              {% set menuItemAboutTitle = page.menu %}
+              {% set menuItemAboutUrl = page.url %}
+            {% endif %}
+          {% endfor %}
 
-            <div class="header_box">
-              <div class="header_box_pc">
-                <div class="header_image_pc">
-                  <a class="header_icon_link" href="{{menuItemHomeUrl}}">
-                    <h1 class="header_heading"><img class="header_icon" src="{{ url('theme://images/header_logo_pc.png') }}" alt="code for yokohama"/></h1>
-                  </a>
-                </div>
+          <div class="header_box">
+            <div class="header_box_pc">
+              <div class="header_image_pc">
+                <a class="header_icon_link" href="{{menuItemHomeUrl}}">
+                  <h1 class="header_heading"><img class="header_icon" src="{{ url('theme://images/header_logo_pc.png') }}" alt="code for yokohama"/></h1>
+                </a>
+              </div>
+              <div class="header nav">
+                <nav id="grobalNav" class="grobal_nav">
+                  <ul class="nav_box_pc">
+                    <li class="nav_item">
+                      <!-- Get Involved -->
+                      <a href="{{'' ~ menuItemActivitiesUrl ~ '/category:Get%20Involved'}}">Get Involved</a>
+                    </li>
+                    <li class="nav_item">
+                      <!-- About -->
+                      <a href="{{menuItemAboutUrl}}">
+                        {% if menuItemAboutTitle != null %}
+                          {{menuItemAboutTitle}}
+                        {% else %}
+                          About
+                        {% endif %}
+                      </a>
+                    </li>
+                    <li class="nav_item">
+                      <!-- Members -->
+                      <a href="{{menuItemMembersUrl}}">
+                        {% if menuItemMembersTitle != null %}
+                          {{menuItemMembersTitle}}
+                        {% else %}
+                          Members
+                        {% endif %}
+                      </a>
+                    </li>
+                    <li class="nav_item">
+                      <!-- Meeting -->
+                      <a href="{{'' ~ menuItemActivitiesUrl ~ '/category:Meeting'}}">Meeting</a>
+                    </li>
+                    <li class="nav_item">
+                      <!-- Activities -->
+                      <a href="{{menuItemActivitiesUrl}}">
+                        {% if menuItemActivitiesTitle != null %}
+                          {{menuItemActivitiesTitle}}
+                        {% else %}
+                          Activities
+                        {% endif %}
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            {{dump (page.children.visible)}}
+            <div class="header_box_sp">
+              <a class="header_icon_link" href="../home.html">
+                <h1 class="header_heading"><img class="header_icon" src="{{ url('theme://images/header_logo_sp.png') }}" alt="code for yokohama"/></h1>
+              </a>
+
+              <div class="menu_icon">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+              </div>
+
+              <div class="menu_item_box">
                 <div class="header nav">
                   <nav id="grobalNav" class="grobal_nav">
-                    <ul class="nav_box_pc">
+                    <ul class="nav_box_sp">
                       <li class="nav_item">
                         <!-- Get Involved -->
                         <a href="{{'' ~ menuItemActivitiesUrl ~ '/category:Get%20Involved'}}">Get Involved</a>
@@ -83,11 +143,12 @@
                       <li class="nav_item">
                         <!-- About -->
                         <a href="{{menuItemAboutUrl}}">
-                        {% if menuItemAboutTitle != null %}
-                          {{menuItemAboutTitle}}
-                        {% else %}
-                          About
-                        {% endif %}</a>
+                          {% if menuItemAboutTitle != null %}
+                            {{menuItemAboutTitle}}
+                          {% else %}
+                            About
+                          {% endif %}
+                        </a>
                       </li>
                       <li class="nav_item">
                         <!-- Members -->
@@ -117,90 +178,67 @@
                   </nav>
                 </div>
               </div>
-
-              {{dump (page.children.visible)}}
-              <div class="header_box_sp">
-                <a class="header_icon_link" href="../home.html">
-                  <h1 class="header_heading"><img class="header_icon" src="{{ url('theme://images/header_logo_sp.png') }}" alt="code for yokohama"/></h1>
-                </a>
-
-                <div class="menu_icon">
-                  <span class="top"></span>
-                  <span class="middle"></span>
-                <span class="bottom" </span> </div> </header> <div class="menu_item_box"> <div class="header nav"> <nav id="grobalNav" class="grobal_nav"> <ul class="nav_box_sp"> <li class="nav_item"> <a href=""> involved</a>="involved</a>" </li> about</a>="about</a>" <a href="members.html">="involved</a>" get members</a>
-              </li>
-              <li class="nav_item">
-                <a href="">Meeting</a>
-              </li>
-              <li class="nav_item">
-                <a href="../activities.html">Activities</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-
-      <img class="main_visual_typo_pc" src="{{ url ('theme://images/main_typo_pc.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
-      <img class="main_visual_typo_sp" src="{{ url ('theme://images/main_typo_sp.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
-      {% if page.parent.header.title == null %}
-        {% set pageTitle = page.title %}
-      {% else %}
-        {% set pageTitle = page.parent.header.title %}
-      {% endif %}
-      <h1 class="main_title">{{pageTitle}}</h1>
-    </div>
-
-  </div>
-{% endblock %}
-
-{% block body %}
-  <section id="body" class="{{ class }}">
-    {% block content %}{% endblock %}
-  </section>
-{% endblock %}
-
-{% block footer %}
-  <footer>
-    <div class="footer_box">
-      <div class="container">
-        <div class="container_footer_box">
-          <div class="license_box">
-            <div class="license_image">
-              <a class="creative_commons_image" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-                <img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="クリエイティブ・コモンズ・ライセンス"/>
-              </a>
+              {% if page.parent.header.title == null %}
+                {% set pageTitle = page.title %}
+              {% else %}
+                {% set pageTitle = page.parent.header.title %}
+              {% endif %}
+              <h1 class="main_title">{{pageTitle}}</h1>
             </div>
-            <div class="license_message">
-              このウェブサイトのコンテンツは
-              <a class="license_message_link" rel="license" href="http://creativecommons.org/licenses/by/4.0/">クリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。</a>
-              <div class="copyright">
-                <p class="copyright_text">© Code for YOKOHAMA.</p>
+
+          </div>
+        </header>
+      </div>
+    {% endblock %}
+
+    {% block body %}
+      <section id="body" class="{{ class }}">
+        {% block content %}{% endblock %}
+      </section>
+    {% endblock %}
+
+    {% block footer %}
+      <footer>
+        <div class="footer_box">
+          <div class="container">
+            <div class="container_footer_box">
+              <div class="license_box">
+                <div class="license_image">
+                  <a class="creative_commons_image" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    <img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="クリエイティブ・コモンズ・ライセンス"/>
+                  </a>
+                </div>
+                <div class="license_message">
+                  このウェブサイトのコンテンツは
+                  <a class="license_message_link" rel="license" href="http://creativecommons.org/licenses/by/4.0/">クリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。</a>
+                  <div class="copyright">
+                    <p class="copyright_text">© Code for YOKOHAMA.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="sns_box">
+                <ul class="sns_list">
+                  <li class="sns_item">
+                    <a class="sns_icon" href=""><img src="{{ url('theme://images/sns_icon_fb.png')}}"/></a>
+                  </li >
+                  <li class="sns_item">
+                    <a class="sns_icon" href=""><img src="{{ url('theme://images/sns_icon_github.png')}}"/></a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-          <div class="sns_box">
-            <ul class="sns_list">
-              <li class="sns_item">
-                <a class="sns_icon" href=""><img src="{{ url('theme://images/sns_icon_fb.png')}}"/></a>
-              </li >
-              <li class="sns_item">
-                <a class="sns_icon" href=""><img src="{{ url('theme://images/sns_icon_github.png')}}"/></a>
-              </li>
-            </ul>
+        </div>
+        <div class="common_footer_box">
+          <div class="container">
+            <div class="link_box">
+              <a class="link_item" href="">Hackathons</a>
+              <a class="link_item" href="">CONTACT</a>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="common_footer_box">
-      <div class="container">
-        <div class="link_box">
-          <a class="link_item" href="">Hackathons</a>
-          <a class="link_item" href="">CONTACT</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-{% endblock %}
-</div>
-</body>
+      </footer>
+    {% endblock %}
+
+  </body>
 </html>

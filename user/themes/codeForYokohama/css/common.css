@@ -50,7 +50,7 @@ header { width: 100%; position: absolute; }
 
 .menu_item_box { display: none; }
 
-@media screen and (max-width: 750px) { .menu_item_box { background-color: #000000; width: 100%; float: right; margin-top: 55px; position: relative; z-index: 10; } }
+@media screen and (max-width: 750px) { .menu_item_box { background-color: #000000; width: 100%; float: right; top: 55px; position: absolute; z-index: 10; } }
 
 .main_visual_typo_pc { position: absolute; display: block; top: 50%; left: 50%; ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); margin: 0; padding: 0; width: 50%; }
 

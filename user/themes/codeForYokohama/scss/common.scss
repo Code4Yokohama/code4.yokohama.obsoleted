@@ -163,8 +163,8 @@ header {
     background-color: $black;
     width: 100%;
     float: right;
-    margin-top: 55px;
-    position: relative;
+    top: 55px;
+    position: absolute;
     z-index: 10;
   };
 }

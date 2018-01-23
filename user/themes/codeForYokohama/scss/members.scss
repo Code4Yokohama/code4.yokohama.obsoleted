@@ -249,3 +249,12 @@
     }
   }
 }
+/*-------------------------------------------------- footer --------------------------------------------------*/
+.container.footer {
+  width: 1020px;
+  margin: auto;
+  @include media-query('sp') {
+    width: auto;
+    padding: 0 30px;
+  };
+}

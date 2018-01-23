@@ -91,4 +91,9 @@
 
 .members_detail_sp_sns img { object-fit: contain; width: 100%; height: 100%; text-align: center; }
 
+/*-------------------------------------------------- footer --------------------------------------------------*/
+.container.footer { width: 1020px; margin: auto; }
+
+@media screen and (max-width: 750px) { .container.footer { width: auto; padding: 0 30px; } }
+
 /*# sourceMappingURL=members.css.map */

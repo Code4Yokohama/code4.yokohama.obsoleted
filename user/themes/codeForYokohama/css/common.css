@@ -125,4 +125,6 @@ header { width: 100%; position: absolute; }
 
 .link_item { color: #ffffff; font-size: 14pt; text-decoration: none; margin-right: 45px; }
 
+.link_item:last-child { margin-right: 0; }
+
 /*# sourceMappingURL=common.css.map */

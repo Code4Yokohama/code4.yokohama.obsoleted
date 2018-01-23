@@ -402,4 +402,7 @@ header {
   font-size: 14pt;
   text-decoration: none;
   margin-right: 45px;
+  &:last-child {
+    margin-right: 0;
+  }
 }

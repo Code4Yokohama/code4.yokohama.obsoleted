@@ -38,6 +38,12 @@
       <div id="mainVisual" class="main_visual">
         <img class="main_visual_typo_pc" src="{{ url ('theme://images/main_typo_pc.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
         <img class="main_visual_typo_sp" src="{{ url ('theme://images/main_typo_sp.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
+        {% if page.parent.header.title == null %}
+          {% set pageTitle = page.title %}
+        {% else %}
+          {% set pageTitle = page.parent.header.title %}
+        {% endif %}
+        <h1 class="main_title">{{pageTitle}}</h1>
         <header>
           {% set menuItemHomeUrl = null %}
           {% set menuItemHomeTitle = null %}
@@ -178,12 +184,6 @@
                   </nav>
                 </div>
               </div>
-              {% if page.parent.header.title == null %}
-                {% set pageTitle = page.title %}
-              {% else %}
-                {% set pageTitle = page.parent.header.title %}
-              {% endif %}
-              <h1 class="main_title">{{pageTitle}}</h1>
             </div>
 
           </div>

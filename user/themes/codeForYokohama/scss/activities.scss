@@ -365,6 +365,22 @@ height: auto;
   }
 }
 
-.next_after_pagination {
+.next_prev_pagination {
   margin-bottom: 80px;
+}
+
+.n_p_pagenation {
+  width: 50%;
+  display: flex;
+
+  &.next {
+    float: left;
+  }
+
+  &.prev {
+    float: right;
+  }
+  &_icon {
+
+  }
 }

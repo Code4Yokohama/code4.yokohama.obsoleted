@@ -132,6 +132,12 @@
 
 @media screen and (max-width: 750px) { .pages_link_sp { display: block; } }
 
-.next_after_pagination { margin-bottom: 80px; }
+.next_prev_pagination { margin-bottom: 80px; }
+
+.n_p_pagenation { width: 50%; display: -ms-flexbox; display: flex; }
+
+.n_p_pagenation.next { float: left; }
+
+.n_p_pagenation.prev { float: right; }
 
 /*# sourceMappingURL=activities.css.map */

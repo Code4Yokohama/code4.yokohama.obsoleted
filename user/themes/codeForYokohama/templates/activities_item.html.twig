@@ -23,8 +23,14 @@
             } %}
 
           </div>
-          <div class="next_after_pagination">
+          <div class="next_prev_pagination">
+            {% if not page.isFirst %}
+              <a class="n_p_pagenation next" href="{{ page.nextSibling.url }}"><img class="n_p_pagenation_icon" src="{{ url ('theme://images/pagination_next.png')}}"/>{{ page.nextSibling.title }}</a>
+            {% endif %}
 
+            {% if not page.isLast %}
+              <a class="n_p_pagenation prev" href="{{ page.prevSibling.url }}"><img class="n_p_pagenation_icon" src="{{ url ('theme://images/pagination_prev.png')}}"/>{{page.prevSibling.title }}</a>
+            {% endif %}
           </div>
         </div>
         <div id="sidebar" class="sidebar_activities">

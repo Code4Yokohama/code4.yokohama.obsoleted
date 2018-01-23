@@ -24,6 +24,9 @@
     margin-top: $sp-page-title-font-margin;
     font-size: $sp-page-title-font-size;
     };
+    &_category {
+      display: block;
+    }
 }
 
 /*-------------------------------------------------- Activities --------------------------------------------------*/

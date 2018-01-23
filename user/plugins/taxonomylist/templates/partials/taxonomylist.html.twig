@@ -8,7 +8,7 @@
           ? 'active'
           : '' %}
 
-          <a class="category_item" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }} / {{taxlist[taxonomy][tax]}}</a>
+          <a id="category_link" class="category_item" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }} / {{taxlist[taxonomy][tax]}}</a>
 
       {% endfor %}
     </span>

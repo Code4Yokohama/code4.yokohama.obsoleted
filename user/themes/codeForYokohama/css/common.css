@@ -61,6 +61,8 @@ header { width: 100%; position: absolute; }
 
 .main_title { display: none; position: absolute; top: 50%; left: 50%; ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); margin: 0; padding: 0; color: #db2023; font-size: 56px; }
 
+.main_title_category { display: none; position: absolute; top: 50%; left: 50%; ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); margin: 0; padding: 0; color: #db2023; font-size: 46px; }
+
 .grobal_nav { display: -ms-flexbox; display: flex; height: 120px; -ms-flex-align: center; align-items: center; float: right; }
 
 @media screen and (max-width: 750px) { .grobal_nav { height: 100%; float: left; } }

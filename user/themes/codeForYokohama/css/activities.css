@@ -9,6 +9,8 @@
 
 @media screen and (max-width: 750px) { .main_title { margin-top: 25px; font-size: 32px; } }
 
+.main_title_category { display: block; }
+
 /*-------------------------------------------------- Activities --------------------------------------------------*/
 .activities { display: -ms-flexbox; display: flex; position: relative; height: auto; margin: 0; color: #ffffff; }
 

@@ -39,10 +39,18 @@
         <img class="main_visual_typo_pc" src="{{ url ('theme://images/main_typo_pc.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
         <img class="main_visual_typo_sp" src="{{ url ('theme://images/main_typo_sp.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
 
-        {{dump (grav.uri.params)}}
         {% if grav.uri.params != null %}
           {% set pageParams = grav.uri.params %}
-          {% set targetText = "/category:" %}
+          {% set isCategory = preg_match("{^\/category:}", pageParams) %}
+          {% set isTaxonomy = preg_match("{^\/tag:}", pageParams) %}
+          {% if isCategory == 1 %}
+            <!-- category -->
+            {% set targetText = "/category:" %}
+          {% endif %}
+          {% if isTaxonomy == 1 %}
+            <!-- taxonomy -->
+            {% set targetText = "/tag:" %}
+          {% endif %}
           {% set index = strlen(targetText) %}
           {% set pageCategory = (substr(pageParams, index)) %}
           {% set pageTitle = rawurldecode(pageCategory) %}

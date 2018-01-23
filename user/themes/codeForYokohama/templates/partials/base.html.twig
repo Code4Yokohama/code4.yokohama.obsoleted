@@ -46,14 +46,17 @@
           {% if isCategory == 1 %}
             <!-- category -->
             {% set targetText = "/category:" %}
+            {% set index = strlen(targetText) %}
+            {% set pageCategory = (substr(pageParams, index)) %}
+            {% set pageTitle = rawurldecode(pageCategory) %}
           {% endif %}
           {% if isTaxonomy == 1 %}
             <!-- taxonomy -->
-            {% set targetText = "/tag:" %}
+            {% set targetText = "/" %}
+            {% set index = strlen(targetText) %}
+            {% set pageCategory = (substr(pageParams, index)) %}
+            {% set pageTitle = ucfirst(rawurldecode(pageCategory)) %}
           {% endif %}
-          {% set index = strlen(targetText) %}
-          {% set pageCategory = (substr(pageParams, index)) %}
-          {% set pageTitle = rawurldecode(pageCategory) %}
         {% else %}
           {% if page.parent.header.title == null %}
             {% set pageTitle = page.title %}

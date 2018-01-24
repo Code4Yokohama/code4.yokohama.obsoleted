@@ -367,11 +367,14 @@ height: auto;
 
 .next_prev_pagination {
   margin-bottom: 80px;
+  margin-top: 25px;
 }
 
 .n_p_pagenation {
   width: 50%;
   display: flex;
+  padding: 0 20px;
+  box-sizing: border-box;
 
   &.next {
     float: left;

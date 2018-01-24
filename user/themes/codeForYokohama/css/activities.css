@@ -132,9 +132,9 @@
 
 @media screen and (max-width: 750px) { .pages_link_sp { display: block; } }
 
-.next_prev_pagination { margin-bottom: 80px; }
+.next_prev_pagination { margin-bottom: 80px; margin-top: 25px; }
 
-.n_p_pagenation { width: 50%; display: -ms-flexbox; display: flex; }
+.n_p_pagenation { width: 50%; display: -ms-flexbox; display: flex; padding: 0 20px; box-sizing: border-box; }
 
 .n_p_pagenation.next { float: left; }
 

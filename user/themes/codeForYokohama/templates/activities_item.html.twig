@@ -24,12 +24,17 @@
 
           </div>
           <div class="next_prev_pagination">
-            {% if not page.isFirst %}
-              <a class="n_p_pagenation next" href="{{ page.nextSibling.url }}"><img class="n_p_pagenation_icon" src="{{ url ('theme://images/pagination_next.png')}}"/>{{ page.nextSibling.title }}</a>
-            {% endif %}
-
             {% if not page.isLast %}
-              <a class="n_p_pagenation prev" href="{{ page.prevSibling.url }}"><img class="n_p_pagenation_icon" src="{{ url ('theme://images/pagination_prev.png')}}"/>{{page.prevSibling.title }}</a>
+              <div class="n_p_pagenation prev">
+                <a href="{{ page.prevSibling.url }}">{{page.prevSibling.title }}</a>
+                <img class="n_p_pagenation_icon prev" src="{{ url ('theme://images/pagination_prev_icon.png')}}"/>
+              </div>
+            {% endif %}
+            {% if not page.isFirst %}
+              <div class="n_p_pagenation next">
+                <img class="n_p_pagenation_icon next" src="{{ url ('theme://images/pagination_next_icon.png')}}"/>
+                <a href="{{ page.nextSibling.url }}">{{ page.nextSibling.title }}</a>
+              </div>
             {% endif %}
           </div>
         </div>

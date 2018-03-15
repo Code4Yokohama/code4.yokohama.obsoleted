@@ -69,7 +69,7 @@
 
 .read_more_button { display: block; width: 210px; height: 46px; font-size: 18px; color: #db2023; text-align: center; line-height: 50px; text-decoration: none; background-color: #ffffff; border-style: none; outline: none; margin: 0 auto; }
 
-.read_more_button:hover { background-color: #db2023; }
+.read_more_button:hover { background-color: #db2023; color: #ffffff; }
 
 /*-------------------------------------------------- Activites --------------------------------------------------*/
 .activites { background-image: url("../images/bg_activites.png"); background-size: cover; position: relative; height: auto; margin: -100px 0 0; padding: 150px 0; color: #ffffff; transform: skewY(-4deg); z-index: 50; }

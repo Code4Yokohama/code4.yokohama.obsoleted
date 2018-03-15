@@ -212,9 +212,10 @@
     {% endblock %}
 
     {% block body %}
-      <section id="body" class="{{ class }}">
+      <div id="body" class="{{ class }}">
         {% block content %}{% endblock %}
-      </section>
+        {% block categoryPosts %}{% endblock %}
+      </div>
     {% endblock %}
 
     {% block footer %}

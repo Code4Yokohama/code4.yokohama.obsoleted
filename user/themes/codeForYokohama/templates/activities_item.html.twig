@@ -25,11 +25,11 @@
           </div>
           <div class="next_prev_pagination">
             {% if not page.isFirst %}
-              <a class="n_p_pagenation next" href="{{ page.nextSibling.url }}"><img class="n_p_pagenation_icon" src="{{ url ('theme://images/pagination_next.png')}}"/>{{ page.nextSibling.title }}</a>
+              <a class="n_p_pagenation next" href="{{ page.nextSibling.url }}">{{ page.nextSibling.title|length > 40 ? page.nextSibling.title|slice(0, 40) ~ '...' : page.nextSibling.title }}</a>
             {% endif %}
 
             {% if not page.isLast %}
-              <a class="n_p_pagenation prev" href="{{ page.prevSibling.url }}"><img class="n_p_pagenation_icon" src="{{ url ('theme://images/pagination_prev.png')}}"/>{{page.prevSibling.title }}</a>
+              <a class="n_p_pagenation prev" href="{{ page.prevSibling.url }}">{{ page.prevSibling.title|length > 40 ? page.prevSibling.title|slice(0, 40) ~ '...' : page.prevSibling.title }}</a>
             {% endif %}
           </div>
         </div>
@@ -37,6 +37,34 @@
           {% include 'partials/sidebar.html.twig' with {'activities':page.parent}%}
         </div>
       </div>
+    </div>
+
+  {% endblock %}
+
+  {% block categoryPosts %}
+    <div class="category_list">
+      <section class="category_list_inner container">
+        {% for post in taxonomy.findTaxonomy({'category':page.taxonomy.category[0]})|reverse|slice(0,3) %}
+          <h2 class="category_list_title">{{category}}</h2>
+          <section class="category_list_item">
+            {% set post_image = post.media.images | first %}
+            {% if post_image %}
+              <img class="" src="{{ post_image.url }}">
+            {% else %}
+              <div><span>No Image</span></div>
+            {% endif %}
+            <div class="category_list_info">
+              <h3 class="info_title">{{ post.title|length > 30 ? post.title|slice(0, 30) ~ '...' : post.title }}</h3>
+              <div class="info_desc">
+                {{ post.content|length > 40 ? post.content|slice(0, 40) ~ '...' : post.content }}
+              </div>
+              <time class="info_date" datetime="{{ page.date|date(" c") }}"="c" )=")" }}""="}}" "">
+              <p>{{ post.date|date("Y") }}.{{ post.date|date("m") }}.{{ post.date|date("d") }}</p>
+              </time>
+            </div>
+          </section>
+        {% endfor %}
+      </section>
     </div>
   {% endblock %}
 

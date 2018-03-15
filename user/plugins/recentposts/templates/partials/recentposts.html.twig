@@ -9,7 +9,7 @@
           </div>
         {% endif %}
         <div class="recent_post_title_box">
-          <a class="recent_post_title" title="post.title" href="{{ post.url }}">{{ post.title }}</a>
+          <a class="recent_post_title" title="post.title" href="{{ post.url }}">{{ post.title|length > 42 ? post.title|slice(0, 42) ~ '...' : post.title  }}</a>
         </div>
       </div>
     </li>

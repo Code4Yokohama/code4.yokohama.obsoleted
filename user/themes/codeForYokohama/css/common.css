@@ -7,6 +7,8 @@ img { vertical-align: bottom; }
 
 @media screen and (max-width: 750px) { .container { width: auto; padding: 0 30px; } }
 
+a { color: #1976d2; }
+
 .container.activites_container { transform: skewY(4deg); }
 
 /*-------------------------------------------------- MainVisual --------------------------------------------------*/

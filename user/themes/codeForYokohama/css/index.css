@@ -123,9 +123,11 @@
 
 .member_list { display: -ms-flexbox; display: flex; list-style: none; margin: 0 -20px 0 0; padding: 0; }
 
+@media screen and (max-width: 750px) { .member_list { padding-top: 40px; position: relative; overflow: scroll; width: 100%; } }
+
 .member_list_pager { display: none; }
 
-@media screen and (max-width: 750px) { .member_list_pager { display: -ms-flexbox; display: flex; margin: 0; padding-left: 0; width: 60px; }
+@media screen and (max-width: 750px) { .member_list_pager { display: -ms-flexbox; display: flex; margin: 0; padding-left: 0; width: 60px; position: absolute; right: 0; }
   .member_list_pager li { box-sizing: border-box; cursor: pointer; list-style-type: none; position: relative; text-indent: -9999px; width: 24px; }
   .member_list_pager li.prev:before, .member_list_pager li.next:after { border-top: 1px solid #ffffff; content: ''; position: absolute; top: 0; bottom: 0; background-color: transparent; width: 10px; height: 10px; margin: auto; }
   .member_list_pager li.prev:before { left: 10px; border-left: 1px solid #ffffff; transform: rotate(-45deg); }

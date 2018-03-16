@@ -5,6 +5,13 @@ body {
   margin: 0;
 }
 
+* {
+  line-height: 1.75;
+  @include media-query('sp') {
+    line-height: 1.5;
+  }
+}
+
 img {
   vertical-align: bottom;
 }
@@ -14,7 +21,7 @@ img {
   margin: auto;
   @include media-query('sp') {
     width: auto;
-    padding: 0 30px;
+    padding: 0 4%;
   };
 }
 
@@ -24,6 +31,9 @@ a {
 
 .container.activites_container {
   transform: skewY(4deg);
+  @include media-query('sp') {
+    transform: skewY(15deg);
+  }
 }
 /*-------------------------------------------------- MainVisual --------------------------------------------------*/
 .main_visual {
@@ -48,6 +58,8 @@ header {
 
 .header_box {
   &_pc {
+    display: flex;
+    justify-content: space-between;
     width: 1020px;
     height: 80px;
     margin: auto;
@@ -61,11 +73,11 @@ header {
     @include media-query('sp') {
       display: flex;
       background-color: $white;
-      height: 45px;
+      height: 20px;
       width: 100%;
       align-items: center;
       text-align: center;
-      padding: 5px 0;
+      padding: 10px 0;
       position: relative;
       z-index: 20;
     };
@@ -73,11 +85,7 @@ header {
 }
 
 .header_image_pc {
-  display: flex;
-  float: left;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 40px;
   @include media-query('sp') {
     display: none;
   };
@@ -94,15 +102,20 @@ header {
 }
 
 .header_heading {
+  line-height: 1;
   margin: 0;
   @include media-query('sp') {
     margin: 0;
   };
+
+  img {
+    vertical-align: middle;
+  }
 }
 
 .header_icon {
   @include media-query('sp') {
-    height: 45px;
+    height: 30px;
     width: auto;
     position: absolute;
     top: 50%;
@@ -120,29 +133,28 @@ header {
 .menu_icon {
   @include media-query('sp') {
     position: absolute;
-    width: 40px;
+    width: 30px;
     height: 40px;
-    right: 30px;
-
+    padding: 0 5px;
+    right: 10px;
 
     span {
-      width: 40px;
+      width: 30px;
       height: 2px;
       border-radius: 10px 10px;
       display: block;
       background: $black;
       position: absolute;
-      left: 90%;
+      left: 5px;
       top: 50%;
-      margin-left: -25px;
     }
 
     .top {
-      transform: translateY(-13px);
+      transform: translateY(-10px);
     }
 
     .bottom {
-      transform: translateY(13px);
+      transform: translateY(10px);
     }
 
     &.active {
@@ -167,10 +179,13 @@ header {
     background-color: $black;
     width: 100%;
     float: right;
-    top: 55px;
+    top: 40px;
     position: absolute;
     z-index: 10;
   };
+  &.active {
+    display: block;
+  }
 }
 
 .main_visual_typo {
@@ -219,7 +234,7 @@ header {
       transform: translate(-50%, -50%);
       margin: 0;
       padding: 0;
-      width: 50%;
+      width: 74%;
     }
   };
 }
@@ -283,7 +298,7 @@ header {
 }
 
 .nav_item {
-  float: right;
+  float: left;
   @include media-query('sp') {
     float: none;
   }
@@ -306,10 +321,15 @@ header {
 /*-------------------------------------------------- common heading --------------------------------------------------*/
 .common_heading {
   margin: 0;
-  padding: 40px 0;
+  padding: 30px 0 50px;
   font-size: 28px;
+  line-height: 1;
   position: relative;
   width: 100%;
+  @include media-query('sp') {
+    font-size: 24px;
+    padding: 12px 0 35px;
+  }
 }
 
 .common_heading::before {
@@ -319,6 +339,9 @@ header {
   position: absolute;
   left: 0;
   top: 0;
+  @include media-query('sp') {
+    width: 6%;
+  }
 }
 
 .common_heading.white::before {
@@ -337,14 +360,14 @@ header {
   margin: 0;
   padding: 40px 0;
   color: $white;
-}
 
-.container_footer_box {
-  display: -ms-flexbox;
-  display: flex;
-  @include media-query('sp') {
-    flex-direction: column;
-  };
+  &_flex {
+    display: -ms-flexbox;
+    display: flex;
+    @include media-query('sp') {
+      flex-direction: column;
+    };
+  }
 }
 
 .sns_box {
@@ -352,7 +375,8 @@ header {
   margin-left: auto;
   @include media-query('sp') {
     order: 1;
-    margin: 10px auto;
+    margin: 0 auto;
+    padding-bottom: 45px;
   };
 }
 
@@ -363,6 +387,7 @@ header {
 }
 
 .license_message {
+  font-size: 12px;
   margin-top: 5px;
 }
 
@@ -375,10 +400,19 @@ header {
   text-decoration: none;
 }
 
-.copyright_text {
+.copyright {
+  margin-top: 18px;
   @include media-query('sp') {
-    text-align: center;
+    margin-top: 40px;
   };
+
+  &_text {
+    margin: 0;
+    @include media-query('sp') {
+      text-align: center;
+    };
+  }
+
 }
 
 .sns_list {
@@ -387,9 +421,12 @@ header {
   list-style: none;
   margin: 0 -30px 0 0;
   padding: 0;
+  @include media-query('sp') {
+    margin: 0;
+  }
 }
 
-.sns_item {
+.sns_item:not(:last-child) {
   margin-right: 30px;
 }
 /*-------------------------------------------------- agination --------------------------------------------------*/
@@ -416,7 +453,7 @@ header {
 
 .link_item {
   color: $white;
-  font-size: 14pt;
+  font-size: 14px;
   text-decoration: none;
   margin-right: 45px;
   &:last-child {

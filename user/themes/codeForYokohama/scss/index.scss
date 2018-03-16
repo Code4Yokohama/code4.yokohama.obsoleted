@@ -13,6 +13,9 @@
   color: $white;
   position: relative;
   overflow: hidden;
+  @include media-query('sp') {
+    padding: 50px 0 60px;
+  };
 }
 
 .about:before {
@@ -26,7 +29,10 @@
   background-color: $bg-red-accent;
   transform: rotateZ(6deg);
   overflow: hidden;
-  @include media-query('sp') {};
+  @include media-query('sp') {
+    bottom: -150px;
+    transform: rotateZ(10deg);
+  };
 }
 
 .about:after {
@@ -39,7 +45,11 @@
   height: 160px;
   background-color: $bg-red;
   transform: rotateZ(-6deg);
-  @include media-query('sp') {};
+  @include media-query('sp') {
+    bottom: -150px;
+    transform: rotateZ(-12deg);
+    right: -30px;
+  };
 }
 
 .about_box {
@@ -47,12 +57,30 @@
   width: 100%;
   padding: 80px 0;
   @include media-query('sp') {
-    padding: 50px 0;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 0 0 25px;
   };
 }
 
-.about_box.first {
+  .about_box.first {
   padding-top: 0;
+}
+
+.about_title {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+  margin: 0;
+  padding-bottom: 30px;
+  @include media-query('sp') {
+    font-size: 16px;
+    padding-top: 30px;
+  }
+}
+
+.about_detail {
+  margin: 0;
 }
 
 .about_box.project {
@@ -71,17 +99,18 @@
   };
 }
 
-.about_box.innovation .about_title {
-  margin-top: 0;
-}
-
 .project_archives {
   display: -ms-flexbox;
   display: flex;
+  padding-top: 60px;
+  @include media-query('sp') {
+    display: block;
+    padding-top: 0;
+  }
 }
 
 .project_archives_item {
-  padding: 10px;
+  padding: 20px;
   text-align: left;
 }
 
@@ -128,11 +157,14 @@
   background-size: auto;
   height: auto;
   margin: 0;
-  padding: 80px 0;
+  padding: 150px 0 80px;
   color: $white;
   position: relative;
   overflow: hidden;
   z-index: 100;
+  @include media-query('sp') {
+    padding: 85px 0 50px;
+  }
 }
 
 .whats_new_contents {
@@ -150,6 +182,10 @@
   height: 150px;
   background-color: $bg-red-accent;
   transform: rotateZ(-6deg);
+  @include media-query('sp') {
+    top: -152px;
+    transform: rotateZ(-12deg);
+  }
 }
 
 .whats_new:after {
@@ -162,6 +198,10 @@
   height: 160px;
   background-color: $bg-red;
   transform: rotateZ(6deg);
+  @include media-query('sp') {
+    top: -154px;
+    transform: rotateZ(10deg);
+  }
 }
 
 .whats_new_list {
@@ -169,6 +209,10 @@
   text-align: left;
   font-size: 16px;
   list-style: none;
+  margin-top: 0;
+  @include media-query('sp') {
+    font-size: 13px;
+  }
 }
 
 .whats_new_item {
@@ -177,6 +221,8 @@
   display: flex;
   @include media-query('sp') {
     display: block;
+    font-size: 13px;
+    margin-bottom: 16px;
   };
 }
 
@@ -211,6 +257,7 @@
   text-overflow: ellipsis;
   text-decoration: none;
   color: $white;
+  margin: 0;
 }
 
 .read_more_button {
@@ -226,6 +273,13 @@
   border-style: none;
   outline: none;
   margin: 0 auto;
+  @include media-query('sp') {
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    max-width: 110px;
+    width: 32%;
+  }
 }
 
 .read_more_button:hover {
@@ -238,11 +292,15 @@
   background-size: cover;
   position: relative;
   height: auto;
-  margin: -100px 0 0;
+  margin: -60px 0 0;
   padding: 150px 0;
   color: $white;
   transform: skewY(-4deg);
   z-index: 50;
+  @include media-query('sp') {
+    padding: 120px 0;
+    transform: skewY(-15deg);
+  }
 }
 
 .activites_items {
@@ -273,7 +331,7 @@
 
 .activities_title {
   font-size: 16px;
-  margin: 30px 20px 20px 15px;
+  margin: 20px;
 }
 
 .activities_title a {
@@ -296,8 +354,11 @@
   position: relative;
   height: auto;
   margin: 0;
-  padding: 80px 0;
+  padding: 120px 0 80px;
   color: $white;
+  @include media-query('sp') {
+    padding: 80px 0 40px;
+  }
 }
 
 .member_list {
@@ -306,6 +367,56 @@
   list-style: none;
   margin: 0 -20px 0 0;
   padding: 0;
+}
+
+.member_list_pager {
+  display: none;
+  @include media-query('sp') {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+    width: 60px;
+
+    li {
+      box-sizing: border-box;
+      cursor: pointer;
+      list-style-type: none;
+      position: relative;
+      text-indent: -9999px;
+      width: 24px;
+
+      &.prev:before,
+      &.next:after {
+        border-top: 1px solid $white;
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: transparent;
+        width: 10px;
+        height: 10px;
+        margin: auto;
+      }
+
+      &.prev {
+        &:before {
+          left: 10px;
+          border-left: 1px solid $white;
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+      }
+
+      &.next {
+        &:after {
+          right: 10px;
+          border-right: 1px solid $white;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
 }
 
 .member_item_box {
@@ -318,4 +429,12 @@
 .member_image {
   width: 240px;
   height: 240px;
+}
+
+.member_company {
+  margin-bottom: 0;
+}
+
+.member_name {
+  margin: 0;
 }

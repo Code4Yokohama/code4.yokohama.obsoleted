@@ -23,7 +23,7 @@
 
       {% block javascripts %}
         {% do
-          assets.add('jquery', 101) %}
+          assets.add('jQuery', 101) %}
         {% do
           assets.add('theme://js/script.js', 101) %}
       {% endblock %}
@@ -105,18 +105,18 @@
                 <nav id="grobalNav" class="grobal_nav">
                   <ul class="nav_box_pc">
                     <li class="nav_item">
-                      <!-- Get Involved -->
-                      <a href="{{'' ~ menuItemActivitiesUrl ~ '/category:Get%20Involved'}}">Get Involved</a>
+                      <!-- Activities -->
+                      <a href="{{menuItemActivitiesUrl}}">
+                          {% if menuItemActivitiesTitle != null %}
+                              {{menuItemActivitiesTitle}}
+                          {% else %}
+                            Activities
+                          {% endif %}
+                      </a>
                     </li>
                     <li class="nav_item">
-                      <!-- About -->
-                      <a href="{{menuItemAboutUrl}}">
-                        {% if menuItemAboutTitle != null %}
-                          {{menuItemAboutTitle}}
-                        {% else %}
-                          About
-                        {% endif %}
-                      </a>
+                      <!-- Meeting -->
+                      <a href="{{'' ~ menuItemActivitiesUrl ~ '/category:Meeting'}}">Meeting</a>
                     </li>
                     <li class="nav_item">
                       <!-- Members -->
@@ -129,18 +129,18 @@
                       </a>
                     </li>
                     <li class="nav_item">
-                      <!-- Meeting -->
-                      <a href="{{'' ~ menuItemActivitiesUrl ~ '/category:Meeting'}}">Meeting</a>
+                      <!-- About -->
+                      <a href="{{menuItemAboutUrl}}">
+                          {% if menuItemAboutTitle != null %}
+                              {{menuItemAboutTitle}}
+                          {% else %}
+                            About
+                          {% endif %}
+                      </a>
                     </li>
                     <li class="nav_item">
-                      <!-- Activities -->
-                      <a href="{{menuItemActivitiesUrl}}">
-                        {% if menuItemActivitiesTitle != null %}
-                          {{menuItemActivitiesTitle}}
-                        {% else %}
-                          Activities
-                        {% endif %}
-                      </a>
+                      <!-- Get Involved -->
+                      <a href="{{'' ~ menuItemActivitiesUrl ~ '/category:Get%20Involved'}}">Get Involved</a>
                     </li>
                   </ul>
                 </nav>
@@ -163,8 +163,28 @@
                   <nav id="grobalNav" class="grobal_nav">
                     <ul class="nav_box_sp">
                       <li class="nav_item">
-                        <!-- Get Involved -->
-                        <a href="{{'' ~ menuItemActivitiesUrl ~ '/category:Get%20Involved'}}">Get Involved</a>
+                        <!-- Activities -->
+                        <a href="{{menuItemActivitiesUrl}}">
+                            {% if menuItemActivitiesTitle != null %}
+                                {{menuItemActivitiesTitle}}
+                            {% else %}
+                              Activities
+                            {% endif %}
+                        </a>
+                      </li>
+                      <li class="nav_item">
+                        <!-- Meeting -->
+                        <a href="{{'' ~ menuItemActivitiesUrl ~ '/category:Meeting'}}">Meeting</a>
+                      </li>
+                      <li class="nav_item">
+                        <!-- Members -->
+                        <a href="{{menuItemMembersUrl}}">
+                            {% if menuItemMembersTitle != null %}
+                                {{menuItemMembersTitle}}
+                            {% else %}
+                              Members
+                            {% endif %}
+                        </a>
                       </li>
                       <li class="nav_item">
                         <!-- About -->
@@ -177,28 +197,8 @@
                         </a>
                       </li>
                       <li class="nav_item">
-                        <!-- Members -->
-                        <a href="{{menuItemMembersUrl}}">
-                          {% if menuItemMembersTitle != null %}
-                            {{menuItemMembersTitle}}
-                          {% else %}
-                            Members
-                          {% endif %}
-                        </a>
-                      </li>
-                      <li class="nav_item">
-                        <!-- Meeting -->
-                        <a href="{{'' ~ menuItemActivitiesUrl ~ '/category:Meeting'}}">Meeting</a>
-                      </li>
-                      <li class="nav_item">
-                        <!-- Activities -->
-                        <a href="{{menuItemActivitiesUrl}}">
-                          {% if menuItemActivitiesTitle != null %}
-                            {{menuItemActivitiesTitle}}
-                          {% else %}
-                            Activities
-                          {% endif %}
-                        </a>
+                        <!-- Get Involved -->
+                        <a href="{{'' ~ menuItemActivitiesUrl ~ '/category:Get%20Involved'}}">Get Involved</a>
                       </li>
                     </ul>
                   </nav>
@@ -221,8 +221,7 @@
     {% block footer %}
       <footer>
         <div class="footer_box">
-          <div class="container footer">
-            <div class="container_footer_box">
+          <div class="container footer_box_flex">
               <div class="license_box">
                 <div class="license_image">
                   <a class="creative_commons_image" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
@@ -247,7 +246,6 @@
                   </li>
                 </ul>
               </div>
-            </div>
           </div>
         </div>
         <div class="common_footer_box">

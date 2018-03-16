@@ -49,20 +49,22 @@
 
     </div>
 
-    <div class="activities_item_tags">
-      <p class="activities_item_tags_title">TAGS</p>
+    {% if page.taxonomy.tag %}
+      <div class="activities_item_tags">
+        <p class="activities_item_tags_title">TAGS</p>
 
-      {% set count = 0 %}
-      {% for tag in page.taxonomy.tag %}
-        <a class="activities_item_tags_item" href="{{ activities.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
-        {% set count = count + 1 %}
-        {% if count != count(page.taxonomy.tag) %}
-          ,
-        {% endif %}
+        {% set count = 0 %}
+        {% for tag in page.taxonomy.tag %}
+          <a class="activities_item_tags_item" href="{{ activities.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+          {% set count = count + 1 %}
+          {% if count != count(page.taxonomy.tag) %}
+            ,
+          {% endif %}
 
-      {% endfor %}
+        {% endfor %}
 
-    </div>
+      </div>
+    {% endif %}
 
   </div>
 </div>

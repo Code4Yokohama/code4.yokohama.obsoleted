@@ -15,21 +15,19 @@
   {% do
     assets.addCss('theme://css/index.css', 100) %}
 {% endblock %}
-<div>
-  <ul class="whats_new_list">
-    {% for child in whatsNewCollection %}
-      <li class="whats_new_item">
-        <time class="dt-published" datetime="{{ child.date|date(" c") }}"="c" )=")" }}""="}}" "">
-          <span class="whats_new_item_date">{{ child.date|date("Y") }}.{{ child.date|date("m") }}.{{ child.date|date("d") }}</span>
-        </time>
-        <div class="whats_new_item_title_box">
-          <a href="{{ child.url }}">
-            <p class="whats_new_item_title">
-              {{ child.title }}
-            </p>
-          </a>
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<ul class="whats_new_list">
+  {% for child in whatsNewCollection %}
+    <li class="whats_new_item">
+      <time class="dt-published" datetime="{{ child.date|date(" c") }}"="c" )=")" }}""="}}" "">
+        <span class="whats_new_item_date">{{ child.date|date("Y") }}.{{ child.date|date("m") }}.{{ child.date|date("d") }}</span>
+      </time>
+      <div class="whats_new_item_title_box">
+        <a href="{{ child.url }}">
+          <p class="whats_new_item_title">
+            {{ child.title }}
+          </p>
+        </a>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

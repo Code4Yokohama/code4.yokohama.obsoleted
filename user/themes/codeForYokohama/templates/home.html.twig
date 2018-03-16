@@ -13,85 +13,75 @@
   {% block content %}
 
     <main class="main_home">
-      <div id="about" class="about">
+      <section id="about" class="about">
         <div class="container">
-          <h1 class="common_heading white">About</h1>
+          <h2 class="common_heading white">About</h2>
           <article class="about_box first">
-            <h2 class="about_title">Technology for Social Innovation</h2>
-            <section>
-              <p class="about_detail">
-                Code for YOKOHAMAは仲間とともに技術を磨き、学んだスキルを地域の課題解決に役立てていく活動です。<br/>横浜から価値あるソリューションを世界へ。あなたもこの活動に参加しませんか？
-              </p>
-            </section>
+            <h3 class="about_title">Technology for Social Innovation</h3>
+            <p class="about_detail">
+              Code for YOKOHAMAは仲間とともに技術を磨き、学んだスキルを地域の課題解決に役立てていく活動です。<br/>横浜から価値あるソリューションを世界へ。あなたもこの活動に参加しませんか？
+            </p>
           </article>
           <article class="about_box project">
-            <h2 class="about_title">Project</h2>
-            <section>
-              <p class="about_detail">
-                Code for YOKOHAMAはオープンソースやオープンデータに関するプロジェクト、<br/>
-                参加者のスキルアップを目指すプロジェクトを中心に参加メンバーが主体的に立ち上げていきます。
-              </p>
-              <div class="project_archives">
-                <div class="project_archives_item">
-                  オープンソースオープンソースオープン ソースオープンソースオープンソース オープンソースオープンソースオープン ソースオープンソースオープンソース
-                </div>
-                <div class="project_archives_item">
-                  オープンソースオープンソースオープン ソースオープンソースオープンソース オープンソースオープンソースオープン ソースオープンソースオープンソース
-                </div>
-                <div class="project_archives_item">
-                  オープンソースオープンソースオープン ソースオープンソースオープンソース オープンソースオープンソースオープン ソースオープンソースオープンソース
-                </div>
+            <h3 class="about_title">Project</h3>
+            <p class="about_detail">
+              Code for YOKOHAMAはオープンソースやオープンデータに関するプロジェクト、<br/>
+              参加者のスキルアップを目指すプロジェクトを中心に参加メンバーが主体的に立ち上げていきます。
+            </p>
+            <div class="project_archives">
+              <div class="project_archives_item">
+                オープンソースオープンソースオープン ソースオープンソースオープンソース オープンソースオープンソースオープン ソースオープンソースオープンソース
               </div>
-            </section>
+              <div class="project_archives_item">
+                オープンソースオープンソースオープン ソースオープンソースオープンソース オープンソースオープンソースオープン ソースオープンソースオープンソース
+              </div>
+              <div class="project_archives_item">
+                オープンソースオープンソースオープン ソースオープンソースオープンソース オープンソースオープンソースオープン ソースオープンソースオープンソース
+              </div>
+            </div>
           </article>
           <article class="about_box innovation">
             <div class="about_innovation_text">
               <h2 class="about_title">Technology for Social Innovation</h2>
-              <section>
-                <p class="about_detail">
-                  Code for YOKOHAMAは仲間とともに技術を磨き、<br/>学んだスキルを地域の課題解決に役立てていく活動です。<br/>
-                  横浜から価値あるソリューションを世界へ。<br/>
-                  あなたもこの活動に参加しませんか？
-                </p>
-              </section>
+              <p class="about_detail">
+                Code for YOKOHAMAは仲間とともに技術を磨き、<br/>学んだスキルを地域の課題解決に役立てていく活動です。<br/>
+                横浜から価値あるソリューションを世界へ。<br/>
+                あなたもこの活動に参加しませんか？
+              </p>
             </div>
             <div class="about_innovation_image">
               <img src="{{ url('theme://images/inovation.png')}}"/>
             </div>
           </article>
         </div>
-      </div>
+      </section>
 
-      <div id="whatsNew" class="whats_new">
+      <section id="whatsNew" class="whats_new">
         <div class="container">
-          <h1 class="common_heading red">What's New?</h1>
+          <h2 class="common_heading red">What's New?</h2>
           <div class="whats_new_contents">
             {% include 'partials/whats_new_home.html.twig' %}
           </div>
           <a class="read_more_button" href="activities/category:What's%20New" onclick="">Read more</a>
         </div>
-      </div>
+      </section>
 
-      <div id="activites" class="activites">
+      <section id="activites" class="activites">
         <div class="container activites_container">
-          <h1 class="common_heading white">Activites</h1>
-          <article>
-            <section>
-              <div class="activites_items">
-                {% include 'partials/activities_home.html.twig' %}
-              </div>
-            </section>
-          </article>
+          <h2 class="common_heading white">Activites</h2>
+          <div class="activites_items">
+            {% include 'partials/activities_home.html.twig' %}
+          </div>
           <a class="read_more_button" href="activities/category:Activities" onclick="">Read more</a>
         </div>
-      </div>
+      </section>
 
-      <div id="member" class="member">
+      <section id="member" class="member">
         <div class="container">
-          <h1 class="common_heading red">Member</h1>
+          <h2 class="common_heading red">Member</h2>
           {% include 'partials/members_home.html.twig' %}
         </div>
-      </div>
+      </section>
     </main>
   {% endblock %}
 

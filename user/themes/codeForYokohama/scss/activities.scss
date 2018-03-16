@@ -59,7 +59,8 @@
   margin-top: 70px;
   border-bottom: 1px solid $border-gray;
   @include media-query('sp') {
-    width: 100%
+    width: 100%;
+    margin-top: 40px;
   };
 }
 
@@ -75,12 +76,11 @@
 }
 
 .activities_list_info {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
 }
 
 .activities_list_date {
-  height: 15px;
   padding-right: 15px;
   color: $activity-text-light;
   font-size: 12px;
@@ -91,6 +91,8 @@
 .activities_list_date p {
   padding: 0;
   margin: 0;
+  height: 15px;
+  line-height: 15px;
 }
 
 .activities_list_category {
@@ -98,7 +100,7 @@
   padding-left: 15px;
   color: $activity-text-light;
   font-size: 12px;
-  line-height: 35px;
+  line-height: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,12 +142,18 @@
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
+  @include media-query('sp') {
+    font-size: 13px;
+  }
 }
 
 .activities_list_content {
   color: black;
   text-align: left;
   margin-top: 15px;
+  @include media-query('sp') {
+    font-size: 13px;
+  }
 }
 
 .read_more_button {
@@ -183,7 +191,6 @@
 }
 
 .activities_item_date {
-  height: 15px;
   padding-right: 15px;
   color: $activity-text-light;
   font-size: 12px;
@@ -192,8 +199,10 @@
 }
 
 .activities_item_date p {
-  padding: 0;
+  height: 15px;
+  line-height: 15px;
   margin: 0;
+  padding: 0;
 }
 
 .activities_item_title {
@@ -231,6 +240,17 @@
   text-align: center;
   text-decoration: none;
   color: $activity-text-gray;
+  margin: 0;
+
+  a {
+    display: block;
+    line-height: 1;
+    padding: 20px 0;
+    @include media-query('sp') {
+      font-size: 12px;
+      padding: 15px 0;
+    }
+  }
 }
 
 .activities_item_tags {
@@ -258,7 +278,7 @@
   @include media-query('sp') {
     display: block;
     width: 100%;
-    margin: 50px 0 0 0;
+    margin: 0;
   };
 }
 
@@ -267,7 +287,11 @@
   margin-bottom: 48px;
   color: $activity-text-dark;
   letter-spacing: 0.1em;
-  line-height: 1.6;
+  line-height: 1;
+  @include media-query('sp') {
+    font-size: 13px;
+    margin-bottom: 40px;
+  }
 
   &:first-child {
     margin-top: 0;
@@ -281,13 +305,18 @@
   width: 40px;
   position: absolute;
   left: 0;
-  bottom: 0;
-  margin-bottom: -20px;
+  bottom: -20px;
+  @include media-query('sp') {
+    bottom: -15px;
+  }
 }
 
 .recent_posts {
   margin-bottom: 75px;
   width: 100%;
+  @include media-query('sp') {
+    margin-bottom: 45px;
+  }
 }
 
 .recent_posts_list {
@@ -328,6 +357,9 @@ height: auto;
 
 .categories {
   margin-bottom: 75px;
+  @include media-query('sp') {
+    margin-bottom: 45px;
+  }
 }
 
 .category_item {
@@ -339,21 +371,58 @@ height: auto;
 
 .archive {
   margin-bottom: 75px;
+  @include media-query('sp') {
+    margin-bottom: 45px;
+    position: relative;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      right: 3px;
+      width: 10px;
+      height: 10px;
+    }
+    &:before {
+      top: 57px;
+      border-top: 1px solid #3f3f3f;
+      border-left: 1px solid #3f3f3f;
+      transform: rotate(45deg);
+    }
+    &:after {
+      bottom: 2px;
+      border-bottom: 1px solid #3f3f3f;
+      border-left: 1px solid #3f3f3f;
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 .archives_list {
   padding: 0;
   font-size: 12px;
   color: $activity-text-dark;
+  @include media-query('sp') {
+    margin: 0;
+    max-height: 130px;
+    overflow: scroll;
+  }
 }
 
 .archives_year {
+  color: $activity-text-light;
+  font-weight: 600;
   margin-bottom: 20px;
+  @include media-query('sp') {
+    margin-bottom: 10px;
+  }
 }
 
 .archives_month_list_box {
   display: inline-block;
-    margin: 0 15px 20px 0;
+  margin: 0 15px 20px 0;
+  @include media-query('sp') {
+    margin: 0 15px 13px 0;
+  }
 }
 
 .archives_month_list {
@@ -408,6 +477,9 @@ height: auto;
   display: flex;
   align-items: center;
   margin-bottom: 80px;
+  @include media-query('sp') {
+    margin-bottom: 20px;
+  }
 }
 
 .n_p_pagenation {
@@ -415,6 +487,9 @@ height: auto;
   padding: 20px 0;
   box-sizing: border-box;
   position: relative;
+  @include media-query('sp') {
+    font-size: 12px;
+  }
 
   &.next:before,
   &.prev:after {
@@ -426,11 +501,19 @@ height: auto;
     width: 20px;
     height: 20px;
     margin: auto;
+    @include media-query('sp') {
+      width: 10px;
+      height: 10px;
+    }
   }
 
   &.next {
     padding-left: 50px;
     padding-right: 30px;
+    @include media-query('sp') {
+      padding-left: 20px;
+      padding-right: 10px;
+    }
 
     &:before {
       left: 20px;
@@ -438,6 +521,9 @@ height: auto;
       border-left: 1px solid $activity-text-gray;
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
+      @include media-query('sp') {
+        left: 5px;
+      }
     }
   }
 
@@ -451,6 +537,9 @@ height: auto;
       border-right: 1px solid $activity-text-gray;
       -webkit-transform: rotate(45deg);
       transform: rotate(45deg);
+      @include media-query('sp') {
+        right: 5px;
+      }
     }
   }
 }
@@ -464,16 +553,33 @@ height: auto;
   &_inner {
     display: flex;
     justify-content: space-between;
+    @include media-query('sp') {
+      display: block;
+    }
   }
 
   &_item {
     background-color: $white;
     width: 30%;
+    @include media-query('sp') {
+      width: 100%;
+    }
 
     img {
       width: 100%;
     }
   }
+
+  .no-image {
+    background-color: $activity-text-gray;
+    color: $border-gray;
+    display: block;
+    font-size: 12px;
+    line-height: 1;
+    padding: 95px 0;
+    text-align: center;
+  }
+
   &_info {
     position: relative;
     color: $activity-text-gray;
@@ -482,7 +588,6 @@ height: auto;
 
     .info_title {
       font-size: 16px;
-      line-height: 1.5;
       margin: 0;
     }
 

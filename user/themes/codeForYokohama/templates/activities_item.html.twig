@@ -49,9 +49,9 @@
           <section class="category_list_item">
             {% set post_image = post.media.images | first %}
             {% if post_image %}
-              <img class="" src="{{ post_image.url }}">
+              <img src="{{ post_image.url }}">
             {% else %}
-              <div><span>No Image</span></div>
+              <span class="no-image">No Image</span>
             {% endif %}
             <div class="category_list_info">
               <h3 class="info_title">{{ post.title|length > 30 ? post.title|slice(0, 30) ~ '...' : post.title }}</h3>

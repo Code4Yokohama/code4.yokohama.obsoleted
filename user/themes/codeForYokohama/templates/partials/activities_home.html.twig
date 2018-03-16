@@ -18,11 +18,11 @@
 
 {% for child in activitiesCollection %}
   {% set header_image_media = child.media.images | first %}
-  <div class="activites_item_box">
+  <article class="activites_item_box">
     <img class="activities_image" src="{{ header_image_media.url }}" alt="activites"/>
-    <div class="activities_title">
+    <h1 class="activities_title">
       <a href="{{ child.url }}">{{ child.title }}</a>
-    </div>
-    <div class="activities_summary">{{child.summary}}</div>
-  </div>
+    </h1>
+    <div class="activities_summary">{{ child.summary|length > 60 ? child.summary|slice(0, 60) ~ '...' : child.summary }}</div>
+  </article>
 {% endfor %}

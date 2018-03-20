@@ -17,11 +17,7 @@
     assets.addCss('theme://css/index.css', 100) %}
 {% endblock %}
 <div class="member_list_wrapper">
-  <ul class="member_list_pager">
-    <li class="prev">prev</li>
-    <li class="next">next</li>
-  </ul>
-  <ul class="member_list">
+  <ul id="lightSlider" class="member_list">
     {% for child in membersCollection %}
       <li class="member_item_box">
         <img class="member_image" src="{{ url('theme://images/member_hidano.png')}}" alt="肥田野 正輝"/>

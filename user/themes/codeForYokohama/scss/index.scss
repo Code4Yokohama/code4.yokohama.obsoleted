@@ -375,53 +375,57 @@
   }
 }
 
-.member_list_pager {
-  display: none;
-  @include media-query('sp') {
-    display: flex;
-    margin: 0;
-    padding-left: 0;
-    width: 60px;
+//spのスライダーのページャー
+.member_list + .lSAction {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 64px;
+  height: 32px;
+
+  > * {
+    background: transparent;
+  }
+
+  > .lSPrev:before,
+  > .lSNext:after {
+    border-top: 1px solid $white;
+    content: '';
     position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+  }
+
+  > .lSPrev {
+    left: 0;
+    &:before {
+      left: 12px;
+      border-left: 1px solid $white;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+    &:active {
+      &:before {
+        border-color: $primary-red;
+      }
+    }
+  }
+
+  > .lSNext {
     right: 0;
-
-    li {
-      box-sizing: border-box;
-      cursor: pointer;
-      list-style-type: none;
-      position: relative;
-      text-indent: -9999px;
-      width: 24px;
-
-      &.prev:before,
-      &.next:after {
-        border-top: 1px solid $white;
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        background-color: transparent;
-        width: 10px;
-        height: 10px;
-        margin: auto;
-      }
-
-      &.prev {
-        &:before {
-          left: 10px;
-          border-left: 1px solid $white;
-          -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-        }
-      }
-
-      &.next {
-        &:after {
-          right: 10px;
-          border-right: 1px solid $white;
-          -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-        }
+    &:after {
+      right: 12px;
+      border-right: 1px solid $white;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    &:active {
+      &:after {
+        border-color: $primary-red;
       }
     }
   }
@@ -437,6 +441,10 @@
 .member_image {
   width: 240px;
   height: 240px;
+  @include media-query('sp') {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .member_company {

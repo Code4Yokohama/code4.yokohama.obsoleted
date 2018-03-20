@@ -24,7 +24,9 @@ a { color: #1976d2; }
 
 .main_visual_image { width: 100%; }
 
-header { width: 100%; position: absolute; }
+header { width: 100%; position: absolute; z-index: 1; }
+
+@media screen and (max-width: 750px) { header { position: fixed; height: 20px; } }
 
 .header_box_pc { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; width: 1020px; height: 80px; margin: auto; }
 

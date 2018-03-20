@@ -1,0 +1,7 @@
+.grav-lightslider ul { padding: 0; list-style: none; overflow: hidden;margin: 0;}
+.grav-lightslider li img {display: block; width: 100%;}
+.grav-lightslider .panel-bg {background-size: cover; background-position: center;}
+.grav-lightslider h1, .grav-lightslider h2, .grav-lightslider h3, .grav-lightslider h4 { color: #fff;}
+.lSSlideOuter .lSPager.lSpg > li a { height: 12px !important; width: 12px !important; border-radius: 100% !important;}
+
+

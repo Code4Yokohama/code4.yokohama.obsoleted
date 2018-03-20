@@ -54,6 +54,11 @@ a {
 header {
   width: 100%;
   position: absolute;
+  z-index: 1;
+  @include media-query('sp') {
+    position: fixed;
+    height: 20px;
+  }
 }
 
 .header_box {

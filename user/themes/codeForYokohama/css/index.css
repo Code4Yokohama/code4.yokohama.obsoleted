@@ -125,17 +125,29 @@
 
 @media screen and (max-width: 750px) { .member_list { padding-top: 40px; position: relative; overflow: scroll; width: 100%; } }
 
-.member_list_pager { display: none; }
+.member_list + .lSAction { position: absolute; top: 0; right: 0; width: 64px; height: 32px; }
 
-@media screen and (max-width: 750px) { .member_list_pager { display: -ms-flexbox; display: flex; margin: 0; padding-left: 0; width: 60px; position: absolute; right: 0; }
-  .member_list_pager li { box-sizing: border-box; cursor: pointer; list-style-type: none; position: relative; text-indent: -9999px; width: 24px; }
-  .member_list_pager li.prev:before, .member_list_pager li.next:after { border-top: 1px solid #ffffff; content: ''; position: absolute; top: 0; bottom: 0; background-color: transparent; width: 10px; height: 10px; margin: auto; }
-  .member_list_pager li.prev:before { left: 10px; border-left: 1px solid #ffffff; transform: rotate(-45deg); }
-  .member_list_pager li.next:after { right: 10px; border-right: 1px solid #ffffff; transform: rotate(45deg); } }
+.member_list + .lSAction > * { background: transparent; }
+
+.member_list + .lSAction > .lSPrev:before, .member_list + .lSAction > .lSNext:after { border-top: 1px solid #ffffff; content: ''; position: absolute; top: 0; bottom: 0; background-color: transparent; width: 10px; height: 10px; margin: auto; }
+
+.member_list + .lSAction > .lSPrev { left: 0; }
+
+.member_list + .lSAction > .lSPrev:before { left: 12px; border-left: 1px solid #ffffff; transform: rotate(-45deg); }
+
+.member_list + .lSAction > .lSPrev:active:before { border-color: #db2023; }
+
+.member_list + .lSAction > .lSNext { right: 0; }
+
+.member_list + .lSAction > .lSNext:after { right: 12px; border-right: 1px solid #ffffff; transform: rotate(45deg); }
+
+.member_list + .lSAction > .lSNext:active:after { border-color: #db2023; }
 
 .member_item_box { font-size: 16px; text-align: center; color: #ffffff; margin-right: 20px; }
 
 .member_image { width: 240px; height: 240px; }
+
+@media screen and (max-width: 750px) { .member_image { width: 100%; height: auto; } }
 
 .member_company { margin-bottom: 0; }
 

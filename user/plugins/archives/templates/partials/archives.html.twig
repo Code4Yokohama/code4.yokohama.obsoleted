@@ -1,23 +1,21 @@
-<ul class="archives_list">
+<div id="archivesCont" class="archives_content">
   {% for month, items in archives_data %}
     {% set only_year = preg_replace('/[^0-9]/', '', month) %}
     {% if only_year != only_year_after %}
       {% set only_year = preg_replace('/[^0-9]/', '', month) %}
+      </ul>
       <p class="archives_year">{{only_year}}</p>
+      <ul class="archives_list">
     {% endif %}
-    <div class="archives_month_list_box">
-      <li class="archives_month_list">
-        {% if items | length > 0 %}
-          <div class="archives_month_item">
-            <a href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date('M_Y')|lower|e('url') }}">
-            {% endif %}
-            {% set only_month = preg_replace('/[0-9]/', '', month) %}
-            {% set short_month = strtoupper(substr(only_month, 0, 3)) %}
-            <span class="archive_date">{{ short_month }}</span>
-          </a>
-        </div>
+    {% if items | length > 0 %}
+      <li class="archives_list_item">
+        <a href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date('M_Y')|lower|e('url') }}">
+          {% set only_month = preg_replace('/[0-9]/', '', month) %}
+          {% set short_month = strtoupper(substr(only_month, 0, 3)) %}
+          <span class="archive_date">{{ short_month }}</span>
+        </a>
       </li>
-    </div>
+    {% endif %}
     {% set only_year_after = preg_replace('/[^0-9]/', '', month) %}
   {% endfor %}
-</ul>
+</div>

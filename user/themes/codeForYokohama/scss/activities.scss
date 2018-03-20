@@ -369,72 +369,80 @@ height: auto;
   text-decoration: none;
 }
 
-.archive {
+.archives {
   margin-bottom: 75px;
   @include media-query('sp') {
     margin-bottom: 45px;
     position: relative;
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      right: 3px;
-      width: 10px;
-      height: 10px;
-    }
-    &:before {
-      top: 57px;
-      border-top: 1px solid #3f3f3f;
-      border-left: 1px solid #3f3f3f;
-      transform: rotate(45deg);
-    }
-    &:after {
-      bottom: 2px;
-      border-bottom: 1px solid #3f3f3f;
-      border-left: 1px solid #3f3f3f;
-      transform: rotate(-45deg);
+  }
+  &_content {
+    @include media-query('sp') {
+      margin: 0;
+      max-height: 130px;
+      overflow: scroll;
     }
   }
-}
-
-.archives_list {
-  padding: 0;
-  font-size: 12px;
-  color: $activity-text-dark;
-  @include media-query('sp') {
-    margin: 0;
-    max-height: 130px;
-    overflow: scroll;
+  &_controls {
+    display: none;
+    @include media-query('sp') {
+      display: block;
+    }
+    @include media-query('sp') {
+      &-prev,
+      &-next {
+        content: '';
+        position: absolute;
+        right: 3px;
+        width: 10px;
+        height: 10px;
+        &:active {
+          border-color: $primary-red;
+        }
+      }
+      &-prev {
+        top: 57px;
+        border-top: 1px solid #3f3f3f;
+        border-left: 1px solid #3f3f3f;
+        transform: rotate(45deg);
+      }
+      &-next {
+        bottom: 2px;
+        border-bottom: 1px solid #3f3f3f;
+        border-left: 1px solid #3f3f3f;
+        transform: rotate(-45deg);
+      }
+    }
   }
-}
 
-.archives_year {
-  color: $activity-text-light;
-  font-weight: 600;
-  margin-bottom: 20px;
-  @include media-query('sp') {
-    margin-bottom: 10px;
+  &_list {
+    padding: 0;
+    font-size: 12px;
+    color: $activity-text-dark;
+
+    &_item {
+      display: inline-block;
+      list-style: none;
+      margin: 0 15px 20px 0;
+      @include media-query('sp') {
+        margin: 0 15px 13px 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
   }
-}
 
-.archives_month_list_box {
-  display: inline-block;
-  margin: 0 15px 20px 0;
-  @include media-query('sp') {
-    margin: 0 15px 13px 0;
+  &_year {
+    color: $activity-text-light;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    @include media-query('sp') {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
   }
-}
-
-.archives_month_list {
-  list-style: none;
-}
-
-.archives_month_item {
-
-}
-
-.archives_month_item a {
-  text-decoration: none;
 }
 
 .tags {

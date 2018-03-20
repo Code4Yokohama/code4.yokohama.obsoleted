@@ -7,6 +7,14 @@
     {% do
       assets.addCss('theme://css/normalize.css', 100) %}
   {% endblock %}
+  {% block javascripts %}
+    {% do
+    assets.add('jQuery', 101) %}
+    {% do
+    assets.add('theme://js/script.js', 101) %}
+    {% do
+    assets.add('theme://js/activities.js', 101) %}
+  {% endblock %}
 
   {% block content %}
     {% if config.plugins.breadcrumbs.enabled %}

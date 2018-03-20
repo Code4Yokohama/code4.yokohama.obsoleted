@@ -25,7 +25,11 @@
   {% endif %}
 
   {% if config.plugins.archives.enabled %}
-    <div class="archive">
+    <div class="archives">
+      <div class="archives_controls">
+        <span id="archivesPrev" class="archives_controls-prev"></span>
+        <span id="archivesNext" class="archives_controls-next"></span>
+      </div>
       <h4 class="sidebar_content_title">ARCHIVE</h4>
       {% include 'partials/archives.html.twig' with {
         'base_url' : new_base_url

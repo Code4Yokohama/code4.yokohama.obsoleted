@@ -49,14 +49,8 @@
 
 <header id="header" class="index">
     <div class="header__title_wrapper">
-        <h1 class="c-section_inner"><a href="/"><img src="../images/c4y_logo_small.png" alt="code for YOKOHAMA"></a></h1>
+        <h1 class="c-section_inner"><a href="/"><img src="/images/c4y_logo_small.png" alt="code for YOKOHAMA"></a></h1>
         <div class="header_box">
-            <ul class="menu_box">
-                <li><a href="hackathon/">ハッカソン</a></li>
-                <!--<li>プロジェクト</li>-->
-                <li><a href="mailto:info@code4.yokohama">問い合わせ</a></li>
-                <!--<li>参加方法</li>-->
-            </ul>
             <div class="sns_box">
                 <div class="fb-like" data-href="http://code4.yokohama/" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
                 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://code4.yokohama/" data-count="none">Tweet</a>
@@ -67,6 +61,8 @@
 </header>
 
 <div id="proposal">
+    <p style="text-align: right;padding-top: 20px;"><a href="./report.php" style="text-decoration: underline;">→提言の提出について、写真や経緯など詳細をご覧いただけます。（2017年8月1日）</a></p>
+
   <h1 id="toc_0">「技術駆動都市ヨコハマ2030」</h1>
 
   <p class="subtitle"><strong>- The tech driven city YOKOHAMA 2030 -</strong></p>
@@ -287,6 +283,7 @@
   <h2 id="toc_32">2030年に向けて出航します</h2>
 
   <p>これら26のアクションについて、市内で可能なものから一つずつ実施されるように、Code for Yokohamaは市の議員や職員、市内の企業、NPO、研究者、学生、個人といった様々な組織や人々に働きかけていきます。ゴールは2030年。技術駆動都市を目指し、横浜は今、新たな出航のときを迎えます。</p>
+
 
 
 <div id="credit">

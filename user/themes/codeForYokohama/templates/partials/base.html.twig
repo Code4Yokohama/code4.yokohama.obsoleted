@@ -32,8 +32,8 @@
       {{ assets.css() }}
 
       {% block javascripts %}
-        {% do
-          assets.add('jQuery', 101) %}
+          {% do
+              assets.add('theme://js/script.js', 101) %}
         {% do
           assets.add('theme://js/script.js', 101) %}
       {% endblock %}

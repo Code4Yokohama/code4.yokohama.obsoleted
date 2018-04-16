@@ -10,8 +10,6 @@
 @media screen and (max-width: 750px) { .main_title { margin-top: 20px; font-size: 32px; } }
 
 /*-------------------------------------------------- Member --------------------------------------------------*/
-.container { width: auto; }
-
 .members { position: relative; height: auto; margin: 0; padding: 80px 0; color: #ffffff; }
 
 @media screen and (max-width: 750px) { .members { padding: 25px 0; } }

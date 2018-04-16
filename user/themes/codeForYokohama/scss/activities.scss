@@ -115,10 +115,14 @@
   padding-left: 0;
   list-style-type: none;
   display: flex;
-  border: 1px solid $border-gray;
+  //border: 1px solid $border-gray;
   width: 80px;
 
-  a {
+  li:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  /*a {
     display: block;
     width: 40px;
     height: 40px;
@@ -133,6 +137,10 @@
     img {
       vertical-align: middle;
     }
+  }*/
+
+  #twitter-widget-0 {
+    vertical-align: bottom;
   }
 }
 
@@ -597,6 +605,10 @@ height: auto;
     .info_title {
       font-size: 16px;
       margin: 0;
+      
+      a {
+        text-decoration: none;
+      }
     }
 
     .info_desc {

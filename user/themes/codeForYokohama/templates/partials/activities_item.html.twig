@@ -25,8 +25,14 @@
     </div>
     
     <ul class="activities_item_sns">
-      <li class="ais_item"><a class="ais_item_link" href=""><img src="{{ url('theme://images/sns_icon_fb_b.png')}}" alt="facebook"></a></li>
-      <li class="ais_item"><a class="ais_item_link" href=""><img src="{{ url('theme://images/sns_icon_tw_b.png')}}" alt="twitter"></a></li>
+      <li class="ais_item">
+        {#<a class="ais_item_link" href=""><img src="{{ url('theme://images/sns_icon_fb_b.png')}}" alt="facebook"></a>#}
+        <div class="fb-share-button" data-href="http://code4.yokohama/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcode4.yokohama%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">シェア</a></div>
+      </li>
+      <li class="ais_item">
+        {#<a class="ais_item_link" href=""><img src="{{ url('theme://images/sns_icon_tw_b.png')}}" alt="twitter"></a>#}
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </li>
     </ul>
 
     <div class="activities_item_image_box">

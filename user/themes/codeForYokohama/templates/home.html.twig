@@ -33,21 +33,23 @@
           <article class="about_box project">
             <h3 class="about_title">Project</h3>
             <p class="about_detail">
-              Code for YOKOHAMAはオープンソースやオープンデータに、<br/>
-              参加者のスキルアップを目指すプロジェクトを中心に参加メンバーが主体的に立ち上げていきます。
+              Code for YOKOHAMAはオープンソースやオープンデータ、<br/>
+              参加者のスキルアップを目指すプロジェクトを中心に、参加メンバーが主体的に立ち上げています。
             </p>
             <div class="project_archives">
               <div class="project_archives_item">
-                オープンソースオープンソースオープン ソースオープンソースオープンソース オープンソースオープンソースオープン ソースオープンソースオープンソース
+                <a href="https://github.com/LocalGood/" target="_blank">
+                  LocalGood Yokohama
+                </a>
               </div>
               <div class="project_archives_item">
-                オープンソースオープンソースオープン ソースオープンソースオープンソース オープンソースオープンソースオープン ソースオープンソースオープンソース
-              </div>
-              <div class="project_archives_item">
-                オープンソースオープンソースオープン ソースオープンソースオープンソース オープンソースオープンソースオープン ソースオープンソースオープンソース
+                <a href="/ICTproposal/">
+                  技術駆動都市ヨコハマ2030
+                </a>
               </div>
             </div>
           </article>
+{#
           <article class="about_box innovation">
             <div class="about_innovation_text">
               <h2 class="about_title">Technology for Social Innovation</h2>
@@ -61,6 +63,7 @@
               <img src="{{ url('theme://images/inovation.png')}}"/>
             </div>
           </article>
+#}
         </div>
       </section>
 
@@ -70,7 +73,7 @@
           <div class="whats_new_contents">
             {% include 'partials/whats_new_home.html.twig' %}
           </div>
-          <a class="read_more_button" href="activities/category:What's%20New" onclick="">Read more</a>
+          <a class="read_more_button" href="activities/category:What's%20New">Read more</a>
         </div>
       </section>
 
@@ -80,16 +83,18 @@
           <div class="activites_items">
             {% include 'partials/activities_home.html.twig' %}
           </div>
-          <a class="read_more_button" href="activities/category:Activities" onclick="">Read more</a>
+          <a class="read_more_button" href="activities/category:Activities">Read more</a>
         </div>
       </section>
 
+{#
       <section id="member" class="member">
         <div class="container">
           <h2 class="common_heading red">Member</h2>
           {% include 'partials/members_home.html.twig' %}
         </div>
       </section>
+#}
     </main>
   {% endblock %}
 

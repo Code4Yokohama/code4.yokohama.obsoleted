@@ -13,8 +13,8 @@
   <div class="members_info" id="{{page.id}}">
     <a href="{{page.url}}">
       <img class="members_image" src="{{ header_image_media.url }}" alt="hoge"/>
-      <p class="members_company">{{page.header.company}}</p>
-      <p class="members_name">{{page.header.person}}{{page.title}}</p>
+      <p class="members_company">{{page.header.metadata.company}}</p>
+      <p class="members_name">{{page.title}}</p>
     </a>
   </div>
   <div class="members_detail_content" id="members_detail-{{page.id}}">

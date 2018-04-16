@@ -51,28 +51,34 @@
 
   {% block categoryPosts %}
     <div class="category_list">
-      <section class="category_list_inner container">
-        {% for post in taxonomy.findTaxonomy({'category':page.taxonomy.category[0]})|reverse|slice(0,3) %}
-          <h2 class="category_list_title">{{category}}</h2>
-          <section class="category_list_item">
-            {% set post_image = post.media.images | first %}
-            {% if post_image %}
-              <img src="{{ post_image.url }}">
-            {% else %}
-              <span class="no-image">No Image</span>
-            {% endif %}
-            <div class="category_list_info">
-              <h3 class="info_title">{{ post.title|length > 30 ? post.title|slice(0, 30) ~ '...' : post.title }}</h3>
-              <div class="info_desc">
-                {{ post.content|length > 40 ? post.content|slice(0, 40) ~ '...' : post.content }}
-              </div>
-              <time class="info_date" datetime="{{ page.date|date(" c") }}"="c" )=")" }}""="}}" "">
-              <p>{{ post.date|date("Y") }}.{{ post.date|date("m") }}.{{ post.date|date("d") }}</p>
-              </time>
-            </div>
-          </section>
-        {% endfor %}
-      </section>
+        <section class="category_list_inner container">
+            {% for post in taxonomy.findTaxonomy({'category':page.taxonomy.category[0]})|reverse|slice(0,3) %}
+                  <h2 class="category_list_title">{{category}}</h2>
+                  <section class="category_list_item">
+                      <a href="{{ post.url }}">
+                      {% set post_image = post.media.images | first %}
+                      {% if post_image %}
+                        <img src="{{ post_image.url }}">
+                      {% else %}
+                        <span class="no-image">No Image</span>
+                      {% endif %}
+                      </a>
+                    <div class="category_list_info">
+                      <h3 class="info_title">
+                          <a href="{{ post.url }}">
+                          {{ post.title|length > 30 ? post.title|slice(0, 30) ~ '...' : post.title }}
+                          </a>
+                      </h3>
+                      <div class="info_desc">
+                          {{ post.content|length > 40 ? post.content|slice(0, 40) ~ '...' : post.content }}
+                      </div>
+                      <time class="info_date" datetime="{{ page.date|date(" c") }}"="c" )=")" }}""="}}" "">
+                      <p>{{ post.date|date("Y") }}.{{ post.date|date("m") }}.{{ post.date|date("d") }}</p>
+                      </time>
+                    </div>
+                  </section>
+            {% endfor %}
+        </section>
     </div>
   {% endblock %}
 

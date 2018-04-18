@@ -1,264 +1,281 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getLanguage ?: 'en' }}">
-  <head>
+<head>
     {% block head %}
-      <meta charset="utf-8"/>
-      <title>
-        {% if header.title %}{{ header.title|e('html') }}
-          |
-        {% endif %}{{ site.title|e('html') }}</title>
-      {% include 'partials/metadata.html.twig' %}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta charset="utf-8"/>
+        <title> {% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+        <meta name="description" content="Code for YOKOHAMAは仲間とともに技術を磨き、学んだスキルを地域の課題解決に役立てていきます"/>
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+        <link type="image/png" rel="icon" href="/c4y_favicon.png"/>
+        <meta property="og:title" content="code for YOKOHAMA"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:description" content="Code for YOKOHAMAは仲間とともに技術を磨き、学んだスキルを地域の課題解決に役立てていきます"/>
+        <meta property="og:url" content="http://code4.yokohama/"/>
+        <meta property="og:image" content="http://code4.yokohama/images/icon_top.png"/>
+        <meta property="fb:app_id" content="485812038210485"/>
+        <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
-      <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+        {% block stylesheets %}
+            {% do
+                assets.addCss('theme://css/common.css', 100) %}
+            {% do
+                assets.addCss('theme://css/normalize.css', 100) %}
+        {% endblock %}
+        {{ assets.css() }}
 
-      <link type="image/png" rel="icon" href="/c4y_favicon.png" />
-      <meta property="og:title" content="code for YOKOHAMA" />
-      <meta property="og:type" content="article" />
-      <meta property="og:description" content="Code for YOKOHAMAでは仲間とともに技術を磨き、学んだスキルを地域の課題解決に役立てていく活動です。" />
-      <meta property="og:url" content="http://code4.yokohama/" />
-      <meta property="og:image" content="http://code4.yokohama/images/icon_top.png" />
-      <meta property="fb:app_id" content="485812038210485" />
-
-      <link rel="canonical" href="{{ page.url(true, true) }}"/>
-
-      {% block stylesheets %}
-        {% do
-          assets.addCss('theme://css/common.css', 100) %}
-        {% do
-          assets.addCss('theme://css/normalize.css', 100) %}
-      {% endblock %}
-      {{ assets.css() }}
-
-      {% block javascripts %}
-          {% do
-              assets.add('theme://js/script.js', 101) %}
-        {% do
-          assets.add('theme://js/script.js', 101) %}
-      {% endblock %}
-      {{ assets.js() }}
+        {% block javascripts %}
+            {% do
+                assets.add('jquery', 101) %}
+            {% do
+                assets.add('theme://js/script.js', 101) %}
+        {% endblock %}
+        {{ assets.js() }}
 
     {% endblock head %}
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date()
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]
+        a.async = 1
+        a.src = g
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga')
 
-      ga('create', 'UA-59974413-1', 'auto');
-      ga('send', 'pageview');
+      ga('create', 'UA-59974413-1', 'auto')
+      ga('send', 'pageview')
     </script>
-  </head>
+</head>
 
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.12&appId=485812038210485&autoLogAppEvents=1';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-  <body id="top" class="{{ page.header.body_classes }}">
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0]
+    if (d.getElementById(id)) return
+    js = d.createElement(s)
+    js.id = id
+    js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.12&appId=485812038210485&autoLogAppEvents=1'
+    fjs.parentNode.insertBefore(js, fjs)
+  }(document, 'script', 'facebook-jssdk'))</script>
+<body id="top" class="{{ page.header.body_classes }}">
 
-    {% block header %}
-      <div id="mainVisual" class="main_visual">
-        <img class="main_visual_typo_pc" src="{{ url ('theme://images/main_typo_pc.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
-        <img class="main_visual_typo_sp" src="{{ url ('theme://images/main_typo_sp.png')}}" alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
-
+{% block header %}
+    <div id="mainVisual" class="main_visual">
+        <img class="main_visual_typo_pc" src="{{ url ('theme://images/main_typo_pc.png') }}"
+             alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
+        <img class="main_visual_typo_sp" src="{{ url ('theme://images/main_typo_sp.png') }}"
+             alt="TECHNOLOGY FOR SOCIAL INNOVATION"/>
         {% if grav.uri.params != null %}
-          {% set pageParams = grav.uri.params %}
-          {% set isCategory = preg_match("{^\/category:}", pageParams) %}
-          {% set isTaxonomy = preg_match("{^\/tag:}", pageParams) %}
-          {% if isCategory == 1 %}
-            <!-- category -->
-            {% set targetText = "/category:" %}
-            {% set index = strlen(targetText) %}
-            {% set pageCategory = (substr(pageParams, index)) %}
-            {% set pageTitle = rawurldecode(pageCategory) %}
-          {% endif %}
-          {% if isTaxonomy == 1 %}
-            <!-- taxonomy -->
-            {% set targetText = "/" %}
-            {% set index = strlen(targetText) %}
-            {% set pageCategory = (substr(pageParams, index)) %}
-            {% set pageTitle = ucfirst(rawurldecode(pageCategory)) %}
-          {% endif %}
+            {% set pageParams = grav.uri.params %}
+            {% set isCategory = preg_match("{^\/category:}", pageParams) %}
+            {% set isTaxonomy = preg_match("{^\/tag:}", pageParams) %}
+            {% set isPaged = preg_match("{^\/page:}", pageParams) %}
+            {% if isCategory == 1 %}
+                {% set index = strlen("/category:") %}
+                {% set pageCategory = (substr(pageParams, index)) %}
+                {% set pageTitle = rawurldecode(pageCategory) %}
+            {% elseif isTaxonomy == 1 %}
+                {% set index = strlen("/") %}
+                {% set pageCategory = (substr(pageParams, index)) %}
+                {% set pageTitle = ucfirst(rawurldecode(pageCategory)) %}
+            {% elseif isPaged == 1 %}
+                {% if page.parent.header.title == null %}
+                    {% set pageTitle = page.title %}
+                {% else %}
+                    {% set pageTitle = page.parent.header.title %}
+                {% endif %}
+            {% endif %}
         {% else %}
-          {% if page.parent.header.title == null %}
-            {% set pageTitle = page.title %}
-          {% else %}
-            {% set pageTitle = page.parent.header.title %}
-          {% endif %}
+            {% if page.parent.header.title == null %}
+                {% set pageTitle = page.title %}
+            {% else %}
+                {% set pageTitle = page.parent.header.title %}
+            {% endif %}
         {% endif %}
-        <h1 id="main_category" class="main_title">{{pageTitle}}</h1>
+        <h1 id="main_category" class="main_title">{{ pageTitle }}</h1>
         <header>
-          {% set menuItemHomeUrl = null %}
-          {% set menuItemHomeTitle = null %}
-          {% set menuItemActivitiesUrl = null %}
-          {% set menuItemActivitiesTitle = null %}
-          {% set menuItemMembersUrl = null %}
-          {% set menuItemMembersTitle = null %}
-          {% set menuItemAboutUrl = null %}
-          {% set menuItemAboutTitle = null %}
+            {% set menuItemHomeUrl = null %}
+            {% set menuItemHomeTitle = null %}
+            {% set menuItemActivitiesUrl = null %}
+            {% set menuItemActivitiesTitle = null %}
+            {% set menuItemMembersUrl = null %}
+            {% set menuItemMembersTitle = null %}
+            {% set menuItemAboutUrl = null %}
+            {% set menuItemAboutTitle = null %}
 
-          {% for page in pages.children.visible %}
-            {% if page.menu == 'Home' %}
-              {% set menuItemHomeTitle = page.menu %}
-              {% set menuItemHomeUrl = page.url %}
-            {% endif %}
-            {% if page.menu == 'Activities' %}
-              {% set menuItemActivitiesTitle = page.menu %}
-              {% set menuItemActivitiesUrl = page.url %}
-            {% endif %}
-            {% if page.menu == 'Members' %}
-              {% set menuItemMembersTitle = page.menu %}
-              {% set menuItemMembersUrl = page.url %}
-            {% endif %}
-            {% if page.menu == 'About' %}
-              {% set menuItemAboutTitle = page.menu %}
-              {% set menuItemAboutUrl = page.url %}
-            {% endif %}
-          {% endfor %}
+            {% for page in pages.children.visible %}
+                {% if page.menu == 'Home' %}
+                    {% set menuItemHomeTitle = page.menu %}
+                    {% set menuItemHomeUrl = page.url %}
+                {% endif %}
+                {% if page.menu == 'Activities' %}
+                    {% set menuItemActivitiesTitle = page.menu %}
+                    {% set menuItemActivitiesUrl = page.url %}
+                {% endif %}
+                {% if page.menu == 'Members' %}
+                    {% set menuItemMembersTitle = page.menu %}
+                    {% set menuItemMembersUrl = page.url %}
+                {% endif %}
+                {% if page.menu == 'About' %}
+                    {% set menuItemAboutTitle = page.menu %}
+                    {% set menuItemAboutUrl = page.url %}
+                {% endif %}
+            {% endfor %}
 
-          <div class="header_box">
-            <div class="header_box_pc">
-              <div class="header_image_pc">
-                <a class="header_icon_link" href="{{menuItemHomeUrl}}">
-                  
-                  <h1 class="header_heading"><img class="header_icon" src="{{ url('theme://images/header_logo_pc.png') }}" alt="code for yokohama"/></h1>
-                </a>
-              </div>
-              <div class="header nav">
-                <nav id="grobalNav" class="grobal_nav">
-                  <ul class="nav_box_pc">
-                    <li class="nav_item">
-                      <a href="{{menuItemActivitiesUrl}}">
-                          {% if menuItemActivitiesTitle != null %}
-                              {{menuItemActivitiesTitle}}
-                          {% else %}
-                            Activities
-                          {% endif %}
-                      </a>
-                    </li>
-                    <li class="nav_item">
-                      <a href="{{'' ~ menuItemActivitiesUrl ~ '/category:Meeting'}}">Meeting</a>
-                    </li>
-                    <li class="nav_item">
-                      <a href="{{menuItemMembersUrl}}">
-                        {% if menuItemMembersTitle != null %}
-                          {{menuItemMembersTitle}}
-                        {% else %}
-                          Members
-                        {% endif %}
-                      </a>
-                    </li>
-                    <li class="nav_item">
-                      <a href="https://docs.google.com/a/info-lounge.jp/forms/d/1jpl0R1mK1JXRzOPdQpVBU6pN3Ei2Ol4Qz9R44tHEdQI/viewform" target="_blank">Get Involved</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
+            <div class="header_box">
+                <div class="header_box_pc">
+                    <div class="header_image_pc">
+                        <a class="header_icon_link" href="{{ menuItemHomeUrl }}">
 
-            <div class="header_box_sp">
-              <a class="header_icon_link" href="/">
-                <h1 class="header_heading"><img class="header_icon" src="{{ url('theme://images/header_logo_sp.png') }}" alt="code for yokohama"/></h1>
-              </a>
-
-              <div class="menu_icon">
-                <span class="top"></span>
-                <span class="middle"></span>
-                <span class="bottom"></span>
-              </div>
-
-              <div class="menu_item_box">
-                <div class="header nav">
-                  <nav id="grobalNav" class="grobal_nav">
-                    <ul class="nav_box_sp">
-                      <li class="nav_item">
-                        <a href="{{menuItemActivitiesUrl}}">
-                            {% if menuItemActivitiesTitle != null %}
-                                {{menuItemActivitiesTitle}}
-                            {% else %}
-                              Activities
-                            {% endif %}
+                            <h1 class="header_heading"><img class="header_icon"
+                                                            src="{{ url('theme://images/header_logo_pc.png') }}"
+                                                            alt="code for yokohama"/></h1>
                         </a>
-                      </li>
-                      <li class="nav_item">
-                        <a href="{{'' ~ menuItemActivitiesUrl ~ '/category:Meeting'}}">Meeting</a>
-                      </li>
-                      <li class="nav_item">
-                        <a href="{{menuItemMembersUrl}}">
-                            {% if menuItemMembersTitle != null %}
-                                {{menuItemMembersTitle}}
-                            {% else %}
-                              Members
-                            {% endif %}
-                        </a>
-                      </li>
-                      <li class="nav_item">
-                        <a href="https://docs.google.com/a/info-lounge.jp/forms/d/1jpl0R1mK1JXRzOPdQpVBU6pN3Ei2Ol4Qz9R44tHEdQI/viewform" target="_blank">Get Involved</a>
-                      </li>
-                    </ul>
-                  </nav>
+                    </div>
+                    <div class="header nav">
+                        <nav id="grobalNav" class="grobal_nav">
+                            <ul class="nav_box_pc">
+                                <li class="nav_item">
+                                    <a href="{{ menuItemActivitiesUrl }}">
+                                        {% if menuItemActivitiesTitle != null %}
+                                            {{ menuItemActivitiesTitle }}
+                                        {% else %}
+                                            Activities
+                                        {% endif %}
+                                    </a>
+                                </li>
+                                <li class="nav_item">
+                                    <a href="{{ '' ~ menuItemActivitiesUrl ~ '/category:Meeting' }}">Meeting</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a href="{{ menuItemMembersUrl }}">
+                                        {% if menuItemMembersTitle != null %}
+                                            {{ menuItemMembersTitle }}
+                                        {% else %}
+                                            Members
+                                        {% endif %}
+                                    </a>
+                                </li>
+                                <li class="nav_item">
+                                    <a href="https://docs.google.com/a/info-lounge.jp/forms/d/1jpl0R1mK1JXRzOPdQpVBU6pN3Ei2Ol4Qz9R44tHEdQI/viewform"
+                                       target="_blank">Get Involved</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-              </div>
+
+                <div class="header_box_sp">
+                    <a class="header_icon_link" href="/">
+                        <h1 class="header_heading"><img class="header_icon"
+                                                        src="{{ url('theme://images/header_logo_sp.png') }}"
+                                                        alt="code for yokohama"/></h1>
+                    </a>
+
+                    <div class="menu_icon">
+                        <span class="top"></span>
+                        <span class="middle"></span>
+                        <span class="bottom"></span>
+                    </div>
+
+                    <div class="menu_item_box">
+                        <div class="header nav">
+                            <nav id="grobalNav" class="grobal_nav">
+                                <ul class="nav_box_sp">
+                                    <li class="nav_item">
+                                        <a href="{{ menuItemActivitiesUrl }}">
+                                            {% if menuItemActivitiesTitle != null %}
+                                                {{ menuItemActivitiesTitle }}
+                                            {% else %}
+                                                Activities
+                                            {% endif %}
+                                        </a>
+                                    </li>
+                                    <li class="nav_item">
+                                        <a href="{{ '' ~ menuItemActivitiesUrl ~ '/category:Meeting' }}">Meeting</a>
+                                    </li>
+                                    <li class="nav_item">
+                                        <a href="{{ menuItemMembersUrl }}">
+                                            {% if menuItemMembersTitle != null %}
+                                                {{ menuItemMembersTitle }}
+                                            {% else %}
+                                                Members
+                                            {% endif %}
+                                        </a>
+                                    </li>
+                                    <li class="nav_item">
+                                        <a href="https://docs.google.com/a/info-lounge.jp/forms/d/1jpl0R1mK1JXRzOPdQpVBU6pN3Ei2Ol4Qz9R44tHEdQI/viewform"
+                                           target="_blank">Get Involved</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-
-          </div>
         </header>
-      </div>
-    {% endblock %}
+    </div>
+{% endblock %}
 
-    {% block body %}
-      <div id="body" class="{{ class }}">
+{% block body %}
+    <div id="body" class="{{ class }}">
         {% block content %}{% endblock %}
         {% block categoryPosts %}{% endblock %}
-      </div>
-    {% endblock %}
+    </div>
+{% endblock %}
 
-    {% block footer %}
-      <footer>
+{% block footer %}
+    <footer>
         <div class="footer_box">
-          <div class="container footer_box_flex">
-              <div class="license_box">
-                <div class="license_image">
-                  <a class="creative_commons_image" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-                    <img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="クリエイティブ・コモンズ・ライセンス"/>
-                  </a>
+            <div class="container footer_box_flex">
+                <div class="license_box">
+                    <div class="license_image">
+                        <a class="creative_commons_image" rel="license"
+                           href="http://creativecommons.org/licenses/by/4.0/">
+                            <img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="クリエイティブ・コモンズ・ライセンス"/>
+                        </a>
+                    </div>
+                    <div class="license_message">
+                        このウェブサイトのコンテンツは
+                        <a class="license_message_link" rel="license"
+                           href="http://creativecommons.org/licenses/by/4.0/">クリエイティブ・コモンズ 表示 4.0 国際
+                            ライセンスの下に提供されています。</a>
+                        <div class="copyright">
+                            <p class="copyright_text">© Code for YOKOHAMA some rights reserved.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="license_message">
-                  このウェブサイトのコンテンツは
-                  <a class="license_message_link" rel="license" href="http://creativecommons.org/licenses/by/4.0/">クリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。</a>
-                  <div class="copyright">
-                    <p class="copyright_text">© Code for YOKOHAMA some rights reserved.</p>
-                  </div>
+                <div class="sns_box">
+                    <ul class="sns_list">
+                        <li class="sns_item">
+                            <a class="sns_icon" href="https://www.facebook.com/code4yokohama/" target="_blank"><img
+                                        src="{{ url('theme://images/sns_icon_fb.png') }}"/></a>
+                        </li>
+                        <li class="sns_item">
+                            <a class="sns_icon" href="https://github.com/Code4Yokohama/" target="_blank"><img
+                                        src="{{ url('theme://images/sns_icon_github.png') }}"/></a>
+                        </li>
+                    </ul>
                 </div>
-              </div>
-              <div class="sns_box">
-                <ul class="sns_list">
-                  <li class="sns_item">
-                    <a class="sns_icon" href="https://www.facebook.com/code4yokohama/" target="_blank"><img src="{{ url('theme://images/sns_icon_fb.png')}}"/></a>
-                  </li >
-                  <li class="sns_item">
-                    <a class="sns_icon" href="https://github.com/Code4Yokohama/" target="_blank"><img src="{{ url('theme://images/sns_icon_github.png')}}"/></a>
-                  </li>
-                </ul>
-              </div>
-          </div>
+            </div>
         </div>
         <div class="common_footer_box">
-          <div class="container">
-            <div class="link_box">
-              <a class="link_item" href="/hackathon/">Hackathons</a>
-              <a class="link_item" href="/ICTproposal/">技術駆動都市ヨコハマ2030</a>
-              <a class="link_item" href="mailto:info@code4.yokohama">Contact</a>
+            <div class="container">
+                <div class="link_box">
+                    <a class="link_item" href="/hackathon/">Hackathons</a>
+                    <a class="link_item" href="/ICTproposal/">技術駆動都市ヨコハマ2030</a>
+                    <a class="link_item" href="mailto:info@code4.yokohama">Contact</a>
+                </div>
             </div>
-          </div>
         </div>
-      </footer>
-    {% endblock %}
+    </footer>
+{% endblock %}
 
-  </body>
+</body>
 </html>

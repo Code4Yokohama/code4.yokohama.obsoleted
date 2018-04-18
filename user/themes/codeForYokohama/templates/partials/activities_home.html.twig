@@ -19,7 +19,7 @@
 {% for child in activitiesCollection %}
   {% set header_image_media = child.media.images | first %}
   <article class="activites_item_box">
-    <img class="activities_image" src="{{ header_image_media.url }}" alt="activites"/>
+    <a href="{{ child.url }}"><img class="activities_image" src="{{ header_image_media.url }}" alt="activites"/></a>
     <h1 class="activities_title">
       <a href="{{ child.url }}">{{ child.title }}</a>
     </h1>

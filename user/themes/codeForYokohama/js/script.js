@@ -1,4 +1,4 @@
-jQuery(function($) {
+$(function($) {
 
   //SPナビゲーション
   $('.menu_icon').on('click', function() {

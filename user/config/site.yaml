@@ -1,14 +1,18 @@
-title: Grav
+title: 'Code For Yokohama'
+default_lang: ja
 author:
-  name: Joe Bloggs
-  email: 'joe@test.com'
+  name: 'Iwao Kobayashi'
+  email: info@code4.yokohama
+taxonomies:
+  - category
+  - tag
+  - month
+metadata:
+  description: 'Grav is an easy to use, yet powerful, open source flat-file CMS'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
 blog:
   route: ''
-metadata:
-    description: 'Grav is an easy to use, yet powerful, open source flat-file CMS'
-taxonomies: [category,tag,month]
-# redirects:
-#     /changelog: /blog/the-urban-jungle
-# routes:
-#     /something/else: /blog/focus-and-blur
-#     /another/one/(.*): /blog/$1

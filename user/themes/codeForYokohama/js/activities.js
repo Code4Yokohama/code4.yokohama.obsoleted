@@ -1,4 +1,4 @@
-jQuery(function($) {
+$(function($) {
 
   //トップページでSPのときのみ行う調整
   var winW = $(window).width();

@@ -1,0 +1,11 @@
+email: info@info-lounge.jp
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+fullname: 'Info Lounge'
+title: 'Code for Yokohama Admin'
+state: enabled
+hashed_password: $2y$10$Z4Peul5.YuY9zYp/zJJoweXt0OZOTmdclAvtFewv5Abcex5CBHKg6

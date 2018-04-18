@@ -12,7 +12,7 @@
 
 <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
-<link type="image/png" rel="icon" href="../c4y_favicon.png" />
+<link type="image/png" rel="icon" href="/c4y_favicon.png" />
 <meta property="og:title" content="ICT提言「技術駆動都市ヨコハマ2030」を横浜市長選3候補に渡しました" />
 <meta property="og:type" content="article" />
 <meta property="og:description" content="ICT提言「技術駆動都市ヨコハマ2030」を横浜市長選3候補に渡しました" />
@@ -49,14 +49,8 @@
 
 <header id="header" class="index">
     <div class="header__title_wrapper">
-        <h1 class="c-section_inner"><a href="/"><img src="../images/c4y_logo_small.png" alt="code for YOKOHAMA"></a></h1>
+        <h1 class="c-section_inner"><a href="/"><img src="/images/c4y_logo_small.png" alt="code for YOKOHAMA"></a></h1>
         <div class="header_box">
-            <ul class="menu_box">
-                <li><a href="hackathon/">ハッカソン</a></li>
-                <!--<li>プロジェクト</li>-->
-                <li><a href="mailto:info@code4.yokohama">問い合わせ</a></li>
-                <!--<li>参加方法</li>-->
-            </ul>
             <div class="sns_box">
                 <div class="fb-like" data-href="http://code4.yokohama/" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
                 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://code4.yokohama/" data-count="none">Tweet</a>
@@ -93,7 +87,6 @@
   <p style="margin:2em 0;"><a href="/">トップページへ戻る</a></p>
 </div>
 
-</div>
 
 <div class="footer_box">
     <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />このウェブサイトのコンテンツは <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">クリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。</a><br />Copyright (C) 2015 Code for YOKOHAMA.</p>

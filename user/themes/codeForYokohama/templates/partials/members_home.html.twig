@@ -1,29 +1,34 @@
-{% set collection = page.collection("What's New") %}
+{% set collection = child.collection("What's New") %}
 <!-- TODO スマホ表示のときは取得する要素を2つにする-->
 {% set membersOption = {
-  items: {
-    '@page': '/members'
-  },
-  'limit': 4,
-  'order': {
-    'by': 'date',
-    'dir': 'desc'
-  }
+    items: {
+        '@page': '/members'
+    },
+    'limit': 4,
+    'order': {
+        'by': 'date',
+        'dir': 'desc'
+    }
 } %}
 {% set membersCollection = page.collection(membersOption) %}
 
 {% block stylesheets %}
-  {% do
-    assets.addCss('theme://css/index.css', 100) %}
+    {% do assets.addCss('theme://css/index.css', 100) %}
 {% endblock %}
 <div class="member_list_wrapper">
-  <ul id="lightSlider" class="member_list">
-    {% for child in membersCollection %}
-      <li class="member_item_box">
-        <img class="member_image" src="{{ url('theme://images/member_hidano.png')}}" alt="肥田野 正輝"/>
-        <p class="member_company">{{child.header.company}}</p>
-        <p class="member_name">{{child.header.person}}</p>
-      </li>
-    {% endfor %}
-  </ul>
+    <ul class="member_list">
+        {% for child in membersCollection %}
+            {% set header_image_file = child.header.header_image_file %}
+            {% if header_image_file %}
+                {% set header_image_media = child.media.images[header_image_file] %}
+            {% else %}
+                {% set header_image_media = child.media.images | first %}
+            {% endif %}
+            <li class="member_item_box">
+                <img class="member_image" src="{{ header_image_media.url }}" alt="{{ child.title }}"/>
+                <p class="member_company">{{ child.header.metadata.company }}</p>
+                <p class="member_name">{{ child.title }}</p>
+            </li>
+        {% endfor %}
+    </ul>
 </div>

@@ -34,10 +34,14 @@
           <div class="next_prev_pagination">
             {% if not page.isFirst %}
               <a class="n_p_pagenation next" href="{{ page.nextSibling.url }}">{{ page.nextSibling.title|length > 40 ? page.nextSibling.title|slice(0, 40) ~ '...' : page.nextSibling.title }}</a>
+            {% else %}
+              <span class="n_p_pagenation"></span>
             {% endif %}
 
             {% if not page.isLast %}
               <a class="n_p_pagenation prev" href="{{ page.prevSibling.url }}">{{ page.prevSibling.title|length > 40 ? page.prevSibling.title|slice(0, 40) ~ '...' : page.prevSibling.title }}</a>
+            {% else %}
+              <span class="n_p_pagenation"></span>
             {% endif %}
           </div>
         </div>

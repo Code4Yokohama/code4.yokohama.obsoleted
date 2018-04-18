@@ -106,7 +106,7 @@
   padding-top: 60px;
   @include media-query('sp') {
     display: block;
-    padding-top: 0;
+    padding-top: 4%;
   }
 }
 
@@ -114,6 +114,12 @@
   background-color: #ffffff;
   width: 48%;
   text-align: left;
+  @include media-query('sp') {
+    width: 100%;
+    .project_archives_item:not(:last-child) {
+      margin-bottom: 4%;
+    }
+  }
 }
 
 .project_archives_item a {

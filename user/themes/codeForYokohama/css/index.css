@@ -34,9 +34,12 @@
 
 .project_archives { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; padding-top: 60px; }
 
-@media screen and (max-width: 750px) { .project_archives { display: block; padding-top: 0; } }
+@media screen and (max-width: 750px) { .project_archives { display: block; padding-top: 4%; } }
 
 .project_archives_item { background-color: #ffffff; width: 48%; text-align: left; }
+
+@media screen and (max-width: 750px) { .project_archives_item { width: 100%; }
+  .project_archives_item .project_archives_item:not(:last-child) { margin-bottom: 4%; } }
 
 .project_archives_item a { display: block; text-decoration: none; width: 100%; }
 

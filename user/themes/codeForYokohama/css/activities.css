@@ -99,7 +99,7 @@
 /*-------------------------------------------------- Sidebar --------------------------------------------------*/
 .sidebar_activities { margin: 70px 0 0 50px; width: 300px; color: #000000; }
 
-@media screen and (max-width: 750px) { .sidebar_activities { display: block; width: 100%; margin: 0; } }
+@media screen and (max-width: 750px) { .sidebar_activities { display: block; width: 100%; margin: 12% 0; } }
 
 .sidebar_content_title { position: relative; margin-bottom: 48px; color: #282828; letter-spacing: 0.1em; line-height: 1; }
 

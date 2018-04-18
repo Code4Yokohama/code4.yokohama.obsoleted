@@ -448,6 +448,10 @@ header {
   height: 80px;
   margin: 0;
   color: $white;
+  @include media-query('sp') {
+    height: auto;
+    padding-bottom: 30px;
+  }
 }
 
 .link_box {
@@ -463,5 +467,9 @@ header {
   margin-right: 45px;
   &:last-child {
     margin-right: 0;
+  }
+  @include media-query('sp') {
+    display: block;
+    margin: 0 0 4%;
   }
 }

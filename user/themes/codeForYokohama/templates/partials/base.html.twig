@@ -17,6 +17,22 @@
         <meta property="og:image" content="http://code4.yokohama/images/icon_top.png"/>
         <meta property="fb:app_id" content="485812038210485"/>
         <link rel="canonical" href="{{ page.url(true, true) }}"/>
+        <script>window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+              t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function(f) {
+              t._e.push(f);
+            };
+
+            return t;
+          }(document, "script", "twitter-wjs"));</script>
 
         {% block stylesheets %}
             {% do
@@ -33,7 +49,6 @@
                 assets.add('theme://js/script.js', 101) %}
         {% endblock %}
         {{ assets.js() }}
-
     {% endblock head %}
     <script>
       (function (i, s, o, g, r, a, m) {

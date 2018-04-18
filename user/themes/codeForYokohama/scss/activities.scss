@@ -78,6 +78,7 @@
 .activities_list_info {
   margin-top: 30px;
   display: flex;
+  align-items: center;
 }
 
 .activities_list_date {
@@ -89,15 +90,12 @@
 }
 
 .activities_list_date a {
-  line-height: 15px;
   text-decoration: none;
 }
 
 .activities_list_date p {
   padding: 0;
   margin: 0;
-  height: 15px;
-  line-height: 15px;
 }
 
 .activities_list_category {

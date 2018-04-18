@@ -26,8 +26,7 @@
 
 .about_detail { margin: 0; }
 
-.about_box.project { border: 1px solid #ffffff; border-left: none; border-right: none; }
-
+/*.about_box.project { border: 1px solid $white; border-left: none; border-right: none; }*/
 .about_box.innovation { display: -ms-flexbox; display: flex; margin-left: auto; margin-right: auto; }
 
 @media screen and (max-width: 750px) { .about_box.innovation { display: block; } }
@@ -38,8 +37,8 @@
 
 .project_archives_item { background-color: #ffffff; width: 48%; text-align: left; }
 
-@media screen and (max-width: 750px) { .project_archives_item { width: 100%; }
-  .project_archives_item .project_archives_item:not(:last-child) { margin-bottom: 4%; } }
+@media screen and (max-width: 750px) { .project_archives_item { width: 100%; margin-bottom: 50px; }
+  .project_archives_item:not(:last-child) { margin-bottom: 4%; } }
 
 .project_archives_item a { display: block; text-decoration: none; width: 100%; }
 

@@ -83,11 +83,11 @@
   margin: 0;
 }
 
-.about_box.project {
+/*.about_box.project {
   border: 1px solid $white;
   border-left: none;
   border-right: none;
-}
+}*/
 
 .about_box.innovation {
   display: -ms-flexbox;
@@ -116,7 +116,8 @@
   text-align: left;
   @include media-query('sp') {
     width: 100%;
-    .project_archives_item:not(:last-child) {
+    margin-bottom: 50px;
+    &:not(:last-child) {
       margin-bottom: 4%;
     }
   }

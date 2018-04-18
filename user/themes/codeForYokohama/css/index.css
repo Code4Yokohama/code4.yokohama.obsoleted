@@ -32,11 +32,23 @@
 
 @media screen and (max-width: 750px) { .about_box.innovation { display: block; } }
 
-.project_archives { display: -ms-flexbox; display: flex; padding-top: 60px; }
+.project_archives { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; padding-top: 60px; }
 
 @media screen and (max-width: 750px) { .project_archives { display: block; padding-top: 0; } }
 
-.project_archives_item { padding: 20px; text-align: left; }
+.project_archives_item { background-color: #ffffff; width: 48%; text-align: left; }
+
+.project_archives_item a { display: block; text-decoration: none; width: 100%; }
+
+.project_archives_thumb { border-bottom: 1px solid #afafaf; }
+
+.project_archives_thumb img { width: 100%; }
+
+.project_archives_info { position: relative; color: #3f3f3f; min-height: 100px; padding: 20px 20px 32px; }
+
+.project_archives_info .info_title { font-size: 16px; margin: 0; }
+
+.project_archives_info .info_desc { font-size: 14px; line-height: 1.5; }
 
 .about_innovation { text-align: center; margin-left: auto; margin-right: auto; }
 

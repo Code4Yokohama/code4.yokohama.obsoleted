@@ -74,7 +74,7 @@ pages:
       - form
       - forms
 cache:
-  enabled: true
+  enabled: false
   check:
     method: file
   driver: auto
@@ -126,6 +126,7 @@ media:
   upload_limit: 8388608
 session:
   enabled: true
+  initialize: true
   timeout: 1800
   name: grav-site
   secure: false

@@ -13,7 +13,13 @@
   <div class="members_info" id="{{page.id}}">
     <a href="{{page.url}}">
       <img class="members_image" src="{{ header_image_media.url }}" alt="{{page.title}}"/>
-      <p class="members_company">{{page.header.metadata.company}}</p>
+      <p class="members_position">
+        {% if page.header.metadata.position %}
+          {{page.header.metadata.position}}
+        {% else %}
+          Fellow
+        {% endif %}
+      </p>
       <p class="members_name">{{page.title}}</p>
     </a>
   </div>

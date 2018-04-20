@@ -83,12 +83,6 @@
   margin: 0;
 }
 
-/*.about_box.project {
-  border: 1px solid $white;
-  border-left: none;
-  border-right: none;
-}*/
-
 .about_box.innovation {
   display: -ms-flexbox;
   display: flex;
@@ -102,56 +96,23 @@
 .project_archives {
   display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
   padding-top: 60px;
   @include media-query('sp') {
     display: block;
-    padding-top: 4%;
+    padding-top: 0;
   }
 }
 
 .project_archives_item {
-  background-color: #ffffff;
-  width: 48%;
+  padding: 20px;
   text-align: left;
   @include media-query('sp') {
     width: 100%;
     margin-bottom: 50px;
-    &:not(:last-child) {
+    .project_archives_item:not(:last-child) {
       margin-bottom: 4%;
     }
   }
-}
-
-.project_archives_item a {
-  display: block;
-  text-decoration: none;
-  width: 100%;
-}
-
-.project_archives_thumb {
-  border-bottom: 1px solid $border-gray;
-}
-
-.project_archives_thumb img {
-  width: 100%;
-}
-
-.project_archives_info {
-  position: relative;
-  color: #3f3f3f;
-  min-height: 100px;
-  padding: 20px 20px 32px;
-}
-
-.project_archives_info .info_title {
-  font-size: 16px;
-  margin: 0;
-}
-
-.project_archives_info .info_desc {
-  font-size: 14px;
-  line-height: 1.5;
 }
 
 .about_innovation {
@@ -487,7 +448,7 @@
   }
 }
 
-.member_company {
+.member_position {
   margin-bottom: 0;
 }
 

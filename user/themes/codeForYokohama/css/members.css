@@ -16,14 +16,13 @@
 
 .members_list { width: 1020px; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; list-style: none; margin: 0 auto; padding: 0; }
 
-@media screen and (max-width: 750px) { .members_list { width: 100%; } }
+@media screen and (max-width: 750px) { .members_list { box-sizing: border-box; padding-right: 10px; width: 100%; } }
 
 .members_item_box_content { max-width: 100%; padding-right: 20px; color: #000000; text-align: center; }
 
 .members_item_box_content:last-child { padding-right: 0; }
 
-@media screen and (max-width: 750px) { .members_item_box_content { box-sizing: border-box; width: 50%; padding-right: 10px; }
-  .members_item_box_content:nth-child(2n) { padding-right: 0; padding-left: 10px; } }
+@media screen and (max-width: 750px) { .members_item_box_content { box-sizing: border-box; width: 50%; padding: 0 10px; } }
 
 .members_item_box_content_dummy { width: 240px; margin-right: 20px; }
 
@@ -31,40 +30,44 @@
 
 .members_info a { text-decoration: none; }
 
-.members_image { width: 240px; height: 240px; }
+.members_image { width: 240px; height: 240px; border-radius: 50%; }
 
 @media screen and (max-width: 750px) { .members_image { width: 100%; height: auto; } }
 
-.members_company { margin: 18px 0 8px; }
+.members_position { font-size: 12px; margin: 18px 0 0; }
+
+@media screen and (max-width: 750px) { .members_position { margin-top: 0; } }
 
 .members_name { margin-top: 0; }
 
 .members_detail_content { display: none; }
 
-.members_detail_box { display: none; left: 0; width: 100%; height: 590px; background-color: #000; color: #ffffff; margin-bottom: 40px; }
+.members_detail_box { display: none; left: 0; width: 100%; min-height: 400px; background-color: #000; color: #ffffff; margin-bottom: 40px; }
 
 .members_detail_box .members_detail_content { display: block; width: 1020px; margin: auto; padding: 60px 0; }
 
 .box_square { height: 590px; }
 
-.box_triangle { display: none; width: 0; height: 0; margin-top: -30px; margin-left: 105px; border: 15px solid transparent; border-bottom: 15px solid #000000; }
+.box_triangle { display: none; width: 0; height: 0; margin-top: -50px; margin-left: 105px; border: 15px solid transparent; border-bottom: 15px solid #000000; }
 
 .members_list_border { width: 100%; height: 1px; margin-top: 20px; background-color: #afafaf; }
 
 /*-------------------------------------------------- Members Detail --------------------------------------------------*/
-.members_detail_pc { display: -ms-flexbox; display: flex; width: 1020px; margin: 0 auto; color: #3f3f3f; }
+.members_detail_pc { display: -ms-flexbox; display: flex; width: 1020px; margin: 0 auto; color: #ffffff; }
 
 .members_detail_pc_image_box { margin-right: 55px; }
 
-.members_detail_pc_image_box img { height: 240px; width: 240px; }
+.members_detail_pc_image_box img { border-radius: 50%; height: 240px; width: 240px; }
 
 .members_detail_pc_content_box a { display: block; font-size: 14px; }
 
-.members_detail_pc_company { font-size: 14px; margin: 0; }
+.members_detail_pc_position { font-size: 14px; margin: 0; }
 
-.members_detail_pc_person { font-size: 14px; margin: 10px 0 0; }
+.members_detail_pc_person { font-size: 14px; margin: 4px 0 0; }
 
 .members_detail_pc_info { font-size: 14px; margin: 30px 0; }
+
+.members_detail_pc_info ul { padding-left: 20px; }
 
 .members_detail_pc_sns_box { display: -ms-flexbox; display: flex; margin-left: 295px; }
 
@@ -80,19 +83,25 @@
 
 .members_detail_sp_image_box { width: 100%; height: auto; }
 
-.members_detail_sp_image_box img { width: 100%; height: auto; }
+.members_detail_sp_image_box img { width: 100%; height: auto; border-radius: 50%; }
 
 .members_detail_sp_content_box { margin-top: 25px; }
 
 .members_detail_sp_content_box a { display: block; text-align: left; }
 
-.members_detail_sp_company { font-size: 11px; }
+.members_detail_sp_position { font-size: 11px; }
 
 .members_detail_sp_person { font-size: 13px; margin-top: 10px; }
 
+@media screen and (max-width: 750px) { .members_detail_sp_person { font-size: 16px; margin-top: 4px; } }
+
 .members_detail_sp_info { font-size: 13px; margin: 30px 0; }
 
-.members_detail_sp_sns_box { display: -ms-flexbox; display: flex; }
+.members_detail_sp_info ul { padding-left: 20px; }
+
+.members_detail_sp_sns_box { display: none; }
+
+@media screen and (max-width: 750px) { .members_detail_sp_sns_box { display: -ms-flexbox; display: flex; } }
 
 .members_detail_sp_sns { display: block; width: 25px; height: 25px; text-decoration: none; margin-right: 20px; }
 

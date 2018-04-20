@@ -149,14 +149,17 @@ header { width: 100%; position: absolute; z-index: 1; }
 /*-------------------------------------------------- common_footer --------------------------------------------------*/
 .common_footer_box { background-image: url("../images/bg_common_footer.png"); background-size: auto; position: relative; height: 80px; margin: 0; color: #ffffff; }
 
-@media screen and (max-width: 750px) { .common_footer_box { height: auto; padding-bottom: 30px; } }
+@media screen and (max-width: 750px) { .common_footer_box { height: auto; } }
 
 .link_box { margin: 0 0 -45px; padding-top: 30px; text-align: center; }
+
+@media screen and (max-width: 750px) { .link_box { padding-bottom: 30px; } }
 
 .link_item { color: #ffffff; font-size: 14px; text-decoration: none; margin-right: 45px; }
 
 .link_item:last-child { margin-right: 0; }
 
-@media screen and (max-width: 750px) { .link_item { display: block; margin: 0 0 4%; } }
+@media screen and (max-width: 750px) { .link_item { display: block; margin: 0 0 4%; }
+  .link_item:last-child { margin-bottom: 0; } }
 
 /*# sourceMappingURL=common.css.map */

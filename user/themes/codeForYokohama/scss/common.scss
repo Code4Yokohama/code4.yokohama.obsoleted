@@ -450,14 +450,17 @@ header {
   color: $white;
   @include media-query('sp') {
     height: auto;
-    padding-bottom: 30px;
   }
 }
+
 
 .link_box {
   margin: 0 0 -45px;
   padding-top: 30px;
   text-align: center;
+  @include media-query('sp') {
+    padding-bottom: 30px;
+  }
 }
 
 .link_item {
@@ -471,5 +474,8 @@ header {
   @include media-query('sp') {
     display: block;
     margin: 0 0 4%;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

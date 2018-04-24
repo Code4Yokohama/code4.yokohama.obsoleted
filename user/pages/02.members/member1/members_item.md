@@ -1,6 +1,6 @@
 ---
-title: '小林 巌生'
-media_order: member_kobayashi.png
+title: 'Iwao Kobayashi'
+media_order: portlate.png
 metadata:
     position: 'Information Architect'
     twitter_url: 'https://twitter.com/iwao'
@@ -8,8 +8,6 @@ metadata:
     github_url: 'https://github.com/iwao'
 ---
 
-リアルな場×ICTでコミュニティーのつながりをより高密度高純度にしたい！ 
-
-- デザイナー
-- 情報アーキテクト
-- コンセプター
+情報アーキテクト、デザイナー、プロデューサー。
+インフォ・ラウンジ合同会社副代表、特定非営利活動法人リンクト・オープン・データ・イニシアティブ副理事長
+Code for YOKOKOHAMA 共同代表。

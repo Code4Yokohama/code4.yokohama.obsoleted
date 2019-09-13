@@ -49,7 +49,7 @@
 
 <header id="header" class="index">
     <div class="header__title_wrapper">
-        <h1 class="c-section_inner"><a href="/"><img src="/images/c4y_logo_small.png" alt="code for YOKOHAMA"></a></h1>
+        <h1 class="c-section_inner"><a href="/"><img src="/c4y_logo_small.png" alt="code for YOKOHAMA"></a></h1>
         <div class="header_box">
             <div class="sns_box">
                 <div class="fb-like" data-href="http://code4.yokohama/" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>

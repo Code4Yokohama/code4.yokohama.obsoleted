@@ -9,11 +9,11 @@
 namespace Grav\Common\Page;
 
 use Grav\Common\Grav;
+use Grav\Common\Yaml;
 use Grav\Common\Page\Medium\AbstractMedia;
 use Grav\Common\Page\Medium\GlobalMedia;
 use Grav\Common\Page\Medium\MediumFactory;
 use RocketTheme\Toolbox\File\File;
-use Symfony\Component\Yaml\Yaml;
 
 class Media extends AbstractMedia
 {
@@ -24,11 +24,13 @@ class Media extends AbstractMedia
     protected $standard_exif = ['FileSize', 'MimeType', 'height', 'width'];
 
     /**
-     * @param $path
+     * @param string $path
+     * @param array  $media_order
      */
-    public function __construct($path)
+    public function __construct($path, array $media_order = null)
     {
         $this->path = $path;
+        $this->media_order = $media_order;
 
         $this->__wakeup();
         $this->init();
@@ -86,7 +88,7 @@ class Media extends AbstractMedia
         /** @var \DirectoryIterator $info */
         foreach ($iterator as $path => $info) {
             // Ignore folders and Markdown files.
-            if (!$info->isFile() || $info->getExtension() === 'md' || $info->getBasename()[0] === '.') {
+            if (!$info->isFile() || $info->getExtension() === 'md' || $info->getFilename()[0] === '.') {
                 continue;
             }
 

@@ -10,9 +10,8 @@ namespace Grav\Common\Data;
 
 use Grav\Common\Grav;
 use Grav\Common\Utils;
-use Symfony\Component\Yaml\Exception\ParseException;
-use Symfony\Component\Yaml\Parser;
-use Symfony\Component\Yaml\Yaml;
+use Grav\Common\Yaml;
+use RocketTheme\Toolbox\Compat\Yaml\Yaml as FallbackYaml;
 
 class Validation
 {
@@ -107,7 +106,7 @@ class Validation
         $method = 'filter' . ucfirst(strtr($type, '-', '_'));
 
         // If this is a YAML field validate/filter as such
-        if ($type != 'yaml' && isset($field['yaml']) && $field['yaml'] === true) {
+        if ($type !== 'yaml' && isset($field['yaml']) && $field['yaml'] === true) {
             $method = 'filterYaml';
         }
 
@@ -128,9 +127,11 @@ class Validation
      */
     public static function typeText($value, array $params, array $field)
     {
-        if (!is_string($value)) {
+        if (!is_string($value) && !is_numeric($value)) {
             return false;
         }
+
+        $value = (string)$value;
 
         if (isset($params['min']) && strlen($value) < $params['min']) {
             return false;
@@ -643,15 +644,12 @@ class Validation
 
     public static function filterYaml($value, $params)
     {
-        try {
-            if (is_string($value)) {
-                return (array) Yaml::parse($value);
-            } else {
-                return $value;
-            }
-        } catch (ParseException $e) {
+        if (!is_string($value)) {
             return $value;
         }
+
+        return (array) Yaml::parse($value);
+
     }
 
     /**

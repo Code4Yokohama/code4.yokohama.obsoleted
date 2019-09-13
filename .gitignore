@@ -1,4 +1,6 @@
 .DS_Store
+.idea
+
 /vendor
 
 # cacheフォルダ
@@ -11,7 +13,7 @@ logs/
 .htaccess
 
 #gravで生成されるimageファイル
-#images/
+images/
 
 #node modules
 user/themes/codeForYokohama/node_modules/

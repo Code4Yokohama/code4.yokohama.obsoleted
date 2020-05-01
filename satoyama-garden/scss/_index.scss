@@ -1,0 +1,504 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------------------
+  1.header
+-------------------------------------------------------------- */
+.header {
+  .header-sec{
+    background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
+    min-height: 300px;
+    padding-bottom: 4px;
+    @include media320{
+      background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
+      padding: 50px 0;
+    }
+    @include media375{
+      background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
+      padding: 0px 0;
+    }
+    @include media425{
+      background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
+      padding: 50px 0;
+    }
+    @include media768{
+      background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
+      padding: 50px 0;
+    }
+    @include media1024{
+      padding: 90px 0 150px;
+      background: url("../images/main_photo.jpg") 50% top / cover no-repeat;
+    }
+
+    &__inner {
+      width: 100%;
+      max-width: 1920px;
+      margin: 0 auto;
+    }
+    &__item {
+      margin: 0 auto;
+      background: url("../images/main-flame_sp.png") 6px top / 100% no-repeat;
+      text-align: center;
+      position: relative;
+      padding-bottom: 56px;
+      @include media425{
+        max-width: 385px;
+        width: 100%;
+        background-size: 100%;
+        background-position: center top;
+        padding-left: 10px;
+      }
+      @include media768{
+        max-width: 702px;
+        background: url("../images/main-flame.png") 50% top / contain no-repeat;
+      }
+    }
+    &__item-inner{
+      @include media425{
+      padding-right: 20px;
+      }
+    }
+    &__logo {
+      padding-top: 56px;
+      width: 70%;
+      margin: 0 auto;
+      padding-top: 80px;
+      @include media375{
+        padding-top: 60px;
+      }
+      @include media320{
+        padding-top: 46px;
+      }
+      @include media425{
+        padding-top: 64px;
+      }
+      img {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__line{
+      width: 70%;
+      color: $baseColor;
+      @include media768{
+        width: 42%;
+      }
+    }
+    &__txt02{
+      margin-top: 10px;
+      span{
+        color: $colPK01;
+        font-size: 2.4rem;
+        font-weight: 500;
+        @include lineHeight(24, 36);
+        @include media320{
+          font-size: 2.0rem;
+        }
+      }
+    }
+    &__pagelink{
+      margin: 10px 30%;
+      display: block;
+      font-size: 2.0rem;
+      line-height: 40px;
+      border: solid 1px $colOrg;
+      @include media320{
+        font-size: 1.6rem;
+        line-height: 32px;
+      }
+      @include media768{
+        margin: 10px 39%;
+      }
+    }
+    &__gardenbear{
+      position: absolute;
+      bottom: -6px;
+      right: 0;
+      max-width: 116px;
+      width: 100%;
+      @include media768{
+        position: absolute;
+        top: 70px;
+        bottom: unset;
+        right: -60px;
+        max-width: 280px;
+      }
+      @include media1024{
+        position: absolute;
+        top: 60px;
+        bottom: unset;
+        right: -126px;
+        max-width: 368px;
+      }
+    }
+  }
+  .fixed{
+    background-attachment: fixed;
+    background-size: contain;
+    @include media768{
+      min-height: 500px;
+      background-size: cover;
+    }
+    @include media1024{
+      min-height: 640px;
+      background-size: cover;
+    }
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+  2.main contents
+-------------------------------------------------------------- */
+.main{
+  margin-top: 70px;
+  .main-sec{
+    &__inner{
+      width: 92%;
+      margin: 0 auto;
+      @include media1024{
+        max-width: 900px;
+        width: 100%;
+      }
+    }
+    &__ttl01{
+      margin-bottom: 64px;
+      @include media320{
+        font-size: 1.8rem;
+      }
+      @include media768{
+        font-size: 3.6rem;
+      }
+    }
+    &__ttl02{
+      margin: 40px 16px 8px;
+      padding :10px 0;
+      border: solid 1px $colGY;
+      position: relative;
+      &::before{
+        position: absolute;
+        content: url("../images/flamedeco_l.png");
+        top: -8px;
+        left: -16px;
+      }
+      &::after{
+        position: absolute;
+        content: url("../images/flamedeco_r.png");
+        bottom: -16px;
+        right: -16px;
+      }
+      @include media768{
+        margin-top: 60px;
+      }
+    }
+    &__ttl03{
+      margin-top: 40px;
+      @include media320{
+        font-size: 1.6rem;
+      }
+    }
+    &__line01{
+      width: 64%;
+      height: 1px;
+      background-color: $colPK02;
+      border: none;
+      margin: 12px auto 30px;
+      @include media768{
+        width: 98%;
+      }
+    }
+    &__line02{
+      width: 64%;
+      height: 1px;
+      background-color: $colPK02;
+      border: none;
+      margin: 12px auto 30px;
+      @include media768{
+        width: 100%;
+      }
+      @include media1024{
+        width: 78%;
+      }
+    }
+    &__ttl04{
+      margin: 30px auto 20px;
+      width: 200px;
+      padding: 10px 0;
+      line-height: 1rem;
+      border: solid 1px $mainColor;
+      border-radius: 20px;
+    }
+    &__txt01{
+      margin-bottom: 16px;
+    }
+    &__txt02{
+      margin-bottom: 16px;
+      @include media768{
+        text-align: center;
+      }
+    }
+    &__goods-bear{
+      display: block;
+      margin: 40px auto 30px;
+      width: 50%;
+      @include media425{
+        width: 35%;
+      }
+      @include media768{
+        width: 20%;
+      }
+    }
+    &__goods-code4{
+      display: block;
+      margin: 0 auto;
+      width: 60%;
+      @include media425{
+        width: 45%;
+      }
+      @include media768{
+        width: 30%;
+      }
+    }
+    &__list{
+      li{
+        &::before{
+          content: '-';
+          margin-right: 0.5rem;
+          @include lineHeight(14, 20);
+        }
+      }
+    }
+    &__sec02{
+      position: relative;
+      &__gardenbear {
+        display: none;
+        @include media768{
+          display: block;
+          position: absolute;
+          top: 30%;
+          right: 0;
+        }
+      }
+    }
+    &__selection{
+      &__ttl{
+        font-weight: 600;
+      }
+      &__txt{
+        margin: 30px auto 36px;
+      }
+    }
+
+    &__appperiod{
+      border: solid 1px $mainColor;
+      @include media768{
+        margin: 0 1%;
+        padding: 3rem 0;
+      }
+      p{
+        color: $colOrg;
+        font-size: 2.4rem;
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+    &__group{
+      margin: 50px auto;
+      width: 100%;
+      display: none;
+      @include media768{
+        padding: 0 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &__main-logo{
+        width: 42%;
+        max-width: 200px;
+        height: auto;
+      }
+      &__logo01{
+        width: 13%;
+        max-width: 200px;
+        height: auto;
+      }
+      &__logo02{
+        width: 22.5%;
+        max-width: 200px;
+        height: auto;
+      }
+      &__logo03{
+        width: 22.5%;
+        max-width: 200px;
+        height: auto;
+      }
+    }
+    &__sec03-item{
+      @include media768{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+    }
+    &__sec03-itemR{
+      margin-top: 40px;
+      @include media768{
+        margin-top: 70px;
+        width: 48%;
+      }
+      @include media1024{
+        width: 40%;
+        margin-top: 60px;
+      }
+      .img-flow{
+        width: 95%;
+        display: block;
+      }
+      .img-view{
+        display: none;
+        width: 100%;
+        @include media768{
+          display: block;
+          margin-top: 60px;
+        }
+        @include media1024{
+          margin-top: 50px;
+        }
+      }
+    }
+    &__sec03-itemL{
+      @include media768{
+        width: 44%;
+      }
+      @include media1024{
+        width: 55%;
+      }
+    }
+
+    &__btndl{
+      margin: 40px 12%;
+      @include media768{
+        margin: 30px 0 40px;
+        display: flex;
+        justify-content: space-between;
+      }
+      a{
+        margin-top: 20px;
+        display: block;
+        text-align: center;
+        line-height: 40px;
+        border: solid 1px $colOrg;
+        @include media768{
+          width: 48%;
+          font-size: 1rem;
+        }
+        @include media1024{
+          font-size: 1.4rem;
+        }
+      }
+    }
+    &__btnform{
+      margin-top: 30px;
+      border: solid 1px $colRed;
+      a{
+        margin: 4px;
+        display: block;
+        text-align: center;
+        line-height: 46px;
+        font-size: 1.8rem;
+        color: $colWT;
+        background-color: $colRed;
+
+      }
+    }
+    &__essential{
+      margin: 40px auto;
+      @include media768{
+        margin: 40px auto 80px;
+      }
+      dt{
+        margin: 20px 0 16px;
+      }
+      &__list01{
+        li{
+          margin: 0 10px 10px 20px;
+        }
+      }
+      &__list02{
+        li{
+          margin: 0 10px 10px 20px;
+          text-indent: -1.5rem;
+          &::before{
+            content: '・';
+          }
+        }
+      }
+      &__txt01{
+        margin: 0 0 10px 2rem;
+      }
+      &__txt02{
+        margin-bottom: 1rem;
+      }
+      &__contact{
+        display: block;
+        color: $baseColor;
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+  3.footer
+-------------------------------------------------------------- */
+.footer {
+  background: url("../images/main_photo.jpg") 50% top / cover no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  height: 500px;
+  .footer-sec{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    &__inner{
+      margin: 0 auto;
+      background-color: white;
+      padding: 60px 0;
+    }
+    &__main-logo{
+      text-align: center;
+      img {
+        width: 150px;
+        height: auto;
+      }
+    }
+    &__item{
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include media768{
+        align-items: flex-end;
+      }
+    }
+    &__logo01{
+      width: 94px;
+      height: auto;
+      @include media768{
+        width: 160px;
+      }
+    }
+    &__logo02{
+      margin-left: 40px;
+      width: 136px;
+      height: auto;
+      @include media768{
+        margin: 40px 0 0 40px;
+        width: 200px;
+      }
+    }
+  }
+}
+
+
+

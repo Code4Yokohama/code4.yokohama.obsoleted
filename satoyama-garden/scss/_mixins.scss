@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/*--------------------------------------------------------------
+  media queries
+-------------------------------------------------------------- */
+@mixin media320 {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin media375 {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}
+@mixin media425 {
+  @media screen and (min-width: 425px) {
+    @content;
+  }
+}
+
+@mixin media768 {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+
+@mixin media900 {
+  @media screen and (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin media1024 {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media1280 {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+
+/*--------------------------------------------------------------
+  font settings
+-------------------------------------------------------------- */
+@mixin fontFamilyBase {
+  font-family: "Noto Sans JP","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック",sans-serif;
+}
+
+@mixin fontRoboto {
+  font-family: "Roboto","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック",sans-serif;
+}
+
+@mixin fontHiragino {
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
+}
+
+@mixin fontHelvetica {
+  font-family: "Helvetica","Arial","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック",sans-serif;
+}
+
+@mixin fontSize ($fontSize) {
+  font-size: $fontSize/$baseFontSize + rem;
+}
+@mixin lineHeight ($fontSize, $lineHeight) {
+  line-height: $lineHeight/$fontSize;
+}
+$baseFontSize: 16;
+
+

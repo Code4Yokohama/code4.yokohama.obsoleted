@@ -1,0 +1,137 @@
+/*--------------------------------------------------------------
+  common Style
+-------------------------------------------------------------- */
+html {
+  //font-size: #{$baseFontSize}px;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  @include fontFamilyBase;
+  font-size: 1.6rem;
+  color: $baseColor;
+  margin: 0;
+  & * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+p {
+  margin: 0;
+  font-size: 1.4rem;
+  @include lineHeight(14, 22);
+}
+
+a {
+  color: $colOrg;
+  font-size: 1.4rem;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  -ms-filter: "alpha(opacity=70)";
+}
+
+dl,
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ol{
+  padding: 0;
+  margin: 0;
+}
+dl dd,
+dl dt,
+ul li,
+ol li {
+  font-size: 1.4rem;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+h2{
+  font-size: 2.0rem;
+  font-weight: 500;
+  color: $mainColor;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $colVio;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: $mainColor;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+h5 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $mainColor;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+
+i{
+  font-style: italic;
+}
+
+span{
+  display: block;
+}
+
+figure {
+  margin: 0;
+}
+
+.italic {
+  font-style: italic;
+}
+
+
+

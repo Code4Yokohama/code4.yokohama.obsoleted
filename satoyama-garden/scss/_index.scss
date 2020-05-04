@@ -7,7 +7,7 @@
   .header-sec{
     min-height: 300px;
     padding-bottom: 4px;
-    background: url("../images/main_photo.jpg") 50% top / cover no-repeat;
+    background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
     background-attachment: fixed;
 
     @include media1024{
@@ -427,13 +427,14 @@
   3.footer
 -------------------------------------------------------------- */
 .footer {
-  background: url("../images/main_photo.jpg") 50% top / cover no-repeat;
+  background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
   background-attachment: fixed;
   position: relative;
   height: 500px;
-  @include media375{
-    background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
+  @include media1024{
+    background: url("../images/main_photo.jpg") 50% top / cover no-repeat;
     background-attachment: fixed;
+    position: relative;
     padding: 0px 0;
   }
   .footer-sec{

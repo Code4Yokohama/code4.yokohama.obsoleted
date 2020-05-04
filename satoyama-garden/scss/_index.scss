@@ -456,6 +456,11 @@
   background-attachment: fixed;
   position: relative;
   height: 500px;
+  @include media375{
+    background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
+    background-attachment: fixed;
+    padding: 0px 0;
+  }
   .footer-sec{
     position: absolute;
     width: 100%;

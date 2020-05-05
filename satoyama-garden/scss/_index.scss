@@ -5,28 +5,15 @@
 -------------------------------------------------------------- */
 .header {
   .header-sec{
-    background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
     min-height: 300px;
     padding-bottom: 4px;
-    @include media320{
-      background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
-      padding: 50px 0;
-    }
-    @include media375{
-      background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
-      padding: 0px 0;
-    }
-    @include media425{
-      background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
-      padding: 50px 0;
-    }
-    @include media768{
-      background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
-      padding: 50px 0;
-    }
+    background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
+    background-attachment: fixed;
+
     @include media1024{
       padding: 90px 0 150px;
       background: url("../images/main_photo.jpg") 50% top / cover no-repeat;
+      background-attachment: fixed;
     }
 
     &__inner {
@@ -130,18 +117,6 @@
         right: -126px;
         max-width: 368px;
       }
-    }
-  }
-  .fixed{
-    background-attachment: fixed;
-    background-size: contain;
-    @include media768{
-      min-height: 500px;
-      background-size: cover;
-    }
-    @include media1024{
-      min-height: 640px;
-      background-size: cover;
     }
   }
 }
@@ -452,10 +427,16 @@
   3.footer
 -------------------------------------------------------------- */
 .footer {
-  background: url("../images/main_photo.jpg") 50% top / cover no-repeat;
+  background: url("../images/main_photo_sp.jpg") 50% top / cover no-repeat;
   background-attachment: fixed;
   position: relative;
   height: 500px;
+  @include media1024{
+    background: url("../images/main_photo.jpg") 50% top / cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    padding: 0px 0;
+  }
   .footer-sec{
     position: absolute;
     width: 100%;

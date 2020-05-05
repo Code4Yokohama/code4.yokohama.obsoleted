@@ -192,6 +192,24 @@ a:hover{
 }
 .project_box p {
     line-height: 30px;
+    margin-bottom: 2em;
+}
+
+.project_box li {
+  list-style: disc;
+  margin-bottom: 0.5em;
+}
+
+.project_box li a {
+  color: #CC3333;
+}
+
+.project_box li a:hover {
+  color: #FF3333;
+}
+
+.project_box li a:visited {
+  color: #660000;
 }
 
 h1 {
@@ -301,6 +319,8 @@ h3 {
 
 #proposal {
   padding: 0 2em;
+  width: 740px;
+  margin: 0 auto;
 }
 
 #proposal p {
@@ -373,4 +393,21 @@ h3 {
 #credit p{
   margin-top: 2em;
   text-align: right;
+}
+
+#proposal .image_credit {
+  font-size: 1em;
+  text-align: right;
+}
+
+#proposal a {
+  color: #CC3333;
+}
+
+#proposal a:hover {
+  color: #FF3333;
+}
+
+#proposal a:visited {
+  color: #660000;
 }

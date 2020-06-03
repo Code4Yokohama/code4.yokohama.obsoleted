@@ -448,7 +448,7 @@ h3.name {
   margin-bottom: 1rem;
 }
 
-.member .tag li {
+.tag li {
   background-color: rgb(183, 208, 231);
   color: rgb(80, 82, 131);
   padding: 4px 10px;
@@ -457,11 +457,35 @@ h3.name {
   border-radius: 6px;
 }
 
-.member .social {
+.social {
   margin-top: 2rem;
 }
 
-.member .social li {
+.social li {
   display: inline-block;
   margin: 0 5px;
+}
+
+#member_individual {
+  text-align: center;
+}
+
+.bio {
+  width: 860px;
+  text-align: left;
+  margin: 4rem auto 4rem auto;
+}
+
+#member_individual .title {
+  font-size: 1rem;
+}
+
+#member_individual h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.go_previous_link {
+  width: 860px;
+  margin: 2rem auto 2rem auto;
 }

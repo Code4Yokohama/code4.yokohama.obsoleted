@@ -411,3 +411,81 @@ h3 {
 #proposal a:visited {
   color: #660000;
 }
+
+#members {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.member {
+  display: inline-block;
+  width: 300px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.member_photo {
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+.member .title {
+  line-height: 1rem;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  color: #535353;
+  font-weight: bold;
+}
+
+h3.name {
+  line-height: 3rem;
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+.tag li {
+  background-color: rgb(183, 208, 231);
+  color: rgb(80, 82, 131);
+  padding: 4px 10px;
+  margin-bottom: 5px;;
+  display: inline-block;
+  border-radius: 6px;
+}
+
+.social {
+  margin-top: 2rem;
+}
+
+.social li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+#member_individual {
+  text-align: center;
+}
+
+.bio {
+  width: 860px;
+  text-align: left;
+  margin: 4rem auto 4rem auto;
+}
+
+#member_individual .title {
+  font-size: 1rem;
+}
+
+#member_individual h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.go_previous_link {
+  width: 860px;
+  margin: 2rem auto 2rem auto;
+}

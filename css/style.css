@@ -448,6 +448,10 @@ h3.name {
   margin-bottom: 1rem;
 }
 
+.tag {
+  height: 70px;
+}
+
 .tag li {
   background-color: rgb(183, 208, 231);
   color: rgb(80, 82, 131);

@@ -270,6 +270,7 @@
       @include media768{
         margin: 0 1%;
         padding: 3rem 0;
+        margin-bottom: 4rem;
       }
       p{
         color: $colOrg;
@@ -376,7 +377,7 @@
     &__btnform{
       margin-top: 30px;
       border: solid 1px $colRed;
-      a{
+      a, p{
         margin: 4px;
         display: block;
         text-align: center;

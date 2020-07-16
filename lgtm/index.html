@@ -1,0 +1,298 @@
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="コントリビューター感謝祭用 感謝状を誰でも自分で作成できるサイトです。">
+    <meta name="keywords" content="オープンソース,オープンデータ,Code for,GitHub,covid19,東京都 新型コロナウイルス感染症対策サイト">
+
+	<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" media="all" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/lgtm.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jspdf.min.js"></script>
+    <script src="js/svg2pdf.min.js"></script>
+    <script src="js/svgzoom.js"></script>
+    <script src="js/lgtm.js"></script>
+
+    <title>コントリビューター感謝祭特設　感謝状生成サイト</title>
+  </head>
+  <body>
+    <header id="header" class="index">
+      <div class="header__title_wrapper">
+        <h1 class="c-section_inner">コントリビューター感謝祭特設　感謝状生成サイト</h1>
+      </div>
+    </header>
+    <div class="top_box inner m_top">
+      <img width="100%" src="images/topview.png"/>
+      <h2>あなたが感謝を伝えたいと思えば、<br>誰でも感謝状を作成できます。</h2>
+      <section id="sec-usage">
+      <h3>利用方法</h3>
+      <p>
+        以下に必要事項をご記入の上、プレビューボタンを押してください。<br>
+        プレビューをご確認の上、問題なければダウンロードボタンを押してください。<br>
+        SVG形式、PDF形式どちらでもダウンロードできます。<br>
+      </p>
+      </section>
+      <section id="sec-form">
+      <h3>入力フォーム</h3>
+      <form action='#'>
+        <label><span class="must">*</span>差出人:</label><input type='text' id='from' placeholder='GitHubアカウント' value='halsk' required />
+        <label><span class="must">*</span>宛先:</label><input type='text' id='to' placeholder='GitHubアカウント' value='kaizumaki' required />
+		<label>タイトル:</label><input type='text' id='title' placeholder='感謝状のタイトル' value='感謝状'/>
+		<label>1行目:</label><input type='text' id='description_row1' placeholder='感謝の内容 1行目' value='あなたは東京都新型コロナウイルス感染症対策サイトの開発において'/>
+		<label>2行目:</label><input type='text' id='description_row2' placeholder='感謝の内容 2行目' value='GitHub女将として多大な貢献をされました。'/>
+		<label>3行目:</label><input type='text' id='description_row3' placeholder='感謝の内容 3行目' value='特に#1234はLGTMでした。'/>
+		<label>4行目:</label><input type='text' id='description_row4' placeholder='感謝の内容 4行目' value='よってここにその功績をたたえ深く感謝の意を表します。'/>
+		<label>5行目:</label><input type='text' id='description_row5' placeholder='感謝の内容 5行目' value=''/>
+        <div  style="display:none;">
+        <label>Web Font:</label><input type='text' id='web-font' placeholder='フリーライセンスのGoogle Font' value=''/>
+        <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+        <label>ローカルFont:</label><input type='file' id='font-file' placeholder='ローカルFontファイル'/>
+        </div>
+        <div id="coc-wrap"><input type='checkbox' id="coc" required /><label for="coc">Code for Japanの<a href="https://github.com/codeforjapan/codeofconduct" target="_blank" class="linkblue">Code of Conduct</a>に同意します。</label></div>
+        <input type='submit' class="project_btn" id='preview' value='プレビュー' disabled/>
+        <a id="alink-svg" class="project_btn downloadLink disabled">ダウンロード(SVG形式)</a>
+        <a id="alink-pdf" class="project_btn downloadLink disabled">ダウンロード(PDF形式)</a>
+      </form>
+      <p class="message"></p>
+      </section>
+      <section id="sec-preview">
+      <h3>プレビュー</h3>
+      <p>
+		文字の大きさを調整できます。<br>
+		枠線内でプレビュー画像を拡縮できます。<input type="button" id="zoom-reset" value="リセット"><br>
+		<label>文字の大きさ調整:</label><input type='number' step="0.01" id='scale' placeholder='文字の大きさ調整' value='1'/><br>
+	  </p>
+      <div id="namecard-preview" class="svg-ph">読み込み中...</div>
+      <p>
+        より詳しい編集は <a class="clickable linkblue" id="custom">[こちら]</a>
+      </p>
+      </section>
+      <section id="sec-data" style="display:none;">
+      <h3>実データ</h3>
+      <p id="how-to-custom">
+        開発者ツールなどでdiv#namecard内のSVGを更新して<a class="clickable linkblue" id="update">[こちら]</a>を押せば、ダウンロードされるデータが更新されます。
+      </p>
+      <div id="namecard" class="svg-ph" style="display:none;"></div>
+      </section>
+      <section id="sec-link">
+      <h3>参考</h3>
+      <ul>
+        <li><a href="https://fonts.google.com/" target="_blank" class="linkblue">Google Font</a>: Webで使えるフリーFont</li>
+        <li><a href="https://github.com/ksss/text2svg" target="_blank" class="linkblue">GitHub - ksss/text2svg</a>: テキストをSVGのパスにアウトライン化するRubyライブラリ</li>
+        <li><a href="https://github.com/yWorks/svg2pdf.js" target="_blank" class="linkblue">GitHub - yWorks/svg2pdf.js</a>: SVGをPDFに変換するライブラリ</li>
+        <li><a href="https://github.com/MrRio/jsPDF" target="_blank" class="linkblue">GitHub - MrRio/jsPDF</a>: クライアントサイドのPDF生成ライブラリ</li>
+        <li><a href="https://docs.github.com/en/rest/reference/users#get-a-user" target="_blank" class="linkblue">GitHub Docs - Users</a>: GitHubのユーザー情報を取得するREST API</li>
+      </ul>
+      </section>
+      <section id="sec-about">
+      <h2 class="m_top">Code for YOKOHAMAとは</h2>
+      <p>
+        Code for YOKOHAMAは仲間とともに技術を磨き、学んだスキルを地域の課題解決に役立てていく活動です。<br>
+        詳しくはこちら(<a href="http://code4.yokohama/" class="linkblue">http://code4.yokohama/</a>)。
+      </p>
+      </section>
+    </div>
+    <div class="footer_box">
+      <a href="images/c4y_vol6-2.jpg" target="_blank"></a>
+      <p>
+        <a href="images/c4y_vol6-2.jpg" target="_blank"></a>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          <img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png">
+        </a><br>
+        このウェブサイトのコンテンツは <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">クリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。</a><br>
+        Copyright (C) 2020 Code for YOKOHAMA.
+      </p>
+    </div>
+
+    <script>
+	//ダウンロードのリンクを状態に応じて有効/無効化
+	// Code for Condactに同意している
+	// かつ、データがセットされている
+	function activateLink() {
+		$('.downloadLink').each(function(index, elm){
+			if($("#coc").prop('checked') && $(elm).hasClass("setted")){
+				$(elm).removeClass("disabled");
+			}else{
+				$(elm).addClass("disabled");
+			}
+		});
+	}
+
+	//メッセージ表示関数
+	function addMessage(text) {
+		$('.message').html($('.message').html()+'<br>'+text);
+	}
+	//メッセージ表示関数
+	function setMessage(text) {
+		$('.message').html(text);
+	}
+
+	//文字の大きさを調整する
+	function changeScaleSVG() {
+		scale = $('#scale').val();
+		changeScale('.val-from g', scale);
+		changeScale('.val-to g', scale);
+		changeScale('.val-title g', scale);
+		changeScale('.val-description g g', scale);
+	}
+
+	//ダウンロードSVGの表示
+	function showDownloadSVG(){
+		$('#sec-preview').hide();
+		$('#sec-data').show();
+		//SVGをズーム、パンできるようにする
+		initSVGTools('#namecard');
+		$('#namecard').show();
+	}
+	//ダウンロードSVGの更新
+	function updateDownloadSVG(){
+		setDownloadSVG('#namecard', 'LGTMcard_'+$('#from').val().replace(/ /,'')+'_'+$('#to').val().replace(/ /,'')+'.svg', '.downloadLink');
+		activateLink();
+	}
+
+	//githubアバターをとってくる。
+	function getgithub_avator(user, selector,logfunc){
+		var d = $.Deferred();
+		$.ajax({
+		type: 'get',
+		url: './list.html',
+		processData: false,
+		contentType: false,
+		success: function(data) {
+			var div = $(data).find('#'+user);
+			if(div){
+				$(selector).attr('xlink:href', $(div).find('img').attr('src'));
+			}else{
+				message = "コントリビュータが見つかりませんでした。";
+				logfunc(message);
+			}
+			d.resolve();
+		},
+		error: function(XMLHttpRequest, textStatus, errorThrown){
+			message = "AJAXエラーでアバター画像を取得できませんでした。";
+			logfunc(message);
+			d.resolve();
+		}
+	});
+		return d.promise();
+	}
+	
+	//githubアバターをとってくる。API直接
+	function getgithub_avator_api(user, selector, logfunc){
+		var d = $.Deferred();
+			$.ajax({
+			type: 'get',
+			url: 'https://api.github.com/users/'+user+'?access_token=791331b4666ec2fc0d5ea2796ce397de3e9460b2',
+			processData: false,
+			contentType: false,
+			success: function(data) {
+				$(selector).attr('xlink:href',data.avatar_url);
+				d.resolve();
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown){
+				message = "AJAXエラーでアバター画像を取得できませんでした。";
+				logfunc(message);
+				d.resolve();
+			}
+		});
+		return d.promise();
+	}
+
+	$(function(){
+		//プレビューボタン押下
+		$('#preview').click(function(){
+			//初期化
+			setMessage("");
+			clearDownloadSVG('.downloadLink');
+			activateLink();
+
+			//フォントを取得
+			fontname = $('#web-font').val();
+			fontfile = $('#font-file').prop("files")[0];
+
+			//それぞれの文字列をアウトライン化
+			//終了後に文字の大きさの調整、ダウンロードリンクの設定、ダウンロードリンクの有効化
+			$.when(
+				text2svg_api($('#from').val(),	'.val-from',	'Cedarville+Cursive', fontfile, addMessage),
+				text2svg_api($('#to').val(),		'.val-to',		'Cedarville+Cursive', fontfile, addMessage),
+				text2svg_api($('#title').val(),		'.val-title',		fontname, fontfile, addMessage),
+				text2svg_api($('#description_row1').val(),		'.val-description .row1',			fontname, fontfile, addMessage),
+				text2svg_api($('#description_row2').val(),		'.val-description .row2',			fontname, fontfile, addMessage),
+				text2svg_api($('#description_row3').val(),		'.val-description .row3',			fontname, fontfile, addMessage),
+				text2svg_api($('#description_row4').val(),		'.val-description .row4',			fontname, fontfile, addMessage),
+				text2svg_api($('#description_row5').val(),		'.val-description .row5',			fontname, fontfile, addMessage),
+				getgithub_avator_api($('#from').val(), '.val-from-avator',addMessage ),
+				getgithub_avator_api($('#to').val(), '.val-to-avator',addMessage )
+			).done(function(){
+				console.log("done");
+				changeScaleSVG();
+				updateDownloadSVG();
+			});
+			//submitは無効化する。
+			return false;
+		});
+		//Code for Condactのチェックによりダウンロードリンクの有効化
+		$('#coc').change(function(){
+			activateLink();
+		});
+		//PDFのダウンロードリンクの場合はSVGをPDFに変換してダウンロードさせる
+		$('#alink-pdf').click(function(){
+			convSVG2PDF('#namecard', 'LGTMcard_'+$('#from').val().replace(/ /,'')+'_'+$('#to').val().replace(/ /,'')+'.pdf');
+			return false;
+		});
+		//文字の大きさを変更したら、ダウンロードデータも更新する。
+		$('#scale').change(function(){
+			changeScaleSVG();
+			updateDownloadSVG();
+		});
+    //リセットボタンでズームとパンを初期化
+		$('#zoom-reset').click(function(){
+			resetSVGTools('.svg-ph');
+		});
+
+		//外部SVGを読み込み
+		//SVGの仕様
+		//役職 class:val-position
+		//名前 class:val-name
+		//Eメールアドレス class:val-email
+		//電話番号 class:val-tel
+
+		//プレビュー用
+		$.ajax({
+			type: 'get',
+			url: './LGTMcard_preview.svg',
+			success: function(data) {
+				var svg = $(data).find('svg');
+				$('#namecard-preview').html(svg);
+				//SVGをズーム、パンできるようにする
+				initSVGTools('#namecard-preview');
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown){
+				addMessage("プレビュー用SVGが見つかりません。");
+			}
+		});
+		//ダウンロード用
+		$.ajax({
+			type: 'get',
+			url: './LGTMcard.svg',
+			success: function(data) {
+				var svg = $(data).find('svg');
+				$('#namecard').html(svg);
+				//プレビューボタンを有効化(もしプレビューがなくてもダウンロード用があれば加工してダウンロードすることは可能)
+				$('#preview').prop("disabled", false);
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown){
+				addMessage("SVGが見つかりません。");
+			}
+		});
+
+		//ダウンロードSVGの表示と更新
+		$('#custom').click(function(){showDownloadSVG()});
+		$('#update').click(function(){updateDownloadSVG()});
+	});
+    </script>
+  </body>
+</html>

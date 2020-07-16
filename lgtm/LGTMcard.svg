@@ -1,0 +1,25 @@
+<svg xmlns:dc="http://purl.org/dc/elements/2.0/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" height="700" width="1000" xml:space="preserve" id="svg2" version="2.0"><metadata id="metadata8"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/></cc:Work></rdf:RDF></metadata><g transform="" id="g10">
+     
+  <image x="0" y="0" width="1000" height="700" xlink:href="https://code4.yokohama/lgtm/images/card.png"/>
+  <image id="val-from-avator" class="val-from-avator" x="600" y="560" width="50" height="50" xlink:href="https://code4.yokohama/lgtm/images/github.png"/>
+  <image id="val-to-avator" class="val-to-avator" x="100" y="180" width="50" height="50" xlink:href="https://code4.yokohama/lgtm/images/github.png"/>
+  <g id="val-from" class="val-from" style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size: 40px;font-family:'Cedarville Cursive';-inkscape-font-specification:NotoSansCJKjp-Regular;writing-mode:lr-tb;fill: #000000;fill-opacity:1;fill-rule:nonzero;stroke:none;" transform="matrix(1,0,0,1,660,600)" text-anchor="start">
+  <text id="text2042" ><tspan>hogehoge</tspan></text>
+  </g>
+  <g id="val-to" class="val-to" style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size: 40px;font-family:'Cedarville Cursive','Noto Serif JP';-inkscape-font-specification:NotoSansCJKjp-Regular;writing-mode:lr-tb;fill: #000000;fill-opacity:1;fill-rule:nonzero;stroke:none;" transform="matrix(1,0,0,1,160,220)" text-anchor="start">
+  <text id="text2046"><tspan style="font-size: 45px;">fugafuga</tspan></text>
+  </g>
+  <g id="val-title" class="val-title" style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size: 55px;font-family:'Noto Serif JP';-inkscape-font-specification:NotoSansCJKjp-Regular;writing-mode:lr-tb;fill: #000000;fill-opacity:1;fill-rule:nonzero;stroke:none;" transform="matrix(1,0,0,1,150,150)" text-anchor="start">
+  <text id="text2052"><tspan>感謝状</tspan></text>
+  </g>
+  <g id="val-description" class="val-description" style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size: 18px;font-family:'Noto Serif JP';-inkscape-font-specification:NotoSansCJKjp-Regular;writing-mode:lr-tb;fill: #000000;fill-opacity:1;fill-rule:nonzero;stroke:none;" transform="matrix(1,0,0,1,100,300)" text-anchor="start">
+      <g class="row1" transform="translate(0,0)"><text><tspan>行１</tspan></text></g>
+      <g class="row2" transform="translate(0,50)"><text><tspan>行２</tspan></text></g>
+      <g class="row3" transform="translate(0,100)"><text><tspan>行３</tspan></text></g>
+      <g class="row4" transform="translate(0,150)"><text><tspan>行４</tspan></text></g>
+      <g class="row5" transform="translate(0,200)"><text><tspan>行５</tspan></text></g>
+  </g>
+
+
+  </g>
+</svg>

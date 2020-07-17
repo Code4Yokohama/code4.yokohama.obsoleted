@@ -1,0 +1,95 @@
+header h1 {
+  color: #fff;
+}
+form {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+}
+form .must {
+  color: #f44;
+}
+form label {
+  grid-column: 3 span;
+  text-align: right;
+  margin: auto 0.5rem;
+}
+form textarea,
+form input[type=text],
+form input[type=file] {
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  margin: 0.5rem;
+  grid-column: 9 span;
+}
+form input[type=submit] {
+  font-size: 1rem;
+  grid-column: 4 span;
+  margin: 0rem auto;
+  border-width: 0px;
+}
+form .downloadLink {
+  font-size: 1rem;
+  margin: 0rem auto !important;
+  grid-column: 4 span;
+}
+
+form input[type=submit]:disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
+form .disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+form .message {
+  margin: 0rem auto;
+  grid-column: 12 span;
+}
+form input[type=checkbox] {
+  -ms-transform: scale(1.8, 1.8);
+  -webkit-transform: scale(1.8, 1.8);
+  transform: scale(1.8, 1.8);
+}
+
+.project_btn {
+  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.project_btn:hover {
+  opacity: 0.8;
+}
+.project_btn:active  {
+  transition: 0.1s ease-in-out;
+  -webkit-transition: 0.1s ease-in-out;
+  -moz-transition: 0.1s ease-in-out;
+  opacity: 1;
+}
+
+#coc-wrap {
+  grid-column: 12 span;
+  text-align: center;
+  margin: 0rem auto;
+  font-size: 1.2rem;
+}
+
+.svg-ph {
+  text-align: center;
+  border: dashed 2px #CCC;
+}
+.svg-ph svg {
+  width: 100%;
+  height: auto;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:disabled {
+  cursor: auto;
+}
+

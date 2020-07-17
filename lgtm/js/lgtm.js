@@ -72,7 +72,7 @@ function text2svg_api(text, selector, fontname, fontfile, logfunc){
 
 	$.ajax({
 		type: 'post',
-		url: './text2svg-api.php',
+		url: 'http://153.127.39.37/lgtm/text2svg-api.php',
 		data: formData,
 		processData: false,
 		contentType: false,

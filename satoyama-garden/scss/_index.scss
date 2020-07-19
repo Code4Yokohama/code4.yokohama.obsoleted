@@ -425,6 +425,34 @@
 }
 
 /*--------------------------------------------------------------
+  0.prize
+-------------------------------------------------------------- */
+
+.prize {
+  text-align: center;
+  &__title {
+    display: inline-block;
+    min-width: 200px;
+    margin: 6rem auto 20px;
+    padding: 20px 20px;
+    line-height: 1rem;
+    border: solid 1px $mainColor;
+    border-radius: 40px;
+  }
+  &__name {
+    font-size: 2rem;
+    margin: 2rem 0 2rem 0;
+  }
+  &__h5 {
+    padding: 2rem 0 1rem 0;
+  }
+  &__comment {
+    padding: 1rem 0 4rem 0;
+    text-align: left;
+  }
+}
+
+/*--------------------------------------------------------------
   3.footer
 -------------------------------------------------------------- */
 .footer {

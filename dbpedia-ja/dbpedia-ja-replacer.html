@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<title>DBPedia Japanese Replacer</title>
+</head>
+
+<body>
+	<h1 class="text-white bg-primary p-3">
+		<div class="row clearfix">
+			<span class="col-12 col-xl-5">DBPedia Japanese Replacer<i class="material-icons align-middle m-2">repeat</i></span>
+			<span class="col-12 col-xl-7">
+				<a href="http://ja.dbpedia.org/sparql" target="_blank" class="float-right mx-3">
+					<button type="button" class="btn btn-primary btn-lg"><i class="material-icons align-middle m-2">open_in_new</i>ja.dbpedia.org SPARQL EndPoint</button>
+				</a>
+				<a href="http://dbpedia-dev.lodac.nii.ac.jp/sparql" target="_blank" class="float-right mx-3">
+					<button type="button" class="btn btn-primary btn-lg"><i class="material-icons align-middle m-2">open_in_new</i>lodac.nii.ac.jp SPARQL EndPoint</button>
+				</a>	
+			</span>
+		</div>	
+	</h1>
+	<div class="container">
+		<p class="alert alert-secondary col-12" role="alert">
+			DBPedia Japaneseのベータ版ではSPARQLの結果は，ja.dbpedia.orgにリンクされています．各エンティティを表示する場合は，ドメインを手動で書き換える必要があります．<br/>
+			また、以下のPREFIXが変更されています．<br/>
+			（dbpedia-owl -> dbo）<br/>
+			本サイトでは上記の差異を置換することができます．
+		</p>
+
+		<form>
+			<div class="btn-group btn-group-toggle btn-group-md m-3">
+				<button type="button" class="btn btn-primary" id="beta_sparql">本家のSPARQLをベータ版にする</button>
+				<button type="button" class="btn btn-primary" id="stable_sparql">ベータ版のSPARQLを本家版にする</button>
+				<button type="button" class="btn btn-primary" id="beta_result">SPARQL結果のリンク先をベータ版にする</button>
+				<button type="button" class="btn btn-primary" id="stable_result">SPARQL結果のリンク先を本家版にする</button>
+			</div>
+			<div class="btn-group btn-group-toggle btn-group-lg m-3 options" data-toggle="buttons">
+				<label class="btn btn-outline-secondary active" id="option1">
+					<input type="radio" name="options"  autocomplete="off">ja.dbpedia.org<i class="material-icons align-middle m-2">double_arrow</i>lodac.nii.ac.jp
+				</label>
+				<label class="btn btn-outline-secondary" id="option2">
+					<input type="radio" name="options"  autocomplete="off">lodac.nii.ac.jp<i class="material-icons align-middle m-2">double_arrow</i>ja.dbpedia.org
+				</label>
+				<label class="btn btn-outline-secondary" id="option3">
+					<input type="radio" name="options"  autocomplete="off">OFF
+				</label>
+			</div>
+			<div class="btn-group btn-group-toggle btn-group-lg m-3 dbo-options" data-toggle="buttons">
+				<label class="btn btn-outline-secondary active" id="option-dbo1">
+					<input type="radio" name="dbo-options" autocomplete="off">dbpedia-owl<i class="material-icons align-middle m-2">double_arrow</i>dbo
+				</label>
+				<label class="btn btn-outline-secondary" id="option-dbo2">
+					<input type="radio" name="dbo-options" autocomplete="off">dbo<i class="material-icons align-middle m-2">double_arrow</i>dbpedia-owl
+				</label>
+				<label class="btn btn-outline-secondary" id="option-dbo3">
+					<input type="radio" name="dbo-options" autocomplete="off">OFF
+				</label>
+			</div>
+	
+			<div class="form-group m-3">
+				<label for="beforeText">Before Textarea</label>
+				<textarea class="form-control" id="beforeText" rows="5"></textarea>
+			</div>
+			<div class="form-group m-3">
+				<label for="afterText">After Textarea</label>
+				<textarea class="form-control" id="afterText" rows="5"></textarea>
+			</div>
+			<div class="form-group m-3">
+				<label for="afterLink">After Link</label>
+				<div id="afterLink"></div>
+			</div>
+	
+		</form>	
+	</div>
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<!-- Optional JavaScript -->
+	<script>
+		$(function(){
+			//置換処理
+			$("#beforeText").on("keyup", function(){
+				var txt = $("#beforeText").val();
+				if($("#option1").hasClass("active")) {
+					txt = txt.replace(/ja.dbpedia.org/g, "dbpedia-dev.lodac.nii.ac.jp");
+				}else if($("#option2").hasClass("active")) {
+					txt = txt.replace(/dbpedia-dev.lodac.nii.ac.jp/g, "ja.dbpedia.org");
+				}
+				if($("#option-dbo1").hasClass("active")) {
+					txt = txt.replace(/dbpedia-owl/g, "dbo");
+				}else if($("#option-dbo2").hasClass("active")) {
+					txt = txt.replace(/dbo/g, "dbpedia-owl");
+				}
+				$("#afterText").val(txt);
+				$("#afterLink").html("");
+				txt.split(/\r\n|\r|\n/).forEach(function(line){
+					line.split(/\s/).forEach(function(element){
+						$("#afterLink").append($("<a>").html(element).addClass("m-3").attr("href", element).attr("target","_blank"));
+					});
+					$("#afterLink").append($("<br>"));
+  				});
+			});
+
+			
+
+			//ボタン処理
+			$("#beta_sparql").on("click",function(){
+				$("#option3").button('toggle');
+				$("#option-dbo1").button('toggle');
+			});
+			$("#stable_sparql").on("click",function(){
+				$("#option3").button('toggle');
+				$("#option-dbo2").button('toggle');
+			});
+			$("#beta_result").on("click",function(){
+				$("#option1").button('toggle');
+				$("#option-dbo3").button('toggle');
+			});
+			$("#stable_result").on("click",function(){
+				$("#option2").button('toggle');
+				$("#option-dbo3").button('toggle');
+			});
+
+		});
+	</script>
+</body>
+
+</html>
